@@ -13,10 +13,10 @@ export default function FooterSection() {
   };
 
   return (
-    <footer className="relative bg-gradient-to-b from-[#1a2942] via-[#0e172e] to-[#040812] text-white font-sans antialiased overflow-hidden pt-10 sm:pt-12 pb-8 border-t border-white/10">
+    <footer className="relative bg-gradient-to-b from-[#1a2942] via-[#0e172e] to-[#040812] text-white font-sans antialiased overflow-hidden pt-10 sm:pt-14 pb-12 sm:pb-16 border-t border-white/10">
 
       {/* Giant Background Watermark Typography (Fully visible descenders) */}
-      <div className="absolute bottom-4 left-0 right-0 w-full select-none pointer-events-none overflow-hidden leading-none z-0 px-2 flex justify-center">
+      <div className="absolute bottom-2 left-0 right-0 w-full select-none pointer-events-none overflow-hidden leading-none z-0 px-2 flex justify-center">
         <span className="text-[12.5vw] font-serif font-bold text-white/[0.14] tracking-tighter whitespace-nowrap block text-center max-w-full">
           Megha Systems
         </span>
