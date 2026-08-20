@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ChevronRight, Layers, ShieldCheck, DoorClosed, LayoutGrid } from 'lucide-react';
