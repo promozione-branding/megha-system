@@ -1,0 +1,48 @@
+'use client';
+
+import SmoothScroll from '@/app/components/smoothScroll';
+import LightWallSectionScroll from './components/structure/page';
+import TextMaskScroll from '@/components/TextMaskScroll';
+import Hero3 from '@/app/components/hero3/page';
+import FeaturesGrid from '@/app/components/featuresGrid/page';
+import OurProjectsSection from '@/app/components/ourprojects/page';
+import ContactSection from '@/app/components/contactUs/page';
+import WashroomCubiclesFAQ from '@/app/components/Faq/page';
+import FooterSection from '@/app/components/Footer/page';
+import SplitVantage from '@/app/components/split_vanatge/page';
+
+export default function Home() {
+  return (
+    <SmoothScroll>
+      <main className="relative min-h-screen bg-[#0f0f11] text-white">
+        {/* Hero Section with 4 Repositioning Stacked Cards */}
+        <Hero3 />
+
+        {/* Features Grid Section */}
+        <FeaturesGrid />
+
+        {/* Structural Architectural Section */}
+        <LightWallSectionScroll />
+
+        {/* Our Projects Section */}
+        <OurProjectsSection />
+
+        {/* Split Vantage Showcase Section */}
+        <SplitVantage />
+
+        {/* Scroll Video Text Mask */}
+        <TextMaskScroll />
+
+        {/* FAQ Section */}
+        <WashroomCubiclesFAQ />
+
+        {/* Contact Us Section */}
+        <ContactSection />
+
+        {/* Footer Section */}
+        <FooterSection />
+      </main>
+    </SmoothScroll>
+  );
+}
+
