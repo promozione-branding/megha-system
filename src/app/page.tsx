@@ -13,6 +13,9 @@ import FooterSection from '@/app/components/Footer/page';
 import SplitVantage from '@/app/components/split_vanatge/page';
 import Navbar from '@/app/components/Navabar/page';
 import HeroSection from '@/app/components/HeroBanner/page';
+import ServicesSection from '@/app/components/Service-section/page';
+import AboutUs from '@/app/components/Aboutus/page';
+import ClientMarquee from '@/app/components/ClientMarquee/page';
 
 export default function Home() {
   return (
@@ -23,12 +26,19 @@ export default function Home() {
 
         {/* Main Hero Banner Section */}
         <HeroSection />
+        <FeaturesGrid />
+
+        {/* Client Logos Marquee */}
+        <ClientMarquee />
 
         {/* Hero Section with 4 Repositioning Stacked Cards */}
         <Hero3 />
 
-        {/* Features Grid Section */}
-        <FeaturesGrid />
+        {/* About Us Section */}
+        <AboutUs />
+
+        {/* Services Section */}
+        <ServicesSection />
 
         {/* Structural Architectural Section */}
         <LightWallSectionScroll />

@@ -3,6 +3,35 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import { Play, X } from 'lucide-react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay, EffectFade, Pagination } from 'swiper/modules';
+
+import 'swiper/css';
+import 'swiper/css/effect-fade';
+import 'swiper/css/pagination';
+
+const HERO_SLIDES = [
+  {
+    id: 1,
+    src: '/assets/hero_section_images/Apple-BKC-Mumbai-India-media-preview-hero_Full-Bleed-Image.jpg.slideshow-large.jpg.jpeg',
+    alt: 'Apple BKC Architectural Showcase',
+  },
+  {
+    id: 2,
+    src: '/assets/hero_section_images/Apple-office-featured-20240117 (2).webp',
+    alt: 'Apple Office Architectural Interior Showcase',
+  },
+  {
+    id: 3,
+    src: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1800&auto=format&fit=crop',
+    alt: 'Architectural Interior Showcase',
+  },
+  {
+    id: 4,
+    src: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?q=80&w=1800&auto=format&fit=crop',
+    alt: 'Modern Restroom Systems Showcase',
+  },
+];
 
 export default function HeroSection() {
   const [isVideoOpen, setIsVideoOpen] = useState(false);
@@ -101,15 +130,33 @@ export default function HeroSection() {
               </div>
             </div>
 
-            {/* Right Showcase Banner */}
-            <div className="relative min-h-[320px] sm:min-h-[380px] lg:min-h-[440px] xl:min-h-[480px] w-full overflow-hidden rounded-[22px]">
-              <Image
-                src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1800&auto=format&fit=crop"
-                alt="Architectural Interior Showcase"
-                fill
-                priority
-                className="object-cover object-center"
-              />
+            {/* Right Showcase Banner Slider */}
+            <div className="relative min-h-[320px] sm:min-h-[380px] lg:min-h-[440px] xl:min-h-[480px] w-full overflow-hidden rounded-[22px] shadow-sm group/slider">
+              <Swiper
+                modules={[Autoplay, EffectFade, Pagination]}
+                effect="fade"
+                autoplay={{
+                  delay: 4000,
+                  disableOnInteraction: false,
+                }}
+                loop={true}
+                pagination={{ clickable: true }}
+                className="w-full h-full hero-swiper text-white"
+              >
+                {HERO_SLIDES.map((slide) => (
+                  <SwiperSlide key={slide.id} className="relative w-full h-full min-h-[320px] sm:min-h-[380px] lg:min-h-[440px] xl:min-h-[480px]">
+                    <Image
+                      src={slide.src}
+                      alt={slide.alt}
+                      fill
+                      priority={slide.id === 1}
+                      className="object-cover object-center"
+                    />
+                    {/* Subtle Overlay Gradient */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent pointer-events-none" />
+                  </SwiperSlide>
+                ))}
+              </Swiper>
             </div>
 
           </div>

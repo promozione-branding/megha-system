@@ -23,25 +23,25 @@ const projects: Project[] = [
     id: 1,
     title: 'Kora',
     category: 'Consulting Site',
-    image: '/assets/moving_down_images/image1.avif',
+    image: '/assets/moving_down_images/image1.jpeg',
   },
   {
     id: 2,
     title: 'KYMA',
     category: 'AI Agency',
-    image: '/assets/moving_down_images/image2.avif',
+    image: '/assets/moving_down_images/image2.jpeg',
   },
   {
     id: 3,
     title: 'Mugen Studio',
     category: 'Design Studio',
-    image: '/assets/moving_down_images/image3.avif',
+    image: '/assets/moving_down_images/image3.jpeg',
   },
   {
     id: 4,
     title: 'Axiom Performance',
     category: 'Ecommerce Site',
-    image: '/assets/moving_down_images/image 4.avif',
+    image: '/assets/moving_down_images/image4.jpeg',
   },
 ];
 
