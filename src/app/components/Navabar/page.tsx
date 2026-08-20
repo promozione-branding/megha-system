@@ -20,14 +20,14 @@ export default function Navbar() {
   return (
     <>
       {/* Top announcement bar */}
-      <div className="w-full bg-[#0d2461] text-white text-[11px] font-medium tracking-wide text-center py-2 px-4 flex items-center justify-center gap-3">
-        <span className="opacity-75">India&apos;s Trusted Restroom Cubicle Solutions</span>
+      <div className="w-full bg-[#0d2461] text-white text-[13px] sm:text-[13.5px] font-semibold tracking-wide text-center py-1.5 px-4 flex items-center justify-center gap-3">
+        <span className="opacity-85">India&apos;s Trusted Restroom Cubicle Solutions</span>
         <span className="opacity-30">|</span>
         <span className="text-[#f5bd24]">✦</span>
-        <span className="opacity-75 ml-1">Where Hygiene Meets Design</span>
+        <span className="opacity-85 ml-1">Where Hygiene Meets Design</span>
         <span className="opacity-30">|</span>
-        <a href="tel:+91" className="inline-flex items-center gap-1.5 text-[#f5bd24] hover:text-white transition-colors font-semibold">
-          <Phone className="w-3 h-3" />
+        <a href="tel:+91" className="inline-flex items-center gap-1.5 text-[#f5bd24] hover:text-white transition-colors font-bold">
+          <Phone className="w-3.5 h-3.5" />
           Get a Free Quote
         </a>
       </div>
@@ -43,7 +43,7 @@ export default function Navbar() {
         {/* Gold accent line at top */}
         <div className="absolute top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-transparent via-[#f5bd24] to-transparent opacity-80" />
 
-        <div className="mx-auto max-w-[1750px] px-4 sm:px-8 lg:px-12 xl:px-16 h-[72px] flex items-center justify-between gap-6">
+        <div className="mx-auto max-w-[1750px] px-4 sm:px-8 lg:px-12 xl:px-16 h-[72px] flex items-center justify-between gap-4">
 
           {/* Left: Logo Image */}
           <a href="#" className="flex items-center shrink-0 group py-0.5">
@@ -58,22 +58,22 @@ export default function Navbar() {
             </div>
           </a>
 
-          {/* Center: Navigation Links */}
-          <nav className="hidden lg:flex items-center gap-0.5 text-[13.5px] font-medium text-[#0d2461]">
+          {/* Center: Navigation Links with Larger Font */}
+          <nav className="hidden lg:flex items-center gap-1 text-[15px] sm:text-[15.5px] font-bold text-[#0d2461]">
             <a
               href="#"
-              className="px-4 py-2 rounded-lg hover:bg-[#0d2461]/6 transition-all duration-200 font-semibold relative group"
+              className="px-3 sm:px-3.5 py-1.5 rounded-lg hover:bg-[#0d2461]/6 transition-all duration-200 relative group"
             >
               Home
-              <span className="absolute bottom-1 left-4 right-4 h-[2px] bg-[#f5bd24] scale-x-0 group-hover:scale-x-100 transition-transform duration-200 rounded-full" />
+              <span className="absolute bottom-0.5 left-3 right-3 h-[2px] bg-[#f5bd24] scale-x-0 group-hover:scale-x-100 transition-transform duration-200 rounded-full" />
             </a>
 
             {/* About Dropdown */}
             <div className="relative group py-1.5 cursor-pointer">
-              <div className="flex items-center gap-1.5 px-4 py-2 rounded-lg hover:bg-[#0d2461]/6 transition-all duration-200 relative">
+              <div className="flex items-center gap-1 px-3 sm:px-3.5 py-1.5 rounded-lg hover:bg-[#0d2461]/6 transition-all duration-200 relative">
                 <span>About Us</span>
-                <ChevronDown className="w-3.5 h-3.5 opacity-50 group-hover:rotate-180 transition-transform duration-300" />
-                <span className="absolute bottom-1 left-4 right-4 h-[2px] bg-[#f5bd24] scale-x-0 group-hover:scale-x-100 transition-transform duration-200 rounded-full" />
+                <ChevronDown className="w-4 h-4 opacity-60 group-hover:rotate-180 transition-transform duration-300" />
+                <span className="absolute bottom-0.5 left-3 right-3 h-[2px] bg-[#f5bd24] scale-x-0 group-hover:scale-x-100 transition-transform duration-200 rounded-full" />
               </div>
               <div className="absolute top-[calc(100%+4px)] left-0 hidden group-hover:block w-64 bg-white border border-[#0d2461]/10 shadow-[0_20px_60px_rgba(13,36,97,0.15)] rounded-2xl p-2 z-50">
                 <div className="absolute -top-1.5 left-6 w-3 h-3 bg-white border-l border-t border-[#0d2461]/10 rotate-45" />
@@ -82,8 +82,8 @@ export default function Navbar() {
                     <Sparkles className="w-4 h-4 text-[#0d2461]" />
                   </div>
                   <div>
-                    <div className="text-[12.5px] font-semibold text-[#0d2461]">Our Story</div>
-                    <div className="text-[11px] text-gray-400 mt-0.5">Pioneering cubicle solutions</div>
+                    <div className="text-[13.5px] font-bold text-[#0d2461]">Our Story</div>
+                    <div className="text-[11.5px] text-gray-400 mt-0.5">Pioneering cubicle solutions</div>
                   </div>
                 </a>
                 <a href="#team" className="flex items-start gap-3 p-3 rounded-xl hover:bg-[#f8f8ff] transition-colors">
@@ -91,8 +91,8 @@ export default function Navbar() {
                     <Building className="w-4 h-4 text-[#0d2461]" />
                   </div>
                   <div>
-                    <div className="text-[12.5px] font-semibold text-[#0d2461]">Leadership</div>
-                    <div className="text-[11px] text-gray-400 mt-0.5">Expert architects & planners</div>
+                    <div className="text-[13.5px] font-bold text-[#0d2461]">Leadership</div>
+                    <div className="text-[11.5px] text-gray-400 mt-0.5">Expert architects & planners</div>
                   </div>
                 </a>
               </div>
@@ -100,10 +100,10 @@ export default function Navbar() {
 
             {/* Services Mega Dropdown */}
             <div className="relative group py-1.5 cursor-pointer">
-              <div className="flex items-center gap-1.5 px-4 py-2 rounded-lg hover:bg-[#0d2461]/6 transition-all duration-200 relative">
+              <div className="flex items-center gap-1 px-3 sm:px-3.5 py-1.5 rounded-lg hover:bg-[#0d2461]/6 transition-all duration-200 relative">
                 <span>Services</span>
-                <ChevronDown className="w-3.5 h-3.5 opacity-50 group-hover:rotate-180 transition-transform duration-300" />
-                <span className="absolute bottom-1 left-4 right-4 h-[2px] bg-[#f5bd24] scale-x-0 group-hover:scale-x-100 transition-transform duration-200 rounded-full" />
+                <ChevronDown className="w-4 h-4 opacity-60 group-hover:rotate-180 transition-transform duration-300" />
+                <span className="absolute bottom-0.5 left-3 right-3 h-[2px] bg-[#f5bd24] scale-x-0 group-hover:scale-x-100 transition-transform duration-200 rounded-full" />
               </div>
               <div className="absolute top-[calc(100%+4px)] left-1/2 -translate-x-1/2 hidden group-hover:block w-[440px] bg-white border border-[#0d2461]/10 shadow-[0_20px_60px_rgba(13,36,97,0.15)] rounded-2xl p-3 z-50">
                 <div className="absolute -top-1.5 left-1/2 -translate-x-1/2 w-3 h-3 bg-white border-l border-t border-[#0d2461]/10 rotate-45" />
@@ -114,36 +114,36 @@ export default function Navbar() {
                       <div className="w-7 h-7 rounded-lg bg-[#0d2461]/8 flex items-center justify-center">
                         <Layers className="w-3.5 h-3.5 text-[#0d2461]" />
                       </div>
-                      <span className="text-[12.5px] font-semibold text-[#0d2461]">Cubicle Systems</span>
+                      <span className="text-[13px] font-bold text-[#0d2461]">Cubicle Systems</span>
                     </div>
-                    <p className="text-[11px] text-gray-400 leading-relaxed pl-9">Engineered modular partitions</p>
+                    <p className="text-[11.5px] text-gray-400 leading-relaxed pl-9">Engineered modular partitions</p>
                   </a>
                   <a href="#services" className="p-3 rounded-xl hover:bg-[#f8f8ff] transition-colors">
                     <div className="flex items-center gap-2 mb-1">
                       <div className="w-7 h-7 rounded-lg bg-[#0d2461]/8 flex items-center justify-center">
                         <Palette className="w-3.5 h-3.5 text-[#0d2461]" />
                       </div>
-                      <span className="text-[12.5px] font-semibold text-[#0d2461]">Marble Finishes</span>
+                      <span className="text-[13px] font-bold text-[#0d2461]">Marble Finishes</span>
                     </div>
-                    <p className="text-[11px] text-gray-400 leading-relaxed pl-9">Luxury natural stone textures</p>
+                    <p className="text-[11.5px] text-gray-400 leading-relaxed pl-9">Luxury natural stone textures</p>
                   </a>
                   <a href="#services" className="p-3 rounded-xl hover:bg-[#f8f8ff] transition-colors">
                     <div className="flex items-center gap-2 mb-1">
                       <div className="w-7 h-7 rounded-lg bg-[#f5bd24]/15 flex items-center justify-center">
                         <Sparkles className="w-3.5 h-3.5 text-[#c9a227]" />
                       </div>
-                      <span className="text-[12.5px] font-semibold text-[#0d2461]">Smart Design</span>
+                      <span className="text-[13px] font-bold text-[#0d2461]">Smart Design</span>
                     </div>
-                    <p className="text-[11px] text-gray-400 leading-relaxed pl-9">Hygienic intelligent spaces</p>
+                    <p className="text-[11.5px] text-gray-400 leading-relaxed pl-9">Hygienic intelligent spaces</p>
                   </a>
                   <a href="#services" className="p-3 rounded-xl hover:bg-[#f8f8ff] transition-colors">
                     <div className="flex items-center gap-2 mb-1">
                       <div className="w-7 h-7 rounded-lg bg-[#0d2461]/8 flex items-center justify-center">
                         <Building className="w-3.5 h-3.5 text-[#0d2461]" />
                       </div>
-                      <span className="text-[12.5px] font-semibold text-[#0d2461]">Installation</span>
+                      <span className="text-[13px] font-bold text-[#0d2461]">Installation</span>
                     </div>
-                    <p className="text-[11px] text-gray-400 leading-relaxed pl-9">End-to-end setup & support</p>
+                    <p className="text-[11.5px] text-gray-400 leading-relaxed pl-9">End-to-end setup & support</p>
                   </a>
                 </div>
               </div>
@@ -151,54 +151,54 @@ export default function Navbar() {
 
             {/* Projects Dropdown */}
             <div className="relative group py-1.5 cursor-pointer">
-              <div className="flex items-center gap-1.5 px-4 py-2 rounded-lg hover:bg-[#0d2461]/6 transition-all duration-200 relative">
+              <div className="flex items-center gap-1 px-3 sm:px-3.5 py-1.5 rounded-lg hover:bg-[#0d2461]/6 transition-all duration-200 relative">
                 <span>Projects</span>
-                <ChevronDown className="w-3.5 h-3.5 opacity-50 group-hover:rotate-180 transition-transform duration-300" />
-                <span className="absolute bottom-1 left-4 right-4 h-[2px] bg-[#f5bd24] scale-x-0 group-hover:scale-x-100 transition-transform duration-200 rounded-full" />
+                <ChevronDown className="w-4 h-4 opacity-60 group-hover:rotate-180 transition-transform duration-300" />
+                <span className="absolute bottom-0.5 left-3 right-3 h-[2px] bg-[#f5bd24] scale-x-0 group-hover:scale-x-100 transition-transform duration-200 rounded-full" />
               </div>
               <div className="absolute top-[calc(100%+4px)] left-0 hidden group-hover:block w-56 bg-white border border-[#0d2461]/10 shadow-[0_20px_60px_rgba(13,36,97,0.15)] rounded-2xl p-2 z-50">
                 <div className="absolute -top-1.5 left-6 w-3 h-3 bg-white border-l border-t border-[#0d2461]/10 rotate-45" />
-                <a href="#projects" className="flex items-center justify-between p-3 rounded-xl hover:bg-[#f8f8ff] text-[12.5px] font-semibold text-[#0d2461] transition-colors">
+                <a href="#projects" className="flex items-center justify-between p-3 rounded-xl hover:bg-[#f8f8ff] text-[13px] font-bold text-[#0d2461] transition-colors">
                   <span>Commercial Icons</span>
-                  <ArrowUpRight className="w-3.5 h-3.5 text-[#0d2461]/40" />
+                  <ArrowUpRight className="w-4 h-4 text-[#0d2461]/40" />
                 </a>
-                <a href="#projects" className="flex items-center justify-between p-3 rounded-xl hover:bg-[#f8f8ff] text-[12.5px] font-semibold text-[#0d2461] transition-colors">
+                <a href="#projects" className="flex items-center justify-between p-3 rounded-xl hover:bg-[#f8f8ff] text-[13px] font-bold text-[#0d2461] transition-colors">
                   <span>Luxury Residential</span>
-                  <ArrowUpRight className="w-3.5 h-3.5 text-[#0d2461]/40" />
+                  <ArrowUpRight className="w-4 h-4 text-[#0d2461]/40" />
                 </a>
-                <a href="#projects" className="flex items-center justify-between p-3 rounded-xl hover:bg-[#f8f8ff] text-[12.5px] font-semibold text-[#0d2461] transition-colors">
+                <a href="#projects" className="flex items-center justify-between p-3 rounded-xl hover:bg-[#f8f8ff] text-[13px] font-bold text-[#0d2461] transition-colors">
                   <span>Corporate Spaces</span>
-                  <ArrowUpRight className="w-3.5 h-3.5 text-[#0d2461]/40" />
+                  <ArrowUpRight className="w-4 h-4 text-[#0d2461]/40" />
                 </a>
               </div>
             </div>
 
             {/* More Dropdown */}
             <div className="relative group py-1.5 cursor-pointer">
-              <div className="flex items-center gap-1.5 px-4 py-2 rounded-lg hover:bg-[#0d2461]/6 transition-all duration-200 relative">
+              <div className="flex items-center gap-1 px-3 sm:px-3.5 py-1.5 rounded-lg hover:bg-[#0d2461]/6 transition-all duration-200 relative">
                 <span>More</span>
-                <ChevronDown className="w-3.5 h-3.5 opacity-50 group-hover:rotate-180 transition-transform duration-300" />
-                <span className="absolute bottom-1 left-4 right-4 h-[2px] bg-[#f5bd24] scale-x-0 group-hover:scale-x-100 transition-transform duration-200 rounded-full" />
+                <ChevronDown className="w-4 h-4 opacity-60 group-hover:rotate-180 transition-transform duration-300" />
+                <span className="absolute bottom-0.5 left-3 right-3 h-[2px] bg-[#f5bd24] scale-x-0 group-hover:scale-x-100 transition-transform duration-200 rounded-full" />
               </div>
               <div className="absolute top-[calc(100%+4px)] left-0 hidden group-hover:block w-48 bg-white border border-[#0d2461]/10 shadow-[0_20px_60px_rgba(13,36,97,0.15)] rounded-2xl p-2 z-50">
                 <div className="absolute -top-1.5 left-6 w-3 h-3 bg-white border-l border-t border-[#0d2461]/10 rotate-45" />
-                <a href="#faq" className="block p-3 rounded-xl hover:bg-[#f8f8ff] text-[12.5px] font-semibold text-[#0d2461] transition-colors">FAQ</a>
-                <a href="#testimonials" className="block p-3 rounded-xl hover:bg-[#f8f8ff] text-[12.5px] font-semibold text-[#0d2461] transition-colors">Testimonials</a>
+                <a href="#faq" className="block p-3 rounded-xl hover:bg-[#f8f8ff] text-[13px] font-bold text-[#0d2461] transition-colors">FAQ</a>
+                <a href="#testimonials" className="block p-3 rounded-xl hover:bg-[#f8f8ff] text-[13px] font-bold text-[#0d2461] transition-colors">Testimonials</a>
               </div>
             </div>
 
-            <a href="#contact" className="px-4 py-2 rounded-lg hover:bg-[#0d2461]/6 transition-all duration-200 relative group">
+            <a href="#contact" className="px-3 sm:px-3.5 py-1.5 rounded-lg hover:bg-[#0d2461]/6 transition-all duration-200 relative group">
               Contact
-              <span className="absolute bottom-1 left-4 right-4 h-[2px] bg-[#f5bd24] scale-x-0 group-hover:scale-x-100 transition-transform duration-200 rounded-full" />
+              <span className="absolute bottom-0.5 left-3 right-3 h-[2px] bg-[#f5bd24] scale-x-0 group-hover:scale-x-100 transition-transform duration-200 rounded-full" />
             </a>
           </nav>
 
-          {/* Right: CTA Buttons */}
-          <div className="hidden lg:flex items-center gap-3 shrink-0">
+          {/* Right: CTA Buttons with Larger Font */}
+          <div className="hidden lg:flex items-center gap-2.5 shrink-0">
             {/* Ghost outline button */}
             <a
               href="#contact"
-              className="px-5 py-2.5 text-[12.5px] font-semibold text-[#0d2461] border border-[#0d2461]/25 rounded-lg hover:border-[#0d2461]/60 hover:bg-[#0d2461]/4 transition-all duration-200"
+              className="px-4.5 sm:px-5 py-2.5 text-[14px] font-bold text-[#0d2461] border border-[#0d2461]/30 rounded-lg hover:border-[#0d2461] hover:bg-[#0d2461]/5 transition-all duration-200"
             >
               Get in Touch
             </a>
@@ -206,12 +206,12 @@ export default function Navbar() {
             {/* Primary shimmer CTA */}
             <a
               href="#portfolio"
-              className="group relative inline-flex items-center gap-2.5 bg-[#0d2461] text-white px-6 py-2.5 text-[12.5px] font-semibold rounded-lg overflow-hidden transition-all duration-300 hover:shadow-[0_8px_30px_rgba(13,36,97,0.35)] hover:-translate-y-0.5 active:translate-y-0"
+              className="group relative inline-flex items-center gap-2 bg-[#0d2461] text-white px-5 sm:px-6 py-2.5 text-[14px] font-bold rounded-lg overflow-hidden transition-all duration-300 hover:shadow-[0_8px_30px_rgba(13,36,97,0.35)] hover:-translate-y-0.5 active:translate-y-0"
             >
               {/* Gold shimmer sweep */}
               <span className="absolute inset-0 bg-gradient-to-r from-transparent via-[#f5bd24]/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-in-out" />
               <span className="relative z-10">View Portfolio</span>
-              <ArrowRight className="relative z-10 w-3.5 h-3.5 group-hover:translate-x-1 transition-transform duration-200" />
+              <ArrowRight className="relative z-10 w-4 h-4 group-hover:translate-x-1 transition-transform duration-200" />
             </a>
           </div>
 

@@ -13,6 +13,7 @@ export default function TextMaskScroll() {
   const container = useRef<HTMLDivElement>(null);
   const stickyMask = useRef<HTMLDivElement>(null);
   const innerMedia = useRef<HTMLDivElement>(null);
+  const headerText = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     let easedScrollProgress = 0;
@@ -20,14 +21,19 @@ export default function TextMaskScroll() {
 
     const animate = () => {
       if (stickyMask.current && container.current && innerMedia.current) {
-        const scrollProgress =
-          stickyMask.current.offsetTop /
-          (container.current.getBoundingClientRect().height - window.innerHeight);
+        const containerRect = container.current.getBoundingClientRect();
+        const totalScrollHeight = containerRect.height - window.innerHeight;
+        const scrollProgress = totalScrollHeight > 0 ? Math.max(0, -containerRect.top / totalScrollHeight) : 0;
 
         const delta = scrollProgress - easedScrollProgress;
         easedScrollProgress += delta * easing;
         // Clamp between 0 and 1
         const progress = Math.max(0, Math.min(1, easedScrollProgress));
+
+        // Fade out top overlay text immediately as scroll starts
+        if (headerText.current) {
+          headerText.current.style.opacity = `${Math.max(0, 1 - scrollProgress * 8)}`;
+        }
 
         // --- PHASE 1: 0% to 60% — Text Mask Zooms In ---
         const zoomProgress = Math.min(1, progress / 0.6);
@@ -47,8 +53,8 @@ export default function TextMaskScroll() {
         // --- PHASE 2: 60% to 100% — Image Repositions & Shrinks ---
         const shrinkProgress = Math.max(0, (progress - 0.6) / 0.4);
         
-        // Scale down from 1 to 0.75
-        const scale = 1 - (shrinkProgress * 0.25);
+        // Scale down from 1 to 0.90 (90% width)
+        const scale = 1 - (shrinkProgress * 0.10);
         // Add border radius from 0 to 32px
         const borderRadius = shrinkProgress * 32;
         // Move it down slightly as it shrinks
@@ -69,43 +75,50 @@ export default function TextMaskScroll() {
     <main className="relative bg-[#0f0f11]">
       {/* 250vh provides a smooth scroll zoom and shrink without excessive empty scroll space */}
       <div ref={container} className="relative h-[250vh]">
-        <div
-          ref={stickyMask}
-          className="sticky top-0 h-screen w-full overflow-hidden flex items-center justify-center"
-          style={{
-            maskImage: SVG_MASK,
-            WebkitMaskImage: SVG_MASK,
-            // Fixed at the 'A' counter of "MEGHA" (37.5% X, 50% Y)
-            maskPosition: '45% 60%',
-            WebkitMaskPosition: '45% 60%',
-            maskRepeat: 'no-repeat',
-            WebkitMaskRepeat: 'no-repeat',
-            maskSize: `${initialMaskSize * 100}%`,
-            WebkitMaskSize: `${initialMaskSize * 100}%`,
-          }}
-        >
-          {/* Inner media wrapper that scales and repositions */}
-          <div 
-            ref={innerMedia}
-            className="relative w-full h-full overflow-hidden transform-gpu origin-center will-change-transform"
+        <div className="sticky top-0 h-screen w-full overflow-hidden flex items-center justify-center bg-[#0f0f11]">
+          {/* Overlay Text Above MEGHA SYSTEM */}
+          <div
+            ref={headerText}
+            className="absolute top-[28%] sm:top-[30%] left-1/2 -translate-x-1/2 z-20 text-center pointer-events-none"
           >
-            <img
-              src="/assets/project_image.png"
-              alt="Mega System"
-              className="absolute inset-0 w-full h-full object-cover"
-            />
-            <video
-              autoPlay
-              muted
-              loop
-              playsInline
-              className="absolute inset-0 w-full h-full object-cover"
+            <p className="text-white/80 text-xs sm:text-sm font-semibold tracking-[0.3em] uppercase">
+              CUBICLE ENGINEERING EXCELLENCE
+            </p>
+          </div>
+
+          <div
+            ref={stickyMask}
+            className="absolute inset-0 w-full h-full overflow-hidden flex items-center justify-center"
+            style={{
+              maskImage: SVG_MASK,
+              WebkitMaskImage: SVG_MASK,
+              // Fixed position (45% X, 60% Y)
+              maskPosition: '45% 60%',
+              WebkitMaskPosition: '45% 60%',
+              maskRepeat: 'no-repeat',
+              WebkitMaskRepeat: 'no-repeat',
+              maskSize: `${initialMaskSize * 100}%`,
+              WebkitMaskSize: `${initialMaskSize * 100}%`,
+            }}
+          >
+            {/* Inner media wrapper that scales and repositions */}
+            <div 
+              ref={innerMedia}
+              className="relative w-full h-full overflow-hidden transform-gpu origin-center will-change-transform"
             >
-              <source
-                src="https://assets.mixkit.co/videos/preview/mixkit-set-of-plateaus-seen-from-the-sky-in-a-sunny-day-51197-large.mp4"
-                type="video/mp4"
-              />
-            </video>
+              <video
+                autoPlay
+                muted
+                loop
+                playsInline
+                className="absolute inset-0 w-full h-full object-cover"
+              >
+                <source
+                  src="/assets/video/video_2.mp4"
+                  type="video/mp4"
+                />
+              </video>
+            </div>
           </div>
         </div>
       </div>
