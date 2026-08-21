@@ -16,6 +16,8 @@ import HeroSection from '@/app/components/HeroBanner/page';
 import ServicesSection from '@/app/components/Service-section/page';
 import AboutUs from '@/app/components/Aboutus/page';
 import ClientMarquee from '@/app/components/ClientMarquee/page';
+import CertificatesMarquee from '@/app/components/CertificatesMarquee/page';
+import BuyNowBanner from '@/app/components/BuyNowBanner/page';
 
 export default function Home() {
   return (
@@ -52,14 +54,21 @@ export default function Home() {
         {/* Scroll Video Text Mask */}
         <TextMaskScroll />
 
+        {/* Accreditations & Quality Certificates Marquee */}
+        <CertificatesMarquee />
+
         {/* Testimonials Section */}
         <Testimonials />
 
         {/* FAQ Section */}
         <WashroomCubiclesFAQ />
 
+        {/* Buy Now / CTA Banner Section */}
+      
+
         {/* Contact Us Section */}
         <ContactSection />
+        <BuyNowBanner />
 
         {/* Footer Section */}
         <FooterSection />

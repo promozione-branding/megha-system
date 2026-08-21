@@ -205,12 +205,12 @@ export default function Navbar() {
 
             {/* Primary shimmer CTA */}
             <a
-              href="#portfolio"
+              href="/products"
               className="group relative inline-flex items-center gap-2 bg-[#0d2461] text-white px-5 sm:px-6 py-2.5 text-[14px] font-bold rounded-lg overflow-hidden transition-all duration-300 hover:shadow-[0_8px_30px_rgba(13,36,97,0.35)] hover:-translate-y-0.5 active:translate-y-0"
             >
               {/* Gold shimmer sweep */}
               <span className="absolute inset-0 bg-gradient-to-r from-transparent via-[#f5bd24]/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-in-out" />
-              <span className="relative z-10">View Portfolio</span>
+              <span className="relative z-10">All Products</span>
               <ArrowRight className="relative z-10 w-4 h-4 group-hover:translate-x-1 transition-transform duration-200" />
             </a>
           </div>
@@ -229,20 +229,20 @@ export default function Navbar() {
         {/* Mobile Drawer */}
         {mobileMenuOpen && (
           <div className="lg:hidden bg-white border-t border-[#0d2461]/10 px-6 py-6 space-y-1">
-            <a href="#" className="block py-3 px-3 rounded-xl text-sm font-bold text-[#0d2461] bg-[#0d2461]/5">Home</a>
+            <a href="/" className="block py-3 px-3 rounded-xl text-sm font-bold text-[#0d2461] bg-[#0d2461]/5">Home</a>
             <a href="#about" className="block py-3 px-3 rounded-xl text-sm font-medium text-gray-700 hover:bg-[#0d2461]/5 hover:text-[#0d2461] transition-colors">About Us</a>
             <a href="#services" className="block py-3 px-3 rounded-xl text-sm font-medium text-gray-700 hover:bg-[#0d2461]/5 hover:text-[#0d2461] transition-colors">Services</a>
-            <a href="#projects" className="block py-3 px-3 rounded-xl text-sm font-medium text-gray-700 hover:bg-[#0d2461]/5 hover:text-[#0d2461] transition-colors">Projects</a>
+            <a href="/products" className="block py-3 px-3 rounded-xl text-sm font-medium text-gray-700 hover:bg-[#0d2461]/5 hover:text-[#0d2461] transition-colors">All Products</a>
             <a href="#testimonials" className="block py-3 px-3 rounded-xl text-sm font-medium text-gray-700 hover:bg-[#0d2461]/5 hover:text-[#0d2461] transition-colors">Testimonials</a>
             <a href="#faq" className="block py-3 px-3 rounded-xl text-sm font-medium text-gray-700 hover:bg-[#0d2461]/5 hover:text-[#0d2461] transition-colors">FAQ</a>
             <a href="#contact" className="block py-3 px-3 rounded-xl text-sm font-medium text-gray-700 hover:bg-[#0d2461]/5 hover:text-[#0d2461] transition-colors">Contact</a>
 
             <div className="pt-4 border-t border-[#0d2461]/10 space-y-2">
               <a
-                href="#portfolio"
+                href="/products"
                 className="w-full flex items-center justify-center gap-2 bg-[#0d2461] text-white py-3.5 text-sm font-semibold rounded-xl hover:bg-[#0a1b52] transition-colors"
               >
-                <span>View Portfolio</span>
+                <span>All Products</span>
                 <ArrowRight className="w-4 h-4" />
               </a>
               <a

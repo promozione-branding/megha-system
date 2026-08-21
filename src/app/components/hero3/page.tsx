@@ -89,7 +89,7 @@ export default function Hero3() {
   ];
 
   return (
-    <div ref={containerRef} className="relative bg-[#f8fafc] text-[#0f172a] min-h-[230vh] pb-32">
+    <div ref={containerRef} className="relative bg-[#f8fafc] text-[#0f172a] min-h-[195vh] pb-16">
       <div className="max-w-7xl mx-auto px-6 md:px-14 relative">
 
         {/* --- HERO SECTION --- */}
@@ -108,8 +108,8 @@ export default function Hero3() {
                 <span className="text-[#334155]">delivers results.</span>
               </h1>
 
-              <p className="text-base md:text-lg text-slate-600 font-normal leading-relaxed mb-8 max-w-sm">
-                <strong className="text-[#0f172a] font-semibold">Strategic design that drives growth, not just looks good.</strong> I create everything your brand needs to attract customers and turn them into sales.
+              <p className="text-lg text-slate-600 mb-8 leading-relaxed font-normal">
+                I help ambitious companies transform their digital presence through strategic design, high-performance web development, and brand identity.
               </p>
 
               <button className="px-6 py-3.5 rounded-full bg-[#0f172a] text-white font-semibold hover:bg-[#1e293b] transition-all shadow-md flex items-center gap-3">
@@ -133,7 +133,7 @@ export default function Hero3() {
         </div>
 
         {/* Spacer for 2x2 Grid Height */}
-        <div className="min-h-[120vh] w-full" />
+        <div className="min-h-[105vh] w-full" />
 
         {/* --- ANIMATED CARDS LAYER --- */}
         <div className="absolute inset-0 w-full h-full pointer-events-none px-6 md:px-14">

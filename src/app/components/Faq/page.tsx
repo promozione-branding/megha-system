@@ -46,7 +46,7 @@ export default function WashroomCubiclesFAQ() {
   };
 
   return (
-    <section className="py-20 bg-white flex items-center justify-center p-4 sm:p-8 lg:p-16 font-sans text-slate-900 antialiased">
+    <section className="pt-2 sm:pt-4 lg:pt-6 pb-16 md:pb-20 lg:pb-24 bg-white flex items-center justify-center px-4 sm:px-8 lg:px-16 font-sans text-slate-900 antialiased">
       <div className="w-full max-w-7xl grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 items-start">
         
         {/* Left Column: Heading & Showcase Card */}
