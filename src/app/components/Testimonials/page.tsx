@@ -29,8 +29,8 @@ const testimonials = [
 
 export default function Testimonials() {
   return (
-    <section className="w-full overflow-hidden bg-white py-16 md:py-20 lg:py-24">
-      <div className="mx-auto max-w-[1280px] px-5 sm:px-8 lg:px-10">
+    <section className="w-full overflow-hidden bg-white py-[3pc]">
+      <div className="mx-auto max-w-[1536px] px-5 sm:px-8 lg:px-12">
 
         {/* ================= MAIN AREA ================= */}
         <div className="relative grid grid-cols-1 lg:grid-cols-[48%_52%]">
@@ -60,7 +60,7 @@ export default function Testimonials() {
 
             {/* Label */}
             <div className="mb-6 flex items-center gap-4">
-              <span className="text-[10px] font-semibold uppercase tracking-[0.55em] text-gray-700 sm:text-[11px]">
+              <span className="text-sm sm:text-base lg:text-lg font-bold uppercase tracking-[0.35em] text-[#0d2461]">
                 Testimonials
               </span>
             </div>
@@ -179,7 +179,7 @@ export default function Testimonials() {
         </div>
 
         {/* ================= SLIDER DOTS ================= */}
-        <div className="mt-12 flex items-center justify-center gap-2 lg:mt-[220px]">
+        <div className="mt-8 flex items-center justify-center gap-2 lg:mt-[100px]">
 
           <span className="h-1.5 w-1.5 rounded-full bg-gray-200" />
           <span className="h-1.5 w-1.5 rounded-full bg-gray-200" />

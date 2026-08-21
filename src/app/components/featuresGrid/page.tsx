@@ -8,32 +8,28 @@ const features = [
     id: "01",
     subtitle: "EXPLORE THE FEATURES",
     title: "UNIQUE\nSOLUTIONS",
-    // Updated working Unsplash gaming/controller image
-    image: "https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=800&auto=format&fit=crop", 
+    image: "/assets/features-grid/2 (22).webp", 
     link: "#",
   },
   {
     id: "02",
     subtitle: "EXPLORE THE FEATURES",
     title: "PROJECT\nOVERVIEW",
-    // Placeholder tech image
-    image: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=800&auto=format&fit=crop",
+    image: "/assets/features-grid/1 (71).webp",
     link: "#",
   },
   {
     id: "03",
     subtitle: "EXPLORE THE FEATURES",
     title: "EXPLORE\nPOTENTIALS",
-    // Placeholder tech image
-    image: "https://images.unsplash.com/photo-1618401471353-b98afee0b2eb?q=80&w=800&auto=format&fit=crop",
+    image: "/assets/features-grid/2 (22).webp",
     link: "#",
   },
   {
     id: "04",
     subtitle: "EXPLORE THE FEATURES",
     title: "DIGITAL\nINSTRUMENT",
-    // Placeholder tech image
-    image: "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=800&auto=format&fit=crop",
+    image: "/assets/features-grid/1 (71).webp",
     link: "#",
   },
 ];
@@ -45,7 +41,7 @@ export default function FeaturesGrid() {
         {features.map((feature, index) => (
           <div
             key={feature.id}
-            className={`group relative flex flex-col justify-between min-h-[450px] p-12 overflow-hidden cursor-pointer bg-white transition-colors duration-500 ${
+            className={`group relative flex flex-col justify-between min-h-[330px] p-7 sm:p-8 overflow-hidden cursor-pointer bg-white transition-colors duration-500 ${
               // Add right borders to separate columns (except on mobile where they stack)
               index !== features.length - 1 ? "lg:border-r border-gray-200" : ""
             } ${
@@ -69,23 +65,23 @@ export default function FeaturesGrid() {
               
               <div className="relative">
                 {/* Giant Background Number */}
-                <span className="absolute -top-8 -left-4 text-9xl font-bold text-gray-50 group-hover:text-white/10 transition-colors duration-500 pointer-events-none select-none z-[-1]">
+                <span className="absolute -top-6 -left-2 text-8xl font-bold text-gray-50 group-hover:text-white/10 transition-colors duration-500 pointer-events-none select-none z-[-1]">
                   {feature.id}
                 </span>
 
                 {/* Subtitle */}
-                <p className="text-[10px] sm:text-xs font-semibold tracking-[0.2em] text-gray-500 group-hover:text-gray-200 transition-colors duration-500 uppercase mt-12">
+                <p className="text-[10px] sm:text-xs font-semibold tracking-[0.2em] text-gray-500 group-hover:text-gray-200 transition-colors duration-500 uppercase mt-4">
                   {feature.subtitle}
                 </p>
 
                 {/* Main Title */}
-                <h3 className="text-3xl sm:text-4xl font-bold text-black group-hover:text-white transition-colors duration-500 uppercase mt-3 whitespace-pre-line leading-tight">
+                <h3 className="text-2xl sm:text-3xl font-bold text-black group-hover:text-white transition-colors duration-500 uppercase mt-2 whitespace-pre-line leading-tight">
                   {feature.title}
                 </h3>
               </div>
 
               {/* Bottom "Read More" Link */}
-              <div className="mt-auto pt-12">
+              <div className="mt-auto pt-6">
                 <a
                   href={feature.link}
                   className="text-[10px] sm:text-xs font-bold tracking-[0.2em] text-black group-hover:text-white transition-colors duration-500 uppercase flex items-center gap-2"

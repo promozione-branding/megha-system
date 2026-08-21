@@ -104,24 +104,6 @@ export default function AboutUs() {
                 </p>
               </motion.div>
             </div>
-
-            {/* CTA Button */}
-            <motion.div
-              initial={{ opacity: 0, y: 15 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.4 }}
-              className="pt-2"
-            >
-              <a 
-                href="#read-more" 
-                className="inline-flex items-center justify-center gap-3 px-7 py-3.5 border-2 border-[#0d2461] text-[#0d2461] font-bold text-xs tracking-wider uppercase transition-all duration-300 hover:bg-[#0d2461] hover:text-white hover:shadow-[0_8px_25px_rgba(13,36,97,0.25)] group rounded-lg"
-              >
-                READ MORE 
-                <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
-              </a>
-            </motion.div>
-
           </motion.div>
         </div>
       </div>
