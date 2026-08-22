@@ -44,11 +44,11 @@ export default function Navbar() {
         {/* Gold accent line at top */}
         <div className="absolute top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-transparent via-[#f5bd24] to-transparent opacity-80" />
 
-        <div className="mx-auto max-w-[1750px] px-4 sm:px-8 lg:px-12 xl:px-16 h-[72px] flex items-center justify-between gap-4">
+        <div className="mx-auto max-w-[1750px] px-4 sm:px-8 lg:px-12 xl:px-16 h-[72px] flex items-center justify-between gap-4 overflow-hidden">
 
           {/* Left: Logo Image */}
-          <Link href="/" className="flex items-center shrink-0 group py-0.5">
-            <div className="relative h-[50px] w-[320px] sm:w-[360px] overflow-hidden transition-all duration-300 group-hover:scale-[1.02]">
+          <Link href="/" className="flex items-center shrink-0 group">
+            <div className="relative h-[50px] w-[320px] sm:w-[360px] transition-all duration-300 group-hover:scale-[1.02]">
               <Image
                 src="/assets/logo/logo.png"
                 alt="Megha Systems Logo"
