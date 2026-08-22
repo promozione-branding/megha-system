@@ -24,16 +24,16 @@ export default function ContactSection() {
   return (
     <section className="py-12 bg-slate-50 flex items-center justify-center p-4 sm:p-6 lg:p-8 font-sans antialiased text-slate-900">
       <div className="relative w-full max-w-[1400px] bg-white rounded-[16px] border border-slate-100 p-6 sm:p-8 lg:p-12 overflow-hidden">
-        
+
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 relative z-10">
-          
+
           {/* Left Info Panel (Clean light beige/gray tone matching image 2) */}
           <aside className="lg:col-span-4 bg-[#E5E2E0] rounded-[16px] p-6 sm:p-8 flex flex-col justify-between space-y-6">
             <div className="space-y-6">
               <h2 className="text-4xl font-bold tracking-tight leading-[1.2] text-black">
                 Let's Talk Beautiful Spaces.
               </h2>
- 
+
               {/* Info Cards */}
               <div className="space-y-4 pt-1">
                 <div className="bg-[#F0EDED] rounded-[12px] p-4.5 flex items-center gap-3.5">
@@ -42,7 +42,7 @@ export default function ContactSection() {
                   </div>
                   <div>
                     <p className="text-[12px] text-slate-600 leading-tight">Call Us</p>
-                    <p className="text-base font-semibold text-black tracking-tight mt-0.5">+800-3374-4676</p>
+                    <p className="text-base font-semibold text-black tracking-tight mt-0.5">+91 9873735713</p>
                   </div>
                 </div>
 
@@ -52,7 +52,7 @@ export default function ContactSection() {
                   </div>
                   <div>
                     <p className="text-[12px] text-slate-600 leading-tight">Mail Us</p>
-                    <p className="text-base font-semibold text-black tracking-tight mt-0.5 break-all">hola@dominantsite.com</p>
+                    <p className="text-base font-semibold text-black tracking-tight mt-0.5 break-all">contact@meghasystems.com</p>
                   </div>
                 </div>
 
@@ -63,7 +63,7 @@ export default function ContactSection() {
                   <div>
                     <p className="text-[12px] text-slate-600 leading-tight">Visit Us</p>
                     <p className="text-base font-semibold text-black tracking-tight leading-snug mt-0.5">
-                      456 Creative District Ahmad Yani, Medan
+                      Adore Business City, Sector 72-73, Faridabad, Haryana, 121004
                     </p>
                   </div>
                 </div>
@@ -74,23 +74,23 @@ export default function ContactSection() {
             <div className="pt-4 border-t border-black/10 space-y-2.5">
               <p className="text-xs font-semibold text-slate-800">Connect with us:</p>
               <div className="flex items-center gap-3">
-                <a 
-                  href="#facebook" 
-                  className="text-slate-800 hover:text-black transition-all" 
+                <a
+                  href="#facebook"
+                  className="text-slate-800 hover:text-black transition-all"
                   aria-label="Facebook"
                 >
                   <Share2 className="w-4 h-4" />
                 </a>
-                <a 
-                  href="#twitter" 
-                  className="text-slate-800 hover:text-black transition-all" 
+                <a
+                  href="#twitter"
+                  className="text-slate-800 hover:text-black transition-all"
                   aria-label="Twitter"
                 >
                   <Globe className="w-4 h-4" />
                 </a>
-                <a 
-                  href="#youtube" 
-                  className="text-slate-800 hover:text-black transition-all" 
+                <a
+                  href="#youtube"
+                  className="text-slate-800 hover:text-black transition-all"
                   aria-label="YouTube"
                 >
                   <Video className="w-4 h-4" />
@@ -238,7 +238,7 @@ export default function ContactSection() {
             <path d="M330 200 L410 240 L410 330 L330 290 Z" />
             <path d="M330 200 L410 160 L330 120" />
             <path d="M410 160 L410 240" strokeWidth="2" />
-            
+
             {/* Cubicle 3 (Left Pod) */}
             <path d="M170 200 L90 240 L90 330 L170 290 Z" />
             <path d="M170 200 L90 160 L170 120" />

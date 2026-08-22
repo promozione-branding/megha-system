@@ -165,7 +165,7 @@ export default function Hero3() {
                   </div>
 
                   {/* Title & Metadata */}
-                  <div className="flex justify-between items-center mt-3.5 px-1">
+                  {/* <div className="flex justify-between items-center mt-3.5 px-1">
                     <div>
                       <h3 className="text-base md:text-lg font-bold text-[#0f172a] tracking-tight group-hover:text-blue-700 transition-colors">
                         {project.title}
@@ -176,7 +176,7 @@ export default function Hero3() {
                     <span className="text-xs font-semibold text-[#1e3a8a] flex items-center gap-1 group-hover:translate-x-0.5 transition-transform">
                       ↗ View Project
                     </span>
-                  </div>
+                  </div> */}
                 </motion.div>
               );
             })}
