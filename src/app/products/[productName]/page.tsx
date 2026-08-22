@@ -40,7 +40,7 @@ export const PROJECTS_DATA: Record<
     style: 'Coastal Minimalism',
     size: '320 m²',
     heroImage:
-      'https://media.istockphoto.com/id/1206101413/photo/row-of-public-toilet-decorated-with-wooden-partition.jpg?s=612x612&w=0&k=20&c=RPzZ0KfkG6DsxrFjPfYEyWa30BJCkS43ycS-Cfp1LUc=',
+      '/product/product.png',
     concept:
       'A clean and calming restroom environment inspired by coastal architecture, using soft neutral tones, natural textures, and moisture-resistant materials to create a refined yet functional space.',
     palette: [

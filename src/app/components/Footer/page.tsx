@@ -45,7 +45,7 @@ export default function FooterSection() {
                 Luxury Systems for iconic spaces.
               </h3>
               <p className="text-base text-white/80 leading-relaxed font-light">
-                456 Creative District Ahmad Yani, Medan, Indonesia 90001
+                Plot No.341/1,2,3 & 4, Safdar Nagar, Borabanda, Hyderabad-500018
               </p>
             </div>
 
@@ -100,16 +100,21 @@ export default function FooterSection() {
               </h4>
               <div className="space-y-3.5 text-base text-white/80 font-normal">
                 <p className="leading-relaxed">
-                  Head Office Suite 3, Creative Tower, Medan
+                  Plot Number-P10/J-3, Adore Business City, Sector 72-73, Faridabad, Haryana, 121004
                 </p>
                 <p>
                   <a href="mailto:hola@dominantsite.com" className="hover:text-white transition-colors font-medium text-white">
-                    hola@dominantsite.com
+                    contact@meghasystems.com
                   </a>
                 </p>
                 <p>
-                  <a href="tel:+80033744676" className="hover:text-white transition-colors font-medium text-white">
-                    +800-3374-4676
+                  <a href="tel:+919873735716" className="hover:text-white transition-colors font-medium text-white">
+                    +91 9873735716
+                  </a>
+                </p>
+                <p>
+                  <a href="tel:+919873735713" className="hover:text-white transition-colors font-medium text-white">
+                    +91 9873735713
                   </a>
                 </p>
               </div>

@@ -48,9 +48,9 @@ export default function Navbar() {
 
           {/* Left: Logo Image */}
           <Link href="/" className="flex items-center shrink-0 group py-0.5">
-            <div className="relative h-[66px] w-[320px] sm:w-[360px] overflow-hidden transition-all duration-300 group-hover:scale-[1.02]">
+            <div className="relative h-[50px] w-[320px] sm:w-[360px] overflow-hidden transition-all duration-300 group-hover:scale-[1.02]">
               <Image
-                src="/assets/logo/clean_logo.png"
+                src="/assets/logo/logo.png"
                 alt="Megha Systems Logo"
                 fill
                 className="object-contain object-left scale-140 origin-left -translate-y-1.5"

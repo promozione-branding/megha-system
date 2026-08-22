@@ -23,25 +23,25 @@ const projects: Project[] = [
     id: 1,
     title: 'Kora',
     category: 'Consulting Site',
-    image: '/assets/moving_down_images/image1.jpeg',
+    image: 'https://media.istockphoto.com/id/2290136631/photo/modern-public-mens-restroom-with-stalls-and-urinals-in-clean-commercial-facility.webp?a=1&b=1&s=612x612&w=0&k=20&c=lzm5u9HMHg8e7pwpGAzRC2B0bmOcaQgJVUpA22VPsGg=',
   },
   {
     id: 2,
     title: 'KYMA',
     category: 'AI Agency',
-    image: '/assets/moving_down_images/image2.jpeg',
+    image: 'https://media.istockphoto.com/id/1144758380/photo/interior-of-a-public-toilet-with-open-doors-in-the-stalls-in-dark-gray-tones.jpg?s=612x612&w=0&k=20&c=4k30JfqZj5DipwX0eD8vsDtBHjLZdqNTN315CnID1_Q=',
   },
   {
     id: 3,
     title: 'Mugen Studio',
     category: 'Design Studio',
-    image: '/assets/moving_down_images/image3.jpeg',
+    image: 'https://media.istockphoto.com/id/506005606/photo/doors-from-toilets.jpg?s=612x612&w=0&k=20&c=W398cXmdR42uT5p6z4DdV5qqVfsVpdQcUK5r6Q2e3w0=',
   },
   {
     id: 4,
     title: 'Axiom Performance',
     category: 'Ecommerce Site',
-    image: '/assets/moving_down_images/image4.jpeg',
+    image: 'https://media.istockphoto.com/id/488209420/photo/modern-glass-cubicle-doors.jpg?s=612x612&w=0&k=20&c=-tEek_3R6viR2h_0WLiZtC7x6Jqo9DUMKXZc8MMmru4=',
   },
 ];
 

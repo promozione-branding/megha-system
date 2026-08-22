@@ -25,7 +25,7 @@ const projects: Project[] = [
     description:
       "Inspired by ocean hues and natural light, this beachside villa radiates relaxed luxury with airy spaces and organic finishes.",
     image:
-      "https://media.istockphoto.com/id/2268277974/photo/modern-public-restroom-stalls-interior-with-gray-partitions-and-clean-flooring.jpg?s=612x612&w=0&k=20&c=xNk1QU1u7pq2HR613e7zCntrTQclh5cEWgEA8d6f2VQ=",
+      "https://media.istockphoto.com/id/508182124/photo/doors-from-toilets.jpg?s=612x612&w=0&k=20&c=ExswbkHEa6wG_h53KZcn2xbE_rKfcQ-c3duz2YSCuhQ=",
   },
   {
     number: "03",
@@ -33,7 +33,7 @@ const projects: Project[] = [
     description:
       "A century-old residence reimagined with a modern soul. Classic moldings preserved, paired with contemporary minimalism.",
     image:
-      "https://media.istockphoto.com/id/2290034255/photo/interior-view-of-a-long-public-restroom-or-changing-room-corridor-featuring-rows-of-light.jpg?s=612x612&w=0&k=20&c=ibv4jaudtOu06gwynrkhe8c3fZlipfX0MgRtTFlJurM=",
+      "https://media.istockphoto.com/id/525755111/photo/toilet-doors.jpg?s=612x612&w=0&k=20&c=IOtQdiMHbA1b-751jRjV7x1sD3YYp1DbjvMNoOIV7R0=",
   },
 ];
 

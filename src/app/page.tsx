@@ -42,11 +42,11 @@ export default function Home() {
         {/* Services Section */}
         <ServicesSection />
 
-        {/* Structural Architectural Section */}
-        <LightWallSectionScroll />
-
         {/* Our Projects Section */}
         <OurProjectsSection />
+
+        {/* Structural Architectural Section */}
+        <LightWallSectionScroll />
 
         {/* Split Vantage Showcase Section */}
         <SplitVantage />

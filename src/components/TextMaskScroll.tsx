@@ -38,7 +38,7 @@ export default function TextMaskScroll() {
         // --- PHASE 1: 0% to 60% — Text Mask Zooms In ---
         const zoomProgress = Math.min(1, progress / 0.6);
         const maskSize = (initialMaskSize + (targetMaskSize * Math.pow(zoomProgress, 3))) * 100;
-        
+
         // At the very end of zoom, remove mask completely to prevent clipping artifacts
         if (zoomProgress > 0.99) {
           stickyMask.current.style.maskImage = 'none';
@@ -52,7 +52,7 @@ export default function TextMaskScroll() {
 
         // --- PHASE 2: 60% to 100% — Image Repositions & Shrinks ---
         const shrinkProgress = Math.max(0, (progress - 0.6) / 0.4);
-        
+
         // Scale down from 1 to 0.90 (90% width)
         const scale = 1 - (shrinkProgress * 0.10);
         // Add border radius from 0 to 32px
@@ -102,7 +102,7 @@ export default function TextMaskScroll() {
             }}
           >
             {/* Inner media wrapper that scales and repositions */}
-            <div 
+            <div
               ref={innerMedia}
               className="relative w-full h-full overflow-hidden transform-gpu origin-center will-change-transform"
             >
@@ -118,6 +118,9 @@ export default function TextMaskScroll() {
                   type="video/mp4"
                 />
               </video>
+              <div className='absolute bottom-6 right-5 w-40 bg-white p-2 rounded-lg'>
+                <img src="/assets/logo/logo.png" alt="" />
+              </div>
             </div>
           </div>
         </div>
