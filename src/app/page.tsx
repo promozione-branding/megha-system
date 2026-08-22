@@ -28,7 +28,7 @@ export default function Home() {
 
         {/* Main Hero Banner Section */}
         <HeroSection />
-        <FeaturesGrid />
+        {/* <FeaturesGrid /> */}
 
         {/* Client Logos Marquee */}
         <ClientMarquee />
@@ -64,7 +64,7 @@ export default function Home() {
         <WashroomCubiclesFAQ />
 
         {/* Buy Now / CTA Banner Section */}
-      
+
 
         {/* Contact Us Section */}
         <ContactSection />

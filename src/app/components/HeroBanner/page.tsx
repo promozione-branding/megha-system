@@ -23,21 +23,28 @@ const HERO_SLIDES = [
     id: 2,
     title: 'Architectural Precision in Every Space.',
     description: 'Engineered for durability, antibacterial protection, and sleek aesthetic finish across high-traffic commercial environments.',
-    src: '/assets/hero_section_images/Apple-office-featured-20240117 (2).webp',
+    src: '/assets/hero_section_images/l53220260518130534.webp',
     alt: 'Apple Office Architectural Interior Showcase',
   },
+  // {
+  //   id: 3,
+  //   title: 'Luxury Systems for Iconic Interiors.',
+  //   description: 'Customizable heights, premium hardware finishes, and scratch-proof surfaces built for world-class architectural standards.',
+  //   src: '/assets/hero_section_images/Chennai Restaurant_KFConscious.jpg.jpeg',
+  //   alt: 'Architectural Interior Showcase',
+  // },
   {
-    id: 3,
+    id: 5,
     title: 'Luxury Systems for Iconic Interiors.',
     description: 'Customizable heights, premium hardware finishes, and scratch-proof surfaces built for world-class architectural standards.',
-    src: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1800&auto=format&fit=crop',
+    src: '/assets/hero_section_images/McDonald-1.jpg.jpeg',
     alt: 'Architectural Interior Showcase',
   },
   {
     id: 4,
     title: 'Innovative Materials, Enduring Quality.',
     description: 'Transforming modern washrooms and interior spaces with sustainable, high-performance compact laminate solutions.',
-    src: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?q=80&w=1800&auto=format&fit=crop',
+    src: '/assets/hero_section_images/KFC-opens-first-outlet-in-Mokokchung-plans-expansion-to-Wokha-and-Mon.webp',
     alt: 'Modern Restroom Systems Showcase',
   },
 ];
@@ -106,7 +113,7 @@ export default function HeroSection() {
     <>
       <section className="w-full bg-white text-black font-sans antialiased pt-2 sm:pt-3 lg:pt-4 pb-8 sm:pb-10 lg:pb-12">
         <div className="mx-auto max-w-[1750px] px-6 sm:px-10 lg:px-14 xl:px-16">
-          
+
           {/* Top Sub-header */}
           <div className="mb-2 sm:mb-3">
             <span className="text-[10px] sm:text-[11px] font-medium tracking-[0.45em] text-gray-500 uppercase">
@@ -143,9 +150,9 @@ export default function HeroSection() {
 
           {/* Bottom Feature Grid */}
           <div className="mt-8 sm:mt-10 grid grid-cols-1 lg:grid-cols-[21%_79%] xl:grid-cols-[20%_80%] gap-5 lg:gap-6 items-stretch">
-            
+
             {/* Left Quote Card with Center Animated Play Button */}
-            <div 
+            <div
               onClick={() => setIsVideoOpen(true)}
               className="relative group/card bg-gradient-to-b from-[#f8f7f4] to-[#efeee9] border border-black/5 rounded-[22px] p-6 sm:p-7 lg:p-8 flex flex-col justify-between min-h-[320px] sm:min-h-[380px] lg:min-h-[440px] xl:min-h-[480px] shadow-sm hover:shadow-md transition-all duration-500 cursor-pointer overflow-hidden"
             >
@@ -245,7 +252,7 @@ export default function HeroSection() {
       {isVideoOpen && (
         <div className="fixed inset-0 z-[100] flex items-center justify-center bg-black/80 backdrop-blur-md p-4 sm:p-6 animate-in fade-in duration-300">
           <div className="relative w-full max-w-5xl bg-black rounded-2xl overflow-hidden shadow-2xl border border-white/10">
-            
+
             {/* Modal Header bar */}
             <div className="flex items-center justify-between px-6 py-4 border-b border-white/10 bg-gradient-to-r from-[#0d2461] to-black">
               <div className="flex items-center gap-2.5">
