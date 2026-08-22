@@ -5,69 +5,8 @@ import Link from 'next/link';
 import Navbar from '../components/Navabar/page';
 import FooterSection from '../components/Footer/page';
 import { ArrowRight, Sparkles, Layers, ShieldCheck, Award } from 'lucide-react';
+import { PRODUCTS_CATALOG } from "./../../data.js"
 
-const PRODUCTS_CATALOG = [
-  {
-    slug: 'coastal-calm-retreat',
-    name: 'Coastal Calm Retreat',
-    category: 'Private Beach Villa',
-    location: 'Bali, Indonesia',
-    size: '320 m²',
-    image: 'https://images.unsplash.com/photo-1600607687920-4e2a09be1587?auto=format&fit=crop&q=80&w=1200',
-    description: 'A tranquil beachfront villa designed to evoke a serene connection between indoor living and organic simplicity.',
-    badge: 'Featured Project',
-  },
-  {
-    slug: 'hpl-cubicle-system',
-    name: 'Compact Laminate HPL Cubicles',
-    category: 'Restroom Systems',
-    location: 'Mumbai, India',
-    size: 'Commercial High-Traffic',
-    image: 'https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&q=80&w=1200',
-    description: '100% moisture-resistant high-pressure laminate partition system with SS 316 anti-vandal hardware.',
-    badge: 'Best Seller',
-  },
-  {
-    slug: 'modern-serenity-apartment',
-    name: 'Modern Serenity Apartment',
-    category: 'Luxury Residential',
-    location: 'Jakarta, Indonesia',
-    size: '240 m²',
-    image: 'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&q=80&w=1200',
-    description: 'Bespoke marble finishes, warm teakwood textures, and minimalist spatial planning for modern urban living.',
-    badge: 'Premium Finish',
-  },
-  {
-    slug: 'executive-loft-partition',
-    name: 'Urban Executive Loft',
-    category: 'Corporate Spaces',
-    location: 'Singapore',
-    size: '500 m²',
-    image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=1200',
-    description: 'Acoustically insulated modular glass and laminate partitions engineered for high-performance workplaces.',
-    badge: 'Acoustic Rated',
-  },
-  {
-    slug: 'heritage-house-revival',
-    name: 'Heritage House Revival',
-    category: 'Boutique Restoration',
-    location: 'Medan, Indonesia',
-    size: '410 m²',
-    image: 'https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?auto=format&fit=crop&q=80&w=1200',
-    description: 'Restoring historic architectural grace with modern humidity-resistant stone paneling and custom fittings.',
-    badge: 'Architectural Icon',
-  },
-  {
-    slug: 'botanical-spa-restroom',
-    name: 'Botanical Spa Restroom System',
-    category: 'Wellness & Spa',
-    location: 'Bangalore, India',
-    size: '180 m²',
-    image: 'https://images.unsplash.com/photo-1507652313519-d4e9174996dd?auto=format&fit=crop&q=80&w=1200',
-    description: 'Antibacterial, scratch-resistant wall paneling paired with concealed ceiling-hung cubicle structures.',
-    badge: 'Eco Friendly',
-  },
-];
 
 export default function AllProductsPage() {
   return (
@@ -78,7 +17,7 @@ export default function AllProductsPage() {
       {/* Hero Header */}
       <header className="relative bg-gradient-to-b from-[#0d2461] to-[#08173d] text-white py-16 sm:py-20 px-6 overflow-hidden">
         <div className="absolute inset-0 opacity-10 bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:16px_16px]" />
-        
+
         <div className="max-w-7xl mx-auto text-center relative z-10 space-y-4">
           <div className="inline-flex items-center gap-2 bg-white/10 border border-white/20 backdrop-blur-md px-4 py-1.5 rounded-full text-xs font-semibold tracking-widest text-[#f5bd24] uppercase">
             <Sparkles className="w-3.5 h-3.5" />
@@ -97,7 +36,7 @@ export default function AllProductsPage() {
 
       {/* Main Catalog Grid */}
       <main className="flex-1 max-w-7xl mx-auto w-full px-6 sm:px-8 py-12 sm:py-16">
-        
+
         {/* Category Stats bar */}
         <div className="mb-10 flex flex-wrap items-center justify-between gap-4 border-b border-blue-900/10 pb-6">
           <div>
@@ -128,7 +67,7 @@ export default function AllProductsPage() {
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-60 group-hover:opacity-40 transition-opacity" />
-                
+
                 {/* Badge */}
                 <div className="absolute top-4 left-4 bg-[#0d2461] text-white text-[11px] font-bold px-3 py-1 rounded-full uppercase tracking-wider shadow-md">
                   {product.badge}

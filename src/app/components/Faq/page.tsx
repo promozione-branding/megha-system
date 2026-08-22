@@ -66,7 +66,7 @@ export default function WashroomCubiclesFAQ() {
           {/* Media Card */}
           <div className="relative rounded-[28px] overflow-hidden shadow-md border border-neutral-200/80 bg-white">
             <img
-              src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?q=80&w=1200&auto=format&fit=crop"
+              src="/assets/faq.webp"
               alt="Premium Washroom Cubicle Partitions"
               className="w-full h-[270px] sm:h-[340px] object-cover"
             />

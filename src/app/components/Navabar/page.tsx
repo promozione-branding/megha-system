@@ -3,6 +3,8 @@
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { ChevronDown, ArrowRight, Menu, X, Sparkles, Building, Layers, Palette, ArrowUpRight, Phone } from 'lucide-react';
+import Link from 'next/link';
+import { PRODUCTS_CATALOG } from '@/data';
 
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -34,11 +36,10 @@ export default function Navbar() {
 
       {/* Main Navbar */}
       <header
-        className={`relative z-50 w-full transition-all duration-500 font-sans ${
-          scrolled
-            ? 'bg-white/97 backdrop-blur-2xl shadow-[0_4px_30px_rgba(13,36,97,0.12)] border-b border-[#0d2461]/10'
-            : 'bg-white border-b border-[#0d2461]/8'
-        }`}
+        className={`relative z-50 w-full transition-all duration-500 sticky top-0 font-sans ${scrolled
+          ? 'bg-white/97 backdrop-blur-2xl shadow-[0_4px_30px_rgba(13,36,97,0.12)] border-b border-[#0d2461]/10'
+          : 'bg-white border-b border-[#0d2461]/8'
+          }`}
       >
         {/* Gold accent line at top */}
         <div className="absolute top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-transparent via-[#f5bd24] to-transparent opacity-80" />
@@ -46,7 +47,7 @@ export default function Navbar() {
         <div className="mx-auto max-w-[1750px] px-4 sm:px-8 lg:px-12 xl:px-16 h-[72px] flex items-center justify-between gap-4">
 
           {/* Left: Logo Image */}
-          <a href="#" className="flex items-center shrink-0 group py-0.5">
+          <Link href="/" className="flex items-center shrink-0 group py-0.5">
             <div className="relative h-[66px] w-[320px] sm:w-[360px] overflow-hidden transition-all duration-300 group-hover:scale-[1.02]">
               <Image
                 src="/assets/logo/clean_logo.png"
@@ -56,7 +57,7 @@ export default function Navbar() {
                 priority
               />
             </div>
-          </a>
+          </Link>
 
           {/* Center: Navigation Links with Larger Font */}
           <nav className="hidden lg:flex items-center gap-1 text-[15px] sm:text-[15.5px] font-bold text-[#0d2461]">
@@ -95,6 +96,22 @@ export default function Navbar() {
                     <div className="text-[11.5px] text-gray-400 mt-0.5">Expert architects & planners</div>
                   </div>
                 </a>
+              </div>
+            </div>
+
+            <div className="relative group py-1.5 cursor-pointer">
+              <div className="flex items-center gap-1 px-3 sm:px-3.5 py-1.5 rounded-lg hover:bg-[#0d2461]/6 transition-all duration-200 relative">
+                <span>Our Products</span>
+                <ChevronDown className="w-4 h-4 opacity-60 group-hover:rotate-180 transition-transform duration-300" />
+                <span className="absolute bottom-0.5 left-3 right-3 h-[2px] bg-[#f5bd24] scale-x-0 group-hover:scale-x-100 transition-transform duration-200 rounded-full" />
+              </div>
+              <div className="absolute top-[calc(100%+2px)] left-0 hidden group-hover:block w-74 bg-white border border-[#0d2461]/10 shadow-[0_20px_60px_rgba(13,36,97,0.15)] rounded-2xl p-2 z-50">
+                <div className="absolute -top-1.5 left-6 w-5 h-3 bg-white border-l border-t border-[#0d2461]/10 rotate-45" />
+                {PRODUCTS_CATALOG.map((i, idx) => (
+                  <Link href={`/products/${i.slug}`} className='hover:text-[#f5bd24] block transition mt-2 text-nowrap'>
+                    {i.name}
+                  </Link>
+                ))}
               </div>
             </div>
 
@@ -170,20 +187,6 @@ export default function Navbar() {
                   <span>Corporate Spaces</span>
                   <ArrowUpRight className="w-4 h-4 text-[#0d2461]/40" />
                 </a>
-              </div>
-            </div>
-
-            {/* More Dropdown */}
-            <div className="relative group py-1.5 cursor-pointer">
-              <div className="flex items-center gap-1 px-3 sm:px-3.5 py-1.5 rounded-lg hover:bg-[#0d2461]/6 transition-all duration-200 relative">
-                <span>More</span>
-                <ChevronDown className="w-4 h-4 opacity-60 group-hover:rotate-180 transition-transform duration-300" />
-                <span className="absolute bottom-0.5 left-3 right-3 h-[2px] bg-[#f5bd24] scale-x-0 group-hover:scale-x-100 transition-transform duration-200 rounded-full" />
-              </div>
-              <div className="absolute top-[calc(100%+4px)] left-0 hidden group-hover:block w-48 bg-white border border-[#0d2461]/10 shadow-[0_20px_60px_rgba(13,36,97,0.15)] rounded-2xl p-2 z-50">
-                <div className="absolute -top-1.5 left-6 w-3 h-3 bg-white border-l border-t border-[#0d2461]/10 rotate-45" />
-                <a href="#faq" className="block p-3 rounded-xl hover:bg-[#f8f8ff] text-[13px] font-bold text-[#0d2461] transition-colors">FAQ</a>
-                <a href="#testimonials" className="block p-3 rounded-xl hover:bg-[#f8f8ff] text-[13px] font-bold text-[#0d2461] transition-colors">Testimonials</a>
               </div>
             </div>
 

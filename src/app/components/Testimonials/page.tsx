@@ -39,11 +39,11 @@ export default function Testimonials() {
           <div className="relative z-10">
 
             <div className="relative aspect-[1.34/1] w-full overflow-hidden rounded-[14px]">
-              <Image
-                src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=80&w=1400&auto=format&fit=crop"
+              <img
+                src="https://media.istockphoto.com/id/1206101478/photo/row-of-public-toilet-decorated-with-wooden-partition.jpg?s=612x612&w=0&k=20&c=dU8Q7gD4UC905t0YCB2WECR8PYRdjNzgH9f1IctjtEA="
                 alt="Refined interior space"
-                fill
-                priority
+                
+                
                 className="object-cover"
               />
 

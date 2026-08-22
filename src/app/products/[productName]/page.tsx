@@ -11,110 +11,344 @@ import { motion, useScroll, useTransform } from "framer-motion";
 
 
 
-const PROJECTS_DATA: Record<string, {
-  title: string;
-  category: string;
-  description: string;
-  location: string;
-  type: string;
-  style: string;
-  size: string;
-  heroImage: string;
-  concept: string;
-  palette: { label: string; value: string }[];
-  quote: string;
-  quoteAuthor: string;
-  quoteRole: string;
-  features: { title: string; content: string }[];
-}> = {
-  'coastal-calm-retreat': {
-    title: 'Coastal Calm Retreat',
+export const PROJECTS_DATA: Record<
+  string,
+  {
+    title: string;
+    category: string;
+    description: string;
+    location: string;
+    type: string;
+    style: string;
+    size: string;
+    heroImage: string;
+    concept: string;
+    palette: { label: string; value: string }[];
+    quote: string;
+    quoteAuthor: string;
+    quoteRole: string;
+    features: { title: string; content: string }[];
+  }
+> = {
+  'toilet-cubicle-neo-model': {
+    title: 'TOILET CUBICLE NEO MODEL',
     category: 'Private Beach Villa',
-    description: 'This private beachfront villa was designed to evoke a serene connection between indoor living and the surrounding natural beauty. Our goal was to create a tranquil retreat—calm, airy, and grounded in organic simplicity.',
+    description:
+      'A tranquil beachfront villa designed to evoke a serene connection between indoor living and organic simplicity.',
     location: 'Bali, Indonesia',
     type: 'Private Beach Villa',
     style: 'Coastal Minimalism',
     size: '320 m²',
-    heroImage: 'https://images.unsplash.com/photo-1600607687920-4e2a09be1587?auto=format&fit=crop&q=80&w=2000',
-    concept: 'We embraced coastal minimalism: a clean aesthetic inspired by sea, sand, and sky. Neutral palettes were layered with warm woods, textured linen, and handmade ceramics. Arched doorways and light-filled spaces encouraged movement and calm.',
+    heroImage:
+      'https://media.istockphoto.com/id/1206101413/photo/row-of-public-toilet-decorated-with-wooden-partition.jpg?s=612x612&w=0&k=20&c=RPzZ0KfkG6DsxrFjPfYEyWa30BJCkS43ycS-Cfp1LUc=',
+    concept:
+      'A clean and calming restroom environment inspired by coastal architecture, using soft neutral tones, natural textures, and moisture-resistant materials to create a refined yet functional space.',
     palette: [
-      { label: 'Walls', value: 'White lime-washed plaster' },
-      { label: 'Floors', value: 'Microcement in soft sand tone' },
-      { label: 'Wood', value: 'Reclaimed teak & light oak' },
-      { label: 'Textiles', value: 'Linen, cotton, and jute' },
-      { label: 'Accent Metals', value: 'Aged brass & brushed bronze' },
-      { label: 'Tiles', value: 'Handmade ceramic & honed limestone' },
-      { label: 'Decor', value: 'Woven seagrass, artisanal pottery, driftwood sculpture' },
+      { label: 'Panels', value: 'Moisture-resistant decorative laminate' },
+      { label: 'Partitions', value: 'Compact laminate toilet cubicles' },
+      { label: 'Hardware', value: 'Brushed stainless steel fittings' },
+      { label: 'Flooring', value: 'Anti-skid stone finish' },
+      { label: 'Accents', value: 'Natural wood and warm neutral tones' },
     ],
-    quote: 'It feels like the ocean moved inside. Peaceful, effortless, and personal. Every space feels like a breath.',
-    quoteAuthor: 'Lisa Amara',
+    quote:
+      'A beautifully balanced combination of privacy, durability, and understated elegance.',
+    quoteAuthor: 'Project Client',
     quoteRole: 'Villa Owner',
     features: [
-      { title: 'Panoramic Sea-Facing Living Room', content: 'Seamless transition between indoors and ocean views with floor-to-ceiling sliding glass panels.' },
-      { title: 'Custom Teakwood & Rattan Furniture', content: 'Handcrafted pieces designed specifically for the space, blending modern comfort with traditional techniques.' },
-      { title: 'Indoor-Outdoor Spa Bathroom', content: 'A luxurious bathing experience featuring natural stone elements and direct access to a private garden.' },
-      { title: 'Textured Linen & Soft Drapery', content: 'Bespoke textiles that soften the architectural lines and flutter beautifully in the coastal breeze.' },
-      { title: 'Concealed Storage Solutions', content: 'Minimalist cabinetry integrated into the walls to maintain a clean, uncluttered visual aesthetic.' },
-      { title: 'Natural Light Optimization', content: 'Strategically placed skylights and reflective surfaces to maximize daylight throughout the day.' },
-      { title: 'Ocean-Inspired Color Harmony', content: 'A curated palette of crisp whites, deep blues, and sandy tones reflecting the natural surroundings.' }
-    ]
+      {
+        title: 'Moisture-Resistant Construction',
+        content:
+          'Materials are selected to withstand humid coastal environments while maintaining their appearance and structural performance.',
+      },
+      {
+        title: 'Minimalist Cubicle Design',
+        content:
+          'Clean lines and carefully proportioned partitions create a spacious and contemporary restroom environment.',
+      },
+      {
+        title: 'Premium Stainless Steel Hardware',
+        content:
+          'Durable stainless steel fittings provide reliable everyday performance with a refined architectural finish.',
+      },
+      {
+        title: 'Coastal Material Palette',
+        content:
+          'Soft neutral surfaces and natural textures complement the surrounding beachfront architecture.',
+      },
+    ],
   },
-  'hpl-cubicle-system': {
-    title: 'Compact Laminate HPL Cubicles',
+
+  'toilet-cubicle-maxi-model': {
+    title: 'TOILET CUBICLE MAXI MODEL',
     category: 'Restroom Systems',
-    description: 'High-traffic commercial restroom partition system engineered for 100% moisture resistance, antibacterial hygiene, and long-lasting structural rigidity.',
+    description:
+      '100% moisture-resistant high-pressure laminate partition system with SS 316 anti-vandal hardware, designed for demanding commercial environments.',
     location: 'Mumbai, India',
     type: 'Commercial Restroom',
-    style: 'Modular Architecture',
-    size: '450 m²',
-    heroImage: 'https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&q=80&w=2000',
-    concept: 'Designed for airport lounges and modern corporate headquarters, this cubicle system combines sleek satin-finish compact laminates with concealed SS 316 heavy-duty hardware.',
+    style: 'High-Performance Modular',
+    size: 'Commercial High-Traffic',
+    heroImage:
+      'https://media.istockphoto.com/id/2268278029/photo/modern-public-restroom-interior-with-gray-toilet-stalls-and-wall-mounted-urinals.jpg?s=612x612&w=0&k=20&c=3pNdcCeVknZKzVpUA-z81emj13l4dh-yT4upONjjgQ8=',
+    concept:
+      'Designed for high-traffic commercial facilities, the MAXI MODEL combines compact HPL panels with heavy-duty stainless steel hardware to deliver long-term durability, hygiene, and ease of maintenance.',
     palette: [
-      { label: 'Panels', value: '12mm Compact Laminate HPL' },
-      { label: 'Hardware', value: 'SS 316 Stainless Steel Satin Finish' },
-      { label: 'Flooring', value: 'Anti-skid Vitrified Stoneware' },
-      { label: 'Lighting', value: 'Concealed LED Strip Accent Channels' },
+      { label: 'Panels', value: 'High-Pressure Compact Laminate HPL' },
+      { label: 'Hardware', value: 'SS 316 Stainless Steel' },
+      { label: 'Finish', value: 'Satin / Matte Architectural Finish' },
+      { label: 'Flooring', value: 'Anti-skid commercial-grade flooring' },
+      { label: 'Accessories', value: 'Heavy-duty cubicle accessories' },
     ],
-    quote: 'Unmatched durability and sophisticated modern aesthetics. Our corporate facility has never looked better.',
-    quoteAuthor: 'Vikram Mehta',
-    quoteRole: 'Chief Infrastructure Officer',
+    quote:
+      'Built for demanding environments without compromising on the visual quality of the restroom.',
+    quoteAuthor: 'Facility Manager',
+    quoteRole: 'Commercial Project Client',
     features: [
-      { title: '100% Water & Humidity Proof', content: 'Solid phenolic core ensures zero delamination even under continuous high-moisture conditions.' },
-      { title: 'Anti-Vandal Heavy-Duty Fittings', content: 'SS 316 indicator locks, self-closing hinges, and adjustable pedestal support legs.' },
-      { title: 'Class A Fire Safety Rating', content: 'Complies with stringent commercial fire and smoke safety regulations.' }
-    ]
+      {
+        title: '100% Moisture Resistant',
+        content:
+          'Compact HPL construction provides excellent resistance to water, humidity, and everyday restroom conditions.',
+      },
+      {
+        title: 'SS 316 Anti-Vandal Hardware',
+        content:
+          'Heavy-duty stainless steel components are engineered for frequent use and demanding commercial environments.',
+      },
+      {
+        title: 'High-Traffic Durability',
+        content:
+          'Robust panels and structural components provide long-lasting performance in busy public and commercial facilities.',
+      },
+      {
+        title: 'Easy Maintenance',
+        content:
+          'Non-porous surfaces and practical modular construction make cleaning and routine maintenance straightforward.',
+      },
+      {
+        title: 'Modern Commercial Appearance',
+        content:
+          'A clean architectural finish creates a professional restroom environment suitable for offices, malls, airports, and institutions.',
+      },
+    ],
   },
-  'modern-serenity-apartment': {
-    title: 'Modern Serenity Apartment',
+
+  'toilet-cubicle-maxi-pro-model': {
+    title: 'TOILET CUBICLE MAXI PRO MODEL',
     category: 'Luxury Residential',
-    description: 'A contemporary luxury apartment featuring Italian marble wall claddings, hidden ambient lighting, and bespoke minimalist furniture.',
+    description:
+      'A premium restroom cubicle system combining refined finishes, warm textures, and minimalist spatial planning for modern luxury interiors.',
     location: 'Jakarta, Indonesia',
-    type: 'Luxury Apartment',
-    style: 'Modern Minimalist',
+    type: 'Luxury Residential Restroom',
+    style: 'Modern Luxury Minimalism',
     size: '240 m²',
-    heroImage: 'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&q=80&w=2000',
-    concept: 'Focusing on clean geometry and rich tactile materials, we created a calming urban sanctuary elevated by natural light and serene spatial proportions.',
+    heroImage:
+      'https://media.istockphoto.com/id/1965427683/photo/public-toilet-in-shopping-mall-city-toilet-separate-cubicles-wooden-door.jpg?s=612x612&w=0&k=20&c=gWC9bc7U4WIErLNWdRPA2QC7Yk6Y83FeRGW4DAwRGxU=',
+    concept:
+      'The MAXI PRO MODEL focuses on premium material expression, combining elegant surfaces, warm wood-inspired textures, and precise detailing to create a sophisticated restroom environment.',
     palette: [
-      { label: 'Walls', value: 'Italian Statuario Marble & Veneer' },
-      { label: 'Furniture', value: 'Custom Walnut & Velvet Upholstery' },
-      { label: 'Fixtures', value: 'Brushed Gold & Matte Black Accents' },
+      { label: 'Panels', value: 'Premium Compact Laminate' },
+      { label: 'Textures', value: 'Warm Teakwood-inspired Finish' },
+      { label: 'Hardware', value: 'Premium Stainless Steel Hardware' },
+      { label: 'Accents', value: 'Brushed Metal Details' },
+      { label: 'Flooring', value: 'Premium Stone / Marble Finish' },
     ],
-    quote: 'The craftsmanship and attention to detail transformed our home into a serene architectural masterwork.',
-    quoteAuthor: 'David & Sarah',
-    quoteRole: 'Homeowners',
+    quote:
+      'Every detail feels intentional—from the finish of the panels to the precision of the hardware.',
+    quoteAuthor: 'Project Client',
+    quoteRole: 'Homeowner',
     features: [
-      { title: 'Open-Plan Living & Dining Space', content: 'Fluid spatial layout ideal for hosting and relaxed family living.' },
-      { title: 'Integrated Smart Home Automation', content: 'Touch-panel scene lighting, climate control, and motorized drapery.' }
-    ]
-  }
+      {
+        title: 'Premium Surface Finishes',
+        content:
+          'High-quality decorative surfaces provide a sophisticated appearance while retaining the practical benefits of compact laminate.',
+      },
+      {
+        title: 'Warm Teakwood Texture',
+        content:
+          'Wood-inspired finishes introduce warmth and visual depth into the contemporary restroom environment.',
+      },
+      {
+        title: 'Precision Hardware',
+        content:
+          'Premium stainless steel fittings provide a refined finish with reliable everyday functionality.',
+      },
+      {
+        title: 'Minimalist Spatial Planning',
+        content:
+          'Carefully planned cubicle layouts maximize usability while maintaining an open and elegant visual character.',
+      },
+    ],
+  },
+
+  'toilet-cubicle-duro-model': {
+    title: 'TOILET CUBICLE DURO MODEL',
+    category: 'Corporate Spaces',
+    description:
+      'Acoustically insulated modular glass and laminate partitions engineered for high-performance workplaces and corporate environments.',
+    location: 'Singapore',
+    type: 'Corporate Restroom',
+    style: 'Contemporary Corporate',
+    size: '500 m²',
+    heroImage:
+      'https://media.istockphoto.com/id/1206101405/photo/row-of-public-toilet-decorated-with-wooden-partition.jpg?s=612x612&w=0&k=20&c=tAVFpifhILw3L0JdNId443byUS-GXp8n-X6IdSpjg1M=',
+    concept:
+      'The DURO MODEL is designed around durability, privacy, acoustics, and clean corporate aesthetics. Modular components allow efficient installation while maintaining a premium architectural appearance.',
+    palette: [
+      { label: 'Partitions', value: 'Compact Laminate & Glass' },
+      { label: 'Hardware', value: 'Heavy-Duty Stainless Steel' },
+      { label: 'Finish', value: 'Contemporary Matte Finish' },
+      { label: 'Flooring', value: 'Commercial Anti-Skid Flooring' },
+      { label: 'Lighting', value: 'Integrated Architectural Lighting' },
+    ],
+    quote:
+      'The system gives our workplace restroom a premium finish while delivering the durability our facility requires.',
+    quoteAuthor: 'Corporate Client',
+    quoteRole: 'Facilities Director',
+    features: [
+      {
+        title: 'Acoustic Privacy',
+        content:
+          'Partition construction is designed to improve acoustic privacy and create a more comfortable restroom experience.',
+      },
+      {
+        title: 'Modular Installation',
+        content:
+          'Modular components enable efficient installation, replacement, and future configuration changes.',
+      },
+      {
+        title: 'Corporate Aesthetic',
+        content:
+          'Minimal architectural detailing creates a polished restroom environment suited to modern offices and workplaces.',
+      },
+      {
+        title: 'Durable Construction',
+        content:
+          'High-performance materials and robust fittings are selected for frequent commercial use.',
+      },
+    ],
+  },
+
+  'toilet-cubicle-duro-pro-model': {
+    title: 'TOILET CUBICLE DURO PRO MODEL',
+    category: 'Boutique Restoration',
+    description:
+      'A premium restroom system combining architectural character with modern humidity-resistant materials and custom fittings.',
+    location: 'Medan, Indonesia',
+    type: 'Boutique / Heritage Restroom',
+    style: 'Contemporary Heritage',
+    size: '410 m²',
+    heroImage:
+      'https://media.istockphoto.com/id/1952619672/photo/changing-booth-at-the-swimming-pool.jpg?s=612x612&w=0&k=20&c=F59Dvvlh7mEo4W_nNuKsL03uQnZHgH6cIN3T40DlapI=',
+    concept:
+      'The DURO PRO MODEL combines the character of boutique architectural spaces with modern restroom engineering, using refined surfaces, humidity-resistant panels, and custom detailing.',
+    palette: [
+      { label: 'Panels', value: 'Humidity-resistant architectural panels' },
+      { label: 'Hardware', value: 'Custom Stainless Steel Fittings' },
+      { label: 'Stone', value: 'Natural / Engineered Stone Finish' },
+      { label: 'Accents', value: 'Warm Metallic Details' },
+      { label: 'Textures', value: 'Premium Architectural Surfaces' },
+    ],
+    quote:
+      'The result preserves the character of the space while introducing modern performance and functionality.',
+    quoteAuthor: 'Restoration Client',
+    quoteRole: 'Project Owner',
+    features: [
+      {
+        title: 'Heritage-Inspired Detailing',
+        content:
+          'Architectural finishes and proportions are selected to complement boutique and restored environments.',
+      },
+      {
+        title: 'Humidity-Resistant Materials',
+        content:
+          'Specialized materials provide long-term performance in moisture-intensive restroom conditions.',
+      },
+      {
+        title: 'Custom Fittings',
+        content:
+          'Custom hardware and accessories allow the cubicle system to integrate seamlessly with the surrounding architecture.',
+      },
+      {
+        title: 'Premium Stone Finishes',
+        content:
+          'Stone-inspired surfaces add a sophisticated architectural character to the restroom interior.',
+      },
+    ],
+  },
+
+  'toilet-cubicle-luron-model': {
+    title: 'TOILET CUBICLE LURON MODEL',
+    category: 'Wellness & Spa',
+    description:
+      'Antibacterial, scratch-resistant wall paneling paired with concealed ceiling-hung cubicle structures for premium wellness and spa environments.',
+    location: 'Bangalore, India',
+    type: 'Wellness & Spa Restroom',
+    style: 'Minimal Wellness',
+    size: '180 m²',
+    heroImage:
+      'https://media.istockphoto.com/id/1061147274/photo/luxury-brown-public-toilet-with-rows-ceramic-urinal.jpg?s=612x612&w=0&k=20&c=T2DM-xQUBvgOLsxFZQwYVlvG4LnhDTCgcK35aFt0Vn0=',
+    concept:
+      'The LURON MODEL brings a calm, hygienic, and refined aesthetic to wellness environments through antibacterial surfaces, concealed structural elements, and carefully integrated finishes.',
+    palette: [
+      { label: 'Wall Panels', value: 'Antibacterial Scratch-Resistant Panels' },
+      { label: 'Cubicles', value: 'Concealed Ceiling-Hung System' },
+      { label: 'Hardware', value: 'Premium Stainless Steel' },
+      { label: 'Flooring', value: 'Slip-Resistant Stone Finish' },
+      { label: 'Accents', value: 'Warm Earth-Tone Finishes' },
+    ],
+    quote:
+      'The restroom feels like a natural extension of the spa—clean, calm, and beautifully finished.',
+    quoteAuthor: 'Spa Client',
+    quoteRole: 'Wellness Centre Director',
+    features: [
+      {
+        title: 'Antibacterial Surfaces',
+        content:
+          'Specialized surface finishes help support hygienic restroom environments and simplify everyday cleaning.',
+      },
+      {
+        title: 'Scratch-Resistant Panels',
+        content:
+          'Durable surfaces are designed to retain their appearance despite frequent use.',
+      },
+      {
+        title: 'Ceiling-Hung Cubicles',
+        content:
+          'Concealed support structures create a visually clean appearance and make floor cleaning easier.',
+      },
+      {
+        title: 'Wellness-Focused Design',
+        content:
+          'Warm neutral finishes and uncluttered detailing create a calm environment aligned with spa and wellness interiors.',
+      },
+    ],
+  },
 };
 
 const SIDEBAR_PROJECTS = [
-  { slug: 'coastal-calm-retreat', name: 'Coastal Calm Retreat' },
-  { slug: 'hpl-cubicle-system', name: 'Compact Laminate HPL Cubicles' },
-  { slug: 'modern-serenity-apartment', name: 'Modern Serenity Apartment' },
-  { slug: 'urban-executive-loft', name: 'Urban Executive Loft' },
-  { slug: 'heritage-house-revival', name: 'Heritage House Revival' },
+  {
+    slug: 'toilet-cubicle-neo-model',
+    name: 'TOILET CUBICLE NEO MODEL',
+  },
+  {
+    slug: 'toilet-cubicle-maxi-model',
+    name: 'TOILET CUBICLE MAXI MODEL',
+  },
+  {
+    slug: 'toilet-cubicle-maxi-pro-model',
+    name: 'TOILET CUBICLE MAXI PRO MODEL',
+  },
+  {
+    slug: 'toilet-cubicle-duro-model',
+    name: 'TOILET CUBICLE DURO MODEL',
+  },
+  {
+    slug: 'toilet-cubicle-duro-pro-model',
+    name: 'TOILET CUBICLE DURO PRO MODEL',
+  },
+  {
+    slug: 'toilet-cubicle-luron-model',
+    name: 'TOILET CUBICLE LURON MODEL',
+  },
 ];
 
 interface PageProps {
