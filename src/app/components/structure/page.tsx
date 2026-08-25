@@ -48,7 +48,7 @@ export default function LightWallSectionScroll() {
     >
       {/* Sticky wrapper */}
       <div className="sticky top-[12vh] h-[76vh] w-full overflow-hidden bg-[#f8fafc] flex flex-col justify-center border-y border-[#e2e8f0]">
-        
+
         {/* Architectural Blueprint Grid */}
         <div
           className="absolute inset-0 pointer-events-none opacity-40"
@@ -61,7 +61,7 @@ export default function LightWallSectionScroll() {
         />
 
         <div className="relative z-10 max-w-[1750px] mx-auto w-full px-6 md:px-12 lg:px-16 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center h-full">
-          
+
           {/* Left Side: Typography & Brand Statement */}
           <div className="lg:col-span-5 flex flex-col justify-center space-y-6">
             <div>
@@ -69,33 +69,33 @@ export default function LightWallSectionScroll() {
                 <span className="w-2 h-2 rounded-full bg-[#0d2461] animate-ping" />
                 MEGHA SYSTEM ARCHITECTURE
               </span>
-              
-              <h1 className="text-3xl md:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.08] text-[#0d2461]">
-                Trusted Toilet <br />
+
+              <h2 className="text-3xl md:text-5xl lg:text-[55px] font-extrabold tracking-tight leading-[1.08] text-[#0d2461]">
+                Designed to Perform. <br />
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0d2461] to-[#2563eb]">
-                  Cubicle Systems.
+                  Built to Endure.
                 </span>
-              </h1>
+              </h2>
             </div>
 
-            <p className="text-[#475569] text-sm md:text-base leading-relaxed max-w-md">
-              Engineered with high-pressure compact laminate, anti-bacterial surfaces, and heavy-duty stainless steel fittings for ultimate commercial durability.
+            <p className="text-[#475569] text-sm md:text-base leading-relaxed max-w-xl">
+              A complete cubicle system engineered around material strength, precision detailing, and reliable components—built to deliver consistent performance in demanding washroom environments.
             </p>
 
             <div className="flex items-center gap-4 text-xs font-mono tracking-widest text-[#0d2461]/70 uppercase pt-2">
               <div className="h-0.5 w-10 bg-[#0d2461]" />
               <div className="flex items-center gap-2 font-semibold">
                 <span className="w-2 h-2 rounded-full bg-[#f5bd24]" />
-                <span>6 Core Precision Layering</span>
+                <span>ENGINEERED FOR EVERY DETAIL</span>
               </div>
             </div>
           </div>
 
           {/* Right Side: High-Tech CAD Cross-Section & Dynamic Pointer */}
           <div className="lg:col-span-7 relative w-full h-[400px] lg:h-[480px] bg-white/70 backdrop-blur-md rounded-3xl p-6 sm:p-8 border border-[#e2e8f0] shadow-[0_15px_40px_rgba(13,36,97,0.06)] flex items-center overflow-hidden">
-            
+
             {/* Background Grid inside container */}
-            <div 
+            <div
               className="absolute inset-0 pointer-events-none opacity-20"
               style={{
                 backgroundImage: "radial-gradient(#0d2461 1px, transparent 1px)",
@@ -117,9 +117,8 @@ export default function LightWallSectionScroll() {
                       cx={`${layer.cadX}%`}
                       cy={`${layer.labelY}%`}
                       r={isActive ? "5" : "3"}
-                      className={`transition-all duration-300 ${
-                        isActive ? "fill-[#0d2461] stroke-[#3b82f6] stroke-2" : "fill-[#94a3b8]"
-                      }`}
+                      className={`transition-all duration-300 ${isActive ? "fill-[#0d2461] stroke-[#3b82f6] stroke-2" : "fill-[#94a3b8]"
+                        }`}
                     />
                     {/* Connector line */}
                     <line
@@ -130,9 +129,8 @@ export default function LightWallSectionScroll() {
                       strokeWidth={isActive ? "2" : "1"}
                       strokeDasharray={isActive ? "none" : "3 3"}
                       vectorEffect="non-scaling-stroke"
-                      className={`transition-all duration-300 ${
-                        isActive ? "stroke-[#0d2461]" : "stroke-[#cbd5e1]"
-                      }`}
+                      className={`transition-all duration-300 ${isActive ? "stroke-[#0d2461]" : "stroke-[#cbd5e1]"
+                        }`}
                     />
                   </g>
                 );
@@ -141,14 +139,13 @@ export default function LightWallSectionScroll() {
 
             {/* CAD Blocks Section */}
             <div className="absolute left-6 sm:left-8 top-[10%] bottom-[10%] w-[48%] flex justify-between z-10 gap-1 sm:gap-1.5">
-              
+
               {/* Layer 0: Compact Laminate */}
               <div
-                className={`relative transition-all duration-500 rounded-lg overflow-hidden border ${
-                  activeLayer === 0 
-                    ? "border-[#0d2461] bg-[#0d2461]/15 shadow-[0_0_20px_rgba(13,36,97,0.15)] scale-[1.02]" 
-                    : "border-[#cbd5e1] bg-slate-100/60"
-                }`}
+                className={`relative transition-all duration-500 rounded-lg overflow-hidden border ${activeLayer === 0
+                  ? "border-[#0d2461] bg-[#0d2461]/15 shadow-[0_0_20px_rgba(13,36,97,0.15)] scale-[1.02]"
+                  : "border-[#cbd5e1] bg-slate-100/60"
+                  }`}
                 style={{ width: CUBICLE_LAYERS[0].cadWidth }}
               >
                 <div className="absolute inset-0 opacity-40 bg-[linear-gradient(45deg,#0d2461_12.5%,transparent_12.5%,transparent_50%,#0d2461_50%,#0d2461_62.5%,transparent_62.5%,transparent_100%)] bg-[length:6px_6px]" />
@@ -156,30 +153,27 @@ export default function LightWallSectionScroll() {
 
               {/* Layer 1: Aluminum Frame */}
               <div
-                className={`relative flex flex-col justify-around items-center py-4 transition-all duration-500 rounded-lg border ${
-                  activeLayer === 1 
-                    ? "border-[#0d2461] bg-[#0d2461]/15 shadow-[0_0_20px_rgba(13,36,97,0.15)] scale-[1.02]" 
-                    : "border-[#cbd5e1] bg-slate-100/60"
-                }`}
+                className={`relative flex flex-col justify-around items-center py-4 transition-all duration-500 rounded-lg border ${activeLayer === 1
+                  ? "border-[#0d2461] bg-[#0d2461]/15 shadow-[0_0_20px_rgba(13,36,97,0.15)] scale-[1.02]"
+                  : "border-[#cbd5e1] bg-slate-100/60"
+                  }`}
                 style={{ width: CUBICLE_LAYERS[1].cadWidth }}
               >
                 {[1, 2, 3].map((i) => (
                   <div
                     key={i}
-                    className={`w-[65%] aspect-square rounded-sm border transition-colors duration-300 ${
-                      activeLayer === 1 ? "border-[#0d2461] bg-white/80" : "border-[#94a3b8] bg-white/40"
-                    }`}
+                    className={`w-[65%] aspect-square rounded-sm border transition-colors duration-300 ${activeLayer === 1 ? "border-[#0d2461] bg-white/80" : "border-[#94a3b8] bg-white/40"
+                      }`}
                   />
                 ))}
               </div>
 
               {/* Layer 2: Nylon Hardware */}
               <div
-                className={`relative transition-all duration-500 rounded-lg overflow-hidden border ${
-                  activeLayer === 2 
-                    ? "border-[#0d2461] bg-[#0d2461]/15 shadow-[0_0_20px_rgba(13,36,97,0.15)] scale-[1.02]" 
-                    : "border-[#cbd5e1] bg-slate-100/60"
-                }`}
+                className={`relative transition-all duration-500 rounded-lg overflow-hidden border ${activeLayer === 2
+                  ? "border-[#0d2461] bg-[#0d2461]/15 shadow-[0_0_20px_rgba(13,36,97,0.15)] scale-[1.02]"
+                  : "border-[#cbd5e1] bg-slate-100/60"
+                  }`}
                 style={{ width: CUBICLE_LAYERS[2].cadWidth }}
               >
                 <svg className="absolute inset-0 w-full h-full" preserveAspectRatio="none">
@@ -200,11 +194,10 @@ export default function LightWallSectionScroll() {
 
               {/* Layer 3: Waterproof Core (Honeycomb Pattern) */}
               <div
-                className={`relative transition-all duration-500 rounded-lg overflow-hidden border ${
-                  activeLayer === 3 
-                    ? "border-[#0d2461] bg-[#0d2461]/15 shadow-[0_0_20px_rgba(13,36,97,0.15)] scale-[1.02]" 
-                    : "border-[#cbd5e1] bg-slate-100/60"
-                }`}
+                className={`relative transition-all duration-500 rounded-lg overflow-hidden border ${activeLayer === 3
+                  ? "border-[#0d2461] bg-[#0d2461]/15 shadow-[0_0_20px_rgba(13,36,97,0.15)] scale-[1.02]"
+                  : "border-[#cbd5e1] bg-slate-100/60"
+                  }`}
                 style={{ width: CUBICLE_LAYERS[3].cadWidth }}
               >
                 <svg className="absolute inset-0 w-full h-[120%]" preserveAspectRatio="none" viewBox="0 0 100 1000">
@@ -220,29 +213,26 @@ export default function LightWallSectionScroll() {
 
               {/* Layer 4: Anti-Bacterial Surface Coating */}
               <div
-                className={`relative transition-all duration-500 rounded-full border-y border-x-2 ${
-                  activeLayer === 4 
-                    ? "border-[#0d2461] bg-[#f5bd24] shadow-[0_0_15px_rgba(245,189,36,0.6)] scale-110" 
-                    : "border-[#94a3b8] bg-[#3b82f6]/30"
-                }`}
+                className={`relative transition-all duration-500 rounded-full border-y border-x-2 ${activeLayer === 4
+                  ? "border-[#0d2461] bg-[#f5bd24] shadow-[0_0_15px_rgba(245,189,36,0.6)] scale-110"
+                  : "border-[#94a3b8] bg-[#3b82f6]/30"
+                  }`}
                 style={{ width: CUBICLE_LAYERS[4].cadWidth }}
               />
 
               {/* Layer 5: Stainless Steel Foot */}
               <div
-                className={`relative flex flex-col transition-all duration-500 rounded-lg overflow-hidden border ${
-                  activeLayer === 5 
-                    ? "border-[#0d2461] bg-[#0d2461]/15 shadow-[0_0_20px_rgba(13,36,97,0.15)] scale-[1.02]" 
-                    : "border-[#cbd5e1] bg-slate-100/60"
-                }`}
+                className={`relative flex flex-col transition-all duration-500 rounded-lg overflow-hidden border ${activeLayer === 5
+                  ? "border-[#0d2461] bg-[#0d2461]/15 shadow-[0_0_20px_rgba(13,36,97,0.15)] scale-[1.02]"
+                  : "border-[#cbd5e1] bg-slate-100/60"
+                  }`}
                 style={{ width: CUBICLE_LAYERS[5].cadWidth }}
               >
                 {Array.from({ length: 7 }).map((_, i) => (
                   <div
                     key={i}
-                    className={`flex-1 border-b last:border-b-0 transition-colors duration-300 ${
-                      activeLayer === 5 ? "border-[#0d2461] bg-white/40" : "border-[#cbd5e1]"
-                    }`}
+                    className={`flex-1 border-b last:border-b-0 transition-colors duration-300 ${activeLayer === 5 ? "border-[#0d2461] bg-white/40" : "border-[#cbd5e1]"
+                      }`}
                   />
                 ))}
               </div>
@@ -265,23 +255,20 @@ export default function LightWallSectionScroll() {
                 return (
                   <div
                     key={layer.id}
-                    className={`transition-all duration-300 rounded-xl px-3 py-1.5 flex flex-col justify-center ${
-                      isActive
-                        ? "bg-[#0d2461] text-white shadow-lg translate-x-1 border border-[#0d2461]"
-                        : "bg-white/60 hover:bg-white text-[#475569] border border-transparent"
-                    }`}
+                    className={`transition-all duration-300 rounded-xl px-3 py-1.5 flex flex-col justify-center ${isActive
+                      ? "bg-[#0d2461] text-white shadow-lg translate-x-1 border border-[#0d2461]"
+                      : "bg-white/60 hover:bg-white text-[#475569] border border-transparent"
+                      }`}
                   >
                     <span
-                      className={`font-mono text-[10px] md:text-xs tracking-wider uppercase font-bold block leading-tight ${
-                        isActive ? "text-white" : "text-[#0d2461]"
-                      }`}
+                      className={`font-mono text-[10px] md:text-xs tracking-wider uppercase font-bold block leading-tight ${isActive ? "text-white" : "text-[#0d2461]"
+                        }`}
                     >
                       {layer.title}
                     </span>
                     <span
-                      className={`text-[9px] md:text-[10px] font-sans transition-colors block mt-0.5 ${
-                        isActive ? "text-[#f5bd24] font-medium" : "text-[#94a3b8]"
-                      }`}
+                      className={`text-[9px] md:text-[10px] font-sans transition-colors block mt-0.5 ${isActive ? "text-[#f5bd24] font-medium" : "text-[#94a3b8]"
+                        }`}
                     >
                       {layer.subtitle}
                     </span>

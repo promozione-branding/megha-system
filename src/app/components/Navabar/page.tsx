@@ -59,139 +59,116 @@ export default function Navbar() {
 
           {/* Center: Navigation Links with Larger Font */}
           <nav className="hidden lg:flex items-center gap-1 text-[15px] sm:text-[15.5px] font-bold text-[#0d2461]">
-            <a
-              href="#"
+            <Link href="/"
               className="px-3 sm:px-3.5 py-1.5 rounded-lg hover:bg-[#0d2461]/6 transition-all duration-200 relative group"
             >
               Home
               <span className="absolute bottom-0.5 left-3 right-3 h-[2px] bg-[#f5bd24] scale-x-0 group-hover:scale-x-100 transition-transform duration-200 rounded-full" />
-            </a>
+            </Link>
+
+            <div className="relative group py-1.5 cursor-pointer">
+              <Link
+                href="/products"
+                className="flex items-center gap-1.5 px-3 sm:px-3.5 py-1.5 rounded-lg
+               hover:bg-[#0d2461]/6 transition-all duration-200 relative"
+              >
+                <span>Our Products</span>
+
+                <ChevronDown
+                  className="w-4 h-4 opacity-60 transition-transform duration-300
+                 group-hover:rotate-180"
+                />
+
+                <span
+                  className="absolute bottom-0.5 left-3 right-3 h-[2px]
+                 bg-[#f5bd24] scale-x-0 group-hover:scale-x-100
+                 transition-transform duration-200 rounded-full"
+                />
+              </Link>
+
+              {/* Dropdown */}
+              <div
+                className="absolute top-[calc(100%+8px)] left-0
+               invisible opacity-0 translate-y-2
+               group-hover:visible group-hover:opacity-100
+               group-hover:translate-y-0
+               transition-all duration-200 ease-out
+               w-80 bg-white
+               border border-[#0d2461]/10
+               shadow-[0_20px_60px_rgba(13,36,97,0.15)]
+               rounded-2xl p-2 z-50"
+              >
+                {/* Arrow */}
+                <div
+                  className="absolute -top-1.5 left-7 w-3 h-3
+                 bg-white border-l border-t
+                 border-[#0d2461]/10 rotate-45"
+                />
+
+                {PRODUCTS_CATALOG.map((item) => {
+                  return (
+                    <Link
+                      key={item.slug}
+                      href={`/products/${item.slug}`}
+                      className="group/item flex items-center gap-3
+                     px-3 py-3 rounded-xl
+                     hover:bg-[#0d2461]/5
+                     transition-all duration-200"
+                    >
+                      {/* Text */}
+                      <div className="flex-1 min-w-0">
+                        <span
+                          className="block text-sm font-semibold text-[#0d2461]
+                         group-hover/item:text-[#0d2461]"
+                        >
+                          {item.name}
+                        </span>
+                      </div>
+
+                      {/* Arrow */}
+                      <ArrowUpRight
+                        className="w-4 h-4 text-gray-300
+                       group-hover/item:text-[#f5bd24]
+                       group-hover/item:translate-x-0.5
+                       group-hover/item:-translate-y-0.5
+                       transition-all duration-200"
+                      />
+                    </Link>
+                  );
+                })}
+              </div>
+            </div>
 
             {/* About Dropdown */}
             <div className="relative group py-1.5 cursor-pointer">
-              <div className="flex items-center gap-1 px-3 sm:px-3.5 py-1.5 rounded-lg hover:bg-[#0d2461]/6 transition-all duration-200 relative">
+              <Link href={"/about-us"} className="flex items-center gap-1 px-3 sm:px-3.5 py-1.5 rounded-lg hover:bg-[#0d2461]/6 transition-all duration-200 relative">
                 <span>About Us</span>
-                <ChevronDown className="w-4 h-4 opacity-60 group-hover:rotate-180 transition-transform duration-300" />
                 <span className="absolute bottom-0.5 left-3 right-3 h-[2px] bg-[#f5bd24] scale-x-0 group-hover:scale-x-100 transition-transform duration-200 rounded-full" />
-              </div>
-              <div className="absolute top-[calc(100%+4px)] left-0 hidden group-hover:block w-64 bg-white border border-[#0d2461]/10 shadow-[0_20px_60px_rgba(13,36,97,0.15)] rounded-2xl p-2 z-50">
-                <div className="absolute -top-1.5 left-6 w-3 h-3 bg-white border-l border-t border-[#0d2461]/10 rotate-45" />
-                <a href="#about" className="flex items-start gap-3 p-3 rounded-xl hover:bg-[#f8f8ff] transition-colors">
-                  <div className="w-8 h-8 rounded-lg bg-[#0d2461]/8 flex items-center justify-center shrink-0 mt-0.5">
-                    <Sparkles className="w-4 h-4 text-[#0d2461]" />
-                  </div>
-                  <div>
-                    <div className="text-[13.5px] font-bold text-[#0d2461]">Our Story</div>
-                    <div className="text-[11.5px] text-gray-400 mt-0.5">Pioneering cubicle solutions</div>
-                  </div>
-                </a>
-                <a href="#team" className="flex items-start gap-3 p-3 rounded-xl hover:bg-[#f8f8ff] transition-colors">
-                  <div className="w-8 h-8 rounded-lg bg-[#0d2461]/8 flex items-center justify-center shrink-0 mt-0.5">
-                    <Building className="w-4 h-4 text-[#0d2461]" />
-                  </div>
-                  <div>
-                    <div className="text-[13.5px] font-bold text-[#0d2461]">Leadership</div>
-                    <div className="text-[11.5px] text-gray-400 mt-0.5">Expert architects & planners</div>
-                  </div>
-                </a>
-              </div>
+              </Link>
             </div>
 
-            <div className="relative group py-1.5 cursor-pointer">
-              <div className="flex items-center gap-1 px-3 sm:px-3.5 py-1.5 rounded-lg hover:bg-[#0d2461]/6 transition-all duration-200 relative">
-                <span>Our Products</span>
-                <ChevronDown className="w-4 h-4 opacity-60 group-hover:rotate-180 transition-transform duration-300" />
-                <span className="absolute bottom-0.5 left-3 right-3 h-[2px] bg-[#f5bd24] scale-x-0 group-hover:scale-x-100 transition-transform duration-200 rounded-full" />
-              </div>
-              <div className="absolute top-[calc(100%+2px)] left-0 hidden group-hover:block w-74 bg-white border border-[#0d2461]/10 shadow-[0_20px_60px_rgba(13,36,97,0.15)] rounded-2xl p-2 z-50">
-                <div className="absolute -top-1.5 left-6 w-5 h-3 bg-white border-l border-t border-[#0d2461]/10 rotate-45" />
-                {PRODUCTS_CATALOG.map((i, idx) => (
-                  <Link href={`/products/${i.slug}`} className='hover:text-[#f5bd24] block transition mt-2 text-nowrap'>
-                    {i.name}
-                  </Link>
-                ))}
-              </div>
-            </div>
+            <Link href="/contact-us" className="px-3 sm:px-3.5 py-1.5 rounded-lg hover:bg-[#0d2461]/6 transition-all duration-200 relative group">
+              Contact Us
+              <span className="absolute bottom-0.5 left-3 right-3 h-[2px] bg-[#f5bd24] scale-x-0 group-hover:scale-x-100 transition-transform duration-200 rounded-full" />
+            </Link>
 
             {/* Services Mega Dropdown */}
             <div className="relative group py-1.5 cursor-pointer">
-              <div className="flex items-center gap-1 px-3 sm:px-3.5 py-1.5 rounded-lg hover:bg-[#0d2461]/6 transition-all duration-200 relative">
-                <span>Services</span>
-                <ChevronDown className="w-4 h-4 opacity-60 group-hover:rotate-180 transition-transform duration-300" />
+              <Link href={"/our-articles"} className="flex items-center gap-1 px-3 sm:px-3.5 py-1.5 rounded-lg hover:bg-[#0d2461]/6 transition-all duration-200 relative">
+                <span>Articles</span>
+                {/* <ChevronDown className="w-4 h-4 opacity-60 group-hover:rotate-180 transition-transform duration-300" /> */}
                 <span className="absolute bottom-0.5 left-3 right-3 h-[2px] bg-[#f5bd24] scale-x-0 group-hover:scale-x-100 transition-transform duration-200 rounded-full" />
-              </div>
-              <div className="absolute top-[calc(100%+4px)] left-1/2 -translate-x-1/2 hidden group-hover:block w-[440px] bg-white border border-[#0d2461]/10 shadow-[0_20px_60px_rgba(13,36,97,0.15)] rounded-2xl p-3 z-50">
-                <div className="absolute -top-1.5 left-1/2 -translate-x-1/2 w-3 h-3 bg-white border-l border-t border-[#0d2461]/10 rotate-45" />
-                <p className="text-[10px] font-bold tracking-[0.15em] text-gray-400 uppercase px-2 pb-2">What We Offer</p>
-                <div className="grid grid-cols-2 gap-1.5">
-                  <a href="#services" className="p-3 rounded-xl hover:bg-[#f8f8ff] transition-colors">
-                    <div className="flex items-center gap-2 mb-1">
-                      <div className="w-7 h-7 rounded-lg bg-[#0d2461]/8 flex items-center justify-center">
-                        <Layers className="w-3.5 h-3.5 text-[#0d2461]" />
-                      </div>
-                      <span className="text-[13px] font-bold text-[#0d2461]">Cubicle Systems</span>
-                    </div>
-                    <p className="text-[11.5px] text-gray-400 leading-relaxed pl-9">Engineered modular partitions</p>
-                  </a>
-                  <a href="#services" className="p-3 rounded-xl hover:bg-[#f8f8ff] transition-colors">
-                    <div className="flex items-center gap-2 mb-1">
-                      <div className="w-7 h-7 rounded-lg bg-[#0d2461]/8 flex items-center justify-center">
-                        <Palette className="w-3.5 h-3.5 text-[#0d2461]" />
-                      </div>
-                      <span className="text-[13px] font-bold text-[#0d2461]">Marble Finishes</span>
-                    </div>
-                    <p className="text-[11.5px] text-gray-400 leading-relaxed pl-9">Luxury natural stone textures</p>
-                  </a>
-                  <a href="#services" className="p-3 rounded-xl hover:bg-[#f8f8ff] transition-colors">
-                    <div className="flex items-center gap-2 mb-1">
-                      <div className="w-7 h-7 rounded-lg bg-[#f5bd24]/15 flex items-center justify-center">
-                        <Sparkles className="w-3.5 h-3.5 text-[#c9a227]" />
-                      </div>
-                      <span className="text-[13px] font-bold text-[#0d2461]">Smart Design</span>
-                    </div>
-                    <p className="text-[11.5px] text-gray-400 leading-relaxed pl-9">Hygienic intelligent spaces</p>
-                  </a>
-                  <a href="#services" className="p-3 rounded-xl hover:bg-[#f8f8ff] transition-colors">
-                    <div className="flex items-center gap-2 mb-1">
-                      <div className="w-7 h-7 rounded-lg bg-[#0d2461]/8 flex items-center justify-center">
-                        <Building className="w-3.5 h-3.5 text-[#0d2461]" />
-                      </div>
-                      <span className="text-[13px] font-bold text-[#0d2461]">Installation</span>
-                    </div>
-                    <p className="text-[11.5px] text-gray-400 leading-relaxed pl-9">End-to-end setup & support</p>
-                  </a>
-                </div>
-              </div>
+              </Link>
             </div>
 
             {/* Projects Dropdown */}
             <div className="relative group py-1.5 cursor-pointer">
-              <div className="flex items-center gap-1 px-3 sm:px-3.5 py-1.5 rounded-lg hover:bg-[#0d2461]/6 transition-all duration-200 relative">
+              <Link href={"/projects"} className="flex items-center gap-1 px-3 sm:px-3.5 py-1.5 rounded-lg hover:bg-[#0d2461]/6 transition-all duration-200 relative">
                 <span>Projects</span>
-                <ChevronDown className="w-4 h-4 opacity-60 group-hover:rotate-180 transition-transform duration-300" />
+                {/* <ChevronDown className="w-4 h-4 opacity-60 group-hover:rotate-180 transition-transform duration-300" /> */}
                 <span className="absolute bottom-0.5 left-3 right-3 h-[2px] bg-[#f5bd24] scale-x-0 group-hover:scale-x-100 transition-transform duration-200 rounded-full" />
-              </div>
-              <div className="absolute top-[calc(100%+4px)] left-0 hidden group-hover:block w-56 bg-white border border-[#0d2461]/10 shadow-[0_20px_60px_rgba(13,36,97,0.15)] rounded-2xl p-2 z-50">
-                <div className="absolute -top-1.5 left-6 w-3 h-3 bg-white border-l border-t border-[#0d2461]/10 rotate-45" />
-                <a href="#projects" className="flex items-center justify-between p-3 rounded-xl hover:bg-[#f8f8ff] text-[13px] font-bold text-[#0d2461] transition-colors">
-                  <span>Commercial Icons</span>
-                  <ArrowUpRight className="w-4 h-4 text-[#0d2461]/40" />
-                </a>
-                <a href="#projects" className="flex items-center justify-between p-3 rounded-xl hover:bg-[#f8f8ff] text-[13px] font-bold text-[#0d2461] transition-colors">
-                  <span>Luxury Residential</span>
-                  <ArrowUpRight className="w-4 h-4 text-[#0d2461]/40" />
-                </a>
-                <a href="#projects" className="flex items-center justify-between p-3 rounded-xl hover:bg-[#f8f8ff] text-[13px] font-bold text-[#0d2461] transition-colors">
-                  <span>Corporate Spaces</span>
-                  <ArrowUpRight className="w-4 h-4 text-[#0d2461]/40" />
-                </a>
-              </div>
+              </Link>
             </div>
-
-            <a href="#contact" className="px-3 sm:px-3.5 py-1.5 rounded-lg hover:bg-[#0d2461]/6 transition-all duration-200 relative group">
-              Contact
-              <span className="absolute bottom-0.5 left-3 right-3 h-[2px] bg-[#f5bd24] scale-x-0 group-hover:scale-x-100 transition-transform duration-200 rounded-full" />
-            </a>
           </nav>
 
           {/* Right: CTA Buttons with Larger Font */}

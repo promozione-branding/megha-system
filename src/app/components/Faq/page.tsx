@@ -13,28 +13,28 @@ interface FAQItem {
 const faqs: FAQItem[] = [
   {
     id: 1,
-    question: "1. What materials are best suited for high-moisture washrooms?",
-    answer: "Our solid compact laminate (HPL) and engineered stone panels provide 100% water and humidity resistance, antibacterial protection, and superior impact strength for high-traffic commercial use."
+    question: "1. What materials are best for toilet cubicles in high-moisture areas?",
+    answer: "High-pressure compact laminate (HPL) is an excellent choice for washrooms because it offers strong moisture resistance, durability, impact resistance, and easy maintenance—making it suitable for demanding commercial environments."
   },
   {
     id: 2,
-    question: "2. Can partition dimensions and hardware finishes be customized?",
-    answer: "Yes. We offer ceiling-hung, floor-anchored, and overhead-braced systems with customizable heights, panel widths, and hardware finishes including Matte Black, Brushed Brass, and SS 316."
+    question: "2. Can toilet cubicle sizes, colours, and hardware be customized?",
+    answer: "Yes. Cubicle dimensions, layouts, colours, finishes, hardware, and accessories can be customized to suit the space, design requirements, and project specifications."
   },
   {
     id: 3,
-    question: "3. Are your cubicle panels fire-rated and vandal-resistant?",
-    answer: "All panels comply with Class A fire safety ratings and feature graffiti-resistant, scratch-proof surfaces engineered specifically for public and commercial washrooms."
+    question: "3. Are compact laminate cubicles durable enough for high-traffic washrooms?",
+    answer: "Yes. Compact laminate cubicles are designed for frequent use and offer excellent resistance to impact, moisture, and everyday wear, making them suitable for offices, malls, restaurants, institutions, and other high-traffic spaces."
   },
   {
     id: 4,
-    question: "4. Do you provide on-site measurements and CAD shop drawings?",
-    answer: "Yes, our technical team provides complimentary on-site structural assessments, precise laser measurements, and full 2D/3D shop drawings before manufacturing begins."
+    question: "4. Does Megha Systems provide site measurements and technical drawings?",
+    answer: "Yes. Our team can support projects with site measurements, layout planning, technical detailing, and CAD/shop drawings to ensure accurate manufacturing and installation."
   },
   {
     id: 5,
-    question: "5. What warranty coverage applies to cubicle systems and fittings?",
-    answer: "We provide a 10-year anti-delamination warranty on compact laminate panels and a 5-year replacement warranty on all stainless-steel hinges, indicator locks, and support legs."
+    question: "5. Do you provide professional toilet cubicle installation?",
+    answer: "Yes. Megha Systems provides professional on-site installation to ensure accurate alignment, secure fittings, proper spacing, and a clean final finish."
   }
 ];
 
@@ -48,7 +48,7 @@ export default function WashroomCubiclesFAQ() {
   return (
     <section className="pt-2 sm:pt-4 lg:pt-6 pb-16 md:pb-20 lg:pb-24 bg-white flex items-center justify-center px-4 sm:px-8 lg:px-16 font-sans text-slate-900 antialiased">
       <div className="w-full max-w-7xl grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 items-start">
-        
+
         {/* Left Column: Heading & Showcase Card */}
         <div className="lg:col-span-5 flex flex-col justify-between space-y-8">
           <div className="space-y-5">
@@ -72,7 +72,7 @@ export default function WashroomCubiclesFAQ() {
             />
 
             {/* Right-Edge Floating Arrow Button */}
-            <button 
+            <button
               type="button"
               className="absolute top-1/2 right-4 -translate-y-1/2 w-11 h-11 rounded-full bg-[#1E3A8A] text-white flex items-center justify-center shadow-lg hover:bg-[#172554] hover:scale-105 transition-all cursor-pointer"
               aria-label="View cubicle showcase"
@@ -99,14 +99,14 @@ export default function WashroomCubiclesFAQ() {
             const isOpen = openId === faq.id;
 
             return (
-              <motion.div 
-                key={faq.id} 
-                layout 
+              <motion.div
+                key={faq.id}
+                layout
                 transition={{ type: 'spring', stiffness: 350, damping: 30 }}
               >
                 {isOpen ? (
                   /* Active Accordion Card */
-                  <motion.div 
+                  <motion.div
                     layout
                     initial={{ opacity: 0.8, scale: 0.98 }}
                     animate={{ opacity: 1, scale: 1 }}
@@ -122,7 +122,7 @@ export default function WashroomCubiclesFAQ() {
                         <span className="text-base sm:text-lg font-medium tracking-tight">
                           {faq.question}
                         </span>
-                        <motion.div 
+                        <motion.div
                           initial={{ rotate: -90 }}
                           animate={{ rotate: 0 }}
                           transition={{ duration: 0.2 }}
@@ -134,7 +134,7 @@ export default function WashroomCubiclesFAQ() {
                     </div>
 
                     <AnimatePresence initial={false}>
-                      <motion.div 
+                      <motion.div
                         initial={{ opacity: 0, height: 0 }}
                         animate={{ opacity: 1, height: 'auto' }}
                         exit={{ opacity: 0, height: 0 }}
@@ -157,7 +157,7 @@ export default function WashroomCubiclesFAQ() {
                     <span className="text-base sm:text-lg font-semibold tracking-tight group-hover:text-[#1E3A8A] transition-colors">
                       {faq.question}
                     </span>
-                    <motion.div 
+                    <motion.div
                       initial={{ rotate: 90 }}
                       animate={{ rotate: 0 }}
                       transition={{ duration: 0.2 }}

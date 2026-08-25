@@ -101,13 +101,13 @@ export default function ContactSection() {
 
           {/* Right Form Panel */}
           <main className="lg:col-span-8 flex flex-col justify-between py-2 sm:pr-2">
-            <header className="space-y-2.5 mb-7">
-              <h1 className="text-4xl font-bold tracking-tight text-black leading-tight">
+            <header className="">
+              <h2 className="text-5xl font-bold tracking-tight text-black leading-tight">
                 Send Us a Message
-              </h1>
-              <p className="text-sm text-slate-500 max-w-2xl leading-relaxed">
+              </h2>
+              {/* <p className="text-sm text-slate-500 max-w-2xl leading-relaxed">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
-              </p>
+              </p> */}
             </header>
 
             <form onSubmit={handleSubmit} className="space-y-5 relative z-10">

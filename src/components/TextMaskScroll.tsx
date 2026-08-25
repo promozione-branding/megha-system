@@ -118,8 +118,8 @@ export default function TextMaskScroll() {
                   type="video/mp4"
                 />
               </video>
-              <div className='absolute bottom-6 right-5 w-40 bg-white p-2 rounded-lg'>
-                <img src="/assets/logo/logo.png" alt="" />
+              <div className='absolute bottom-6 right-5 w-45 bg-white p-2 rounded-lg'>
+                <img src="/assets/logo/1.png" alt="" />
               </div>
             </div>
           </div>

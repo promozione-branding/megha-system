@@ -17,9 +17,9 @@ const services: ServiceItem[] = [
   {
     id: 1,
     icon: Layers,
-    title: 'Premium Cubicle Partitions',
+    title: 'Premium Restroom Partitions',
     description:
-      'Engineered with high-pressure compact laminates for exceptional durability and impact resistance in high-traffic spaces.',
+      'Built with high-pressure compact laminates, our toilet cubicle combines structural strength with a clean, contemporary finish made for demanding spaces.',
     isImageCard: false,
     bgImage: '/assets/moving_down_images/image1.jpeg',
   },
@@ -28,7 +28,7 @@ const services: ServiceItem[] = [
     icon: ShieldCheck,
     title: 'Waterproof Laminate Surfaces',
     description:
-      '100% moisture-resistant and anti-bacterial materials ensuring absolute hygiene and easy maintenance.',
+      'Made to handle moisture and everyday use, our surfaces stay easy to maintain while keeping the washroom clean, fresh, and refined.',
     isImageCard: true,
     bgImage: '/assets/moving_down_images/image2.jpeg',
   },
@@ -38,7 +38,7 @@ const services: ServiceItem[] = [
     icon: DoorClosed,
     title: 'Heavy-Duty Hardware Fittings',
     description:
-      'Nylon and stainless steel accessories including robust hinges, adjustable legs, and privacy indicators.',
+      'From hinges and locks to adjustable legs and privacy indicators, every fitting is chosen for dependable performance and a seamless finish.',
     isImageCard: false,
     bgImage: '/assets/moving_down_images/image3.jpeg',
   },
@@ -47,7 +47,7 @@ const services: ServiceItem[] = [
     icon: LayoutGrid,
     title: 'Hygienic Space Planning',
     description:
-      'Optimized commercial restroom layouts maximizing privacy, compliance, and aesthetic appeal.',
+      'Every layout is thoughtfully considered to create the right balance of privacy, movement, functionality, and visual harmony.',
     isImageCard: false,
     bgImage: '/assets/moving_down_images/image1.jpeg',
   },
@@ -56,7 +56,7 @@ const services: ServiceItem[] = [
 export default function ServicesSection() {
   return (
     <section className="w-full bg-white py-4 sm:py-8 px-4 sm:px-8 lg:px-12 font-sans antialiased text-[#111111] overflow-hidden">
-      <div className="max-w-[1750px] mx-auto space-y-8 sm:space-y-12 px-2 sm:px-6">
+      <div className="max-w-[1750px] mx-auto space-y-8 px-2 sm:px-6">
 
         {/* Header Block */}
         <header className="text-center max-w-3xl mx-auto pt-4 flex flex-col items-center">
@@ -65,11 +65,11 @@ export default function ServicesSection() {
           </p>
 
           <h2 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-[#111111] leading-[1.1] mb-2">
-            Built <span className="text-transparent bg-clip-text bg-gradient-to-r from-gray-400 to-gray-600 font-medium">for</span> Hygiene<br className="hidden sm:block" /> <span className="text-transparent bg-clip-text bg-gradient-to-r from-gray-400 to-gray-600 font-medium">and</span> Function.
+            What <span className="text-transparent bg-clip-text bg-gradient-to-r from-gray-400 to-gray-600 font-medium">Goes</span> Into<br className="hidden sm:block" /> A Better Cubicle.
           </h2>
 
-          <p className="text-sm sm:text-base text-gray-500 max-w-xl mx-auto leading-relaxed">
-            Discover our premium range of commercial washroom cubicles, blending state-of-the-art materials with elegant architectural design.
+          <p className="text-sm sm:text-base text-gray-500 max-w-2xl mx-auto leading-relaxed">
+            From premium materials and precision hardware to smart space planning and expert installation, every element is carefully engineered to deliver lasting performance and a refined finish.
           </p>
         </header>
 

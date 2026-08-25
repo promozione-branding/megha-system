@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, useCallback } from 'react';
 import Image from 'next/image';
 import { Play, X } from 'lucide-react';
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -14,29 +14,29 @@ import 'swiper/css/pagination';
 const HERO_SLIDES = [
   {
     id: 1,
-    title: 'Designing Space, Defining Life.',
-    description: 'From premium Apple retail spaces to modern corporate environments, we deliver high-performance compact laminate cubicles and wall paneling designed for durability, moisture resistance, and architectural excellence.',
+    title: 'Premium Cubicles, Made to Last.',
+    description: 'Designed with precision. With 500+ toilet cubicles installed at the Foxconn facility for Apple, our solutions bring together scale, precision, and dependable performance.',
     src: '/assets/hero_section_images/Apple-BKC-Mumbai-India-media-preview-hero_Full-Bleed-Image.jpg.slideshow-large.jpg.jpeg',
     alt: 'Apple BKC Architectural Showcase',
   },
   {
     id: 2,
-    title: 'Architectural Precision in Every Space.',
-    description: 'Trusted for demanding environments like Maruti Suzuki facilities, we create durable, hygienic, and visually refined interior solutions built to perform in high-traffic commercial spaces.',
+    title: 'Where Design Meets Performance.',
+    description: 'Built around performance. Delivered for Maruti Suzuki. With 4,000+ toilet cubicles installed at the Kadkhoda plant, our solutions are made for scale, precision, and demanding environments.',
     src: '/assets/hero_section_images/l53220260518130534.webp',
     alt: 'maruti suzuki',
   },
   {
     id: 5,
-    title: 'Luxury Systems for Iconic Interiors.',
-    description: 'From McDonald’s restaurants to premium commercial spaces, our customizable cubicle systems combine precision engineering, premium hardware, and scratch-resistant surfaces for interiors that last.',
+    title: 'Custom Cubicles for Every Space.',
+    description: 'Designed for demanding footfall. Delivered across 50+ MCD & McDonald’s outlets, our toilet cubicles combine durability, hygiene, and consistent performance across every location.',
     src: '/assets/hero_section_images/McDonald-1.jpg.jpeg',
     alt: 'McDonald',
   },
   {
     id: 4,
-    title: 'Innovative Materials, Enduring Quality.',
-    description: 'Designed for spaces like KFC and other fast-paced commercial environments, our compact laminate solutions deliver moisture resistance, hygiene, durability, and a clean modern finish.',
+    title: 'Built for Modern Washrooms.',
+    description: 'Made for high-traffic environments. Our toilet cubicle solutions across KFC outlets are built for everyday performance, easy maintenance, and lasting durability.',
     src: '/assets/hero_section_images/KFC-opens-first-outlet-in-Mokokchung-plans-expansion-to-Wokha-and-Mon.webp',
     alt: 'KFC',
   },
@@ -49,35 +49,47 @@ interface TypewriterTextProps {
   className?: string;
 }
 
-function TypewriterText({ text, speed = 45, onComplete, className }: TypewriterTextProps) {
+function TypewriterText({
+  text,
+  speed = 35,
+  onComplete,
+  className,
+}: TypewriterTextProps) {
   const [displayedText, setDisplayedText] = useState('');
   const [isTyping, setIsTyping] = useState(true);
 
   useEffect(() => {
+    let index = 0;
+    let timer: ReturnType<typeof setInterval>;
+
     setDisplayedText('');
     setIsTyping(true);
-    let index = 0;
 
-    const timer = setInterval(() => {
-      if (index < text.length) {
-        setDisplayedText(text.slice(0, index + 1));
-        index++;
-      } else {
+    timer = setInterval(() => {
+      index += 1;
+
+      setDisplayedText(text.slice(0, index));
+
+      if (index >= text.length) {
         clearInterval(timer);
         setIsTyping(false);
-        if (onComplete) {
-          onComplete();
-        }
+        onComplete?.();
       }
     }, speed);
 
-    return () => clearInterval(timer);
-  }, [text, speed]);
+    return () => {
+      clearInterval(timer);
+    };
+  }, [text, speed, onComplete]);
 
   return (
     <span className={className}>
       {displayedText}
-      {isTyping && <span className="inline-block ml-1 animate-pulse font-light">|</span>}
+      {isTyping && (
+        <span className="ml-1 inline-block animate-pulse font-light">
+          |
+        </span>
+      )}
     </span>
   );
 }
@@ -89,14 +101,25 @@ export default function HeroSection() {
 
   const currentSlide = HERO_SLIDES[activeSlideIndex] || HERO_SLIDES[0];
 
-  const handleTypewriterComplete = () => {
-    // Hold reading state for 2 seconds after typewriter finishes, then slide to next banner
-    setTimeout(() => {
-      if (swiperRef.current) {
-        swiperRef.current.slideNext();
+  const slideTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  const handleTypewriterComplete = useCallback(() => {
+    if (slideTimerRef.current) {
+      clearTimeout(slideTimerRef.current);
+    }
+
+    slideTimerRef.current = setTimeout(() => {
+      swiperRef.current?.slideNext();
+    }, 1800);
+  }, []);
+
+  useEffect(() => {
+    return () => {
+      if (slideTimerRef.current) {
+        clearTimeout(slideTimerRef.current);
       }
-    }, 2200);
-  };
+    };
+  }, []);
 
   const handleConsultation = () => {
     console.log("Book consultation clicked");
@@ -105,22 +128,26 @@ export default function HeroSection() {
   return (
     <>
       <section className="w-full bg-white text-black font-sans antialiased pt-2 sm:pt-3 lg:pt-4 pb-8 sm:pb-10 lg:pb-12">
-        <div className="mx-auto max-w-[1750px] px-6 sm:px-10 lg:px-14 xl:px-16">
+        <div className="mx-auto max-w-[1750px] px-6 sm:px-10 lg:px-14 xl:px-12">
 
           {/* Top Sub-header */}
-          <div className="mb-2 sm:mb-3">
+          {/* <div className="mb-2 sm:mb-3">
             <span className="text-[10px] sm:text-[11px] font-medium tracking-[0.45em] text-gray-500 uppercase">
               Welcome to Megha
             </span>
-          </div>
+          </div> */}
 
           {/* Main Headline */}
-          <h1 className="text-4xl sm:text-6xl lg:text-[68px] xl:text-[76px] font-semibold tracking-[-0.04em] text-black leading-[1.02] max-w-7xl">
-            Designing Space, Defining Life.
+          <h1 className="text-3xl sm:text-6xl lg:text-[68px] xl:text-[76px] font-semibold tracking-[-0.04em] text-black leading-[1.02] max-w-7xl">
+            <TypewriterText
+              key={`title-${activeSlideIndex}`}
+              text={currentSlide.title}
+              speed={45}
+            />
           </h1>
 
           {/* Action Button & Description Row */}
-          <div className="mt-5 sm:mt-6 flex flex-col sm:flex-row sm:items-center gap-5 sm:gap-8 lg:gap-12">
+          <div className="mt-4 flex flex-col sm:flex-row sm:items-center gap-5 sm:gap-8 lg:gap-10">
             <button
               type="button"
               onClick={handleConsultation}
@@ -133,9 +160,9 @@ export default function HeroSection() {
             {/* Typewritten Sub-description matching current slide */}
             <p className="max-w-3xl text-xs sm:text-sm leading-relaxed text-gray-500 min-h-[48px]">
               <TypewriterText
-                key={`desc-${activeSlideIndex}`}
+                key={`description-${activeSlideIndex}`}
                 text={currentSlide.description}
-                speed={30}
+                speed={12}
                 onComplete={handleTypewriterComplete}
               />
             </p>
@@ -143,18 +170,13 @@ export default function HeroSection() {
 
           {/* Bottom Feature Grid */}
           <div className="mt-8 sm:mt-10 grid grid-cols-1 lg:grid-cols-[21%_79%] xl:grid-cols-[20%_80%] gap-5 lg:gap-6 items-stretch">
-
-            {/* Left Quote Card with Center Animated Play Button */}
-            <div
-              onClick={() => setIsVideoOpen(true)}
+            {/* <div onClick={() => setIsVideoOpen(true)}
               className="relative group/card bg-gradient-to-b from-[#f8f7f4] to-[#efeee9] border border-black/5 rounded-[22px] p-6 sm:p-7 lg:p-8 flex flex-col justify-between min-h-[320px] sm:min-h-[380px] lg:min-h-[440px] xl:min-h-[480px] shadow-sm hover:shadow-md transition-all duration-500 cursor-pointer overflow-hidden"
             >
-              {/* Subtle background glow on hover */}
               <div className="absolute -right-12 -top-12 w-40 h-40 bg-blue-100/50 rounded-full blur-2xl group-hover/card:scale-150 transition-transform duration-700 pointer-events-none" />
 
               <div>
                 <div className="flex items-center justify-between">
-                  {/* Double Quote Icon */}
                   <svg
                     width="34"
                     height="34"
@@ -170,19 +192,16 @@ export default function HeroSection() {
                     <path d="M15 21c3 0 7-1 7-8V5c0-1.25-.75-2-2-2h-4c-1.25 0-2 .75-2 2v6c0 1.25.75 2 2 2h3c0 4-2 6-4 6" />
                   </svg>
 
-                  {/* Top Badge */}
                   <span className="text-[10px] font-bold tracking-[0.2em] text-gray-500 uppercase px-3 py-1 bg-white/70 backdrop-blur-sm rounded-full border border-black/5 shadow-2xl">
                     SHOWREEL
                   </span>
                 </div>
 
-                {/* Quote Statement */}
                 <h2 className="mt-4 text-lg sm:text-xl lg:text-[22px] xl:text-[24px] font-semibold tracking-[-0.035em] text-black leading-[1.25]">
                   Well-designed spaces speak without words.
                 </h2>
               </div>
 
-              {/* CENTER CIRCULAR PLAY BUTTON LOGO */}
               <div className="my-auto py-4 flex flex-col items-center justify-center">
                 <div className="relative flex items-center justify-center w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-black text-white shadow-xl group-hover/card:scale-110 group-hover/card:bg-[#0d2461] transition-all duration-500">
                   <Play className="w-6 h-6 sm:w-8 sm:h-8 fill-white ml-1 transition-transform duration-300 group-hover/card:scale-110" />
@@ -192,7 +211,6 @@ export default function HeroSection() {
                 </span>
               </div>
 
-              {/* Author */}
               <div className="pt-2 flex items-end justify-between border-t border-black/5">
                 <div>
                   <p className="text-sm sm:text-base font-semibold text-black tracking-tight">
@@ -203,6 +221,16 @@ export default function HeroSection() {
                   </p>
                 </div>
               </div>
+            </div> */}
+
+            <div className="relative group/card bg-gradient-to-b from-[#f8f7f4] to-[#efeee9] border border-black/5 rounded-[22px]  flex flex-col justify-between min-h-[320px] sm:min-h-[380px] lg:min-h-[440px] xl:min-h-[480px] shadow-sm hover:shadow-md transition-all duration-500 cursor-pointer overflow-hidden">
+              <video
+                src="https://www.shutterstock.com/shutterstock/videos/4000952735/preview/stock-footage-interior-of-a-public-restroom-in-japan-featuring-sinks-accessible-western-style-toilet-with-grab.webm"
+                controls
+                autoPlay
+                className="w-full h-full object-fill"
+              >
+              </video>
             </div>
 
             {/* Right Showcase Banner Slider */}
@@ -235,9 +263,7 @@ export default function HeroSection() {
                 ))}
               </Swiper>
             </div>
-
           </div>
-
         </div>
       </section>
 
