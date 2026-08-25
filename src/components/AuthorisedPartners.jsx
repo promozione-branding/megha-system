@@ -4,6 +4,7 @@ import { FreeMode } from "swiper/modules";
 
 import "swiper/css";
 import "swiper/css/free-mode";
+import Link from "next/link";
 
 const partners = [
     {
@@ -125,7 +126,7 @@ function PartnerCard({ partner }) {
                     Authorised
                 </span>
 
-                <span
+                <Link href={"/projects"}
                     className="
                         flex h-7 w-7
                         shrink-0
@@ -141,7 +142,7 @@ function PartnerCard({ partner }) {
                     "
                 >
                     ↗
-                </span>
+                </Link>
             </div>
 
             {/* Logo */}

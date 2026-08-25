@@ -10,6 +10,7 @@ import type { Swiper as SwiperType } from 'swiper';
 import 'swiper/css';
 import 'swiper/css/effect-fade';
 import 'swiper/css/pagination';
+import PopupForm from '@/components/PopupForm';
 
 const HERO_SLIDES = [
   {
@@ -122,8 +123,16 @@ export default function HeroSection() {
   }, []);
 
   const handleConsultation = () => {
-    console.log("Book consultation clicked");
+    setOpen(true)
   };
+
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const [open, setOpen] = useState(false);
+  useEffect(() => {
+    if (videoRef.current) {
+      videoRef.current.playbackRate = 0.8;
+    }
+  }, []);
 
   return (
     <>
@@ -225,9 +234,14 @@ export default function HeroSection() {
 
             <div className="relative group/card bg-gradient-to-b from-[#f8f7f4] to-[#efeee9] border border-black/5 rounded-[22px]  flex flex-col justify-between min-h-[320px] sm:min-h-[380px] lg:min-h-[440px] xl:min-h-[480px] shadow-sm hover:shadow-md transition-all duration-500 cursor-pointer overflow-hidden">
               <video
-                src="https://www.shutterstock.com/shutterstock/videos/4000952735/preview/stock-footage-interior-of-a-public-restroom-in-japan-featuring-sinks-accessible-western-style-toilet-with-grab.webm"
+                ref={videoRef}
+                src="/assets/video/Megha System.mp4"
                 controls
                 autoPlay
+                muted
+                loop
+                playsInline
+                preload="auto"
                 className="w-full h-full object-fill"
               >
               </video>
@@ -266,6 +280,11 @@ export default function HeroSection() {
           </div>
         </div>
       </section>
+
+      <PopupForm
+        isOpen={open}
+        onClose={() => setOpen(false)}
+      />
 
       {/* Video Modal Overlay */}
       {isVideoOpen && (

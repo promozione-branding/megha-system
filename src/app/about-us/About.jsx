@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import {
     ArrowRight,
@@ -25,6 +25,7 @@ import {
     Utensils,
 } from "lucide-react";
 import Link from "next/link";
+import PopupForm from "@/components/PopupForm";
 
 const industries = [
     {
@@ -132,6 +133,7 @@ const itemVariants = {
 };
 
 export default function About() {
+    const [open, setOpen] = useState(false);
     return (
         <main className="w-full overflow-hidden bg-white text-[#0d2461]">
             <section className="relative min-h-[520px] overflow-hidden bg-[#0d2461]">
@@ -729,7 +731,7 @@ export default function About() {
                             {/* Buttons */}
                             <div className="mt-7 flex flex-wrap gap-3">
 
-                                <button
+                                <button onClick={() => setOpen(true)}
                                     className="
                             group
                             inline-flex
@@ -807,6 +809,11 @@ export default function About() {
                     </motion.div>
                 </div>
             </section>
+
+            <PopupForm
+                isOpen={open}
+                onClose={() => setOpen(false)}
+            />
         </main>
     );
 }

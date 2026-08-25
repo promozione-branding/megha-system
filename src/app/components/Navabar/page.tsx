@@ -5,6 +5,7 @@ import Image from 'next/image';
 import { ChevronDown, ArrowRight, Menu, X, Sparkles, Building, Layers, Palette, ArrowUpRight, Phone } from 'lucide-react';
 import Link from 'next/link';
 import { PRODUCTS_CATALOG } from '@/data';
+import PopupForm from '@/components/PopupForm';
 
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -17,18 +18,18 @@ export default function Navbar() {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-
+  const [open, setOpen] = useState(false);
 
   return (
     <>
       {/* Top announcement bar */}
-      <div className="w-full bg-[#0d2461] text-white text-[13px] sm:text-[13.5px] font-semibold tracking-wide text-center py-1.5 px-4 flex items-center justify-center gap-3">
+      <div className="w-full md:flex hidden bg-[#0d2461] text-white text-[13px] sm:text-[13.5px] font-semibold tracking-wide text-center py-1.5 px-4 flex items-center justify-center gap-3">
         <span className="opacity-85">India&apos;s Trusted Restroom Cubicle Solutions</span>
         <span className="opacity-30">|</span>
         <span className="text-[#f5bd24]">✦</span>
         <span className="opacity-85 ml-1">Where Hygiene Meets Design</span>
         <span className="opacity-30">|</span>
-        <a href="tel:+91" className="inline-flex items-center gap-1.5 text-[#f5bd24] hover:text-white transition-colors font-bold">
+        <a href="tel:+919873735716" className="inline-flex items-center gap-1.5 text-[#f5bd24] hover:text-white transition-colors font-bold">
           <Phone className="w-3.5 h-3.5" />
           Get a Free Quote
         </a>
@@ -174,12 +175,11 @@ export default function Navbar() {
           {/* Right: CTA Buttons with Larger Font */}
           <div className="hidden lg:flex items-center gap-2.5 shrink-0">
             {/* Ghost outline button */}
-            <a
-              href="#contact"
+            <button onClick={() => setOpen(true)}
               className="px-4.5 sm:px-5 py-2.5 text-[14px] font-bold text-[#0d2461] border border-[#0d2461]/30 rounded-lg hover:border-[#0d2461] hover:bg-[#0d2461]/5 transition-all duration-200"
             >
               Get in Touch
-            </a>
+            </button>
 
             {/* Primary shimmer CTA */}
             <a
@@ -233,6 +233,11 @@ export default function Navbar() {
           </div>
         )}
       </header>
+
+      <PopupForm
+        isOpen={open}
+        onClose={() => setOpen(false)}
+      />
     </>
   );
 }

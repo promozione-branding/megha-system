@@ -3,6 +3,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ChevronRight, Layers, ShieldCheck, DoorClosed, LayoutGrid } from 'lucide-react';
+import Link from 'next/link';
 
 interface ServiceItem {
   id: number;
@@ -139,14 +140,14 @@ export default function ServicesSection() {
 
                   {/* Card Bottom: Elegant Arrow Button */}
                   <div className="relative z-10 pt-8 flex justify-end">
-                    <div
+                    <Link href={"/products"}
                       className={`w-12 h-12 rounded-full flex items-center justify-center transition-all duration-500 ${service.isImageCard
                         ? 'bg-white text-[#111111] shadow-[0_0_20px_rgba(255,255,255,0.3)] hover:scale-110'
                         : 'bg-white border border-gray-200 text-[#111111] shadow-sm group-hover:bg-white group-hover:border-transparent group-hover:shadow-[0_0_20px_rgba(255,255,255,0.3)] group-hover:scale-110'
                         }`}
                     >
                       <ChevronRight className="w-5 h-5 stroke-[2]" />
-                    </div>
+                    </Link>
                   </div>
                 </motion.div>
               </div>

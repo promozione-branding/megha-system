@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@aws-sdk/client-s3": "^3.1116.0",
+    "axios": "^1.19.0",
     "framer-motion": "^13.1.0",
     "jodit": "^4.13.23",
     "jodit-react": "^5.4.72",

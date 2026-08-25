@@ -1,7 +1,8 @@
 'use client';
 
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
 import { motion, useScroll, useTransform, MotionValue } from 'framer-motion';
+import PopupForm from '@/components/PopupForm';
 
 interface Project {
   id: number;
@@ -80,7 +81,7 @@ export default function Hero3() {
   const card4Y = useTransform(scrollYProgress, [0.08, 0.65], ['26vh', '146vh']);
   const card4Rotate = useTransform(scrollYProgress, [0.08, 0.65], [5, 0]);
   const card4Scale = useTransform(scrollYProgress, [0.08, 0.65], [0.72, 1]);
-
+  const [open, setOpen] = useState(false);
   const cardMotionTransforms: CardMotionTransform[] = [
     { left: card1Left, y: card1Y, rotate: card1Rotate, scale: card1Scale, zIndex: 4 },
     { left: card2Left, y: card2Y, rotate: card2Rotate, scale: card2Scale, zIndex: 3 },
@@ -95,24 +96,24 @@ export default function Hero3() {
         {/* --- HERO SECTION --- */}
         <div className="min-h-[70vh] pt-20 pb-8 flex flex-col justify-center">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-            
+
             {/* Left Hero Text Column */}
-            <div className="lg:col-span-6 z-10 max-w-md">
+            <div className="lg:col-span-6 z-10 max-w-lg">
               <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-50/80 border border-blue-200/80 text-xs font-medium text-[#1e3a8a] mb-6 shadow-sm">
                 <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-                Available for August&apos;25
+                Toilet Cubicles
               </div>
 
               <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight text-[#0f172a] leading-[1.06] mb-6">
-                Design that <br />
-                <span className="text-[#334155]">delivers results.</span>
+                Made for the <br />
+                <span className="text-[#334155]">spaces that matter.</span>
               </h1>
 
               <p className="text-lg text-slate-600 mb-8 leading-relaxed font-normal">
-                I help ambitious companies transform their digital presence through strategic design, high-performance web development, and brand identity.
+                From high-traffic commercial environments to premium interiors, Megha Systems manufactures toilet cubicle systems where design, durability, and precision come together.
               </p>
 
-              <button className="px-6 py-3.5 rounded-full bg-[#0f172a] text-white font-semibold hover:bg-[#1e293b] transition-all shadow-md flex items-center gap-3">
+              <button onClick={() => setOpen(true)} className="px-6 py-3.5 rounded-full bg-[#0f172a] text-white font-semibold hover:bg-[#1e293b] transition-all shadow-md flex items-center gap-3">
                 <span className="w-6 h-6 rounded-full bg-blue-600 text-white flex items-center justify-center text-xs">
                   👤
                 </span>
@@ -128,7 +129,7 @@ export default function Hero3() {
         {/* --- LATEST PROJECTS SECTION HEADER --- */}
         <div className="pt-16 pb-6 z-10 relative">
           <h2 className="text-4xl md:text-6xl font-extrabold tracking-tight text-[#0f172a]">
-            Latest Projects
+            Our Products
           </h2>
         </div>
 
@@ -152,7 +153,7 @@ export default function Hero3() {
                     zIndex: transform.zIndex,
                     willChange: 'left, transform',
                   }}
-                  className="absolute top-0 w-[47%] max-w-[560px] pointer-events-auto flex flex-col group cursor-pointer transform-gpu"
+                  className="absolute top-15 w-[47%] max-w-[600px] pointer-events-auto flex flex-col group cursor-pointer transform-gpu"
                 >
                   {/* Card Image Container */}
                   <div className="w-full aspect-[16/10] rounded-2xl overflow-hidden shadow-xl shadow-slate-200/80 border border-slate-200/90 bg-white relative">
@@ -182,7 +183,10 @@ export default function Hero3() {
             })}
           </div>
         </div>
-
+        <PopupForm
+          isOpen={open}
+          onClose={() => setOpen(false)}
+        />
       </div>
     </div>
   );

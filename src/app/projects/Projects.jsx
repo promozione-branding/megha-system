@@ -117,6 +117,12 @@ export default function Projects() {
                         </motion.p>
                     </motion.div>
 
+                    {loading && (
+                        <div className="flex min-h-[300px] items-center justify-center">
+                            <div className="h-10 w-10 animate-spin rounded-full border-4 border-[#0d2461]/10 border-t-[#f5bd24]" />
+                        </div>
+                    )}
+
                     {/* Projects Grid */}
                     <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
                         {projects.map((project, index) => (
