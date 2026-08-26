@@ -4,7 +4,7 @@ import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { ChevronDown, ArrowRight, Menu, X, Sparkles, Building, Layers, Palette, ArrowUpRight, Phone } from 'lucide-react';
 import Link from 'next/link';
-import { PRODUCTS_CATALOG } from '@/data';
+import { allProducts, PRODUCTS_CATALOG } from '@/data';
 import PopupForm from '@/components/PopupForm';
 
 export default function Navbar() {
@@ -106,11 +106,11 @@ export default function Navbar() {
                  border-[#0d2461]/10 rotate-45"
                 />
 
-                {PRODUCTS_CATALOG.map((item) => {
+                {allProducts.map((item) => {
                   return (
                     <Link
                       key={item.slug}
-                      href={`/products/${item.slug}`}
+                      href={`/products#${item.slug}`}
                       className="group/item flex items-center gap-3
                      px-3 py-3 rounded-xl
                      hover:bg-[#0d2461]/5
@@ -122,7 +122,7 @@ export default function Navbar() {
                           className="block text-sm font-semibold text-[#0d2461]
                          group-hover/item:text-[#0d2461]"
                         >
-                          {item.name}
+                          {item.categoryName}
                         </span>
                       </div>
 
