@@ -148,7 +148,7 @@ export default function ProjectDetail() {
       </section>
 
       <main className="flex-1 py-6 sm:py-8 lg:py-10 px-3 sm:px-6 lg:px-6 xl:px-8">
-        <div className="max-w-[1850px] mx-auto flex flex-col lg:flex-row gap-6 lg:gap-10">
+        <div className="max-w-[1850px] mx-auto flex flex-col-reverse lg:flex-row gap-6 lg:gap-10">
           {/* LEFT SIDEBAR */}
           <div className="w-full lg:w-1/3 xl:w-[350px] flex flex-col gap-6 flex-shrink-0">
 
@@ -266,7 +266,7 @@ export default function ProjectDetail() {
               />
 
               {/* Floating Info Bar */}
-              <div className="absolute bottom-0 right-0 bg-white rounded-tl-[2.5rem] p-6 sm:p-8 lg:px-12 lg:py-8 flex flex-wrap md:flex-nowrap gap-6 sm:gap-10 lg:gap-16">
+              <div className="absolute lg:flex hidden bottom-0 right-0 bg-white rounded-tl-[2.5rem] p-6 sm:p-8 lg:px-12 lg:py-8 flex flex-wrap md:flex-nowrap gap-6 sm:gap-10 lg:gap-16">
 
                 <div>
                   <div className="text-sm text-stone-400 mb-1">

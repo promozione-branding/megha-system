@@ -137,7 +137,7 @@ export default function HeroSection() {
   return (
     <>
       <section className="w-full bg-white text-black font-sans antialiased pt-2 sm:pt-3 lg:pt-4 pb-8 sm:pb-10 lg:pb-12">
-        <div className="mx-auto max-w-[1750px] px-6 sm:px-10 lg:px-14 xl:px-12">
+        <div className="mx-auto max-w-[1750px] px-4 lg:px-10">
 
           {/* Top Sub-header */}
           {/* <div className="mb-2 sm:mb-3">
@@ -178,64 +178,26 @@ export default function HeroSection() {
           </div>
 
           {/* Bottom Feature Grid */}
-          <div className="mt-8 sm:mt-10 grid grid-cols-1 lg:grid-cols-[21%_79%] xl:grid-cols-[20%_80%] gap-5 lg:gap-6 items-stretch">
-            {/* <div onClick={() => setIsVideoOpen(true)}
-              className="relative group/card bg-gradient-to-b from-[#f8f7f4] to-[#efeee9] border border-black/5 rounded-[22px] p-6 sm:p-7 lg:p-8 flex flex-col justify-between min-h-[320px] sm:min-h-[380px] lg:min-h-[440px] xl:min-h-[480px] shadow-sm hover:shadow-md transition-all duration-500 cursor-pointer overflow-hidden"
-            >
-              <div className="absolute -right-12 -top-12 w-40 h-40 bg-blue-100/50 rounded-full blur-2xl group-hover/card:scale-150 transition-transform duration-700 pointer-events-none" />
-
-              <div>
-                <div className="flex items-center justify-between">
-                  <svg
-                    width="34"
-                    height="34"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="1.5"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    className="text-black/80 group-hover/card:text-[#0d2461] transition-colors duration-300"
-                  >
-                    <path d="M3 21c3 0 7-1 7-8V5c0-1.25-.75-2-2-2H4c-1.25 0-2 .75-2 2v6c0 1.25.75 2 2 2h3c0 4-2 6-4 6" />
-                    <path d="M15 21c3 0 7-1 7-8V5c0-1.25-.75-2-2-2h-4c-1.25 0-2 .75-2 2v6c0 1.25.75 2 2 2h3c0 4-2 6-4 6" />
-                  </svg>
-
-                  <span className="text-[10px] font-bold tracking-[0.2em] text-gray-500 uppercase px-3 py-1 bg-white/70 backdrop-blur-sm rounded-full border border-black/5 shadow-2xl">
-                    SHOWREEL
-                  </span>
-                </div>
-
-                <h2 className="mt-4 text-lg sm:text-xl lg:text-[22px] xl:text-[24px] font-semibold tracking-[-0.035em] text-black leading-[1.25]">
-                  Well-designed spaces speak without words.
-                </h2>
-              </div>
-
-              <div className="my-auto py-4 flex flex-col items-center justify-center">
-                <div className="relative flex items-center justify-center w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-black text-white shadow-xl group-hover/card:scale-110 group-hover/card:bg-[#0d2461] transition-all duration-500">
-                  <Play className="w-6 h-6 sm:w-8 sm:h-8 fill-white ml-1 transition-transform duration-300 group-hover/card:scale-110" />
-                </div>
-                <span className="mt-3 text-[10px] sm:text-[11px] font-bold tracking-[0.2em] uppercase text-black/70 group-hover/card:text-[#0d2461] transition-colors">
-                  Watch Showreel
-                </span>
-              </div>
-
-              <div className="pt-2 flex items-end justify-between border-t border-black/5">
-                <div>
-                  <p className="text-sm sm:text-base font-semibold text-black tracking-tight">
-                    Peter Bakar
-                  </p>
-                  <p className="text-xs text-gray-500 font-normal">
-                    Founder of Megha Systems
-                  </p>
-                </div>
-              </div>
-            </div> */}
-
-            <div className="relative group/card bg-gradient-to-b from-[#f8f7f4] to-[#efeee9] border border-black/5 rounded-[22px]  flex flex-col justify-between min-h-[320px] sm:min-h-[380px] lg:min-h-[440px] xl:min-h-[480px] shadow-sm hover:shadow-md transition-all duration-500 cursor-pointer overflow-hidden">
+          <div className="mt-5 sm:mt-8 grid grid-cols-1 lg:grid-cols-[20%_80%] gap-4 md:gap-6 items-stretch">
+            <div className="relative lg:flex hidden group/card bg-linear-to-b from-[#f8f7f4] to-[#efeee9] border border-black/5 rounded-[22px] flex-col justify-between shadow-sm hover:shadow-md transition-all duration-500 cursor-pointer overflow-hidden">
               <video
                 ref={videoRef}
-                src="/assets/video/Megha System.mp4"
+                src="/assets/video/meg (1).mp4"
+                controls
+                autoPlay
+                muted
+                loop
+                playsInline
+                preload="auto"
+                className="w-full h-full object-fill"
+              >
+              </video>
+            </div>
+
+            <div className="relative lg:hidden flex group/card bg-linear-to-b from-[#f8f7f4] to-[#efeee9] border border-black/5 rounded-[22px] flex-col justify-between shadow-sm hover:shadow-md transition-all duration-500 cursor-pointer overflow-hidden">
+              <video
+                ref={videoRef}
+                src="/assets/video/CLIP 4 COMPRESSED.mp4"
                 controls
                 autoPlay
                 muted

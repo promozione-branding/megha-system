@@ -19,7 +19,7 @@ export default function ClientMarquee() {
   const marqueeLogos = [...CLIENT_LOGOS, ...CLIENT_LOGOS, ...CLIENT_LOGOS, ...CLIENT_LOGOS];
 
   return (
-    <section className="relative w-full bg-white py-5 sm:py-10 border-y border-gray-100 overflow-hidden font-sans">
+    <section className="relative w-full bg-white py-10 border-y border-gray-100 overflow-hidden font-sans">
 
       {/* Section Header */}
       <div className="max-w-[1750px] mx-auto px-6 mb-8 text-center">

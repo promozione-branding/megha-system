@@ -99,7 +99,7 @@ export default function OurProjectsSection() {
             {/* =====================================================
                 LEFT COLUMN
             ===================================================== */}
-            <div className="flex flex-col justify-between">
+            <div className="flex flex-col justify-between gap-5">
 
               {/* Heading */}
               <div className="pt-2">

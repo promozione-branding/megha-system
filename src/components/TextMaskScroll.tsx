@@ -2,11 +2,10 @@
 
 import { useRef, useEffect } from 'react';
 
-// SVG mask with "MEGHA SYSTEM" bold text centered
-const SVG_MASK = `url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 200" width="1100" height="200"><text x="50%" y="50%" text-anchor="middle" dominant-baseline="middle" font-family="system-ui,-apple-system,BlinkMacSystemFont,Arial,sans-serif" font-weight="900" font-size="130" fill="black">MEGHA SYSTEM</text></svg>')`;
+const SVG_MASK = `url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1100 200' preserveAspectRatio='xMidYMid meet'><text x='50%25' y='50%25' text-anchor='middle' dominant-baseline='middle' font-family='Arial,sans-serif' font-weight='900' font-size='130' fill='black'>MEGHA SYSTEM</text></svg>")`;
 
 const initialMaskSize = 0.8;
-const targetMaskSize = 40; // Increased slightly to ensure it fully covers before shrinking
+const targetMaskSize = 40;
 const easing = 0.15;
 
 export default function TextMaskScroll() {
@@ -20,106 +19,280 @@ export default function TextMaskScroll() {
     let rafId = 0;
 
     const animate = () => {
-      if (stickyMask.current && container.current && innerMedia.current) {
-        const containerRect = container.current.getBoundingClientRect();
-        const totalScrollHeight = containerRect.height - window.innerHeight;
-        const scrollProgress = totalScrollHeight > 0 ? Math.max(0, -containerRect.top / totalScrollHeight) : 0;
+      if (
+        stickyMask.current &&
+        container.current &&
+        innerMedia.current
+      ) {
+        const containerRect =
+          container.current.getBoundingClientRect();
 
-        const delta = scrollProgress - easedScrollProgress;
+        const totalScrollHeight =
+          containerRect.height - window.innerHeight;
+
+        const scrollProgress =
+          totalScrollHeight > 0
+            ? Math.max(0, -containerRect.top / totalScrollHeight)
+            : 0;
+
+        const delta =
+          scrollProgress - easedScrollProgress;
+
         easedScrollProgress += delta * easing;
-        // Clamp between 0 and 1
-        const progress = Math.max(0, Math.min(1, easedScrollProgress));
 
-        // Fade out top overlay text immediately as scroll starts
+        const progress = Math.max(
+          0,
+          Math.min(1, easedScrollProgress)
+        );
+
+        const isMobile = window.innerWidth < 640;
+
+        /*
+         * Header
+         */
         if (headerText.current) {
-          headerText.current.style.opacity = `${Math.max(0, 1 - scrollProgress * 8)}`;
+          headerText.current.style.opacity = `${Math.max(
+            0,
+            1 - scrollProgress * 8
+          )}`;
         }
 
-        // --- PHASE 1: 0% to 60% — Text Mask Zooms In ---
-        const zoomProgress = Math.min(1, progress / 0.6);
-        const maskSize = (initialMaskSize + (targetMaskSize * Math.pow(zoomProgress, 3))) * 100;
+        /*
+         * =========================
+         * PHASE 1 — MASK ZOOM
+         * =========================
+         */
 
-        // At the very end of zoom, remove mask completely to prevent clipping artifacts
+        const zoomProgress = Math.min(
+          1,
+          progress / 0.6
+        );
+
+        const mobileTargetSize = 32;
+
+        const currentTargetSize = isMobile
+          ? mobileTargetSize
+          : targetMaskSize;
+
+        const maskSize =
+          (initialMaskSize +
+            currentTargetSize *
+            Math.pow(zoomProgress, 3)) *
+          100;
+
         if (zoomProgress > 0.99) {
           stickyMask.current.style.maskImage = 'none';
           stickyMask.current.style.webkitMaskImage = 'none';
         } else {
           stickyMask.current.style.maskImage = SVG_MASK;
           stickyMask.current.style.webkitMaskImage = SVG_MASK;
-          stickyMask.current.style.maskSize = `${maskSize}%`;
-          stickyMask.current.style.webkitMaskSize = `${maskSize}%`;
+
+          stickyMask.current.style.maskSize =
+            `${maskSize}%`;
+
+          stickyMask.current.style.webkitMaskSize =
+            `${maskSize}%`;
         }
 
-        // --- PHASE 2: 60% to 100% — Image Repositions & Shrinks ---
-        const shrinkProgress = Math.max(0, (progress - 0.6) / 0.4);
+        /*
+         * =========================
+         * PHASE 2 — IMAGE SHRINK
+         * =========================
+         */
 
-        // Scale down from 1 to 0.90 (90% width)
-        const scale = 1 - (shrinkProgress * 0.10);
-        // Add border radius from 0 to 32px
-        const borderRadius = shrinkProgress * 32;
-        // Move it down slightly as it shrinks
-        const translateY = shrinkProgress * 50;
+        const shrinkProgress = Math.max(
+          0,
+          (progress - 0.6) / 0.4
+        );
 
-        innerMedia.current.style.transform = `scale(${scale}) translateY(${translateY}px)`;
-        innerMedia.current.style.borderRadius = `${borderRadius}px`;
+        /*
+         * Desktop:
+         * 100% -> 90%
+         *
+         * Mobile:
+         * 100% -> 94%
+         *
+         * This prevents the video from becoming
+         * too small on narrow screens.
+         */
+        const scale = isMobile
+          ? 1 - shrinkProgress * 0.06
+          : 1 - shrinkProgress * 0.1;
+
+        /*
+         * Smaller movement on mobile
+         */
+        const translateY = isMobile
+          ? shrinkProgress * 25
+          : shrinkProgress * 50;
+
+        /*
+         * Smaller radius on mobile
+         */
+        const borderRadius = isMobile
+          ? shrinkProgress * 20
+          : shrinkProgress * 32;
+
+        innerMedia.current.style.transform =
+          `scale(${scale}) translateY(${translateY}px)`;
+
+        innerMedia.current.style.borderRadius =
+          `${borderRadius}px`;
       }
 
       rafId = requestAnimationFrame(animate);
     };
 
     rafId = requestAnimationFrame(animate);
-    return () => cancelAnimationFrame(rafId);
+
+    return () => {
+      cancelAnimationFrame(rafId);
+    };
   }, []);
 
   return (
     <main className="relative bg-[#0f0f11]">
-      {/* 250vh provides a smooth scroll zoom and shrink without excessive empty scroll space */}
-      <div ref={container} className="relative h-[250vh]">
-        <div className="sticky top-0 h-screen w-full overflow-hidden flex items-center justify-center bg-[#0f0f11]">
-          {/* Overlay Text Above MEGHA SYSTEM */}
+      <div
+        ref={container}
+        className="relative h-[220vh] sm:h-[250vh]"
+      >
+        <div className="sticky top-0 h-[100svh] min-h-[600px] w-full overflow-hidden flex items-center justify-center bg-[#0f0f11]">
+
+          {/* =========================
+              HEADER
+          ========================= */}
+
           <div
             ref={headerText}
-            className="absolute top-[28%] sm:top-[30%] left-1/2 -translate-x-1/2 z-20 text-center pointer-events-none"
+            className="
+              absolute
+              top-[27%]
+              sm:top-[30%]
+              left-1/2
+              -translate-x-1/2
+              z-20
+              w-full
+              px-5
+              text-center
+              pointer-events-none
+            "
           >
-            <p className="text-white/80 text-xs sm:text-sm font-semibold tracking-[0.3em] uppercase">
+            <p
+              className="
+                text-white/80
+                text-[10px]
+                xs:text-xs
+                sm:text-sm
+                font-semibold
+                tracking-[0.18em]
+                sm:tracking-[0.3em]
+                uppercase
+                leading-relaxed
+              "
+            >
               CUBICLE ENGINEERING EXCELLENCE
             </p>
           </div>
 
+          {/* =========================
+              MASK
+          ========================= */}
+
           <div
             ref={stickyMask}
-            className="absolute inset-0 w-full h-full overflow-hidden flex items-center justify-center"
+            className="
+              absolute
+              inset-0
+              w-full
+              h-full
+              overflow-hidden
+              flex
+              items-center
+              justify-center
+            "
             style={{
               maskImage: SVG_MASK,
               WebkitMaskImage: SVG_MASK,
-              // Fixed position (45% X, 60% Y)
-              maskPosition: '45% 60%',
-              WebkitMaskPosition: '45% 60%',
+
+              /*
+               * Slightly higher on mobile.
+               * Desktop keeps your original position.
+               */
+              maskPosition: '50% 57%',
+              WebkitMaskPosition: '50% 57%',
+
               maskRepeat: 'no-repeat',
               WebkitMaskRepeat: 'no-repeat',
-              maskSize: `${initialMaskSize * 100}%`,
-              WebkitMaskSize: `${initialMaskSize * 100}%`,
+
+              /*
+               * Responsive starting size
+               */
+              maskSize: '80%',
+              WebkitMaskSize: '80%',
             }}
           >
-            {/* Inner media wrapper that scales and repositions */}
+            {/* =========================
+                VIDEO
+            ========================= */}
+
             <div
               ref={innerMedia}
-              className="relative w-full h-full overflow-hidden transform-gpu origin-center will-change-transform"
+              className="
+                relative
+                w-full
+                h-full
+                overflow-hidden
+                transform-gpu
+                origin-center
+                will-change-transform
+              "
             >
               <video
                 autoPlay
                 muted
                 loop
                 playsInline
-                className="absolute inset-0 w-full h-full object-cover"
+                preload="auto"
+                className="
+                  absolute
+                  inset-0
+                  w-full
+                  h-full
+                  object-cover
+                "
               >
                 <source
                   src="/assets/video/video_2.mp4"
                   type="video/mp4"
                 />
               </video>
-              <div className='absolute bottom-6 right-5 w-45 bg-white p-2 rounded-lg'>
-                <img src="/assets/logo/1.png" alt="" />
+
+              {/* =========================
+                  LOGO
+              ========================= */}
+
+              <div
+                className="
+                  absolute
+                  bottom-4
+                  right-3
+                  sm:bottom-6
+                  sm:right-5
+                  w-24
+                  sm:w-36
+                  md:w-45
+                  bg-white
+                  p-1.5
+                  sm:p-2
+                  rounded-md
+                  sm:rounded-lg
+                "
+              >
+                <img
+                  src="/assets/logo/1.png"
+                  alt="Megha System"
+                  className="block w-full h-auto"
+                />
               </div>
             </div>
           </div>

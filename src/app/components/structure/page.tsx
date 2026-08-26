@@ -44,10 +44,10 @@ export default function LightWallSectionScroll() {
   return (
     <section
       ref={containerRef}
-      className="relative w-full h-[220vh] bg-[#f8fafc] font-sans selection:bg-[#0d2461] selection:text-white"
+      className="relative w-full py-5 sm:py-0 h-[220vh] bg-[#f8fafc] font-sans selection:bg-[#0d2461] selection:text-white"
     >
       {/* Sticky wrapper */}
-      <div className="sticky top-[12vh] h-[76vh] w-full overflow-hidden bg-[#f8fafc] flex flex-col justify-center border-y border-[#e2e8f0]">
+      <div className="sticky lg:top-[15vh] top-5 h- sm:h-[76vh] w-full overflow-hidden bg-[#f8fafc] flex flex-col justify-center border-y border-[#e2e8f0]">
 
         {/* Architectural Blueprint Grid */}
         <div

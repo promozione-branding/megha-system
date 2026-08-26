@@ -57,7 +57,7 @@ const services: ServiceItem[] = [
 export default function ServicesSection() {
   return (
     <section className="w-full bg-white py-4 sm:py-8 px-4 sm:px-8 lg:px-12 font-sans antialiased text-[#111111] overflow-hidden">
-      <div className="max-w-[1750px] mx-auto space-y-8 px-2 sm:px-6">
+      <div className="max-w-[1750px] mx-auto space-y-8 lg:px-6">
 
         {/* Header Block */}
         <header className="text-center max-w-3xl mx-auto pt-4 flex flex-col items-center">
@@ -75,7 +75,7 @@ export default function ServicesSection() {
         </header>
 
         {/* Services Grid with Permanent Alternating Staggered Offset */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 items-start pt-16 pb-20">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 items-start py-5 lg:pt-16 lg:pb-20">
           {services.map((service, index) => {
             const Icon = service.icon;
             const isStaggered = index % 2 === 0;

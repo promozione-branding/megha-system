@@ -37,8 +37,6 @@ export default function AuthorisedPartners() {
     return (
         <section className="overflow-hidden bg-[#f4f3ef] py-10 md:py-15">
             <div className="mx-auto w-full px-4 sm:px-6 md:px-10 lg:px-15">
-
-                {/* ================= HEADING ================= */}
                 <div className="mx-auto mb-5 max-w-[760px] text-center md:mb-8">
 
                     <span className="mb-4 inline-block text-[11px] font-bold uppercase tracking-[0.22em] text-neutral-500 md:text-xs">
@@ -74,8 +72,8 @@ export default function AuthorisedPartners() {
                 <div className="md:hidden">
                     <Swiper
                         modules={[FreeMode]}
-                        spaceBetween={12}
-                        slidesPerView={1.2}
+                        spaceBetween={5}
+                        slidesPerView={2}
                         freeMode={{
                             enabled: true,
                             sticky: false,
@@ -103,12 +101,12 @@ function PartnerCard({ partner }) {
         <div
             className="
                 group relative
-                flex h-[250px]
+                flex h-[240px]
                 flex-col
                 overflow-hidden
                 border border-[#deddd7]
                 bg-white
-                p-5
+                p-2
                 transition-all
                 duration-500
 
