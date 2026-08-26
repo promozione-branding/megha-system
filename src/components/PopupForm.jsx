@@ -22,12 +22,7 @@ const products = [
   "Other",
 ];
 
-interface PopupFormProps {
-  isOpen: boolean;
-  onClose: () => void;
-}
-
-export default function PopupForm({ isOpen, onClose, }: PopupFormProps) {
+export default function PopupForm({ isOpen, onClose }) {
   const [formData, setFormData] = useState({
     contactPerson: "",
     phone: "",
@@ -40,7 +35,7 @@ export default function PopupForm({ isOpen, onClose, }: PopupFormProps) {
   const [success, setSuccess] = useState(false);
   const [error, setError] = useState("");
 
-  /* Lock body scroll */
+  // Lock body scroll
   useEffect(() => {
     document.body.style.overflow = isOpen ? "hidden" : "";
 
@@ -49,9 +44,9 @@ export default function PopupForm({ isOpen, onClose, }: PopupFormProps) {
     };
   }, [isOpen]);
 
-  /* Escape key */
+  // Escape key
   useEffect(() => {
-    const handleEscape = (event: KeyboardEvent) => {
+    const handleEscape = (event) => {
       if (event.key === "Escape" && isOpen) {
         onClose();
       }
@@ -64,11 +59,7 @@ export default function PopupForm({ isOpen, onClose, }: PopupFormProps) {
     };
   }, [isOpen, onClose]);
 
-  const handleChange = (
-    e: React.ChangeEvent<
-      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
-    >
-  ) => {
+  const handleChange = (e) => {
     const { name, value } = e.target;
 
     setFormData((prev) => ({
@@ -79,7 +70,7 @@ export default function PopupForm({ isOpen, onClose, }: PopupFormProps) {
     setError("");
   };
 
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setError("");
 
@@ -133,9 +124,7 @@ export default function PopupForm({ isOpen, onClose, }: PopupFormProps) {
     } catch (err) {
       console.error("Form submission error:", err);
 
-      setError(
-        "Unable to submit your enquiry. Please try again."
-      );
+      setError("Unable to submit your enquiry. Please try again.");
     } finally {
       setLoading(false);
     }
@@ -156,12 +145,16 @@ export default function PopupForm({ isOpen, onClose, }: PopupFormProps) {
           }}
         >
           <motion.div
-            initial={{ opacity: 0, y: 25, scale: 0.97, }}
-            animate={{ opacity: 1, y: 0, scale: 1, }}
-            exit={{ opacity: 0, y: 20, scale: 0.97, }}
-            transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1], }}
+            initial={{ opacity: 0, y: 25, scale: 0.97 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            exit={{ opacity: 0, y: 20, scale: 0.97 }}
+            transition={{
+              duration: 0.3,
+              ease: [0.22, 1, 0.36, 1],
+            }}
             className="relative flex max-h-[92vh] w-full max-w-[900px] overflow-hidden rounded-[26px] bg-white shadow-[0_35px_100px_rgba(0,0,0,0.3)]"
           >
+            {/* LEFT PANEL */}
             <div className="relative hidden w-[38%] flex-col justify-between overflow-hidden bg-[#0d2461] p-8 lg:flex xl:p-10">
               {/* Decorative circles */}
               <div className="absolute -right-28 -top-28 h-72 w-72 rounded-full border border-white/[0.07]" />
@@ -171,7 +164,11 @@ export default function PopupForm({ isOpen, onClose, }: PopupFormProps) {
               <div className="relative z-10">
                 {/* Brand */}
                 <div className="flex items-center gap-3">
-                  <img src="/assets/logo/1.png" alt="logo" className="rounded-lg" />
+                  <img
+                    src="/assets/logo/1.png"
+                    alt="logo"
+                    className="rounded-lg"
+                  />
                 </div>
 
                 {/* Heading */}
@@ -188,8 +185,8 @@ export default function PopupForm({ isOpen, onClose, }: PopupFormProps) {
                   </h2>
 
                   <p className="mt-4 max-w-xs text-sm leading-6 text-white/50">
-                    Tell us about your washroom project and our team
-                    will help you find the right solution.
+                    Tell us about your washroom project and our team will help
+                    you find the right solution.
                   </p>
                 </div>
               </div>
@@ -202,6 +199,7 @@ export default function PopupForm({ isOpen, onClose, }: PopupFormProps) {
                   Speak With Our Team
                 </p>
 
+                {/* Phone */}
                 <a
                   href="tel:+919873735713"
                   className="group flex items-center gap-3"
@@ -221,6 +219,7 @@ export default function PopupForm({ isOpen, onClose, }: PopupFormProps) {
                   </div>
                 </a>
 
+                {/* Email */}
                 <a
                   href="mailto:contact@meghasystems.com"
                   className="group mt-4 flex items-center gap-3"
@@ -242,8 +241,12 @@ export default function PopupForm({ isOpen, onClose, }: PopupFormProps) {
               </div>
             </div>
 
+            {/* RIGHT PANEL */}
             <div className="relative flex min-w-0 flex-1 flex-col bg-white">
-              <button type="button" onClick={onClose}
+              {/* Close button */}
+              <button
+                type="button"
+                onClick={onClose}
                 className="absolute right-5 top-5 z-20 flex h-9 w-9 items-center justify-center rounded-full border border-gray-200 bg-white text-gray-400 transition-all hover:border-[#0d2461]/20 hover:bg-[#0d2461] hover:text-white"
                 aria-label="Close"
               >
@@ -252,6 +255,7 @@ export default function PopupForm({ isOpen, onClose, }: PopupFormProps) {
 
               <div className="overflow-y-auto p-6 sm:p-8 lg:p-10">
                 {success ? (
+                  /* SUCCESS */
                   <motion.div
                     initial={{ opacity: 0, y: 15 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -266,25 +270,24 @@ export default function PopupForm({ isOpen, onClose, }: PopupFormProps) {
                     </h3>
 
                     <p className="mt-3 max-w-sm text-sm leading-6 text-gray-500">
-                      Thank you for contacting Megha Systems.
-                      Our team will get back to you shortly.
+                      Thank you for contacting Megha Systems. Our team will get
+                      back to you shortly.
                     </p>
                   </motion.div>
                 ) : (
                   <>
                     {/* Form heading */}
-                    <div className="md:mb-8 mb-4 pr-10">
+                    <div className="mb-4 pr-10 md:mb-8">
                       <p className="text-[10px] font-bold uppercase tracking-[0.28em] text-[#0d2461]/40">
                         Project Enquiry
                       </p>
 
-                      <h3 className="mt-2 md:text-3xl text-xl font-extrabold tracking-tight text-[#0d2461]">
+                      <h3 className="mt-2 text-xl font-extrabold tracking-tight text-[#0d2461] md:text-3xl">
                         Tell us what you need.
                       </h3>
 
-                      <p className="mt-2 text-sm leading-6 text-gray-400 md:flex hidden">
-                        Fill in your details and we&apos;ll get back to
-                        you.
+                      <p className="mt-2 hidden text-sm leading-6 text-gray-400 md:flex">
+                        Fill in your details and we&apos;ll get back to you.
                       </p>
                     </div>
 
@@ -297,7 +300,7 @@ export default function PopupForm({ isOpen, onClose, }: PopupFormProps) {
                           value={formData.contactPerson}
                           onChange={handleChange}
                           placeholder="Enter your name"
-                          icon={<User />}
+                          icon={User}
                         />
 
                         <FormInput
@@ -307,12 +310,12 @@ export default function PopupForm({ isOpen, onClose, }: PopupFormProps) {
                           value={formData.phone}
                           onChange={handleChange}
                           placeholder="+91 XXXXX XXXXX"
-                          icon={<Phone />}
+                          icon={Phone}
                         />
                       </div>
 
+                      {/* Email + Product */}
                       <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
-                        {/* Email */}
                         <FormInput
                           label="Email Address"
                           name="email"
@@ -320,7 +323,7 @@ export default function PopupForm({ isOpen, onClose, }: PopupFormProps) {
                           value={formData.email}
                           onChange={handleChange}
                           placeholder="your@email.com"
-                          icon={<Mail />}
+                          icon={Mail}
                         />
 
                         {/* Product */}
@@ -344,10 +347,7 @@ export default function PopupForm({ isOpen, onClose, }: PopupFormProps) {
                             </option>
 
                             {products.map((product) => (
-                              <option
-                                key={product}
-                                value={product}
-                              >
+                              <option key={product} value={product}>
                                 {product}
                               </option>
                             ))}
@@ -387,8 +387,10 @@ export default function PopupForm({ isOpen, onClose, }: PopupFormProps) {
                       )}
 
                       {/* Submit */}
-                      <button type="submit" disabled={loading}
-                        className="group flex h-13 w-full items-center justify-center gap-3 rounded-xl bg-[#0d2461] px-6 py-3.5 text-sm font-bold text-white transition-all duration-300 hover:bg-[#102d7a] hover:shadow-lg disabled:cursor-not-allowed disabled:opacity-60"
+                      <button
+                        type="submit"
+                        disabled={loading}
+                        className="group flex h-12 w-full items-center justify-center gap-3 rounded-xl bg-[#0d2461] px-6 py-3.5 text-sm font-bold text-white transition-all duration-300 hover:bg-[#102d7a] hover:shadow-lg disabled:cursor-not-allowed disabled:opacity-60"
                       >
                         {loading ? (
                           <>
@@ -404,8 +406,7 @@ export default function PopupForm({ isOpen, onClose, }: PopupFormProps) {
                       </button>
 
                       <p className="text-center text-[10px] text-gray-400">
-                        Our team typically responds within one
-                        business day.
+                        Our team typically responds within one business day.
                       </p>
                     </form>
                   </>
@@ -430,17 +431,7 @@ function FormInput({
   value,
   onChange,
   placeholder,
-  icon,
-}: {
-  label: string;
-  name: string;
-  type?: string;
-  value: string;
-  onChange: (
-    e: React.ChangeEvent<HTMLInputElement>
-  ) => void;
-  placeholder: string;
-  icon: React.ReactNode;
+  icon: Icon,
 }) {
   return (
     <div>
@@ -453,9 +444,7 @@ function FormInput({
 
       <div className="relative">
         <span className="pointer-events-none absolute left-4 top-1/2 -translate-y-1/2 text-gray-400">
-          {React.cloneElement(icon as React.ReactElement, {
-            className: "h-4 w-4",
-          })}
+          <Icon className="h-4 w-4" />
         </span>
 
         <input

@@ -29,6 +29,6 @@
     ".next/types/**/*.ts",
     ".next/dev/types/**/*.ts",
     "**/*.mts"
-, "src/app/products/[productName]/page.jsx"  ],
+, "src/app/products/[productName]/page.jsx", "src/components/PopupForm.jsx"  ],
   "exclude": ["node_modules"]
 }
