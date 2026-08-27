@@ -10,7 +10,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 
 const testimonials = [
-  {
+  { 
     text: "We were looking for a reliable toilet cubicle manufacturer who could understand our requirements and deliver quality work. Megha Systems handled the project smoothly from start to finish.",
     name: "Jonathan Pierce",
     role: "Project Manager",
