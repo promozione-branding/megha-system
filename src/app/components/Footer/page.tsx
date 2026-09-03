@@ -124,7 +124,8 @@ export default function FooterSection() {
               {/* Social Icons */}
               <div className="flex items-center gap-3 pt-2">
                 <a
-                  href="#facebook"
+                  href="https://www.facebook.com/meghasystems/"
+                  target="_blank"
                   className="w-10 h-10 rounded-full bg-white/10 border border-white/20 text-white flex items-center justify-center hover:bg-white hover:text-[#0b1329] transition-all shadow-sm"
                   aria-label="Facebook"
                 >
