@@ -343,8 +343,8 @@ export default function ProjectDetail() {
                         type="button"
                         onClick={() => setDimensionType('regular')}
                         className={`px-3 py-1.5 text-xs font-semibold rounded-md transition-all ${dimensionType === 'regular'
-                            ? 'bg-[#0d2461] text-white'
-                            : 'text-blue-900 hover:bg-blue-50'
+                          ? 'bg-[#0d2461] text-white'
+                          : 'text-blue-900 hover:bg-blue-50'
                           }`}
                       >
                         Regular
@@ -354,8 +354,8 @@ export default function ProjectDetail() {
                         type="button"
                         onClick={() => setDimensionType('speciallyAbled')}
                         className={`px-3 py-1.5 text-xs font-semibold rounded-md transition-all ${dimensionType === 'speciallyAbled'
-                            ? 'bg-[#0d2461] text-white'
-                            : 'text-blue-900 hover:bg-blue-50'
+                          ? 'bg-[#0d2461] text-white'
+                          : 'text-blue-900 hover:bg-blue-50'
                           }`}
                       >
                         Specially Abled
@@ -468,7 +468,7 @@ export default function ProjectDetail() {
                 ref={imageScrollRef}
                 className="relative h-[1000px] md:h-[1000px]"
               >
-                <div className="sticky top-3 h-[440px]">
+                <div className="sticky top-20 h-[440px]">
 
                   <div className="relative h-full w-full">
 
@@ -476,9 +476,9 @@ export default function ProjectDetail() {
                     <div className="absolute inset-0 translate-y-[-18px] scale-[0.96] rounded-[28px] bg-white p-1">
                       <div className="h-full w-full overflow-hidden rounded-[20px]">
                         <img
-                          src={project.image || '/product/image.png'}
+                          src={'/product/image.png'}
                           alt={project.name}
-                          className="h-full w-full object-cover"
+                          className="h-full w-full object-"
                         />
                       </div>
                     </div>
@@ -493,9 +493,9 @@ export default function ProjectDetail() {
                     >
                       <div className="h-full w-full overflow-hidden rounded-[20px]">
                         <img
-                          src={project.image || '/product/image.png'}
+                          src={'/product/image.png'}
                           alt={project.name}
-                          className="h-full w-full object-cover"
+                          className="h-full w-full object-"
                         />
                       </div>
                     </motion.div>
