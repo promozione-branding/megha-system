@@ -103,7 +103,7 @@ export const allProducts = [
             {
                 name: "Black Maxi",
                 slug: "black-maxi",
-                image: "",
+                image: "/product/Black Maxi.webp",
                 metaTitle: "Black Maxi",
                 metaDescription: "Black Maxi",
                 shortDescription: "The BLACK MAXI Series brings a bold, sophisticated look to modern washrooms with premium PVD-coated stainless steel hardware and a refined matte black finish. Engineered for high-traffic environments, it combines luxury aesthetics with strength, corrosion resistance, and lasting performance.",
@@ -140,7 +140,7 @@ export const allProducts = [
             {
                 name: "Maxi PRO",
                 slug: "maxi-pro",
-                image: "",
+                image: "/product/Maxi PRO.webp",
                 metaTitle: "Maxi PRO",
                 metaDescription: "Maxi PRO",
                 shortDescription: "The MAXI PRO Series is a practical and durable toilet cubicle partition designed for modern commercial washrooms. With a stable aluminium structure, precision-fitted panels, flexible door configuration, and reliable stainless steel hardware, MAXI PRO delivers privacy, comfort, and dependable everyday performance.",
@@ -178,7 +178,7 @@ export const allProducts = [
             {
                 name: "Duro",
                 slug: "duro",
-                image: "",
+                image: "/product/Duro-Toilet-Cubicles.webp",
                 metaTitle: "Duro",
                 metaDescription: "Duro",
                 shortDescription: "The DURO Series is engineered for strength, stability, and long-term performance. With Grade 316 stainless steel supports, secure floor anchoring, and reinforced panel connections, DURO provides a robust restroom partition for demanding commercial washrooms.",
@@ -214,7 +214,7 @@ export const allProducts = [
             {
                 name: "Duro Pro",
                 slug: "duro-pro",
-                image: "",
+                image: "/product/duro pro toilet cubicles.webp",
                 metaTitle: "Duro Pro",
                 metaDescription: "Duro Pro",
                 shortDescription: "The DURO PRO Series is engineered for strength, stability, and lasting performance in demanding washroom environments. Its stainless steel construction and reinforced panel support create a reliable toilet cubicle designed for everyday commercial use.",
@@ -250,7 +250,7 @@ export const allProducts = [
             {
                 name: "Cubic Doorz",
                 slug: "cubic-doorz",
-                image: "",
+                image: "/product/Cubi Doorz.webp",
                 metaTitle: "Cubic Doorz",
                 metaDescription: "Cubic Doorz",
                 shortDescription: "The CUBI DOORZ Series is a slim, durable door system designed to provide privacy and functionality across modern office and commercial spaces. With 12 mm compact board doors, strong D-pole supports, and flexible hardware options, it delivers a clean appearance with reliable everyday performance.",
@@ -295,7 +295,7 @@ export const allProducts = [
             {
                 name: "Kiddiez",
                 slug: "kiddiez",
-                image: "",
+                image: "/product/Kiddiez.webp",
                 metaTitle: "Kiddiez",
                 metaDescription: "Kiddiez",
                 shortDescription: "The KIDDIEZ Series is a thoughtfully designed modular toilet cubicle partition created for children’s washrooms. It combines durable construction, safe and practical hardware, easy maintenance, and a clean, friendly design for schools and other high-use spaces.",
@@ -332,7 +332,7 @@ export const allProducts = [
             {
                 name: "Kiddiez Pro",
                 slug: "kiddiez-pro",
-                image: "",
+                image: "/product/Kiddiez Pro.webp",
                 metaTitle: "Kiddiez Pro",
                 metaDescription: "Kiddiez Pro",
                 shortDescription: "The KIDDIEZ PRO Series is a secure and durable modular washroom partition designed specifically for children’s washrooms. With reinforced stainless steel construction, concealed anchoring, and child-friendly hardware, it provides a safe, stable, and comfortable washroom environment.",
@@ -377,7 +377,7 @@ export const allProducts = [
             {
                 name: "Cielo",
                 slug: "cielo",
-                image: "",
+                image: "/product/Cielo.webp",
                 metaTitle: "Cielo",
                 metaDescription: "Cielo",
                 shortDescription: "The CIELO Series brings a clean, floating aesthetic to modern washrooms with its innovative ceiling-hung design. With no floor contact, the system creates a seamless visual appearance while making floor cleaning easier, improving hygiene, and reducing maintenance.",
@@ -414,7 +414,7 @@ export const allProducts = [
             {
                 name: "Premia",
                 slug: "premia",
-                image: "",
+                image: "/product/Premia.webp",
                 metaTitle: "Premia",
                 metaDescription: "Premia",
                 shortDescription: "The PREMIA Series is a luxury toilet cubicle created for premium commercial and residential washrooms. Combining refined finishes with robust construction, premium PVD hardware, and Grade 316 stainless steel components, PREMIA brings together elegance, privacy, and dependable everyday performance.",
@@ -450,7 +450,7 @@ export const allProducts = [
             {
                 name: "Rove",
                 slug: "rove",
-                image: "",
+                image: "/product/Rove.webp",
                 metaTitle: "Rove",
                 metaDescription: "Rove",
                 shortDescription: "The ROVE Series is a modern wall-hung Restroom Partition Cubicle designed to create a clean, open, and floor-free washroom environment. Supported by heavy-duty wall brackets, ROVE combines lightweight construction with durable materials, making cleaning easier while enhancing hygiene and visual appeal.",
@@ -497,7 +497,7 @@ export const allProducts = [
             {
                 name: "NEO",
                 slug: "neo",
-                image: "",
+                image: "/product/NEO.webp",
                 metaTitle: "NEO",
                 metaDescription: "NEO",
                 shortDescription: "The NEO Series is a modular toilet cubicle system designed for modern commercial and institutional washrooms. Combining durable compact laminate panels with aluminium supports, adjustable nylon legs, and practical hardware, NEO delivers a stable, stylish, and easy-to-install toilet cubicle for high-use spaces.",
@@ -534,7 +534,7 @@ export const allProducts = [
             {
                 name: "Maxi",
                 slug: "maxi",
-                image: "",
+                image: "/product/Maxi.webp",
                 metaTitle: "Maxi",
                 metaDescription: "Maxi",
                 shortDescription: "The MAXI Series is a luxury toilet cubicle partition designed for commercial and high-traffic washrooms. Combining stainless steel hardware, anodized aluminium profiles, adjustable feet, and refined detailing, MAXI delivers exceptional stability, durability, and easy maintenance.",
@@ -571,7 +571,7 @@ export const allProducts = [
             {
                 name: "Luron",
                 slug: "luron",
-                image: "",
+                image: "/product/Luron.webp",
                 metaTitle: "Luron",
                 metaDescription: "Luron",
                 shortDescription: "The LURON Series combines luxury stainless steel construction with thoughtful functionality for modern commercial washrooms. Its concealed support system, precise panel alignment, and flexible door configuration create a clean, stable, and durable toilet cubicle system.",

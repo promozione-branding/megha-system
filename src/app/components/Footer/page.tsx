@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import { ChevronRight, Share2, Globe, Camera, Send, Building2 } from 'lucide-react';
+import Link from 'next/link';
 
 export default function FooterSection() {
   const [email, setEmail] = useState('');
@@ -85,11 +86,12 @@ export default function FooterSection() {
                 Navigation
               </h4>
               <ul className="space-y-3.5 text-base text-white/80 font-normal">
-                <li><a href="#home" className="hover:text-white transition-colors">Home</a></li>
-                <li><a href="#about" className="hover:text-white transition-colors">About</a></li>
-                <li><a href="#cubicles" className="hover:text-white transition-colors">Cubicle Systems</a></li>
-                <li><a href="#materials" className="hover:text-white transition-colors">Marble Finishes</a></li>
-                <li><a href="#testimonials" className="hover:text-white transition-colors">Testimonials</a></li>
+                <li><Link href="/" className="hover:text-white transition-colors">Home</Link></li>
+                <li><Link href="/products" className="hover:text-white transition-colors">Products</Link></li>
+                <li><Link href="/about-us" className="hover:text-white transition-colors">About</Link></li>
+                <li><Link href="/contact-us" className="hover:text-white transition-colors">Contact</Link></li>
+                <li><Link href="/projects" className="hover:text-white transition-colors">Projects</Link></li>
+                <li><Link href="/our-articles" className="hover:text-white transition-colors">Articles</Link></li>
               </ul>
             </div>
 
@@ -103,7 +105,7 @@ export default function FooterSection() {
                   Plot Number-P10/J-3, Adore Business City, Sector 72-73, Faridabad, Haryana, 121004
                 </p>
                 <p>
-                  <a href="mailto:hola@dominantsite.com" className="hover:text-white transition-colors font-medium text-white">
+                  <a href="mailto:contact@meghasystems.com" className="hover:text-white transition-colors font-medium text-white">
                     contact@meghasystems.com
                   </a>
                 </p>
@@ -160,8 +162,7 @@ export default function FooterSection() {
         <div className="pt-8 border-t border-white/15 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-white/70 relative z-20 pb-10">
           <p>© 2026 Megha Systems. All rights reserved.</p>
           <div className="flex items-center gap-8">
-            <a href="#terms" className="hover:text-white transition-colors">Terms & Conditions</a>
-            <a href="#privacy" className="hover:text-white transition-colors">Privacy Policy</a>
+            <p>Website Designed By <Link href="https://inquirybazaar.com" target="_blank" className="hover:text-white transition-colors text-[#CF9306]">Inquiry Bazaar Pvt. Ltd.</Link> B2B Marketplace</p>
           </div>
         </div>
 

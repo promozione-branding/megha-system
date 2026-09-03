@@ -10,7 +10,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 
 const testimonials = [
-  { 
+  {
     text: "We were looking for a reliable toilet cubicle manufacturer who could understand our requirements and deliver quality work. Megha Systems handled the project smoothly from start to finish.",
     name: "Jonathan Pierce",
     role: "Project Manager",
@@ -54,7 +54,7 @@ export default function Testimonials() {
           <div className="relative z-10">
             <div className="relative aspect-[1.34/1] w-full overflow-hidden rounded-[14px]">
               <img
-                src="https://media.istockphoto.com/id/1206101478/photo/row-of-public-toilet-decorated-with-wooden-partition.jpg?s=612x612&w=0&k=20&c=dU8Q7gD4UC905t0YCB2WECR8PYRdjNzgH9f1IctjtEA="
+                src="/4.jpeg"
                 alt="Refined toilet cubicle interior"
                 className="h-full w-full object-cover"
               />
@@ -105,7 +105,7 @@ export default function Testimonials() {
             "
           >
             <Swiper
-              modules={[Navigation, Pagination,Autoplay]}
+              modules={[Navigation, Pagination, Autoplay]}
               slidesPerView={1}
               spaceBetween={20}
               speed={600}

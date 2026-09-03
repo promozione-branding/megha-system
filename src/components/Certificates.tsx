@@ -13,46 +13,46 @@ import 'swiper/css/pagination';
 const CERTIFICATES = [
     {
         id: 1,
-        title: 'ISO Certification',
+        title: 'Authorized OEM',
         image: '/assets/certificates/14.png',
         alt: 'ISO Certification',
     },
     {
         id: 2,
-        title: 'Quality Certification',
+        title: 'Authorized OEM',
         image: '/assets/certificates/15.png',
         alt: 'Quality Certification',
     },
     {
         id: 3,
-        title: 'Industry Certification',
+        title: 'Authorised Distributor',
         image: '/assets/certificates/16.png',
         alt: 'Industry Certification',
     },
     {
         id: 4,
-        title: 'Safety Certification',
+        title: 'Authorised Dealer',
         image: '/assets/certificates/17.png',
         alt: 'Safety Certification',
     },
     {
         id: 5,
-        title: 'Excellence Award',
+        title: 'Authorised Dealer',
         image: '/assets/certificates/18.png',
         alt: 'Excellence Award',
     },
     {
         id: 6,
-        title: 'Excellence Award',
+        title: 'Quality Assurance',
         image: '/assets/certificates/19.png',
         alt: 'Excellence Award',
     },
 ];
 
 export default function Certificates() {
-    const [selectedCertificate, setSelectedCertificate] = useState <
+    const [selectedCertificate, setSelectedCertificate] = useState<
         (typeof CERTIFICATES)[number] | null
-        > (null);
+    >(null);
 
     // Close popup with Escape
     useEffect(() => {

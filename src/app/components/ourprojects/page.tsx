@@ -26,7 +26,7 @@ const projects: Project[] = [
     description:
       "Created for premium environments, our luxury cubicles bring together sophisticated finishes, premium materials, and precision detailing to make every washroom feel considered.",
     image:
-      "https://media.istockphoto.com/id/2263983512/photo/public-toilet-design-with-contrasting-colors-modern-and-minimalist-design.jpg?s=612x612&w=0&k=20&c=JbEjk32IzXFUalLs7fb8GYpc8P7FZw65mCJWMt3ozhY=",
+       "/11.avif",
     details:
       "Our luxury toilet cubicles are designed for premium commercial and hospitality environments where aesthetics, durability, and attention to detail matter. We offer refined finishes and practical configurations that create a sophisticated washroom experience.",
     features: [
@@ -41,8 +41,7 @@ const projects: Project[] = [
     title: "Urinal Cubicles",
     description:
       "Our urinal cubicle solutions are designed for busy washrooms, combining smart space utilization, durable construction, and easy maintenance.",
-    image:
-      "https://media.istockphoto.com/id/508182124/photo/doors-from-toilets.jpg?s=612x612&w=0&k=20&c=ExswbkHEa6wG_h53KZcn2xbE_rKfcQ-c3duz2YSCuhQ=",
+    image: "/new1.webp",
     details:
       "Megha Systems urinal partitions provide privacy and efficient space utilization for commercial, institutional, and high-traffic washrooms. Our systems are manufactured using durable materials designed for regular use and easy maintenance.",
     features: [
@@ -57,8 +56,7 @@ const projects: Project[] = [
     title: "Kids Toilet Cubicles",
     description:
       "Safe, comfortable, and thoughtfully designed, our kids' cubicles create welcoming washroom spaces with child-friendly proportions, durable materials, and vibrant finishes.",
-    image:
-      "https://media.istockphoto.com/id/525755111/photo/toilet-doors.jpg?s=612x612&w=0&k=20&c=IOtQdiMHbA1b-751jRjV7x1sD3YYp1DbjvMNoOIV7R0=",
+    image: "/1.webp",
     details:
       "Our kids toilet cubicles are designed around the needs of younger users. We focus on safe proportions, practical layouts, durable construction, and visually engaging finishes to create comfortable washrooms for schools, malls, recreational spaces, and other child-focused environments.",
     features: [
