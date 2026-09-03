@@ -26,7 +26,7 @@ const projects: Project[] = [
     description:
       "Created for premium environments, our luxury cubicles bring together sophisticated finishes, premium materials, and precision detailing to make every washroom feel considered.",
     image:
-       "/11.avif",
+      "/11.avif",
     details:
       "Our luxury toilet cubicles are designed for premium commercial and hospitality environments where aesthetics, durability, and attention to detail matter. We offer refined finishes and practical configurations that create a sophisticated washroom experience.",
     features: [
@@ -343,8 +343,8 @@ export default function OurProjectsSection() {
                   {/* CTA */}
                   <div className="mt-8 flex flex-col gap-3 sm:flex-row">
 
-                    <Link
-                      href="/contact-us"
+                    <a
+                      href="tel:+919873735713"
                       onClick={closeProject}
                       className="
                         group
@@ -370,7 +370,7 @@ export default function OurProjectsSection() {
                       Get a Quote
 
                       <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" />
-                    </Link>
+                    </a>
 
                     <button
                       type="button"

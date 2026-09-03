@@ -14,11 +14,19 @@ import {
 } from "lucide-react";
 
 const products = [
-  "Toilet Cubicles",
-  "Washroom Partitions",
-  "Urinal Cubicles",
-  "Kids Toilet Cubicles",
-  "HPL 12 MM Boards",
+  "Black Maxi",
+  "Maxi PRO",
+  "Duro",
+  "Duro Pro",
+  "Cubic Doorz",
+  "Kiddiez",
+  "Kiddiez Pro",
+  "Cielo",
+  "Premia",
+  "Rove",
+  "NEO",
+  "Maxi",
+  "Luron",
   "Other",
 ];
 

@@ -19,6 +19,7 @@ import AboutUs from '@/app/components/Aboutus/page';
 import ClientMarquee from '@/app/components/ClientMarquee/page';
 import CertificatesMarquee from '@/app/components/CertificatesMarquee/page';
 import BuyNowBanner from '@/app/components/BuyNowBanner/page';
+import StickyContactButtons from '@/components/StickyContactButtons';
 
 export default function Home() {
   return (
@@ -42,6 +43,7 @@ export default function Home() {
         <ContactSection />
         <BuyNowBanner />
         <FooterSection />
+        <StickyContactButtons />
       </main>
     </SmoothScroll>
   );

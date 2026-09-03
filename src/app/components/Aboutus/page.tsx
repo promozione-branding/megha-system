@@ -3,6 +3,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Award, Building2 } from 'lucide-react';
+import Link from 'next/link';
 
 export default function AboutUs() {
   return (
@@ -78,6 +79,7 @@ export default function AboutUs() {
 
               <p>
                 Led by Mr. Rakesh Talwar, with over 25 years of industry experience, our approach combines technical expertise, premium materials, innovative design, and meticulous execution. From the first concept to final installation, every project is delivered with a focus on quality, precision, and lasting performance.
+                Learn more <Link href="/about" className="font-medium text-[#0d2461] hover:text-[#f5bd24]">about our journey</Link>, or <Link href="/contact" className="font-medium text-[#0d2461] hover:text-[#f5bd24] ">Contact Us</Link> to discuss your restroom partition requirements.
               </p>
             </div>
 

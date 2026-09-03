@@ -212,7 +212,7 @@ export const allProducts = [
                 ],
             },
             {
-                name: "Duro Pro",
+                name: "Duro",
                 slug: "duro-pro",
                 image: "/product/duro pro toilet cubicles.webp",
                 metaTitle: "Duro Pro Toilet Cubicles | Stainless Steel Washroom System",
