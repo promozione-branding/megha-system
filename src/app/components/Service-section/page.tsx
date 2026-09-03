@@ -50,7 +50,7 @@ const services: ServiceItem[] = [
     description:
       'Every layout is thoughtfully considered to create the right balance of privacy, movement, functionality, and visual harmony.',
     isImageCard: false,
-    bgImage: '/assets/moving_down_images/image1.jpeg',
+    bgImage: '/6.jpeg',
   },
 ];
 

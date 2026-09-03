@@ -104,8 +104,8 @@ export const allProducts = [
                 name: "Black Maxi",
                 slug: "black-maxi",
                 image: "/product/Black Maxi.webp",
-                metaTitle: "Black Maxi",
-                metaDescription: "Black Maxi",
+                metaTitle: "Black Maxi Toilet Cubicles | Toilet Cubicle System",
+                metaDescription: "Black Maxi toilet cubicles combine premium PVD stainless steel hardware, modern design, durability, and corrosion resistance for high-traffic spaces.",
                 shortDescription: "The BLACK MAXI Series brings a bold, sophisticated look to modern washrooms with premium PVD-coated stainless steel hardware and a refined matte black finish. Engineered for high-traffic environments, it combines luxury aesthetics with strength, corrosion resistance, and lasting performance.",
 
                 dimensions: [
@@ -140,9 +140,9 @@ export const allProducts = [
             {
                 name: "Maxi PRO",
                 slug: "maxi-pro",
-                image: "/product/Maxi PRO.webp",
-                metaTitle: "Maxi PRO",
-                metaDescription: "Maxi PRO",
+                image: "/product/Maxi Pro.webp",
+                metaTitle: "Maxi PRO Toilet Cubicles | Modular Washroom Cubicles",
+                metaDescription: "Maxi PRO modular toilet cubicles combine aluminium construction, stainless steel hardware, flexible door configuration, and reliable commercial performance.",
                 shortDescription: "The MAXI PRO Series is a practical and durable toilet cubicle partition designed for modern commercial washrooms. With a stable aluminium structure, precision-fitted panels, flexible door configuration, and reliable stainless steel hardware, MAXI PRO delivers privacy, comfort, and dependable everyday performance.",
 
                 dimensions: [
@@ -179,8 +179,8 @@ export const allProducts = [
                 name: "Duro",
                 slug: "duro",
                 image: "/product/Duro-Toilet-Cubicles.webp",
-                metaTitle: "Duro",
-                metaDescription: "Duro",
+                metaTitle: "Duro Toilet Cubicles | Durable Stainless Steel Cubicles",
+                metaDescription: "Duro toilet cubicles feature Grade 316 stainless steel supports, secure panel connections, and practical floor clearance for demanding washrooms.",
                 shortDescription: "The DURO Series is engineered for strength, stability, and long-term performance. With Grade 316 stainless steel supports, secure floor anchoring, and reinforced panel connections, DURO provides a robust restroom partition for demanding commercial washrooms.",
 
                 dimensions: [
@@ -215,8 +215,8 @@ export const allProducts = [
                 name: "Duro Pro",
                 slug: "duro-pro",
                 image: "/product/duro pro toilet cubicles.webp",
-                metaTitle: "Duro Pro",
-                metaDescription: "Duro Pro",
+                metaTitle: "Duro Pro Toilet Cubicles | Stainless Steel Washroom System",
+                metaDescription: "Duro Pro toilet cubicles combine Grade 316 stainless steel supports, reinforced panels, and a stable top pipe system for commercial washrooms.",
                 shortDescription: "The DURO PRO Series is engineered for strength, stability, and lasting performance in demanding washroom environments. Its stainless steel construction and reinforced panel support create a reliable toilet cubicle designed for everyday commercial use.",
 
                 dimensions: [
@@ -251,8 +251,8 @@ export const allProducts = [
                 name: "Cubic Doorz",
                 slug: "cubic-doorz",
                 image: "/product/Cubi Doorz.webp",
-                metaTitle: "Cubic Doorz",
-                metaDescription: "Cubic Doorz",
+                metaTitle: "Cubic Doorz | Compact Toilet Cubicle Door System",
+                metaDescription: "Cubic Doorz offers slim, durable compact board doors with flexible hardware, privacy features, and easy installation for modern commercial spaces.",
                 shortDescription: "The CUBI DOORZ Series is a slim, durable door system designed to provide privacy and functionality across modern office and commercial spaces. With 12 mm compact board doors, strong D-pole supports, and flexible hardware options, it delivers a clean appearance with reliable everyday performance.",
 
                 dimensions: [
@@ -297,7 +297,7 @@ export const allProducts = [
                 slug: "kiddiez",
                 image: "/product/Kiddiez.webp",
                 metaTitle: "Kiddiez",
-                metaDescription: "Kiddiez",
+                metaDescription: "Kiddiez Kids Toilet Cubicles | Modular Washroom SystemKiddiez modular toilet cubicles are designed for children’s washrooms, combining durable construction, practical hardware, easy maintenance, and clean design.",
                 shortDescription: "The KIDDIEZ Series is a thoughtfully designed modular toilet cubicle partition created for children’s washrooms. It combines durable construction, safe and practical hardware, easy maintenance, and a clean, friendly design for schools and other high-use spaces.",
 
                 dimensions: [
@@ -333,8 +333,8 @@ export const allProducts = [
                 name: "Kiddiez Pro",
                 slug: "kiddiez-pro",
                 image: "/product/Kiddiez Pro.webp",
-                metaTitle: "Kiddiez Pro",
-                metaDescription: "Kiddiez Pro",
+                metaTitle: "Kiddiez Pro Kids Toilet Cubicles | Megha Systems",
+                metaDescription: "Kiddiez Pro kids toilet cubicles combine reinforced stainless steel construction, secure anchoring, child-friendly hardware, and durable washroom design.",
                 shortDescription: "The KIDDIEZ PRO Series is a secure and durable modular washroom partition designed specifically for children’s washrooms. With reinforced stainless steel construction, concealed anchoring, and child-friendly hardware, it provides a safe, stable, and comfortable washroom environment.",
 
                 dimensions: [
@@ -378,8 +378,8 @@ export const allProducts = [
                 name: "Cielo",
                 slug: "cielo",
                 image: "/product/Cielo.webp",
-                metaTitle: "Cielo",
-                metaDescription: "Cielo",
+                metaTitle: "Cielo Ceiling-Hung Toilet Cubicles | Megha Systems",
+                metaDescription: "Cielo ceiling-hung toilet cubicles create a clean, floor-free washroom with easy cleaning, modern aesthetics, moisture resistance, and premium finishes.",
                 shortDescription: "The CIELO Series brings a clean, floating aesthetic to modern washrooms with its innovative ceiling-hung design. With no floor contact, the system creates a seamless visual appearance while making floor cleaning easier, improving hygiene, and reducing maintenance.",
 
                 dimensions: [
@@ -415,8 +415,8 @@ export const allProducts = [
                 name: "Premia",
                 slug: "premia",
                 image: "/product/Premia.webp",
-                metaTitle: "Premia",
-                metaDescription: "Premia",
+                metaTitle: "Premia Luxury Toilet Cubicles | Premium Washroom Solutions",
+                metaDescription: "Premia luxury toilet cubicles combine premium finishes, Gold PVD hardware, Grade 316 stainless steel components, privacy, and lasting performance.",
                 shortDescription: "The PREMIA Series is a luxury toilet cubicle created for premium commercial and residential washrooms. Combining refined finishes with robust construction, premium PVD hardware, and Grade 316 stainless steel components, PREMIA brings together elegance, privacy, and dependable everyday performance.",
 
                 dimensions: [
@@ -451,8 +451,8 @@ export const allProducts = [
                 name: "Rove",
                 slug: "rove",
                 image: "/product/Rove.webp",
-                metaTitle: "Rove",
-                metaDescription: "Rove",
+                metaTitle: "Rove Wall-Hung Toilet Cubicles | Megha Systems",
+                metaDescription: "Rove wall-hung toilet cubicles offer a modern floor-free design with durable panels, corrosion-resistant hardware, easy cleaning, and multiple finish options.",
                 shortDescription: "The ROVE Series is a modern wall-hung Restroom Partition Cubicle designed to create a clean, open, and floor-free washroom environment. Supported by heavy-duty wall brackets, ROVE combines lightweight construction with durable materials, making cleaning easier while enhancing hygiene and visual appeal.",
 
                 dimensions: [
@@ -497,9 +497,9 @@ export const allProducts = [
             {
                 name: "NEO",
                 slug: "neo",
-                image: "/product/NEO.webp",
-                metaTitle: "NEO",
-                metaDescription: "NEO",
+                image: "/product/Neo.webp",
+                metaTitle: "NEO Modular Toilet Cubicles | Megha Systems",
+                metaDescription: "NEO modular toilet cubicles combine compact laminate panels, aluminium components, adjustable nylon hardware, and contemporary design for commercial washrooms.",
                 shortDescription: "The NEO Series is a modular toilet cubicle system designed for modern commercial and institutional washrooms. Combining durable compact laminate panels with aluminium supports, adjustable nylon legs, and practical hardware, NEO delivers a stable, stylish, and easy-to-install toilet cubicle for high-use spaces.",
 
                 dimensions: [
@@ -535,8 +535,8 @@ export const allProducts = [
                 name: "Maxi",
                 slug: "maxi",
                 image: "/product/Maxi.webp",
-                metaTitle: "Maxi",
-                metaDescription: "Maxi",
+                metaTitle: "Maxi Toilet Cubicles | Stainless Steel Washroom Cubicles",
+                metaDescription: "Maxi toilet cubicles combine stainless steel hardware, anodized aluminium profiles, adjustable supports, and durable construction for high-traffic washrooms.",
                 shortDescription: "The MAXI Series is a luxury toilet cubicle partition designed for commercial and high-traffic washrooms. Combining stainless steel hardware, anodized aluminium profiles, adjustable feet, and refined detailing, MAXI delivers exceptional stability, durability, and easy maintenance.",
 
                 dimensions: [
@@ -572,8 +572,8 @@ export const allProducts = [
                 name: "Luron",
                 slug: "luron",
                 image: "/product/Luron.webp",
-                metaTitle: "Luron",
-                metaDescription: "Luron",
+                metaTitle: "Luron Toilet Cubicles | Stainless Steel Cubicle System",
+                metaDescription: "Luron toilet cubicles combine Grade 316 stainless steel supports, concealed fixing, flexible door configuration, and durable hardware for modern washrooms.",
                 shortDescription: "The LURON Series combines luxury stainless steel construction with thoughtful functionality for modern commercial washrooms. Its concealed support system, precise panel alignment, and flexible door configuration create a clean, stable, and durable toilet cubicle system.",
 
                 dimensions: [
