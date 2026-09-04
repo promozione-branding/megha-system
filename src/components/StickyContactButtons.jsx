@@ -1,4 +1,3 @@
-
 import { motion } from "framer-motion";
 import { Phone, MessageCircle } from "lucide-react";
 
@@ -32,36 +31,45 @@ const StickyContactButtons = () => {
             href={button.href}
             target={button.target}
             rel={button.target ? "noopener noreferrer" : undefined}
-            initial={{ width: 52 }}
-            whileHover={{ width: 155 }}
+            initial="rest"
+            whileHover="hover"
             whileTap={{ scale: 0.96 }}
+            variants={{
+              rest: {
+                width: 52,
+              },
+              hover: {
+                width: 155,
+              },
+            }}
             transition={{
-              width: {
-                type: "spring",
-                stiffness: 500,
-                damping: 30,
-              },
-              scale: {
-                duration: 0.15,
-              },
+              type: "spring",
+              stiffness: 500,
+              damping: 30,
             }}
             style={{
               backgroundColor: button.bg,
             }}
             className="group relative flex h-12 origin-right items-center overflow-hidden rounded-full border border-white/20 text-white shadow-[0_8px_25px_rgba(0,0,0,0.2)]"
           >
-            {/* Icon container */}
+            {/* Icon */}
             <motion.div
-              className="absolute left-0 top-0 flex h-12 w-12 items-center justify-center"
-              whileHover={{
-                scale: 1.08,
-                rotate: 5,
+              variants={{
+                rest: {
+                  scale: 1,
+                  rotate: 0,
+                },
+                hover: {
+                  scale: 1.08,
+                  rotate: 5,
+                },
               }}
               transition={{
                 type: "spring",
                 stiffness: 500,
                 damping: 20,
               }}
+              className="absolute left-0 top-0 z-20 flex h-12 w-12 shrink-0 items-center justify-center"
             >
               <Icon
                 className="h-[21px] w-[21px]"
@@ -71,11 +79,19 @@ const StickyContactButtons = () => {
 
             {/* Text */}
             <motion.span
-              initial={{ opacity: 0, x: -10 }}
-              whileHover={{ opacity: 1, x: 0 }}
+              variants={{
+                rest: {
+                  opacity: 0,
+                  x: -10,
+                },
+                hover: {
+                  opacity: 1,
+                  x: 0,
+                },
+              }}
               transition={{
                 opacity: {
-                  duration: 0.15,
+                  duration: 0.2,
                   delay: 0.08,
                 },
                 x: {
@@ -83,28 +99,39 @@ const StickyContactButtons = () => {
                   delay: 0.05,
                 },
               }}
-              className="ml-12 whitespace-nowrap pr-5 text-sm font-semibold"
+              className="relative z-10 ml-12 whitespace-nowrap pr-5 text-sm font-semibold"
             >
               {button.label}
             </motion.span>
 
-            {/* Shine effect */}
+            {/* Full Width Shine */}
             <motion.span
-              initial={{ x: "-150%" }}
-              whileHover={{ x: "250%" }}
+              variants={{
+                rest: {
+                  left: "-100%",
+                },
+                hover: {
+                  left: "120%",
+                },
+              }}
               transition={{
-                duration: 0.6,
+                duration: 0.7,
                 ease: "easeInOut",
               }}
-              className="pointer-events-none absolute inset-y-0 left-0 w-8 skew-x-[-20deg] bg-white/25"
+              className="pointer-events-none absolute top-0 z-30 h-full w-10 -skew-x-[20deg] bg-white/30"
             />
 
-            {/* Hover overlay */}
+            {/* Hover Overlay */}
             <motion.span
-              className="pointer-events-none absolute inset-0 rounded-full"
-              whileHover={{
-                backgroundColor: "rgba(255,255,255,0.05)",
+              variants={{
+                rest: {
+                  backgroundColor: "rgba(255,255,255,0)",
+                },
+                hover: {
+                  backgroundColor: "rgba(255,255,255,0.05)",
+                },
               }}
+              className="pointer-events-none absolute inset-0 z-40 rounded-full"
             />
           </motion.a>
         );

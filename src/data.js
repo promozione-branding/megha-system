@@ -94,11 +94,11 @@ export const PRODUCTS_CATALOG = [
 
 export const allProducts = [
     {
-        categoryName: "Public Restroom Partition",
-        slug: "public-restroom-partition",
-        image: "",
-        metaTitle: "Public Restroom Partition",
-        metaDescription: "Public Restroom Partition",
+        categoryName: "CLASSIC RANGE",
+        slug: "classic-range",
+        title: "Classic Cubicle System",
+        excerpt: "Smart. Strong. Built for Every Budget.",
+        description: "Cost-Effective Solutions with the Strength You Can Trust.",
         products: [
             {
                 name: "Black Maxi",
@@ -107,7 +107,7 @@ export const allProducts = [
                 metaTitle: "Black Maxi Toilet Cubicles | Toilet Cubicle System",
                 metaDescription: "Black Maxi toilet cubicles combine premium PVD stainless steel hardware, modern design, durability, and corrosion resistance for high-traffic spaces.",
                 shortDescription: "The BLACK MAXI Series brings a bold, sophisticated look to modern washrooms with premium PVD-coated stainless steel hardware and a refined matte black finish. Engineered for high-traffic environments, it combines luxury aesthetics with strength, corrosion resistance, and lasting performance.",
-
+                hardwareImg: "/product/hardware.webp",
                 dimensions: [
                     { name: "Width of the cubicle", regular: "1000", speciallyAbled: "1500" },
                     { name: "Height of the entire cubicle", regular: "1995", speciallyAbled: "1995" },
@@ -212,7 +212,7 @@ export const allProducts = [
                 ],
             },
             {
-                name: "Duro",
+                name: "Duro Pro",
                 slug: "duro-pro",
                 image: "/product/duro pro toilet cubicles.webp",
                 metaTitle: "Duro Pro Toilet Cubicles | Stainless Steel Washroom System",
@@ -282,85 +282,116 @@ export const allProducts = [
                     }
                 ],
             },
-        ],
-    },
-
-    {
-        categoryName: "Kids Restroom Partition",
-        slug: "kids-restroom-partition",
-        image: "",
-        metaTitle: "Kids Restroom Partition",
-        metaDescription: "Kids Restroom Partition",
-        products: [
             {
-                name: "Kiddiez",
-                slug: "kiddiez",
-                image: "/product/Kiddiez.webp",
-                metaTitle: "Kiddiez",
-                metaDescription: "Kiddiez Kids Toilet Cubicles | Modular Washroom SystemKiddiez modular toilet cubicles are designed for children’s washrooms, combining durable construction, practical hardware, easy maintenance, and clean design.",
-                shortDescription: "The KIDDIEZ Series is a thoughtfully designed modular toilet cubicle partition created for children’s washrooms. It combines durable construction, safe and practical hardware, easy maintenance, and a clean, friendly design for schools and other high-use spaces.",
+                name: "NEO",
+                slug: "neo",
+                image: "/product/Neo.webp",
+                metaTitle: "NEO Modular Toilet Cubicles | Megha Systems",
+                metaDescription: "NEO modular toilet cubicles combine compact laminate panels, aluminium components, adjustable nylon hardware, and contemporary design for commercial washrooms.",
+                shortDescription: "The NEO Series is a modular toilet cubicle system designed for modern commercial and institutional washrooms. Combining durable compact laminate panels with aluminium supports, adjustable nylon legs, and practical hardware, NEO delivers a stable, stylish, and easy-to-install toilet cubicle for high-use spaces.",
 
+                hardwareImg: "/product/Neo-Hardware.webp",
                 dimensions: [
-                    { name: "Width of the cubicle", regular: "1000", speciallyAbled: "1500" },
-                    { name: "Depth of the cubicles", regular: "1500", speciallyAbled: "1700" },
-                    { name: "Height of the divider", regular: "1200", speciallyAbled: "1200" },
-                    { name: "Height of the entire cubicle", regular: "1500", speciallyAbled: "1500" },
+                    { name: "Height of the cubicle", regular: "1980–2000", speciallyAbled: "1980–2000" },
+                    { name: "Depth of the cubicles", regular: "1550", speciallyAbled: "1550" },
+                    { name: "Pilaster height", regular: "1830", speciallyAbled: "1830" },
+                    { name: "Pilaster width", regular: "150/300", speciallyAbled: "150/300" },
+                    { name: "Height of the door", regular: "1815", speciallyAbled: "1815" },
                     { name: "Width of the door", regular: "600", speciallyAbled: "900" },
-                    { name: "Height of the door", regular: "1250", speciallyAbled: "1250" },
-                    { name: "Ground clearance", regular: "100", speciallyAbled: "100" },
+                    { name: "Ground clearance", regular: "150", speciallyAbled: "150" },
                 ],
 
                 keyFeatures: [
                     {
-                        name: "Adjustable Nylon Legs",
-                        description: "Strong, adjustable nylon legs provide secure floor anchoring, stable support, and easy leveling."
+                        name: "Adjustable Nylon Polyamide Legs",
+                        description: "Grade 6 adjustable nylon legs provide stable floor anchoring and precise leveling for a secure toilet cubicle partition."
                     },
                     {
                         name: "Powder-Coated Aluminium Top Rail",
-                        description: "The top rail keeps panels properly aligned while adding structural stability and a neat, contemporary finish."
+                        description: "The powder-coated aluminium top rail improves panel alignment and overall stability while adding a clean, contemporary finish."
                     },
                     {
-                        name: "Secure Aluminium U-Channels",
-                        description: "Durable U-channels firmly connect the panels for a stable and reliable cubicle structure."
+                        name: "Strong Aluminium Panel Supports",
+                        description: "Durable aluminium supports ensure secure panel fixing and structural stability for long-lasting washroom cubicle performance."
                     },
                     {
-                        name: "Child-Friendly Hardware",
-                        description: "Stainless steel coat hooks, door stoppers, privacy thumb-turns, and indicators provide practical functionality and easy everyday use."
+                        name: "Nylon Hardware & Accessories",
+                        description: "The NEO system includes nylon hinges, coat hooks, lock sets, indicators, and adjustable feet, available in White, Grey, and Black."
                     }
                 ],
             },
             {
-                name: "Kiddiez Pro",
-                slug: "kiddiez-pro",
-                image: "/product/Kiddiez Pro.webp",
-                metaTitle: "Kiddiez Pro Kids Toilet Cubicles | Megha Systems",
-                metaDescription: "Kiddiez Pro kids toilet cubicles combine reinforced stainless steel construction, secure anchoring, child-friendly hardware, and durable washroom design.",
-                shortDescription: "The KIDDIEZ PRO Series is a secure and durable modular washroom partition designed specifically for children’s washrooms. With reinforced stainless steel construction, concealed anchoring, and child-friendly hardware, it provides a safe, stable, and comfortable washroom environment.",
+                name: "Maxi",
+                slug: "maxi",
+                image: "/product/Maxi.webp",
+                metaTitle: "Maxi Toilet Cubicles | Stainless Steel Washroom Cubicles",
+                metaDescription: "Maxi toilet cubicles combine stainless steel hardware, anodized aluminium profiles, adjustable supports, and durable construction for high-traffic washrooms.",
+                shortDescription: "The MAXI Series is a luxury toilet cubicle partition designed for commercial and high-traffic washrooms. Combining stainless steel hardware, anodized aluminium profiles, adjustable feet, and refined detailing, MAXI delivers exceptional stability, durability, and easy maintenance.",
 
                 dimensions: [
                     { name: "Width of the cubicle", regular: "1000", speciallyAbled: "1500" },
-                    { name: "Depth of cubicle", regular: "1500", speciallyAbled: "1700" },
-                    { name: "Height of the divider", regular: "1200", speciallyAbled: "1200" },
-                    { name: "Height of the entire cubicle", regular: "1500", speciallyAbled: "1500" },
+                    { name: "Height of the entire cubicle", regular: "1995", speciallyAbled: "1995" },
+                    { name: "Depth of the cubicles", regular: "1500", speciallyAbled: "1750" },
+                    { name: "Height of the door", regular: "1785", speciallyAbled: "1785" },
                     { name: "Width of the door", regular: "600", speciallyAbled: "900" },
+                    { name: "Ground clearance", regular: "150", speciallyAbled: "150" },
+                    { name: "Height of the door", regular: "1815", speciallyAbled: "1815" },
                 ],
 
                 keyFeatures: [
                     {
-                        name: "Secure Structural Support",
-                        description: "Strong L-brackets and floor anchor bolts provide reliable support for every pilaster, ensuring stability during everyday use."
+                        name: "Grade 304/316 Stainless Steel Feet",
+                        description: "Adjustable stainless steel feet provide strong floor support, precise leveling, and 150 mm ground clearance for easier cleaning and maintenance."
                     },
                     {
-                        name: "Concealed Stainless Steel Shoe Box",
-                        description: "A 100 mm stainless steel shoe box neatly covers the floor anchor while providing a clean finish and additional structural support."
+                        name: "Anodized Aluminium Profiles",
+                        description: "Natural anodized U-channels, F-channels, door stopper channels, and top rails provide secure panel fixing with a clean, contemporary finish."
                     },
                     {
-                        name: "Durable Panel Fixing",
-                        description: "Stainless steel U-channels and SS304 screw inserts securely connect the panels to the wall for lasting stability."
+                        name: "Stainless Steel Hardware",
+                        description: "Premium stainless steel hinges, door knobs, locks, latch indicators, and screw inserts are built for reliable performance and long-term durability."
                     },
                     {
-                        name: "Grade 304 / 316 Stainless Steel Options",
-                        description: "Available in Grade 304 or 316 stainless steel to suit different project requirements and environmental conditions."
+                        name: "Acoustic Top Rail",
+                        description: "The anodized aluminium top rail features noise-absorbing tape to help reduce sound and create a more comfortable washroom environment."
+                    }
+                ],
+            },
+            {
+                name: "Luron",
+                slug: "luron",
+                image: "/product/Luron.webp",
+                metaTitle: "Luron Toilet Cubicles | Stainless Steel Cubicle System",
+                metaDescription: "Luron toilet cubicles combine Grade 316 stainless steel supports, concealed fixing, flexible door configuration, and durable hardware for modern washrooms.",
+                shortDescription: "The LURON Series combines luxury stainless steel construction with thoughtful functionality for modern commercial washrooms. Its concealed support system, precise panel alignment, and flexible door configuration create a clean, stable, and durable toilet cubicle system.",
+
+                dimensions: [
+                    { name: "Height of the entire cubicle", regular: "1915", speciallyAbled: "1915" },
+                    { name: "Depth of the cubicles", regular: "1550", speciallyAbled: "1550" },
+                    { name: "Height of the Pilaster", regular: "1830", speciallyAbled: "1860" },
+                    { name: "Width of the Pilaster", regular: "150/300", speciallyAbled: "150/300" },
+                    { name: "Height of the door", regular: "1760", speciallyAbled: "1760" },
+                    { name: "Width of the door", regular: "600", speciallyAbled: "900" },
+                    { name: "Ground clearance", regular: "100", speciallyAbled: "100" },
+                    { name: "HPL thickness", regular: "12", speciallyAbled: "12" },
+                ],
+
+                keyFeatures: [
+                    {
+                        name: "Grade 316 Stainless Steel Shoe Box",
+                        description: "The robust SS shoe box provides strong floor support while maintaining a clean, concealed appearance and 100 mm floor clearance for easier cleaning."
+                    },
+                    {
+                        name: "Concealed L-Bracket Support",
+                        description: "A concealed L-bracket system securely anchors the mid and end pilasters, enhancing stability while keeping the structure visually refined."
+                    },
+                    {
+                        name: "Grade 304 Stainless Steel Top Rail",
+                        description: "The top rail keeps all panels accurately aligned, creating a neat and uniform cubicle system."
+                    },
+                    {
+                        name: "Stainless Steel U-Channels",
+                        description: "Durable U-channels securely connect the intermediate panels, adding strength and stability to the overall structure."
                     }
                 ],
             },
@@ -368,11 +399,12 @@ export const allProducts = [
     },
 
     {
-        categoryName: "Urinals Partitions",
-        slug: "urinals-partitions",
+        categoryName: "LUXE RANGE",
+        slug: "luxe-range",
         image: "",
-        metaTitle: "Urinals Partitions",
-        metaDescription: "Urinals Partitions",
+        title: "Luxe Cubicle System",
+        excerpt: "Premium Looks. Elevated Spaces.",
+        description: "Designed to Impress. Crafted for Premium Spaces.",
         products: [
             {
                 name: "Cielo",
@@ -488,121 +520,149 @@ export const allProducts = [
     },
 
     {
-        categoryName: "Luxe Partition System",
-        slug: "luxe-partition-system",
-        image: "",
-        metaTitle: "Luxe Partition System",
-        metaDescription: "Luxe Partition System",
+        categoryName: "KIDS RANGE",
+        slug: "kids-range",
+        title: "Kids Cubicle System",
+        excerpt: "Fun. Safe. Made for Little Ones.",
+        description: "Specially Built for Kids, Schools & Growing Minds.",
         products: [
             {
-                name: "NEO",
-                slug: "neo",
-                image: "/product/Neo.webp",
-                metaTitle: "NEO Modular Toilet Cubicles | Megha Systems",
-                metaDescription: "NEO modular toilet cubicles combine compact laminate panels, aluminium components, adjustable nylon hardware, and contemporary design for commercial washrooms.",
-                shortDescription: "The NEO Series is a modular toilet cubicle system designed for modern commercial and institutional washrooms. Combining durable compact laminate panels with aluminium supports, adjustable nylon legs, and practical hardware, NEO delivers a stable, stylish, and easy-to-install toilet cubicle for high-use spaces.",
-
-                dimensions: [
-                    { name: "Height of the cubicle", regular: "1980–2000", speciallyAbled: "1980–2000" },
-                    { name: "Depth of the cubicles", regular: "1550", speciallyAbled: "1550" },
-                    { name: "Pilaster height", regular: "1830", speciallyAbled: "1830" },
-                    { name: "Pilaster width", regular: "150/300", speciallyAbled: "150/300" },
-                    { name: "Height of the door", regular: "1815", speciallyAbled: "1815" },
-                    { name: "Width of the door", regular: "600", speciallyAbled: "900" },
-                    { name: "Ground clearance", regular: "150", speciallyAbled: "150" },
-                ],
-
-                keyFeatures: [
-                    {
-                        name: "Adjustable Nylon Polyamide Legs",
-                        description: "Grade 6 adjustable nylon legs provide stable floor anchoring and precise leveling for a secure toilet cubicle partition."
-                    },
-                    {
-                        name: "Powder-Coated Aluminium Top Rail",
-                        description: "The powder-coated aluminium top rail improves panel alignment and overall stability while adding a clean, contemporary finish."
-                    },
-                    {
-                        name: "Strong Aluminium Panel Supports",
-                        description: "Durable aluminium supports ensure secure panel fixing and structural stability for long-lasting washroom cubicle performance."
-                    },
-                    {
-                        name: "Nylon Hardware & Accessories",
-                        description: "The NEO system includes nylon hinges, coat hooks, lock sets, indicators, and adjustable feet, available in White, Grey, and Black."
-                    }
-                ],
-            },
-            {
-                name: "Maxi",
-                slug: "maxi",
-                image: "/product/Maxi.webp",
-                metaTitle: "Maxi Toilet Cubicles | Stainless Steel Washroom Cubicles",
-                metaDescription: "Maxi toilet cubicles combine stainless steel hardware, anodized aluminium profiles, adjustable supports, and durable construction for high-traffic washrooms.",
-                shortDescription: "The MAXI Series is a luxury toilet cubicle partition designed for commercial and high-traffic washrooms. Combining stainless steel hardware, anodized aluminium profiles, adjustable feet, and refined detailing, MAXI delivers exceptional stability, durability, and easy maintenance.",
+                name: "Kiddiez",
+                slug: "kiddiez",
+                image: "/product/Kiddiez.webp",
+                metaTitle: "Kiddiez",
+                metaDescription: "Kiddiez Kids Toilet Cubicles | Modular Washroom SystemKiddiez modular toilet cubicles are designed for children’s washrooms, combining durable construction, practical hardware, easy maintenance, and clean design.",
+                shortDescription: "The KIDDIEZ Series is a thoughtfully designed modular toilet cubicle partition created for children’s washrooms. It combines durable construction, safe and practical hardware, easy maintenance, and a clean, friendly design for schools and other high-use spaces.",
 
                 dimensions: [
                     { name: "Width of the cubicle", regular: "1000", speciallyAbled: "1500" },
-                    { name: "Height of the entire cubicle", regular: "1995", speciallyAbled: "1995" },
-                    { name: "Depth of the cubicles", regular: "1500", speciallyAbled: "1750" },
-                    { name: "Height of the door", regular: "1785", speciallyAbled: "1785" },
+                    { name: "Depth of the cubicles", regular: "1500", speciallyAbled: "1700" },
+                    { name: "Height of the divider", regular: "1200", speciallyAbled: "1200" },
+                    { name: "Height of the entire cubicle", regular: "1500", speciallyAbled: "1500" },
                     { name: "Width of the door", regular: "600", speciallyAbled: "900" },
-                    { name: "Ground clearance", regular: "150", speciallyAbled: "150" },
-                    { name: "Height of the door", regular: "1815", speciallyAbled: "1815" },
+                    { name: "Height of the door", regular: "1250", speciallyAbled: "1250" },
+                    { name: "Ground clearance", regular: "100", speciallyAbled: "100" },
                 ],
 
                 keyFeatures: [
                     {
-                        name: "Grade 304/316 Stainless Steel Feet",
-                        description: "Adjustable stainless steel feet provide strong floor support, precise leveling, and 150 mm ground clearance for easier cleaning and maintenance."
+                        name: "Adjustable Nylon Legs",
+                        description: "Strong, adjustable nylon legs provide secure floor anchoring, stable support, and easy leveling."
                     },
                     {
-                        name: "Anodized Aluminium Profiles",
-                        description: "Natural anodized U-channels, F-channels, door stopper channels, and top rails provide secure panel fixing with a clean, contemporary finish."
+                        name: "Powder-Coated Aluminium Top Rail",
+                        description: "The top rail keeps panels properly aligned while adding structural stability and a neat, contemporary finish."
                     },
                     {
-                        name: "Stainless Steel Hardware",
-                        description: "Premium stainless steel hinges, door knobs, locks, latch indicators, and screw inserts are built for reliable performance and long-term durability."
+                        name: "Secure Aluminium U-Channels",
+                        description: "Durable U-channels firmly connect the panels for a stable and reliable cubicle structure."
                     },
                     {
-                        name: "Acoustic Top Rail",
-                        description: "The anodized aluminium top rail features noise-absorbing tape to help reduce sound and create a more comfortable washroom environment."
+                        name: "Child-Friendly Hardware",
+                        description: "Stainless steel coat hooks, door stoppers, privacy thumb-turns, and indicators provide practical functionality and easy everyday use."
                     }
                 ],
             },
             {
-                name: "Luron",
-                slug: "luron",
-                image: "/product/Luron.webp",
-                metaTitle: "Luron Toilet Cubicles | Stainless Steel Cubicle System",
-                metaDescription: "Luron toilet cubicles combine Grade 316 stainless steel supports, concealed fixing, flexible door configuration, and durable hardware for modern washrooms.",
-                shortDescription: "The LURON Series combines luxury stainless steel construction with thoughtful functionality for modern commercial washrooms. Its concealed support system, precise panel alignment, and flexible door configuration create a clean, stable, and durable toilet cubicle system.",
+                name: "Kiddiez Pro",
+                slug: "kiddiez-pro",
+                image: "/product/Kiddiez Pro.webp",
+                metaTitle: "Kiddiez Pro Kids Toilet Cubicles | Megha Systems",
+                metaDescription: "Kiddiez Pro kids toilet cubicles combine reinforced stainless steel construction, secure anchoring, child-friendly hardware, and durable washroom design.",
+                shortDescription: "The KIDDIEZ PRO Series is a secure and durable modular washroom partition designed specifically for children’s washrooms. With reinforced stainless steel construction, concealed anchoring, and child-friendly hardware, it provides a safe, stable, and comfortable washroom environment.",
 
                 dimensions: [
-                    { name: "Height of the entire cubicle", regular: "1915", speciallyAbled: "1915" },
-                    { name: "Depth of the cubicles", regular: "1550", speciallyAbled: "1550" },
-                    { name: "Height of the Pilaster", regular: "1830", speciallyAbled: "1860" },
-                    { name: "Width of the Pilaster", regular: "150/300", speciallyAbled: "150/300" },
-                    { name: "Height of the door", regular: "1760", speciallyAbled: "1760" },
+                    { name: "Width of the cubicle", regular: "1000", speciallyAbled: "1500" },
+                    { name: "Depth of cubicle", regular: "1500", speciallyAbled: "1700" },
+                    { name: "Height of the divider", regular: "1200", speciallyAbled: "1200" },
+                    { name: "Height of the entire cubicle", regular: "1500", speciallyAbled: "1500" },
                     { name: "Width of the door", regular: "600", speciallyAbled: "900" },
-                    { name: "Ground clearance", regular: "100", speciallyAbled: "100" },
-                    { name: "HPL thickness", regular: "12", speciallyAbled: "12" },
                 ],
 
                 keyFeatures: [
                     {
-                        name: "Grade 316 Stainless Steel Shoe Box",
-                        description: "The robust SS shoe box provides strong floor support while maintaining a clean, concealed appearance and 100 mm floor clearance for easier cleaning."
+                        name: "Secure Structural Support",
+                        description: "Strong L-brackets and floor anchor bolts provide reliable support for every pilaster, ensuring stability during everyday use."
                     },
                     {
-                        name: "Concealed L-Bracket Support",
-                        description: "A concealed L-bracket system securely anchors the mid and end pilasters, enhancing stability while keeping the structure visually refined."
+                        name: "Concealed Stainless Steel Shoe Box",
+                        description: "A 100 mm stainless steel shoe box neatly covers the floor anchor while providing a clean finish and additional structural support."
                     },
                     {
-                        name: "Grade 304 Stainless Steel Top Rail",
-                        description: "The top rail keeps all panels accurately aligned, creating a neat and uniform cubicle system."
+                        name: "Durable Panel Fixing",
+                        description: "Stainless steel U-channels and SS304 screw inserts securely connect the panels to the wall for lasting stability."
                     },
                     {
-                        name: "Stainless Steel U-Channels",
-                        description: "Durable U-channels securely connect the intermediate panels, adding strength and stability to the overall structure."
+                        name: "Grade 304 / 316 Stainless Steel Options",
+                        description: "Available in Grade 304 or 316 stainless steel to suit different project requirements and environmental conditions."
+                    }
+                ],
+            },
+        ],
+    },
+
+    {
+        categoryName: "PD DOORS & URINAL PARTITIONS",
+        slug: "pd-doors-and-urinal-partitions",
+        title: "Doors & Urinal Partition System",
+        excerpt: "Complete Privacy. Seamless Design.",
+        description: "Complete Your Restroom with Smart Privacy",
+        products: [
+            {
+                name: "Urinal Modesty Panels",
+                slug: "urinal-modesty-panels",
+                image: "/product/Commercial Urinal Partitions.webp",
+                metaTitle: "Urinal Modesty Panels | Megha Systems",
+                metaDescription: "Stylish and durable urinal modesty panels made from high-quality compact-grade laminates with a strong phenolic core, ideal for high-traffic public restrooms.",
+                shortDescription: "Our Urinal Modesty Panels provide a stylish, durable, and hygienic privacy solution for modern public restrooms. Manufactured from high-quality compact-grade laminates with a strong phenolic core and a minimum thickness of 12 mm, these panels are designed for high-traffic environments. Available in multiple colours, finishes, and standard sizes, they offer excellent privacy, strength, easy maintenance, and long-lasting performance.",
+
+                dimensions: [
+                    {
+                        name: "Panel thickness",
+                        regular: "12 mm minimum",
+                        speciallyAbled: "12 mm minimum"
+                    },
+                    {
+                        name: "Standard panel size",
+                        regular: "450 × 900 mm",
+                        speciallyAbled: "450 × 900 mm"
+                    },
+                    {
+                        name: "Standard panel size",
+                        regular: "450 × 1200 mm",
+                        speciallyAbled: "450 × 1200 mm"
+                    },
+                    {
+                        name: "Standard panel size",
+                        regular: "550 × 1200 mm",
+                        speciallyAbled: "550 × 1200 mm"
+                    },
+                ],
+
+                keyFeatures: [
+                    {
+                        name: "Compact-Grade Laminate Construction",
+                        description: "Manufactured from high-quality compact-grade laminates with a strong phenolic core, providing excellent strength, durability, and resistance for demanding washroom environments."
+                    },
+                    {
+                        name: "Multiple Sizes & Finishes",
+                        description: "Available in standard sizes of 450 × 900 mm, 450 × 1200 mm, and 550 × 1200 mm, with a variety of colours and finishes to complement different washroom designs."
+                    },
+                    {
+                        name: "Anti-Scratch & Anti-Fungal Options",
+                        description: "Optional anti-scratch and anti-fungal coatings improve surface durability and hygiene while making the panels easier to clean and maintain."
+                    },
+                    {
+                        name: "Designed for High-Traffic Areas",
+                        description: "The robust 12 mm minimum thickness and durable compact laminate construction make these panels suitable for public and high-traffic restroom environments."
+                    },
+                    {
+                        name: "Privacy & Modern Appearance",
+                        description: "Designed to provide reliable user privacy while maintaining a clean, contemporary appearance that complements modern commercial washroom interiors."
+                    },
+                    {
+                        name: "Easy Maintenance",
+                        description: "Durable, hygienic surfaces are designed for regular cleaning and easy maintenance, helping washrooms maintain a fresh and professional appearance."
                     }
                 ],
             },

@@ -8,6 +8,7 @@ import FooterSection from '@/app/components/Footer/page';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { allProducts } from '@/data';
 import { useParams } from 'next/navigation';
+import StickyContactButtons from '@/components/StickyContactButtons';
 
 export default function ProjectDetail() {
   const { productName } = useParams()
@@ -468,7 +469,7 @@ export default function ProjectDetail() {
                 ref={imageScrollRef}
                 className="relative h-[1000px] md:h-[1000px]"
               >
-                <div className="sticky top-20 h-[440px]">
+                <div className="sticky top-25 h-[440px]">
 
                   <div className="relative h-full w-full">
 
@@ -506,9 +507,16 @@ export default function ProjectDetail() {
             </div>
           </div>
         </div>
+
+        {project.hardwareImg && (
+          <div className=''>
+          <h2 className="font-bold text-blue-950 text-4xl mb-4">Hardware</h2>
+            <img src={project.hardwareImg} alt="hardware" className="w-full h-auto mt-4" />
+          </div>
+        )}
       </main>
 
-      {/* Global Footer */}
+      <StickyContactButtons />
       <FooterSection />
     </div>
   );

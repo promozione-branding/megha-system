@@ -13,6 +13,7 @@ import {
 } from 'lucide-react';
 
 import { allProducts } from './../../data.js';
+import StickyContactButtons from '@/components/StickyContactButtons';
 
 export default function AllProductsPage() {
   const totalProducts = allProducts.reduce(
@@ -168,6 +169,7 @@ export default function AllProductsPage() {
         </div>
       </main>
 
+      <StickyContactButtons />
       <FooterSection />
     </div>
   );

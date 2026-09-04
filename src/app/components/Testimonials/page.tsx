@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { Star, ChevronLeft, ChevronRight } from "lucide-react";
+import { Star, ChevronLeft, ChevronRight, User } from "lucide-react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
 
@@ -12,47 +12,47 @@ import "swiper/css/pagination";
 const testimonials = [
   {
     text: "We were looking for a reliable toilet cubicle manufacturer who could understand our requirements and deliver quality work. Megha Systems handled the project smoothly from start to finish.",
-    name: "Jonathan Pierce",
-    role: "Project Manager",
+    name: "Harsh Kumar",
+    role: "Delhi, India",
     image: "https://i.pravatar.cc/100?img=12",
   },
   {
     text: "The cubicles are well-finished, sturdy, and easy to maintain. The team was professional throughout the process and made sure everything was installed properly.",
-    name: "Emma Caldwell",
-    role: "Facility Manager",
+    name: "Amit Verma",
+    role: "Noida, India",
     image: "https://i.pravatar.cc/100?img=47",
   },
   {
     text: "What impressed us most was the quality of the materials and attention to detail. The finished washroom looks modern, clean, and built to handle regular use.",
-    name: "Michael Tan",
-    role: "Architect",
+    name: "Priya Mathur",
+    role: "Noida, India",
     image: "https://i.pravatar.cc/100?img=11",
   },
   {
     text: "Megha Systems offered exactly the kind of customized toilet cubicle solution our project required. Their team was responsive, technically sound, and easy to work with.",
-    name: "David Wilson",
-    role: "Project Consultant",
+    name: "Rahul Sharma",
+    role: "Mumbai, India",
     image: "https://i.pravatar.cc/100?img=13",
   },
   {
     text: "From choosing the right material to the final installation, the entire process was well managed. We received a practical washroom solution without compromising on the overall design.",
-    name: "Sarah Mitchell",
-    role: "Commercial Client",
+    name: "Sara Khan",
+    role: "Bangalore, India",
     image: "https://i.pravatar.cc/100?img=32",
   },
 ];
 
 export default function Testimonials() {
   return (
-    <section className="w-full overflow-hidden bg-white pt-10 pb-20">
-      <div className="mx-auto max-w-[1536px] px-5 sm:px-8 lg:px-12">
+    <section className="w-full overflow-hidden bg-white pt-10 xl:pb-20 pb-10">
+      <div className="mx-auto max-w-[1536px] px-5 sm:px-8 xl:px-12">
 
         {/* ================= MAIN AREA ================= */}
-        <div className="relative grid grid-cols-1 lg:grid-cols-[48%_52%]">
+        <div className="relative grid grid-cols-1 xl:grid-cols-[48%_52%]">
 
           {/* ================= LEFT IMAGE ================= */}
           <div className="relative z-10">
-            <div className="relative aspect-[1.34/1] w-full overflow-hidden rounded-[14px]">
+            <div className="relative h-full xl:aspect-[1.34/1] w-full overflow-hidden rounded-[14px]">
               <img
                 src="/4.jpeg"
                 alt="Refined toilet cubicle interior"
@@ -97,11 +97,11 @@ export default function Testimonials() {
               relative
               z-30
               mt-8
-              lg:absolute
-              lg:left-[29%]
-              lg:top-[310px]
-              lg:mt-0
-              lg:w-[71%]
+              xl:absolute
+              xl:left-[29%]
+              xl:top-[310px]
+              xl:mt-0
+              xl:w-[71%]
             "
           >
             <Swiper
@@ -170,14 +170,10 @@ export default function Testimonials() {
                     </p>
 
                     {/* User */}
-                    <div className="mt-auto flex items-center gap-3 pt-7">
-                      <Image
-                        src={testimonial.image}
-                        alt={testimonial.name}
-                        width={42}
-                        height={42}
-                        className="h-[42px] w-[42px] rounded-full object-cover"
-                      />
+                    <div className="mt-auto flex items-center gap-3 pt-5">
+                      <div className="h-10 w-10 rounded-full bg-gray-200 flex items-center justify-center">
+                        <User />
+                      </div>
 
                       <div>
                         <h4 className="text-[13px] font-semibold text-gray-900">

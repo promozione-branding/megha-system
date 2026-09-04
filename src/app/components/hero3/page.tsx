@@ -3,12 +3,14 @@
 import { useRef, useState } from 'react';
 import { motion, useScroll, useTransform, MotionValue } from 'framer-motion';
 import PopupForm from '@/components/PopupForm';
+import Link from 'next/link';
 
 interface Project {
   id: number;
   title: string;
   category: string;
   image: string;
+  href: string;
 }
 
 interface CardMotionTransform {
@@ -22,31 +24,31 @@ interface CardMotionTransform {
 const projects: Project[] = [
   {
     id: 1,
-    title: 'Kora',
-    category: 'Consulting Site',
-    image:
-      "/char-dham-6778afd0ed68bd0a4db07577.jpeg",
+    title: 'Black Maxi',
+    category: 'CLASSIC RANGE',
+    image: "/product/Black Maxi.webp",
+    href: '/products/black-maxi',
   },
   {
     id: 2,
-    title: 'KYMA',
-    category: 'AI Agency',
-    image:
-      "/6.jpeg",
+    title: 'Duro',
+    category: 'CLASSIC RANGE',
+    image: "/product/Duro-Toilet-Cubicles.webp",
+    href: '/products/duro',
   },
   {
     id: 3,
-    title: 'Mugen Studio',
-    category: 'Design Studio',
-    image:
-      "/pd doors images.jpg",
+    title: 'Kiddiez',
+    category: 'KIDS RANGE',
+    image: "/product/Kiddiez.webp",
+    href: '/products/kiddiez',
   },
   {
     id: 4,
-    title: 'Axiom Performance',
-    category: 'Ecommerce Site',
-    image:
-      "/1.png",
+    title: 'Luron',
+    category: 'CLASSIC RANGE',
+    image: "/product/Luron.webp",
+    href: '/products/luron',
   },
 ];
 
@@ -382,7 +384,7 @@ export default function Hero3() {
             Keep exactly as before, but only on desktop.
         ===================================================== */}
 
-        <div className="min-h-[105vh] w-full max-lg:hidden" />
+        <div className="min-h-[95vh] w-full max-lg:hidden" />
 
         {/* =====================================================
             DESKTOP ANIMATED CARDS
@@ -415,48 +417,191 @@ export default function Hero3() {
                     rotate: transform.rotate,
                     scale: transform.scale,
                     zIndex: transform.zIndex,
-                    willChange: 'left, transform',
+                    willChange: "left, transform",
                   }}
                   className="
-                    absolute
-                    top-15
-                    w-[47%]
-                    max-w-[600px]
-                    pointer-events-auto
-                    flex
-                    flex-col
-                    group
-                    cursor-pointer
-                    transform-gpu
-                  "
+    absolute
+    top-15
+    w-[47%]
+    max-w-[600px]
+    pointer-events-auto
+    flex
+    flex-col
+    group
+    cursor-pointer
+    transform-gpu
+  "
                 >
                   <div
                     className="
-                      w-full
-                      aspect-[16/10]
-                      rounded-2xl
-                      overflow-hidden
-                      shadow-xl
-                      shadow-slate-200/80
-                      border
-                      border-slate-200/90
-                      bg-white
-                      relative
-                    "
+      w-full
+      aspect-[16/10]
+      rounded-2xl
+      overflow-hidden
+      shadow-xl
+      shadow-slate-200/80
+      border
+      border-slate-200/90
+      bg-white
+      relative
+    "
                   >
+                    {/* Image */}
                     <img
                       src={project.image}
                       alt={project.title}
                       className="
-                        w-full
-                        h-full
-                        object-cover
-                        transition-transform
-                        duration-500
-                        group-hover:scale-103
-                      "
+        w-full
+        h-full
+        object-cover
+        transition-transform
+        duration-700
+        ease-out
+        group-hover:scale-105
+      "
                       loading="eager"
                     />
+
+                    {/* Dark Gradient */}
+                    <div
+                      className="
+        absolute
+        inset-0
+        bg-gradient-to-t
+        from-black/80
+        via-black/20
+        to-transparent
+        opacity-0
+        transition-opacity
+        duration-500
+        group-hover:opacity-100
+      "
+                    />
+
+                    {/* Product Info */}
+                    <div
+                      className="
+        absolute
+        inset-x-0
+        bottom-0
+        z-10
+        flex
+        items-end
+        justify-between
+        gap-5
+        p-6
+
+        opacity-0
+        translate-y-5
+
+        transition-all
+        duration-500
+        ease-out
+
+        group-hover:opacity-100
+        group-hover:translate-y-0
+      "
+                    >
+                      {/* Category + Name */}
+                      <div className="min-w-0">
+                        <p
+                          className="
+            mb-1.5
+            text-[11px]
+            font-semibold
+            uppercase
+            tracking-[0.18em]
+            text-white/70
+          "
+                        >
+                          {project.category}
+                        </p>
+
+                        <h3
+                          className="
+            text-2xl
+            font-bold
+            tracking-tight
+            text-white
+          "
+                        >
+                          {project.title}
+                        </h3>
+                      </div>
+
+                      {/* View Product */}
+                      <Link
+                        href={project.href}
+                        onClick={(e) => e.stopPropagation()}
+                        className="
+    group/button
+    flex
+    h-12
+    w-12
+    shrink-0
+    items-center
+    justify-center
+    overflow-hidden
+    rounded-full
+    bg-white
+    text-slate-900
+    shadow-lg
+
+    transition-all
+    duration-500
+    ease-out
+
+    /* Expand when CARD is hovered */
+    group-hover:w-44
+
+    /* Button hover */
+    hover:bg-slate-900
+    hover:text-white
+  "
+                      >
+                        {/* Button Text */}
+                        <span
+                          className="
+      whitespace-nowrap
+      text-sm
+      font-semibold
+
+      opacity-0
+      -translate-x-3
+
+      transition-all
+      duration-300
+      ease-out
+
+      /* Show when CARD is hovered */
+      group-hover:opacity-100
+      group-hover:translate-x-0
+    "
+                        >
+                          View Product
+                        </span>
+
+                        {/* Arrow */}
+                        <span
+                          className="
+      flex
+      h-12
+      w-12
+      shrink-0
+      items-center
+      justify-center
+      text-xl
+      transition-transform
+      duration-300
+
+      group-hover:translate-x-1
+    "
+                        >
+                          →
+                        </span>
+                      </Link>
+
+                    </div>
                   </div>
                 </motion.div>
               );
@@ -480,42 +625,164 @@ export default function Hero3() {
         >
           {projects.map((project) => (
             <div
-              key={project.id}
               className="
-                w-full
-                flex
-                flex-col
-                group
-                cursor-pointer
-              "
+    w-full
+    aspect-[16/10]
+    rounded-2xl
+    overflow-hidden
+    shadow-xl
+    shadow-slate-200/80
+    border
+    border-slate-200/90
+    bg-white
+    relative
+    group
+  "
             >
+              {/* Image */}
+              <img
+                src={project.image}
+                alt={project.title}
+                className="
+      w-full
+      h-full
+      object-cover
+      transition-transform
+      duration-700
+      ease-out
+      group-hover:scale-105
+    "
+                loading="eager"
+              />
+
+              {/* Dark Gradient Overlay */}
               <div
                 className="
-                  w-full
-                  aspect-[16/10]
-                  rounded-2xl
-                  overflow-hidden
-                  shadow-xl
-                  shadow-slate-200/80
-                  border
-                  border-slate-200/90
-                  bg-white
-                  relative
-                "
+      absolute
+      inset-0
+      bg-gradient-to-t
+      from-black/75
+      via-black/20
+      to-transparent
+      opacity-0
+      transition-opacity
+      duration-500
+      group-hover:opacity-100
+    "
+              />
+
+              {/* Product Information */}
+              <div
+                className="
+      absolute
+      inset-x-0
+      bottom-0
+      z-10
+      p-6
+      flex
+      items-end
+      justify-between
+      gap-5
+
+      opacity-0
+      translate-y-5
+
+      transition-all
+      duration-500
+      ease-out
+
+      group-hover:opacity-100
+      group-hover:translate-y-0
+    "
               >
-                <img
-                  src={project.image}
-                  alt={project.title}
+                {/* Name + Category */}
+                <div className="min-w-0">
+                  <p
+                    className="
+          mb-1.5
+          text-[11px]
+          font-semibold
+          uppercase
+          tracking-[0.18em]
+          text-white/70
+        "
+                  >
+                    {project.category}
+                  </p>
+
+                  <h3
+                    className="
+          text-2xl
+          font-bold
+          tracking-tight
+          text-white
+        "
+                  >
+                    {project.title}
+                  </h3>
+                </div>
+
+                {/* View Product Button */}
+                <a
+                  href={project.href}
+                  onClick={(e) => e.stopPropagation()}
                   className="
-                    w-full
-                    h-full
-                    object-cover
-                    transition-transform
-                    duration-500
-                    group-hover:scale-103
-                  "
-                  loading="lazy"
-                />
+        group/button
+        flex
+        h-12
+        w-12
+        shrink-0
+        items-center
+        justify-center
+        overflow-hidden
+        rounded-full
+        bg-white
+        text-slate-900
+        shadow-lg
+
+        transition-all
+        duration-500
+
+        hover:w-36
+        hover:bg-slate-900
+        hover:text-white
+      "
+                >
+                  <span
+                    className="
+          whitespace-nowrap
+          text-sm
+          font-semibold
+          opacity-0
+          -translate-x-2
+
+          transition-all
+          duration-300
+
+          group-hover/button:opacity-100
+          group-hover/button:translate-x-0
+        "
+                  >
+                    View Product
+                  </span>
+
+                  <span
+                    className="
+          flex
+          h-12
+          w-12
+          shrink-0
+          items-center
+          justify-center
+          text-xl
+          transition-transform
+          duration-300
+          group-hover/button:translate-x-1
+        "
+                  >
+                    →
+                  </span>
+                </a>
               </div>
             </div>
           ))}
