@@ -195,64 +195,64 @@ export default function Projects() {
                     >
                         {/* Popup */}
                         <motion.div
-                            className="relative w-full max-w-5xl overflow-hidden rounded-[24px] bg-white shadow-2xl"
-                            initial={{
-                                opacity: 0,
-                                scale: 0.92,
-                                y: 30,
-                            }}
-                            animate={{
-                                opacity: 1,
-                                scale: 1,
-                                y: 0,
-                            }}
-                            exit={{
-                                opacity: 0,
-                                scale: 0.92,
-                                y: 20,
-                            }}
-                            transition={{
-                                duration: 0.35,
-                                ease: [0.21, 0.47, 0.32, 0.98],
-                            }}
-                            onClick={(e) => e.stopPropagation()}
-                        >
-                            {/* Close Button */}
-                            <button
-                                type="button"
-                                onClick={() => setSelectedProject(null)}
-                                aria-label="Close popup"
-                                className="absolute right-4 top-4 z-20 flex h-11 w-11 items-center justify-center rounded-full border border-white/20 bg-[#0d2461]/80 text-white backdrop-blur-md transition-all duration-300 hover:bg-[#f5bd24] hover:text-[#0d2461]"
-                            >
-                                <X className="h-5 w-5" />
-                            </button>
+    className="relative w-fit max-w-[95vw] overflow-hidden rounded-[24px] bg-white shadow-2xl"
+    initial={{
+        opacity: 0,
+        scale: 0.92,
+        y: 30,
+    }}
+    animate={{
+        opacity: 1,
+        scale: 1,
+        y: 0,
+    }}
+    exit={{
+        opacity: 0,
+        scale: 0.92,
+        y: 20,
+    }}
+    transition={{
+        duration: 0.35,
+        ease: [0.21, 0.47, 0.32, 0.98],
+    }}
+    onClick={(e) => e.stopPropagation()}
+>
+    {/* Close Button */}
+    <button
+        type="button"
+        onClick={() => setSelectedProject(null)}
+        aria-label="Close popup"
+        className="absolute right-4 top-4 z-20 flex h-11 w-11 items-center justify-center rounded-full border border-white/20 bg-[#0d2461]/80 text-white backdrop-blur-md transition-all duration-300 hover:bg-[#f5bd24] hover:text-[#0d2461]"
+    >
+        <X className="h-5 w-5" />
+    </button>
 
-                            {/* Image */}
-                            <div className="relative bg-[#07173f]">
-                                <img
-                                    src={selectedProject.image}
-                                    alt={selectedProject.name}
-                                    className="max-h-[70vh] w-full object-contain"
-                                />
-                            </div>
+    {/* Image */}
+    <div className="relative flex max-h-[70vh] w-fit max-w-[95vw] bg-[#07173f]">
+        <img
+            src={selectedProject.image}
+            alt={selectedProject.name}
+            className="block max-h-[70vh] max-w-[95vw] w-auto object-contain"
+        />
+    </div>
 
-                            {/* Popup Information */}
-                            <div className="flex flex-col gap-4 bg-white p-5 sm:flex-row sm:items-center sm:justify-between sm:p-7">
-                                <div>
-                                    <div className="mb-2 flex items-center gap-2 text-[#f5bd24]">
-                                        <MapPin className="h-4 w-4" />
+    {/* Popup Information - same width as image */}
+    <div className="flex w-full flex-col gap-4 bg-white p-5 sm:flex-row sm:items-center sm:justify-between sm:p-7">
+        <div>
+            <div className="mb-2 flex items-center gap-2 text-[#f5bd24]">
+                <MapPin className="h-4 w-4" />
 
-                                        <span className="text-xs font-bold uppercase tracking-[0.15em] text-[#0d2461]/60">
-                                            {selectedProject.place}
-                                        </span>
-                                    </div>
+                <span className="text-xs font-bold uppercase tracking-[0.15em] text-[#0d2461]/60">
+                    {selectedProject.place}
+                </span>
+            </div>
 
-                                    <h2 className="text-2xl font-extrabold tracking-tight text-[#0d2461] sm:text-3xl">
-                                        {selectedProject.name}
-                                    </h2>
-                                </div>
-                            </div>
-                        </motion.div>
+            <h2 className="text-2xl font-extrabold tracking-tight text-[#0d2461] sm:text-3xl">
+                {selectedProject.name}
+            </h2>
+        </div>
+    </div>
+</motion.div>
                     </motion.div>
                 )}
             </AnimatePresence>
