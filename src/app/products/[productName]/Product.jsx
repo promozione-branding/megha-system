@@ -2,7 +2,7 @@
 
 import React, { useState, useRef } from "react";
 import Link from "next/link";
-import { ArrowRight, Phone, Plus, Minus, Quote } from "lucide-react";
+import { ArrowRight, Phone, Plus, Minus, Quote, FileText } from "lucide-react";
 import Navbar from "@/app/components/Navabar/page";
 import FooterSection from "@/app/components/Footer/page";
 import { motion, useScroll, useTransform } from "framer-motion";
@@ -235,6 +235,15 @@ export default function ProjectDetail() {
                   <span>Our Projects</span>
                   <ArrowRight size={18} />
                 </Link>
+
+                <a
+                  href="/catalog.pdf"
+                  download
+                  className="w-full bg-white text-blue-950 mt-3 py-3.5 font-bold flex justify-center items-center gap-2 rounded-xl hover:bg-blue-50 transition-colors shadow-md"
+                >
+                  <span>Download catalog</span>
+                  <FileText size={18} />
+                </a>
               </div>
             </div>
           </div>
@@ -284,25 +293,29 @@ export default function ProjectDetail() {
                   </div>
                 </div>
 
-               {project?.imgSpecs &&(
-                 <div>
-                  <div className="text-sm text-stone-400 mb-1">Dimensions:</div>
+                {project?.imgSpecs && (
+                  <div>
+                    <div className="text-sm text-stone-400 mb-1">
+                      Dimensions:
+                    </div>
 
-                  <div className="text-lg font-semibold text-stone-900">
-                    {project?.imgSpecs.dimensions}
+                    <div className="text-lg font-semibold text-stone-900">
+                      {project?.imgSpecs.dimensions}
+                    </div>
                   </div>
-                </div>
-               )}
+                )}
 
-                {project?.imgSpecs &&(
-                <div>
-                  <div className="text-sm text-stone-400 mb-1">Clearance:</div>
+                {project?.imgSpecs && (
+                  <div>
+                    <div className="text-sm text-stone-400 mb-1">
+                      Clearance:
+                    </div>
 
-                  <div className="text-lg font-semibold text-stone-900">
-                    {project?.imgSpecs.clearance}
+                    <div className="text-lg font-semibold text-stone-900">
+                      {project?.imgSpecs.clearance}
+                    </div>
                   </div>
-                </div>
-                 )}
+                )}
               </div>
             </div>
 
@@ -498,17 +511,31 @@ export default function ProjectDetail() {
 
         {project.hardwareImg && (
           <div className="">
-            <h2 className="font-bold text-blue-950 text-4xl mb-4">Hardware</h2>
+            <h2 className="font-bold text-blue-950 mt-3 text-4xl mb-4">
+              Hardware
+            </h2>
             <img
               src={project.hardwareImg}
               alt="hardware"
+              className="w-full h-auto md:h-140 mt-4"
+            />
+          </div>
+        )}
+        {project?.shapes && (
+          <div className="">
+            <h2 className="font-bold text-blue-950 text-4xl mt-5 mb-4">
+              Differnt Types Of Shape
+            </h2>
+            <img
+              src={project.shapes}
+              alt="shape"
               className="w-full h-auto mt-4"
             />
           </div>
         )}
       </main>
 
-      <CTA2/>
+      <CTA2 />
 
       <StickyContactButtons />
       <FooterSection />

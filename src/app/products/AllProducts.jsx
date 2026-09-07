@@ -94,6 +94,12 @@ export default function AllProductsPage() {
                 <h2 className="mt-1 text-2xl sm:text-3xl font-bold text-blue-950">
                   {category.categoryName}
                 </h2>
+                <h2 className="mt-1 text-lg bg-white w-fit py-2 px-3 rounded-2xl sm:text-xl font-bold text-blue-950">
+                  {category.excerpt}
+                </h2>
+                <h2 className="mt-1 text-sm sm:text-base  text-blue-950">
+                  {category.description}
+                </h2>
 
                 <p className="mt-1 text-sm text-blue-900/60">
                   {category.products.length}{' '}

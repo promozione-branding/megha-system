@@ -969,7 +969,8 @@ export const allProducts = [
         shortDescription:
           "Our Urinal Modesty Panels provide a stylish, durable, and hygienic privacy solution for modern public restrooms. Manufactured from high-quality compact-grade laminates with a strong phenolic core and a minimum thickness of 12 mm, these panels are designed for high-traffic environments. Available in multiple colours, finishes, and standard sizes, they offer excellent privacy, strength, easy maintenance, and long-lasting performance.",
 
-                  hardwareImg: "/hardware/door.webp",
+                  hardwareImg: "/hardware/box.webp",
+                  shapes:"/hardware/door.webp",
 
 
         dimensions: [
