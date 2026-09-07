@@ -241,7 +241,7 @@ export default function ProjectDetail() {
                   download
                   className="w-full bg-white text-blue-950 mt-3 py-3.5 font-bold flex justify-center items-center gap-2 rounded-xl hover:bg-blue-50 transition-colors shadow-md"
                 >
-                  <span>Download catalog</span>
+                  <span>Download Catalog</span>
                   <FileText size={18} />
                 </a>
               </div>
