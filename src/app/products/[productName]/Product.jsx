@@ -1,17 +1,18 @@
-'use client';
+"use client";
 
-import React, { useState, useRef } from 'react';
-import Link from 'next/link';
-import { ArrowRight, Phone, Plus, Minus, Quote } from 'lucide-react';
-import Navbar from '@/app/components/Navabar/page';
-import FooterSection from '@/app/components/Footer/page';
-import { motion, useScroll, useTransform } from 'framer-motion';
-import { allProducts } from '@/data';
-import { useParams } from 'next/navigation';
-import StickyContactButtons from '@/components/StickyContactButtons';
+import React, { useState, useRef } from "react";
+import Link from "next/link";
+import { ArrowRight, Phone, Plus, Minus, Quote } from "lucide-react";
+import Navbar from "@/app/components/Navabar/page";
+import FooterSection from "@/app/components/Footer/page";
+import { motion, useScroll, useTransform } from "framer-motion";
+import { allProducts } from "@/data";
+import { useParams } from "next/navigation";
+import StickyContactButtons from "@/components/StickyContactButtons";
+import CTA2 from "@/components/CTA2";
 
 export default function ProjectDetail() {
-  const { productName } = useParams()
+  const { productName } = useParams();
   const [openAccordion, setOpenAccordion] = useState(0);
   const imageScrollRef = useRef(null);
 
@@ -25,21 +26,21 @@ export default function ProjectDetail() {
 
   const { scrollYProgress } = useScroll({
     target: imageScrollRef,
-    offset: ['start start', 'end end'],
+    offset: ["start start", "end end"],
   });
 
   const secondImageY = useTransform(
     scrollYProgress,
     [0, 0.25, 0.75, 1],
-    ['100%', '70%', '15%', '0%']
+    ["100%", "70%", "15%", "0%"],
   );
 
   const secondImageScale = useTransform(
     scrollYProgress,
     [0, 0.5, 1],
-    [0.96, 0.99, 1]
+    [0.96, 0.99, 1],
   );
-  const [dimensionType, setDimensionType] = useState('regular');
+  const [dimensionType, setDimensionType] = useState("regular");
   // Prevent rendering if product doesn't exist
   if (!project) {
     return (
@@ -115,13 +116,7 @@ export default function ProjectDetail() {
             <line x1="240" y1="204" x2="240" y2="230" />
 
             {/* Floor Line */}
-            <line
-              x1="30"
-              y1="230"
-              x2="270"
-              y2="230"
-              strokeWidth="1.5"
-            />
+            <line x1="30" y1="230" x2="270" y2="230" strokeWidth="1.5" />
           </svg>
         </div>
 
@@ -152,40 +147,38 @@ export default function ProjectDetail() {
         <div className="max-w-[1850px] mx-auto flex flex-col-reverse lg:flex-row gap-6 lg:gap-10">
           {/* LEFT SIDEBAR */}
           <div className="w-full lg:w-1/3 xl:w-[350px] flex flex-col gap-6 flex-shrink-0">
-
             <div className="bg-white border border-blue-900/10 rounded-2xl p-8 shadow-sm">
               <h3 className="text-2xl font-bold mb-4 text-blue-950">
                 Our Categories
               </h3>
 
               <p className="text-sm text-blue-800/80 mb-6 leading-relaxed">
-                Explore our portfolio of bespoke commercial cubicle systems
-                and interior architecture.
+                Explore our portfolio of bespoke commercial cubicle systems and
+                interior architecture.
               </p>
 
               <div className="flex flex-col gap-3">
                 {allProducts.map((category) => {
                   const isActiveCategory = category.products?.some(
-                    (product) => product.slug === project.slug
+                    (product) => product.slug === project.slug,
                   );
 
                   return (
                     <Link
                       key={category.slug}
                       href={`/products#${category.slug}`}
-                      className={`px-5 py-4 text-sm font-semibold flex justify-between items-center rounded-xl transition-all ${isActiveCategory
-                        ? 'bg-[#0d2461] text-white shadow-md'
-                        : 'bg-white border border-blue-100 text-blue-950 hover:bg-blue-50/60'
-                        }`}
+                      className={`px-5 py-4 text-sm font-semibold flex justify-between items-center rounded-xl transition-all ${
+                        isActiveCategory
+                          ? "bg-[#0d2461] text-white shadow-md"
+                          : "bg-white border border-blue-100 text-blue-950 hover:bg-blue-50/60"
+                      }`}
                     >
                       <span>{category.categoryName}</span>
 
                       <ArrowRight
                         size={16}
                         className={
-                          isActiveCategory
-                            ? 'text-white'
-                            : 'text-blue-400'
+                          isActiveCategory ? "text-white" : "text-blue-400"
                         }
                       />
                     </Link>
@@ -198,7 +191,7 @@ export default function ProjectDetail() {
               <div
                 className="absolute inset-0 bg-cover bg-center"
                 style={{
-                  backgroundImage: `url('${project.image || '/product/image.png'}')`,
+                  backgroundImage: `url('${project.image || "/product/image.png"}')`,
                 }}
               />
 
@@ -212,8 +205,8 @@ export default function ProjectDetail() {
                 </h2>
 
                 <p className="text-sm text-blue-100 mb-8 leading-relaxed opacity-90">
-                  Ready to engineer moisture-proof restroom cubicles or
-                  luxury interior spaces? Contact our architectural team.
+                  Ready to engineer moisture-proof restroom cubicles or luxury
+                  interior spaces? Contact our architectural team.
                 </p>
 
                 <div className="flex items-center gap-4 mb-6">
@@ -226,7 +219,10 @@ export default function ProjectDetail() {
                       Hotline Inquiry
                     </div>
 
-                    <a href="tel:+919873735716" className="hover:text-white transition-colors font-medium text-white">
+                    <a
+                      href="tel:+919873735716"
+                      className="hover:text-white transition-colors font-medium text-white"
+                    >
                       +91 9873735716
                     </a>
                   </div>
@@ -261,18 +257,15 @@ export default function ProjectDetail() {
             {/* HERO IMAGE */}
             <div className="relative mb-16 overflow-hidden rounded-3xl shadow-md">
               <img
-                src={project.image || '/product/image.png'}
+                src={project.image || "/product/image.png"}
                 alt={project.name}
                 className="w-full h-[450px] sm:h-[500px] lg:h-[600px] object-cover"
               />
 
               {/* Floating Info Bar */}
               <div className="absolute lg:flex hidden bottom-0 right-0 bg-white rounded-tl-[2.5rem] p-6 sm:p-8 lg:px-12 lg:py-8 flex flex-wrap md:flex-nowrap gap-6 sm:gap-10 lg:gap-16">
-
                 <div>
-                  <div className="text-sm text-stone-400 mb-1">
-                    Product:
-                  </div>
+                  <div className="text-sm text-stone-400 mb-1">Product:</div>
 
                   <div className="text-lg font-semibold text-stone-900">
                     {project.name}
@@ -280,39 +273,36 @@ export default function ProjectDetail() {
                 </div>
 
                 <div>
-                  <div className="text-sm text-stone-400 mb-1">
-                    Category:
-                  </div>
+                  <div className="text-sm text-stone-400 mb-1">Category:</div>
 
                   <div className="text-lg font-semibold text-stone-900">
                     {allProducts.find((category) =>
                       category.products?.some(
-                        (product) => product.slug === project.slug
-                      )
-                    )?.categoryName || '-'}
+                        (product) => product.slug === project.slug,
+                      ),
+                    )?.categoryName || "-"}
                   </div>
                 </div>
 
-                <div>
-                  <div className="text-sm text-stone-400 mb-1">
-                    Finish:
-                  </div>
+               {project?.imgSpecs &&(
+                 <div>
+                  <div className="text-sm text-stone-400 mb-1">Dimensions:</div>
 
                   <div className="text-lg font-semibold text-stone-900">
-                    Black PVD
+                    {project?.imgSpecs.dimensions}
                   </div>
                 </div>
+               )}
 
+                {project?.imgSpecs &&(
                 <div>
-                  <div className="text-sm text-stone-400 mb-1">
-                    Clearance:
-                  </div>
+                  <div className="text-sm text-stone-400 mb-1">Clearance:</div>
 
                   <div className="text-lg font-semibold text-stone-900">
-                    150 mm
+                    {project?.imgSpecs.clearance}
                   </div>
                 </div>
-
+                 )}
               </div>
             </div>
 
@@ -329,10 +319,8 @@ export default function ProjectDetail() {
 
             {/* Split Content: Materials & Features */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-start">
-
               {/* LEFT */}
               <div>
-
                 <div>
                   <div className="flex items-center justify-between gap-4 mb-2">
                     <h3 className="text-2xl font-bold text-blue-950">
@@ -342,22 +330,24 @@ export default function ProjectDetail() {
                     <div className="flex rounded-lg border border-blue-100 bg-white p-1">
                       <button
                         type="button"
-                        onClick={() => setDimensionType('regular')}
-                        className={`px-3 py-1.5 text-xs font-semibold rounded-md transition-all ${dimensionType === 'regular'
-                          ? 'bg-[#0d2461] text-white'
-                          : 'text-blue-900 hover:bg-blue-50'
-                          }`}
+                        onClick={() => setDimensionType("regular")}
+                        className={`px-3 py-1.5 text-xs font-semibold rounded-md transition-all ${
+                          dimensionType === "regular"
+                            ? "bg-[#0d2461] text-white"
+                            : "text-blue-900 hover:bg-blue-50"
+                        }`}
                       >
                         Regular
                       </button>
 
                       <button
                         type="button"
-                        onClick={() => setDimensionType('speciallyAbled')}
-                        className={`px-3 py-1.5 text-xs font-semibold rounded-md transition-all ${dimensionType === 'speciallyAbled'
-                          ? 'bg-[#0d2461] text-white'
-                          : 'text-blue-900 hover:bg-blue-50'
-                          }`}
+                        onClick={() => setDimensionType("speciallyAbled")}
+                        className={`px-3 py-1.5 text-xs font-semibold rounded-md transition-all ${
+                          dimensionType === "speciallyAbled"
+                            ? "bg-[#0d2461] text-white"
+                            : "text-blue-900 hover:bg-blue-50"
+                        }`}
                       >
                         Specially Abled
                       </button>
@@ -375,7 +365,7 @@ export default function ProjectDetail() {
                         <span>
                           <strong className="font-bold text-blue-950">
                             {item.name}:
-                          </strong>{' '}
+                          </strong>{" "}
                           {item[dimensionType]} mm
                         </span>
                       </li>
@@ -392,24 +382,24 @@ export default function ProjectDetail() {
                   {project.keyFeatures?.map((feature, index) => (
                     <div
                       key={index}
-                      className={`rounded-xl transition-all duration-300 overflow-hidden ${openAccordion === index
-                        ? 'bg-blue-50/90 border border-blue-200 shadow-sm'
-                        : 'bg-white border border-blue-100 hover:border-blue-300'
-                        }`}
+                      className={`rounded-xl transition-all duration-300 overflow-hidden ${
+                        openAccordion === index
+                          ? "bg-blue-50/90 border border-blue-200 shadow-sm"
+                          : "bg-white border border-blue-100 hover:border-blue-300"
+                      }`}
                     >
                       <button
                         onClick={() =>
-                          setOpenAccordion(
-                            openAccordion === index ? -1 : index
-                          )
+                          setOpenAccordion(openAccordion === index ? -1 : index)
                         }
                         className="w-full px-5 py-4 flex justify-between items-center text-left"
                       >
                         <span
-                          className={`font-semibold text-sm sm:text-[15px] ${openAccordion === index
-                            ? 'text-[#0d2461] font-bold'
-                            : 'text-blue-950'
-                            }`}
+                          className={`font-semibold text-sm sm:text-[15px] ${
+                            openAccordion === index
+                              ? "text-[#0d2461] font-bold"
+                              : "text-blue-950"
+                          }`}
                         >
                           {feature.name}
                         </span>
@@ -428,10 +418,11 @@ export default function ProjectDetail() {
                       </button>
 
                       <div
-                        className={`px-5 overflow-hidden transition-all duration-300 ease-in-out ${openAccordion === index
-                          ? 'max-h-40 pb-4 opacity-100'
-                          : 'max-h-0 opacity-0'
-                          }`}
+                        className={`px-5 overflow-hidden transition-all duration-300 ease-in-out ${
+                          openAccordion === index
+                            ? "max-h-40 pb-4 opacity-100"
+                            : "max-h-0 opacity-0"
+                        }`}
                       >
                         <p className="text-blue-900/80 text-xs sm:text-sm leading-relaxed">
                           {feature.description}
@@ -470,14 +461,12 @@ export default function ProjectDetail() {
                 className="relative h-[1000px] md:h-[1000px]"
               >
                 <div className="sticky top-25 h-[440px]">
-
                   <div className="relative h-full w-full">
-
                     {/* BACK CARD */}
                     <div className="absolute inset-0 translate-y-[-18px] scale-[0.96] rounded-[28px] bg-white p-1">
                       <div className="h-full w-full overflow-hidden rounded-[20px]">
                         <img
-                          src={'/product/image.png'}
+                          src={"/product/image.png"}
                           alt={project.name}
                           className="h-full w-full object-"
                         />
@@ -494,13 +483,12 @@ export default function ProjectDetail() {
                     >
                       <div className="h-full w-full overflow-hidden rounded-[20px]">
                         <img
-                          src={'/product/image.png'}
+                          src={"/product/image.png"}
                           alt={project.name}
                           className="h-full w-full object-"
                         />
                       </div>
                     </motion.div>
-
                   </div>
                 </div>
               </div>
@@ -509,12 +497,18 @@ export default function ProjectDetail() {
         </div>
 
         {project.hardwareImg && (
-          <div className=''>
-          <h2 className="font-bold text-blue-950 text-4xl mb-4">Hardware</h2>
-            <img src={project.hardwareImg} alt="hardware" className="w-full h-auto mt-4" />
+          <div className="">
+            <h2 className="font-bold text-blue-950 text-4xl mb-4">Hardware</h2>
+            <img
+              src={project.hardwareImg}
+              alt="hardware"
+              className="w-full h-auto mt-4"
+            />
           </div>
         )}
       </main>
+
+      <CTA2/>
 
       <StickyContactButtons />
       <FooterSection />

@@ -56,7 +56,7 @@ export default function Navbar() {
           TOP ANNOUNCEMENT BAR
       ===================================================== */}
 
-      <div className="w-full md:flex hidden bg-[#0d2461] text-white text-[13px] sm:text-[13.5px] font-semibold tracking-wide text-center py-1.5 px-4 flex items-center justify-center gap-3">
+     <div className="w-full md:flex hidden sticky top-0 z-[60] bg-[#0d2461] text-white text-[13px] sm:text-[13.5px] font-semibold tracking-wide text-center py-1.5 px-4 items-center justify-center gap-3">
         <span className="opacity-85">
           India&apos;s Trusted Restroom Cubicle Solutions
         </span>
@@ -76,7 +76,7 @@ export default function Navbar() {
           className="inline-flex items-center gap-1.5 text-[#f5bd24] hover:text-white transition-colors font-bold"
         >
           <Phone className="w-3.5 h-3.5" />
-          Get a Free Quote
+          +91 98737 35716
         </a>
       </div>
 
@@ -85,11 +85,12 @@ export default function Navbar() {
       ===================================================== */}
 
       <header
-        className={`relative z-50 w-full transition-all duration-500 sticky top-0 font-sans ${scrolled
-          ? 'bg-white/97 backdrop-blur-2xl shadow-[0_4px_30px_rgba(13,36,97,0.12)] border-b border-[#0d2461]/10'
-          : 'bg-white border-b border-[#0d2461]/8'
-          }`}
-      >
+  className={`relative z-50 w-full transition-all duration-500 sticky top-0 md:top-[32px] font-sans ${
+    scrolled
+      ? 'bg-white/97 backdrop-blur-2xl shadow-[0_4px_30px_rgba(13,36,97,0.12)] border-b border-[#0d2461]/10'
+      : 'bg-white border-b border-[#0d2461]/8'
+  }`}
+>
         {/* Gold accent line */}
         <div className="absolute top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-transparent via-[#f5bd24] to-transparent opacity-80" />
 

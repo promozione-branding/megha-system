@@ -56,7 +56,7 @@ const projects: Project[] = [
     title: "Kids Toilet Cubicles",
     description:
       "Safe, comfortable, and thoughtfully designed, our kids' cubicles create welcoming washroom spaces with child-friendly proportions, durable materials, and vibrant finishes.",
-    image: "/1.webp",
+    image: "/kids.webp",
     details:
       "Our kids toilet cubicles are designed around the needs of younger users. We focus on safe proportions, practical layouts, durable construction, and visually engaging finishes to create comfortable washrooms for schools, malls, recreational spaces, and other child-focused environments.",
     features: [

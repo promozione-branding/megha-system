@@ -167,7 +167,7 @@ export default function HeroSection() {
             </button>
 
             {/* Typewritten Sub-description matching current slide */}
-            <p className="max-w-3xl text-xs sm:text-sm leading-relaxed text-gray-500 min-h-[48px]">
+            <p className="max-w-3xl text-xs sm:text-[17px] leading-relaxed text-gray-800 min-h-[48px]">
               <TypewriterText
                 key={`description-${activeSlideIndex}`}
                 text={currentSlide.description}
