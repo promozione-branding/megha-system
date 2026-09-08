@@ -49,7 +49,7 @@ const items: VantageItem[] = [
       'Precision in detail creates extraordinary architecture.',
     author: 'Sophia Chen',
     role: 'Lead Structural Engineer',
-    imageUrl: '/assets/split_vantage_image/4.jpg',
+    imageUrl: '/assets/split_vantage_image/44.webp',
   },
 ];
 

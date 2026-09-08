@@ -36,9 +36,9 @@ export default function ContactSection() {
 
               {/* Info Cards */}
               <div className="space-y-4 pt-1">
-                <div className="bg-[#F0EDED] rounded-[12px] p-4.5 flex items-center gap-3.5">
+                <div className="bg-[#F0EDED] rounded-[12px] p-4.5 flex items-center md:gap-3.5">
                   <div className="w-11 h-11 rounded-full bg-transparent flex items-center justify-center text-slate-800 shrink-0">
-                    <Phone className="w-5.5 h-5.5 stroke-[1.5]" />
+                    <Phone className="w-5.5 h-5.5 stroke- [1.5]" />
                   </div>
                   <div>
                     <p className="text-[12px] text-slate-600 leading-tight">Call Us</p>
@@ -46,7 +46,7 @@ export default function ContactSection() {
                   </div>
                 </div>
 
-                <div className="bg-[#F0EDED] rounded-[12px] p-4.5 flex items-center gap-3.5">
+                <div className="bg-[#F0EDED] rounded-[12px] p-4.5 flex items-center md:gap-3.5">
                   <div className="w-11 h-11 rounded-full bg-transparent flex items-center justify-center text-slate-800 shrink-0">
                     <Mail className="w-5.5 h-5.5 stroke-[1.5]" />
                   </div>
@@ -56,17 +56,36 @@ export default function ContactSection() {
                   </div>
                 </div>
 
-                <div className="bg-[#F0EDED] rounded-[12px] p-4.5 flex items-start gap-3.5">
-                  <div className="w-11 h-11 rounded-full bg-transparent flex items-center justify-center text-slate-800 shrink-0 mt-0.5">
-                    <MapPin className="w-5.5 h-5.5 stroke-[1.5]" />
-                  </div>
-                  <div>
-                    <p className="text-[12px] text-slate-600 leading-tight">Visit Us</p>
-                    <p className="text-base font-semibold text-black tracking-tight leading-snug mt-0.5">
-                      Adore Business City, Sector 72-73, Faridabad, Haryana, 121004
-                    </p>
-                  </div>
-                </div>
+                <div className="space-y-3">
+  {/* Head Office */}
+  <div className="bg-[#F0EDED] rounded-[12px] p-4.5 flex items-start md:gap-3.5">
+    <div className="w-11 h-11 rounded-full bg-transparent flex items-center justify-center text-slate-800 shrink-0 mt-0.5">
+      <MapPin className="w-5.5 h-5.5 stroke-[1.5]" />
+    </div>
+
+    <div>
+      <p className="text-[12px] text-slate-600 leading-tight">
+        Head Office
+      </p>
+
+      <p className="text-base font-semibold text-black tracking-tight leading-snug mt-0.5">
+        Plot Number-P10/J-3, Adore Business City, Sector 72-73,
+        Faridabad, Haryana, 121004
+      </p>
+
+      <p className="text-[12px] mt-3 text-slate-600 leading-tight">
+        Branch Office
+      </p>
+
+      <p className="text-base font-semibold text-black tracking-tight leading-snug mt-0.5">
+        Plot No.341/1,2,3 &amp; 4, Safdar Nagar, Borabanda,
+        Hyderabad-500018
+      </p>
+    </div>
+  </div>
+
+  
+</div>
               </div>
             </div>
 

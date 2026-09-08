@@ -10,6 +10,11 @@ import { allProducts } from "@/data";
 import { useParams } from "next/navigation";
 import StickyContactButtons from "@/components/StickyContactButtons";
 import CTA2 from "@/components/CTA2";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Navigation, Pagination } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 
 export default function ProjectDetail() {
   const { productName } = useParams();
@@ -246,6 +251,40 @@ export default function ProjectDetail() {
                 </a>
               </div>
             </div>
+           {project.slider && (
+             <div className="relative h-[650px] rounded-2xl overflow-hidden shadow-lg">
+      <Swiper
+        modules={[Autoplay, Navigation, Pagination]}
+        slidesPerView={1}
+        spaceBetween={0}
+        loop={true}
+        speed={700}
+        autoplay={{
+          delay: 3500,
+          disableOnInteraction: false,
+          pauseOnMouseEnter: true,
+        }}
+        navigation
+        pagination={{
+          clickable: true,
+        }}
+        className="h-full w-full project-image-swiper"
+      >
+        {project?.slider.map((image, index) => (
+          <SwiperSlide key={index}>
+            <div className="relative h-full w-full">
+              <img
+                src={image}
+                alt={`Project ${index + 1}`}
+                loading={index === 0 ? "eager" : "lazy"}
+                className="h-full w-full object-fill"
+              />
+            </div>
+          </SwiperSlide>
+        ))}
+      </Swiper>
+    </div>
+           )}
           </div>
 
           <div className="w-full lg:w-2/3 flex-1 flex flex-col">

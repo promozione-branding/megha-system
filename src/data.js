@@ -836,7 +836,16 @@ export const allProducts = [
           "The KIDDIEZ Series is a thoughtfully designed modular toilet cubicle partition created for children’s washrooms. It combines durable construction, safe and practical hardware, easy maintenance, and a clean, friendly design for schools and other high-use spaces.",
 
 
-
+        slider:[
+          "/kids/kids1.webp",
+          "/kids/kids2.webp",
+          "/kids/kids3.webp",
+          "/kids/kids4.webp",
+          "/kids/kids5.webp",
+          "/kids/kids6.webp",
+          "/kids/kids7.webp",
+          "/kids/kids8.webp",
+        ],
 
         dimensions: [
           {
@@ -904,7 +913,16 @@ export const allProducts = [
           "Kiddiez Pro kids toilet cubicles combine reinforced stainless steel construction, secure anchoring, child-friendly hardware, and durable washroom design.",
         shortDescription:
           "The KIDDIEZ PRO Series is a secure and durable modular washroom partition designed specifically for children’s washrooms. With reinforced stainless steel construction, concealed anchoring, and child-friendly hardware, it provides a safe, stable, and comfortable washroom environment.",
-
+           slider:[
+          "/kids/kids1.webp",
+          "/kids/kids2.webp",
+          "/kids/kids3.webp",
+          "/kids/kids4.webp",
+          "/kids/kids5.webp",
+          "/kids/kids6.webp",
+          "/kids/kids7.webp",
+          "/kids/kids8.webp",
+        ],
         dimensions: [
           {
             name: "Width of the cubicle",
