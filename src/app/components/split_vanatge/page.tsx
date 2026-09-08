@@ -83,6 +83,7 @@ export default function SplitVantage() {
       ref={containerRef}
       className="
         relative
+        
         w-full
         bg-slate-50
         font-sans

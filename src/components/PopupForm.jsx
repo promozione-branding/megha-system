@@ -98,7 +98,7 @@ export default function PopupForm({ isOpen, onClose }) {
 
       const data = {
         platform: "Megha System Contact Form",
-        supplierToken:"6a9fb2bdd936bdc2bb1d6df7",
+        supplierToken: "6a9fb2bdd936bdc2bb1d6df7",
         platformEmail: "contact@meghasystems.com",
         name: formData.contactPerson,
         email: formData.email,
@@ -109,10 +109,7 @@ export default function PopupForm({ isOpen, onClose }) {
         message: formData.message,
       };
 
-      const res = await axios.post(
-        "https://brandbnalo.com/api/form/add",
-        data
-      );
+      const res = await axios.post("https://brandbnalo.com/api/form/add", data);
 
       console.log("Form submitted:", res.data);
 
@@ -242,9 +239,7 @@ export default function PopupForm({ isOpen, onClose }) {
                       contact@meghasystems.com
                     </p>
 
-                    <p className="text-[10px] text-white/50">
-                      Email our team
-                    </p>
+                    <p className="text-[10px] text-white/50">Email our team</p>
                   </div>
                 </a>
               </div>

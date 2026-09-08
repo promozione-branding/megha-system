@@ -106,7 +106,7 @@ export default function Navbar() {
             flex
             items-center
             justify-between
-            gap-4
+            gap-1
 
             max-lg:h-[68px]
             max-lg:px-4
@@ -291,34 +291,68 @@ export default function Navbar() {
             </a>
           </div>
 
+          
+
           {/* =================================================
               MOBILE TOGGLE
           ================================================= */}
 
-          <button
-            type="button"
-            onClick={() => setMobileMenuOpen((prev) => !prev)}
-            className="
-              xl:hidden
-              shrink-0
-              p-2.5
-              text-[#0d2461]
-              hover:bg-[#0d2461]/8
-              active:bg-[#0d2461]/10
-              rounded-xl
-              transition-colors
-            "
-            aria-label={
-              mobileMenuOpen ? 'Close menu' : 'Open menu'
-            }
-            aria-expanded={mobileMenuOpen}
-          >
-            {mobileMenuOpen ? (
-              <X className="w-6 h-6" />
-            ) : (
-              <Menu className="w-6 h-6" />
-            )}
-          </button>
+        {/* =================================================
+    MOBILE + TABLET ACTIONS
+================================================= */}
+
+<div className="xl:hidden flex items-center gap-0 shrink-0">
+  {/* Get a Quote */}
+  <button
+    type="button"
+    onClick={() => setOpen(true)}
+    className="
+      inline-flex
+      items-center
+      justify-center
+      whitespace-nowrap
+      bg-[#0d2461]
+      text-white
+      px-2
+      sm:px-5
+      py-2.5
+      text-[13px]
+      sm:text-[14px]
+      font-bold
+      rounded-lg
+      hover:bg-[#0d2461]/90
+      hover:shadow-[0_6px_20px_rgba(13,36,97,0.25)]
+      active:scale-[0.98]
+      transition-all
+      duration-200
+    "
+  >
+    Get a Quote
+  </button>
+
+  {/* Hamburger */}
+  <button
+    type="button"
+    onClick={() => setMobileMenuOpen((prev) => !prev)}
+    className="
+      shrink-0
+      p-2.5
+      text-[#0d2461]
+      hover:bg-[#0d2461]/8
+      active:bg-[#0d2461]/10
+      rounded-xl
+      transition-colors
+    "
+    aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
+    aria-expanded={mobileMenuOpen}
+  >
+    {mobileMenuOpen ? (
+      <X className="w-6 h-6" />
+    ) : (
+      <Menu className="w-6 h-6" />
+    )}
+  </button>
+</div>
         </div>
 
         {/* =====================================================

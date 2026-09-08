@@ -92,7 +92,7 @@ export default function LightWallSectionScroll() {
   return (
     <section
       ref={containerRef}
-      className="relative w-full bg-[#f8fafc] font-sans"
+      className="relative hidden md:block w-full bg-[#f8fafc] font-sans"
     >
       {/* Scroll height */}
       <div className="h-[300vh]">
