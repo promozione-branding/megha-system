@@ -79,7 +79,7 @@ export default function FooterSection() {
           </div>
 
           {/* Right Columns: Navigation & Contact */}
-          <div className="md:col-span-6 lg:col-span-5 grid grid-cols-2 gap-8 sm:gap-6 pt-2">
+          <div className=" md:col-span-6 lg:col-span-5 grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-6 pt-2">
 
             {/* Navigation Column */}
             <div className="space-y-6">
