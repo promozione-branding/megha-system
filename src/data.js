@@ -190,6 +190,7 @@ export const allProducts = [
           "The MAXI PRO Series is a practical and durable toilet cubicle partition designed for modern commercial washrooms. With a stable aluminium structure, precision-fitted panels, flexible door configuration, and reliable stainless steel hardware, MAXI PRO delivers privacy, comfort, and dependable everyday performance.",
 
         hardwareImg: "/hardware/Maxipro.webp",
+         rightImg:"/right/maxi-pro.jpeg",
 
         dimensions: [
           {
@@ -508,6 +509,7 @@ export const allProducts = [
           "The MAXI Series is a luxury toilet cubicle partition designed for commercial and high-traffic washrooms. Combining stainless steel hardware, anodized aluminium profiles, adjustable feet, and refined detailing, MAXI delivers exceptional stability, durability, and easy maintenance.",
 
         hardwareImg: "/hardware/Maxi.webp",
+        rightImg:"/right/maxi.jpeg",
 
         dimensions: [
           {
@@ -578,6 +580,7 @@ export const allProducts = [
           "The LURON Series combines luxury stainless steel construction with thoughtful functionality for modern commercial washrooms. Its concealed support system, precise panel alignment, and flexible door configuration create a clean, stable, and durable toilet cubicle system.",
 
         hardwareImg: "/hardware/Luron.webp",
+         rightImg:"/right/luron.jpeg",
 
         dimensions: [
           {
