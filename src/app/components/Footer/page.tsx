@@ -46,9 +46,9 @@ export default function FooterSection() {
               <h3 className="text-3xl sm:text-4xl font-serif text-white font-medium leading-tight">
                 Luxury Systems for iconic spaces.
               </h3>
-              <p className="text-base text-white/80 leading-relaxed font-light">
+              {/* <p className="text-base text-white/80 leading-relaxed font-light">
                 Plot No.341/1,2,3 & 4, Safdar Nagar, Borabanda, Hyderabad-500018
-              </p>
+              </p> */}
             </div>
 
             {/* Newsletter */}
@@ -79,7 +79,7 @@ export default function FooterSection() {
           </div>
 
           {/* Right Columns: Navigation & Contact */}
-          <div className="md:col-span-6 lg:col-span-5 grid grid-cols-2 gap-8 sm:gap-12 pt-2">
+          <div className="md:col-span-6 lg:col-span-5 grid grid-cols-2 gap-8 sm:gap-6 pt-2">
 
             {/* Navigation Column */}
             <div className="space-y-6">
@@ -97,39 +97,110 @@ export default function FooterSection() {
             </div>
 
             {/* Contact Column */}
-            <div className="space-y-6">
-              <h4 className="text-sm font-bold tracking-widest text-white/90 uppercase">
-                Contact
-              </h4>
-              <div className="space-y-3.5 text-base text-white/80 font-normal">
-                <p className="leading-relaxed">
-                  Plot Number-P10/J-3, Adore Business City, Sector 72-73, Faridabad, Haryana, 121004
-                </p>
-                <p>
-                  <a href="mailto:contact@meghasystems.com" className="hover:text-white transition-colors font-medium text-white">
-                    contact@meghasystems.com
-                  </a>
-                </p>
-                <p>
-                  <a href="tel:+919873735716" className="hover:text-white transition-colors font-medium text-white">
-                    +91 9873735716
-                  </a>
-                </p>
-                <p>
-                  <a href="tel:+919873735713" className="hover:text-white transition-colors font-medium text-white">
-                    +91 9873735713
-                  </a>
-                </p>
-              </div>
+        
+<div className="space-y-6">
+  <h4 className="text-sm font-bold tracking-widest text-white/90 uppercase">
+    Contact
+  </h4>
 
-              {/* Social Icons */}
-              <div className="flex items-center gap-3 pt-2">
-                <a href="https://www.facebook.com/meghasystems/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-white/10 border border-white/20 text-white flex items-center justify-center hover:bg-white hover:text-[#0b1329] transition-all shadow-sm" aria-label="Facebook" > <FaFacebookF className="w-4 h-4" /> </a>
-                <a href="https://in.linkedin.com/company/meghasystems" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-white/10 border border-white/20 text-white flex items-center justify-center hover:bg-white hover:text-[#0b1329] transition-all shadow-sm" aria-label="LinkedIn" > <FaLinkedinIn className="w-4 h-4" /> </a>
-                <a href="https://www.instagram.com/megha_systems_restroomcubicles" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-white/10 border border-white/20 text-white flex items-center justify-center hover:bg-white hover:text-[#0b1329] transition-all shadow-sm" aria-label="Instagram" > <FaInstagram className="w-4 h-4" /> </a>
-                <a href="https://wa.me/919873735716" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-white/10 border border-white/20 text-white flex items-center justify-center hover:bg-white hover:text-[#0b1329] transition-all shadow-sm" aria-label="WhatsApp" > <FaWhatsapp className="w-4 h-4" /> </a>
-              </div>
-            </div>
+  <div className="space-y-5 text-base text-white/80 font-normal">
+    {/* Head Office */}
+    <div>
+      <p className="text-sm font-bold uppercase tracking-wider text-white mb-1.5">
+        Head Office
+      </p>
+      <p className="leading-relaxed">
+        Plot Number-P10/J-3, Adore Business City, Sector 72-73,
+        Faridabad, Haryana, 121004
+      </p>
+    </div>
+
+    {/* Branch Office */}
+    <div>
+      <p className="text-sm font-bold uppercase tracking-wider text-white mb-1.5">
+        Branch Office
+      </p>
+      <p className="leading-relaxed">
+        Plot No.341/1,2,3 & 4, Safdar Nagar, Borabanda,
+        Hyderabad-500018
+      </p>
+    </div>
+
+    {/* Email */}
+    <p>
+      <a
+        href="mailto:contact@meghasystems.com"
+        className="hover:text-white transition-colors font-medium text-white"
+      >
+        contact@meghasystems.com
+      </a>
+    </p>
+
+    {/* Phone */}
+    <p>
+      <a
+        href="tel:+919873735716"
+        className="hover:text-white transition-colors font-medium text-white"
+      >
+        +91 9873735716
+      </a>
+    </p>
+
+    <p>
+      <a
+        href="tel:+919873735713"
+        className="hover:text-white transition-colors font-medium text-white"
+      >
+        +91 9873735713
+      </a>
+    </p>
+  </div>
+
+  {/* Social Icons */}
+  <div className="flex items-center gap-3 pt-2">
+    <a
+      href="https://www.facebook.com/meghasystems/"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="w-10 h-10 rounded-full bg-white/10 border border-white/20 text-white flex items-center justify-center hover:bg-white hover:text-[#0b1329] transition-all shadow-sm"
+      aria-label="Facebook"
+    >
+      <FaFacebookF className="w-4 h-4" />
+    </a>
+
+    <a
+      href="https://in.linkedin.com/company/meghasystems"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="w-10 h-10 rounded-full bg-white/10 border border-white/20 text-white flex items-center justify-center hover:bg-white hover:text-[#0b1329] transition-all shadow-sm"
+      aria-label="LinkedIn"
+    >
+      <FaLinkedinIn className="w-4 h-4" />
+    </a>
+
+    <a
+      href="https://www.instagram.com/megha_systems_restroomcubicles"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="w-10 h-10 rounded-full bg-white/10 border border-white/20 text-white flex items-center justify-center hover:bg-white hover:text-[#0b1329] transition-all shadow-sm"
+      aria-label="Instagram"
+    >
+      <FaInstagram className="w-4 h-4" />
+    </a>
+
+    <a
+      href="https://wa.me/919873735716"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="w-10 h-10 rounded-full bg-white/10 border border-white/20 text-white flex items-center justify-center hover:bg-white hover:text-[#0b1329] transition-all shadow-sm"
+      aria-label="WhatsApp"
+    >
+      <FaWhatsapp className="w-4 h-4" />
+    </a>
+  </div>
+</div>
+
+
 
           </div>
 
