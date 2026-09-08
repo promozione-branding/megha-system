@@ -25,7 +25,7 @@ const items: VantageItem[] = [
     quote: 'Well-designed spaces speak without words.',
     author: 'Peter Bakar',
     role: 'Founder of Royal Spaces',
-    imageUrl: '/assets/split_vantage_image/first1.webp',
+    imageUrl: '/assets/split_vantage_image/new1.jpeg',
   },
   {
     id: 2,
@@ -41,7 +41,7 @@ const items: VantageItem[] = [
       'Simplicity is about subtracting the obvious and adding the meaningful.',
     author: 'Marcus Vance',
     role: 'Head of Interior Design',
-    imageUrl: '/assets/split_vantage_image/3rd.webp',
+    imageUrl: '/assets/split_vantage_image/3rd3.webp',
   },
   {
     id: 4,
@@ -407,8 +407,8 @@ function ProjectImageCard({
           className="
             h-full
             w-full
-            object-cover
-            object-center
+            object-fill
+            
             select-none
             pointer-events-none
           "

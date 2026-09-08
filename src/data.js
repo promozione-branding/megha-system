@@ -278,11 +278,11 @@ export const allProducts = [
             speciallyAbled: "1830",
           },
           { name: "Width of the door", regular: "600", speciallyAbled: "900" },
-          { name: "Ground clearance", regular: "150", speciallyAbled: "150" },
+          { name: "Ground clearance", regular: "150/50", speciallyAbled: "150/50" },
         ],
         imgSpecs: {
           dimensions: "1000 X 1900",
-          clearance: "150",
+          clearance: "150/50",
         },
 
         keyFeatures: [
@@ -302,7 +302,7 @@ export const allProducts = [
               "Strong U-channels reinforce the divider and mid panels, creating a secure and durable cubicle structure.",
           },
           {
-            name: "150 mm Floor Clearance",
+            name: "150/50 mm Floor Clearance",
             description:
               "Raised floor clearance allows easier cleaning, improved accessibility, and better movement around the cubicle.",
           },
@@ -342,11 +342,11 @@ export const allProducts = [
             speciallyAbled: "1830",
           },
           { name: "Width of the door", regular: "600", speciallyAbled: "900" },
-          { name: "Ground clearance", regular: "150", speciallyAbled: "150" },
+          { name: "Ground clearance", regular: "150/50", speciallyAbled: "150/50" },
         ],
         imgSpecs: {
           dimensions: "1000 X 2000",
-          clearance: "150",
+          clearance: "150/50",
         },
 
         keyFeatures: [
@@ -366,7 +366,7 @@ export const allProducts = [
               "Reinforced U-channels provide additional support to the panels, improving structural strength and stability.",
           },
           {
-            name: "150 mm Floor Clearance",
+            name: "150/50 mm Floor Clearance",
             description:
               "The raised base allows easier cleaning, comfortable movement, and improved accessibility within the washroom.",
           },
@@ -531,7 +531,7 @@ export const allProducts = [
             speciallyAbled: "1785",
           },
           { name: "Width of the door", regular: "600", speciallyAbled: "900" },
-          { name: "Ground clearance", regular: "150", speciallyAbled: "150" },
+          { name: "Ground clearance", regular: "150/50 mm", speciallyAbled: "150/50 mm" },
           {
             name: "Height of the door",
             regular: "1815",
@@ -541,7 +541,7 @@ export const allProducts = [
 
         imgSpecs: {
           dimensions: "1000 X 1995",
-          clearance: "150",
+          clearance: "150/50",
         },
 
         keyFeatures: [

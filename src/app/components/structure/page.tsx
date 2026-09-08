@@ -22,7 +22,7 @@ const CUBICLE_LAYERS: LayerData[] = [
     id: 0,
     number: 1,
     title: "SS Adjustable Leg",
-    subtitle: "Grade 304 Pedestal Base",
+    subtitle: "Adjustable stainless steel support leg",
     x: "45%",
     y: "87%",
   },
@@ -30,7 +30,7 @@ const CUBICLE_LAYERS: LayerData[] = [
     id: 1,
     number: 2,
     title: "Door Stopper",
-    subtitle: "Anodized Structural Rail",
+    subtitle: "Floor-mounted door protection stopper",
     x: "38%",
     y: "63%",
   },
@@ -38,7 +38,7 @@ const CUBICLE_LAYERS: LayerData[] = [
     id: 2,
     number: 3,
     title: "Top Rail",
-    subtitle: "12mm High-Pressure Board",
+    subtitle: "Strong aluminum top support",
     x: "50%",
     y: "12%",
   },
@@ -54,7 +54,7 @@ const CUBICLE_LAYERS: LayerData[] = [
     id: 4,
     number: 5,
     title: "Indicator Lock",
-    subtitle: "High-Impact Polymer Joint",
+    subtitle: "Secure internal privacy locking mechanism",
     x: "73%",
     y: "47%",
   },
@@ -62,7 +62,7 @@ const CUBICLE_LAYERS: LayerData[] = [
     id: 5,
     number: 6,
     title: "Door Knob",
-    subtitle: "100% Moisture Barrier",
+    subtitle: "Durable stainless steel door knob",
     x: "15%",
     y: "53%",
   },
@@ -97,12 +97,12 @@ export default function LightWallSectionScroll() {
       {/* Scroll height */}
       <div className="h-[300vh]">
         {/* Sticky presentation */}
-        <div className="sticky top-0 h-screen w-full flex items-center overflow-hidden">
-          <div className="max-w-[1500px] mx-auto w-full px-5 md:px-10 lg:px-16">
+        <div className="sticky top-0 h-screen w-full flex items-center ">
+          <div className="max-w-[1500px] mx-auto w-full px-5 md:px-7 ">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 items-center">
 
               {/* LEFT CONTENT */}
-              <div className="lg:col-span-4">
+              <div className="lg:col-span-4 relative">
                 <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#0d2461]/5 border border-[#0d2461]/10 text-[10px] md:text-xs font-mono tracking-widest text-[#0d2461] uppercase font-semibold">
                   <span className="w-2 h-2 rounded-full bg-[#0d2461] animate-pulse" />
                   MEGHA SYSTEM ARCHITECTURE
@@ -122,7 +122,7 @@ export default function LightWallSectionScroll() {
                 </p>
 
                 {/* ACTIVE COMPONENT */}
-                <div className="mt-10 min-h-[120px]">
+                <div className="mt-10 z-[999] min-h-[120px]">
                   <div className="text-xs font-mono text-[#94a3b8] tracking-[0.25em]">
                     COMPONENT 0{active.number}
                   </div>
@@ -140,9 +140,9 @@ export default function LightWallSectionScroll() {
                         {active.title}
                       </h3>
 
-                      {/* <p className="mt-2 text-sm text-[#64748b]">
+                      <p className="mt-2 text-sm text-[#64748b]">
                         {active.subtitle}
-                      </p> */}
+                      </p>
                     </motion.div>
                   </AnimatePresence>
                 </div>
@@ -158,12 +158,12 @@ export default function LightWallSectionScroll() {
 
               {/* IMAGE */}
               <div className="lg:col-span-8">
-                <div className="relative w-full overflow-hidden rounded-3xl border border-[#e2e8f0] bg-white shadow-[0_20px_60px_rgba(13,36,97,0.10)]">
+                <div className="relative w-full  rounded-3xl border border-[#e2e8f0] bg-white shadow-[0_20px_60px_rgba(13,36,97,0.10)]">
 
                   <img
                     src="/assets/new2.jpeg"
                     alt="Bathroom cubicle system with numbered component markers"
-                    className="block w-full md:h-[80vh]"
+                    className="block w-full rounded-2xl md:h-[80vh]"
                   />
 
                   {/* IMAGE HOTSPOTS */}
@@ -198,7 +198,7 @@ export default function LightWallSectionScroll() {
                           className={`
                             relative
                             flex items-center justify-center
-                            w-10 h-10 md:w-12 md:h-12
+                            w-10 h-10 md:w-10 md:h-10
                             rounded-full
                             border-2
                             font-mono
@@ -243,8 +243,10 @@ export default function LightWallSectionScroll() {
                                 whitespace-nowrap
                                 rounded-xl
                                 bg-white
-                                px-4
-                                py-3
+                             
+                                overflow-hidden
+                                px-2
+                                py-2
                                 shadow-xl
                                 border border-[#e2e8f0]
                                 z-20
@@ -254,9 +256,9 @@ export default function LightWallSectionScroll() {
                                 {layer.title}
                               </div>
 
-                              {/* <div className="mt-1 text-[10px] text-[#64748b]">
+                              <div className="mt-1 text-[10px] text-wrap  text-[#64748b]">
                                 {layer.subtitle}
-                              </div> */}
+                              </div>
                             </motion.div>
                           )}
                         </AnimatePresence>
@@ -290,9 +292,9 @@ export default function LightWallSectionScroll() {
                     {active.title}
                   </div>
 
-                  {/* <div className="mt-1 text-sm text-[#64748b]">
+                  <div className="mt-1 text-sm text-[#64748b]">
                     {active.subtitle}
-                  </div> */}
+                  </div>
                 </div>
               </div>
 
