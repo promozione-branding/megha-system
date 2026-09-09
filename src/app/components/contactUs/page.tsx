@@ -43,6 +43,7 @@ export default function ContactSection() {
                   <div>
                     <p className="text-[12px] text-slate-600 leading-tight">Call Us</p>
                     <p className="text-base font-semibold text-black tracking-tight mt-0.5">+91 9873735713</p>
+                    <p className="text-base font-semibold text-black tracking-tight mt-0.5">+91 9873735716</p>
                   </div>
                 </div>
 

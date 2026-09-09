@@ -122,6 +122,7 @@ export const allProducts = [
         shortDescription:
           "The BLACK MAXI Series brings a bold, sophisticated look to modern washrooms with premium PVD-coated stainless steel hardware and a refined matte black finish. Engineered for high-traffic environments, it combines luxury aesthetics with strength, corrosion resistance, and lasting performance.",
         hardwareImg: "/hardware/Blackmaxi.webp",
+        rightImg:"/right/backmaxi.jpeg",
         dimensions: [
           {
             name: "Width of the cubicle",
@@ -190,7 +191,7 @@ export const allProducts = [
           "The MAXI PRO Series is a practical and durable toilet cubicle partition designed for modern commercial washrooms. With a stable aluminium structure, precision-fitted panels, flexible door configuration, and reliable stainless steel hardware, MAXI PRO delivers privacy, comfort, and dependable everyday performance.",
 
         hardwareImg: "/hardware/Maxipro.webp",
-         rightImg:"/right/maxi-pro.jpeg",
+        rightImg: "/right/maxi-pro2.jpeg",
 
         dimensions: [
           {
@@ -279,7 +280,11 @@ export const allProducts = [
             speciallyAbled: "1830",
           },
           { name: "Width of the door", regular: "600", speciallyAbled: "900" },
-          { name: "Ground clearance", regular: "150/50", speciallyAbled: "150/50" },
+          {
+            name: "Ground clearance",
+            regular: "150/50",
+            speciallyAbled: "150/50",
+          },
         ],
         imgSpecs: {
           dimensions: "1000 X 1900",
@@ -320,6 +325,7 @@ export const allProducts = [
           "The DURO PRO Series is engineered for strength, stability, and lasting performance in demanding washroom environments. Its stainless steel construction and reinforced panel support create a reliable toilet cubicle designed for everyday commercial use.",
 
         hardwareImg: "/hardware/duropro.webp",
+        rightImg: "/right/duro-pro.jpeg",
 
         dimensions: [
           {
@@ -343,7 +349,11 @@ export const allProducts = [
             speciallyAbled: "1830",
           },
           { name: "Width of the door", regular: "600", speciallyAbled: "900" },
-          { name: "Ground clearance", regular: "150/50", speciallyAbled: "150/50" },
+          {
+            name: "Ground clearance",
+            regular: "150/50",
+            speciallyAbled: "150/50",
+          },
         ],
         imgSpecs: {
           dimensions: "1000 X 2000",
@@ -384,6 +394,7 @@ export const allProducts = [
           "The CUBI DOORZ Series is a slim, durable door system designed to provide privacy and functionality across modern office and commercial spaces. With 12 mm compact board doors, strong D-pole supports, and flexible hardware options, it delivers a clean appearance with reliable everyday performance.",
 
         hardwareImg: "/hardware/cubidoorzs.png",
+        rightImg: "/right/cubi.jpeg",
 
         dimensions: [
           {
@@ -446,6 +457,7 @@ export const allProducts = [
           "The NEO Series is a modular toilet cubicle system designed for modern commercial and institutional washrooms. Combining durable compact laminate panels with aluminium supports, adjustable nylon legs, and practical hardware, NEO delivers a stable, stylish, and easy-to-install toilet cubicle for high-use spaces.",
 
         hardwareImg: "/hardware/Neo.webp",
+        rightImg: "/right/neo.jpeg",
         dimensions: [
           {
             name: "Height of the cubicle",
@@ -509,7 +521,7 @@ export const allProducts = [
           "The MAXI Series is a luxury toilet cubicle partition designed for commercial and high-traffic washrooms. Combining stainless steel hardware, anodized aluminium profiles, adjustable feet, and refined detailing, MAXI delivers exceptional stability, durability, and easy maintenance.",
 
         hardwareImg: "/hardware/Maxi.webp",
-        rightImg:"/right/maxi.jpeg",
+        rightImg: "/right/maxi2.jpeg",
 
         dimensions: [
           {
@@ -533,7 +545,11 @@ export const allProducts = [
             speciallyAbled: "1785",
           },
           { name: "Width of the door", regular: "600", speciallyAbled: "900" },
-          { name: "Ground clearance", regular: "150/50 mm", speciallyAbled: "150/50 mm" },
+          {
+            name: "Ground clearance",
+            regular: "150/50 mm",
+            speciallyAbled: "150/50 mm",
+          },
           {
             name: "Height of the door",
             regular: "1815",
@@ -580,12 +596,9 @@ export const allProducts = [
           "The LURON Series combines luxury stainless steel construction with thoughtful functionality for modern commercial washrooms. Its concealed support system, precise panel alignment, and flexible door configuration create a clean, stable, and durable toilet cubicle system.",
 
         hardwareImg: "/hardware/Luron.webp",
-         rightImg:"/right/luron.jpeg",
+        rightImg: "/right/luron2.jpeg",
 
-          imgSpecs: {
-  
-   
-  },
+        imgSpecs: {},
 
         dimensions: [
           {
@@ -663,6 +676,7 @@ export const allProducts = [
           "The CIELO Series brings a clean, floating aesthetic to modern washrooms with its innovative ceiling-hung design. With no floor contact, the system creates a seamless visual appearance while making floor cleaning easier, improving hygiene, and reducing maintenance.",
 
         hardwareImg: "/hardware/Cielo.webp",
+        rightImg: "/right/ceilo.jpeg",
 
         dimensions: [
           { name: "Width", regular: "900", speciallyAbled: "-" },
@@ -782,6 +796,7 @@ export const allProducts = [
         shortDescription:
           "The ROVE Series is a modern wall-hung Restroom Partition Cubicle designed to create a clean, open, and floor-free washroom environment. Supported by heavy-duty wall brackets, ROVE combines lightweight construction with durable materials, making cleaning easier while enhancing hygiene and visual appeal.",
         hardwareImg: "/hardware/rove.webp",
+        rightImg: "/right/rove.jpeg",
 
         dimensions: [
           { name: "Width", regular: "900" },
@@ -840,17 +855,16 @@ export const allProducts = [
         shortDescription:
           "The KIDDIEZ Series is a thoughtfully designed modular toilet cubicle partition created for children’s washrooms. It combines durable construction, safe and practical hardware, easy maintenance, and a clean, friendly design for schools and other high-use spaces.",
 
-
-        // slider:[
-        //   "/kids/kids1.webp",
-        //   "/kids/kids2.webp",
-        //   "/kids/kids3.webp",
-        //   "/kids/kids4.webp",
-        //   "/kids/kids5.webp",
-        //   "/kids/kids6.webp",
-        //   "/kids/kids7.webp",
-        //   "/kids/kids8.webp",
-        // ],
+        slider: [
+          "/kids/kids1.webp",
+          "/kids/kids2.webp",
+          "/kids/kids3.webp",
+          "/kids/kids4.webp",
+          "/kids/kids5.webp",
+          "/kids/kids6.webp",
+          "/kids/kids7.webp",
+          "/kids/kids8.webp",
+        ],
 
         dimensions: [
           {
@@ -918,16 +932,16 @@ export const allProducts = [
           "Kiddiez Pro kids toilet cubicles combine reinforced stainless steel construction, secure anchoring, child-friendly hardware, and durable washroom design.",
         shortDescription:
           "The KIDDIEZ PRO Series is a secure and durable modular washroom partition designed specifically for children’s washrooms. With reinforced stainless steel construction, concealed anchoring, and child-friendly hardware, it provides a safe, stable, and comfortable washroom environment.",
-        //    slider:[
-        //   "/kids/kids1.webp",
-        //   "/kids/kids2.webp",
-        //   "/kids/kids3.webp",
-        //   "/kids/kids4.webp",
-        //   "/kids/kids5.webp",
-        //   "/kids/kids6.webp",
-        //   "/kids/kids7.webp",
-        //   "/kids/kids8.webp",
-        // ],
+        slider: [
+          "/kids/kids1.webp",
+          "/kids/kids2.webp",
+          "/kids/kids3.webp",
+          "/kids/kids4.webp",
+          "/kids/kids5.webp",
+          "/kids/kids6.webp",
+          "/kids/kids7.webp",
+          "/kids/kids8.webp",
+        ],
         dimensions: [
           {
             name: "Width of the cubicle",
@@ -977,144 +991,142 @@ export const allProducts = [
       },
 
       {
-  name: "Nylon Kiddiez",
-  slug: "nylon-kiddiez",
-  image: "/product/Nylon Kiddiez.webp",
+        name: "Nylon Kiddiez",
+        slug: "nylon-kiddiez",
+        image: "/product/Nylon Kiddiez.webp",
 
-  metaTitle: "Nylon Kiddiez Kids Toilet Cubicles | Megha Systems",
+        metaTitle: "Nylon Kiddiez Kids Toilet Cubicles | Megha Systems",
 
+        metaDescription:
+          "Nylon Kiddiez child-friendly toilet cubicles feature durable nylon components, modular construction, easy maintenance, multiple colour options, and secure washroom design for kids' facilities.",
 
-  metaDescription:
-    "Nylon Kiddiez child-friendly toilet cubicles feature durable nylon components, modular construction, easy maintenance, multiple colour options, and secure washroom design for kids' facilities.",
+        shortDescription:
+          "The KIDDIEZ Series is a child-friendly modular toilet cubicle system designed for safe, comfortable, and hygienic washroom spaces. With durable nylon components, secure construction, easy installation, and practical maintenance features, it is ideal for schools, childcare centres, and other children's facilities.",
 
-  shortDescription:
-    "The KIDDIEZ Series is a child-friendly modular toilet cubicle system designed for safe, comfortable, and hygienic washroom spaces. With durable nylon components, secure construction, easy installation, and practical maintenance features, it is ideal for schools, childcare centres, and other children's facilities.",
+        image: "/product/kids2.webp",
 
-     image: "/product/kids2.webp",
+        slider: [
+          "/kids/kids1.webp",
+          "/kids/kids2.webp",
+          "/kids/kids3.webp",
+          "/kids/kids4.webp",
+          "/kids/kids5.webp",
+          "/kids/kids6.webp",
+          "/kids/kids7.webp",
+          "/kids/kids8.webp",
+        ],
 
-  slider: [
-    "/kids/kids1.webp",
-    "/kids/kids2.webp",
-    "/kids/kids3.webp",
-    "/kids/kids4.webp",
-    "/kids/kids5.webp",
-    "/kids/kids6.webp",
-    "/kids/kids7.webp",
-    "/kids/kids8.webp",
-  ],
+        dimensions: [
+          {
+            name: "Floor Clearance",
+            regular: "150",
+            speciallyAbled: "150",
+          },
+          {
+            name: "Top Rail Powder",
+            regular: "Coated Aluminium",
+            speciallyAbled: "Coated Aluminium",
+          },
+          {
+            name: "Top Rail Grade",
+            regular: "Aluminium Grade 6063-T5 Alloy",
+            speciallyAbled: "6063-T5 Alloy",
+          },
+          {
+            name: "Panel Support",
+            regular: "Aluminium U-Channels",
+            speciallyAbled: "Aluminium U-Channels",
+          },
+          {
+            name: "Panel Fixing",
+            regular: "Rear Wall & Mid-Pilaster",
+            speciallyAbled: "Rear Wall & Mid-Pilaster",
+          },
+          {
+            name: "Door Hinges",
+            regular: "3 Hinges per Door",
+            speciallyAbled: "3 Hinges per Door",
+          },
+        ],
 
-  dimensions: [
-    {
-      name: "Floor Clearance",
-      regular: "150",
-      speciallyAbled: "150",
-    },
-    {
-      name: "Top Rail Powder",
-      regular: "Coated Aluminium",
-      speciallyAbled: "Coated Aluminium",
-    },
-    {
-      name: "Top Rail Grade",
-      regular: "Aluminium Grade 6063-T5 Alloy",
-      speciallyAbled: "6063-T5 Alloy",
-    },
-    {
-      name: "Panel Support",
-      regular: "Aluminium U-Channels",
-      speciallyAbled: "Aluminium U-Channels",
-    },
-    {
-      name: "Panel Fixing",
-      regular: "Rear Wall & Mid-Pilaster",
-      speciallyAbled: "Rear Wall & Mid-Pilaster",
-    },
-    {
-      name: "Door Hinges",
-      regular: "3 Hinges per Door",
-      speciallyAbled: "3 Hinges per Door",
-    },
-  ],
+        imgSpecs: {
+          clearance: "150",
+        },
 
-  imgSpecs: {
-  
-    clearance: "150",
-  },
+        keyFeatures: [
+          {
+            name: "Child-Friendly Design",
+            description:
+              "Thoughtfully designed dimensions and features create a comfortable, private, and user-friendly washroom experience for children.",
+          },
+          {
+            name: "Durable Nylon Components",
+            description:
+              "Strong and lightweight nylon accessories provide reliable performance while offering flexibility in design and colour selection.",
+          },
+          {
+            name: "Easy Installation",
+            description:
+              "Practical modular construction allows quick and efficient installation across different washroom layouts.",
+          },
+          {
+            name: "Easy to Clean",
+            description:
+              "Practical floor clearance and easy-to-maintain surfaces support everyday washroom hygiene and maintenance.",
+          },
+          {
+            name: "Multiple Colour Options",
+            description:
+              "Nylon accessories are available in White, Grey, and Black to complement different washroom interiors.",
+          },
+          {
+            name: "Aluminium Top Rail",
+            description:
+              "The cubicle system features a powder-coated aluminium top rail manufactured using Grade 6063-T5 aluminium alloy for reliable structural performance.",
+          },
+          {
+            name: "Secure Panel Support",
+            description:
+              "Aluminium U-channels provide reliable panel support, while rear-wall and mid-pilaster fixing ensure secure panel installation.",
+          },
+          {
+            name: "Three-Hinge Door Support",
+            description:
+              "Each door is supported by three hinges for stable and reliable everyday operation.",
+          },
+        ],
 
-  keyFeatures: [
-    {
-      name: "Child-Friendly Design",
-      description:
-        "Thoughtfully designed dimensions and features create a comfortable, private, and user-friendly washroom experience for children.",
-    },
-    {
-      name: "Durable Nylon Components",
-      description:
-        "Strong and lightweight nylon accessories provide reliable performance while offering flexibility in design and colour selection.",
-    },
-    {
-      name: "Easy Installation",
-      description:
-        "Practical modular construction allows quick and efficient installation across different washroom layouts.",
-    },
-    {
-      name: "Easy to Clean",
-      description:
-        "Practical floor clearance and easy-to-maintain surfaces support everyday washroom hygiene and maintenance.",
-    },
-    {
-      name: "Multiple Colour Options",
-      description:
-        "Nylon accessories are available in White, Grey, and Black to complement different washroom interiors.",
-    },
-    {
-      name: "Aluminium Top Rail",
-      description:
-        "The cubicle system features a powder-coated aluminium top rail manufactured using Grade 6063-T5 aluminium alloy for reliable structural performance.",
-    },
-    {
-      name: "Secure Panel Support",
-      description:
-        "Aluminium U-channels provide reliable panel support, while rear-wall and mid-pilaster fixing ensure secure panel installation.",
-    },
-    {
-      name: "Three-Hinge Door Support",
-      description:
-        "Each door is supported by three hinges for stable and reliable everyday operation.",
-    },
-  ],
-
-  technicalSpecifications: [
-    {
-      name: "Coating",
-      value: "Powder Coated / Natural Anodized / Stainless Steel",
-    },
-    {
-      name: "Top Rail",
-      value: "Powder-Coated Aluminium",
-    },
-    {
-      name: "Top Rail Grade",
-      value: "Aluminium Grade 6063-T5 Alloy",
-    },
-    {
-      name: "Panel Support",
-      value: "Aluminium U-Channels",
-    },
-    {
-      name: "Panel Fixing",
-      value: "Rear Wall & Mid-Pilaster",
-    },
-    {
-      name: "Door Hinges",
-      value: "3 Hinges per Door",
-    },
-    {
-      name: "Floor Clearance",
-      value: "150 mm",
-    },
-  ],
-},
+        technicalSpecifications: [
+          {
+            name: "Coating",
+            value: "Powder Coated / Natural Anodized / Stainless Steel",
+          },
+          {
+            name: "Top Rail",
+            value: "Powder-Coated Aluminium",
+          },
+          {
+            name: "Top Rail Grade",
+            value: "Aluminium Grade 6063-T5 Alloy",
+          },
+          {
+            name: "Panel Support",
+            value: "Aluminium U-Channels",
+          },
+          {
+            name: "Panel Fixing",
+            value: "Rear Wall & Mid-Pilaster",
+          },
+          {
+            name: "Door Hinges",
+            value: "3 Hinges per Door",
+          },
+          {
+            name: "Floor Clearance",
+            value: "150 mm",
+          },
+        ],
+      },
     ],
   },
 
@@ -1135,10 +1147,10 @@ export const allProducts = [
         shortDescription:
           "Our Urinal Modesty Panels provide a stylish, durable, and hygienic privacy solution for modern public restrooms. Manufactured from high-quality compact-grade laminates with a strong phenolic core and a minimum thickness of 12 mm, these panels are designed for high-traffic environments. Available in multiple colours, finishes, and standard sizes, they offer excellent privacy, strength, easy maintenance, and long-lasting performance.",
 
-                  hardwareImg: "/hardware/box.webp",
-                  shapes:"/hardware/door.webp",
+        hardwareImg: "/hardware/box.webp",
+        shapes: "/hardware/door.webp",
 
-
+        imgSpecs: {},
         dimensions: [
           {
             name: "Panel thickness",
@@ -1161,7 +1173,6 @@ export const allProducts = [
             speciallyAbled: "550 × 1200 mm",
           },
         ],
-       
 
         keyFeatures: [
           {

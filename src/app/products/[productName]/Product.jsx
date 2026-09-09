@@ -528,42 +528,7 @@ export default function ProjectDetail() {
                   
                   </div>
                 </div>
-              </div>):( <div
-                ref={imageScrollRef}
-                className="relative h-[1000px] md:h-[1000px]"
-              >
-                <div className="sticky top-25 h-[440px]">
-                  <div className="relative h-full w-full">
-                    {/* BACK CARD */}
-                    <div className="absolute inset-0 translate-y-[-18px] scale-[0.96] rounded-[28px] bg-white p-1">
-                      <div className="h-full w-full overflow-hidden rounded-[20px]">
-                        <img
-                          src={"/product/image.png"}
-                          alt={project.name}
-                          className="h-full w-full object-"
-                        />
-                      </div>
-                    </div>
-
-                    {/* FRONT CARD */}
-                    <motion.div
-                      style={{
-                        y: secondImageY,
-                        scale: secondImageScale,
-                      }}
-                      className="absolute inset-0 rounded-[28px] bg-white p-1"
-                    >
-                      <div className="h-full w-full overflow-hidden rounded-[20px]">
-                        <img
-                          src={"/product/image.png"}
-                          alt={project.name}
-                          className="h-full w-full object-"
-                        />
-                      </div>
-                    </motion.div>
-                  </div>
-                </div>
-              </div>)}
+              </div>):null}
             </div>
           </div>
         </div>

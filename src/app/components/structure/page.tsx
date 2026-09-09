@@ -45,7 +45,7 @@ const CUBICLE_LAYERS: LayerData[] = [
   {
     id: 3,
     number: 4,
-    title: "Vertical Strip",
+    title: "U channel",
     subtitle: "Silver-Ion Surface Shield",
     x: "82%",
     y: "40%",
