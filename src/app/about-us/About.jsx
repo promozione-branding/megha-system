@@ -238,7 +238,7 @@ export default function About() {
                             {/* Main Image */}
                             <div className="relative aspect-[1/1.05] overflow-hidden rounded-[28px] bg-gray-100">
                                 <img
-                                    src="https://media.istockphoto.com/id/988218244/photo/row-of-public-toilet-design.jpg?s=612x612&w=0&k=20&c=MGYKtjkr6YCK5JpU5Ty7etj0eCfehR9lDTUXMOemik4="
+                                    src="/newm.webp"
                                     alt="Megha Systems toilet cubicle and washroom partition solutions"
                                     className="h-full w-full object-cover transition-transform duration-700 hover:scale-105"
                                 />
@@ -527,7 +527,7 @@ export default function About() {
                                 className="relative min-h-[450px] overflow-hidden rounded-[24px] bg-cover bg-center"
                                 style={{
                                     backgroundImage:
-                                        "url('https://media.istockphoto.com/id/2290136516/photo/public-restroom-urinals-with-privacy-partitions-in-modern-clean-commercial-washroom.webp?a=1&b=1&s=612x612&w=0&k=20&c=2c9mYvoYx8PvHVuU6TEgQgJtdhjwtSpbEH8P40GVG6M=')",
+                                        "url('/newm2.webp')",
                                 }}
                             >
                                 <div className="absolute inset-0 bg-[#0d2461]/30" />
