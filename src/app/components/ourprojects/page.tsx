@@ -176,6 +176,13 @@ export default function OurProjectsSection() {
                       >
                         +91 9873735713
                       </a>
+                      <br className="md:hidden" />
+                      <a
+                        href="tel:+919873735716"
+                        className="text-sm font-bold md:ml-2 text-neutral-900 transition-colors hover:text-neutral-600"
+                      >
+                        +91 9873735716
+                      </a>
                     </div>
                   </div>
                 </div>

@@ -18,6 +18,13 @@ const StickyContactButtons = () => {
       bg: "#2563eb",
       hoverBg: "#1d4ed8",
     },
+    {
+      label: "Call Now",
+      href: "tel:+919873735716",
+      icon: Phone,
+      bg: "#2563eb",
+      hoverBg: "#1d4ed8",
+    },
   ];
 
   return (

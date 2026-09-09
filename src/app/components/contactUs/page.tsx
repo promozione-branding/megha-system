@@ -42,9 +42,19 @@ export default function ContactSection() {
                   </div>
                   <div>
                     <p className="text-[12px] text-slate-600 leading-tight">Call Us</p>
-                    <p className="text-base font-semibold text-black tracking-tight mt-0.5">+91 9873735713</p>
-                    <p className="text-base font-semibold text-black tracking-tight mt-0.5">+91 9873735716</p>
-                  </div>
+<a
+  href="tel:+919873735713"
+  className="text-base font-semibold text-black tracking-tight mt-0.5 block hover:underline"
+>
+  +91 9873735713
+</a>
+
+<a
+  href="tel:+919873735716"
+  className="text-base font-semibold text-black tracking-tight mt-0.5 block hover:underline"
+>
+  +91 9873735716
+</a>                  </div>
                 </div>
 
                 <div className="bg-[#F0EDED] rounded-[12px] p-4.5 flex items-center md:gap-3.5">
@@ -53,8 +63,12 @@ export default function ContactSection() {
                   </div>
                   <div>
                     <p className="text-[12px] text-slate-600 leading-tight">Mail Us</p>
-                    <p className="text-base font-semibold text-black tracking-tight mt-0.5 break-all">contact@meghasystems.com</p>
-                  </div>
+<a
+  href="mailto:contact@meghasystems.com"
+  className="text-base font-semibold text-black tracking-tight mt-0.5 break-all hover:underline"
+>
+  contact@meghasystems.com
+</a>                  </div>
                 </div>
 
                 <div className="space-y-3">
@@ -120,7 +134,7 @@ export default function ContactSection() {
           </aside>
 
           {/* Right Form Panel */}
-          <main className="lg:col-span-8 flex flex-col justify-between py-2 sm:pr-2">
+          <main className="lg:col-span-8 flex flex-col gap-3 py-2 sm:pr-2">
             <header className="">
               <h2 className="text-5xl font-bold tracking-tight text-black leading-tight">
                 Send Us a Message
