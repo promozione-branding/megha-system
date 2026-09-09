@@ -332,7 +332,7 @@ export default function ProjectDetail() {
                   </div>
                 </div>
 
-                {project?.imgSpecs && (
+                {project?.imgSpecs.dimensions && (
                   <div>
                     <div className="text-sm text-stone-400 mb-1">
                       Dimensions:
@@ -344,14 +344,14 @@ export default function ProjectDetail() {
                   </div>
                 )}
 
-                {project?.imgSpecs && (
+                {project?.imgSpecs.clearance && (
                   <div>
                     <div className="text-sm text-stone-400 mb-1">
                       Clearance:
                     </div>
 
                     <div className="text-lg font-semibold text-stone-900">
-                      {project?.imgSpecs.clearance}
+                      {project?.imgSpecs.clearance} mm
                     </div>
                   </div>
                 )}

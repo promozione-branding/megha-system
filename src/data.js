@@ -582,6 +582,11 @@ export const allProducts = [
         hardwareImg: "/hardware/Luron.webp",
          rightImg:"/right/luron.jpeg",
 
+          imgSpecs: {
+  
+   
+  },
+
         dimensions: [
           {
             name: "Height of the entire cubicle",
@@ -836,16 +841,16 @@ export const allProducts = [
           "The KIDDIEZ Series is a thoughtfully designed modular toilet cubicle partition created for children’s washrooms. It combines durable construction, safe and practical hardware, easy maintenance, and a clean, friendly design for schools and other high-use spaces.",
 
 
-        slider:[
-          "/kids/kids1.webp",
-          "/kids/kids2.webp",
-          "/kids/kids3.webp",
-          "/kids/kids4.webp",
-          "/kids/kids5.webp",
-          "/kids/kids6.webp",
-          "/kids/kids7.webp",
-          "/kids/kids8.webp",
-        ],
+        // slider:[
+        //   "/kids/kids1.webp",
+        //   "/kids/kids2.webp",
+        //   "/kids/kids3.webp",
+        //   "/kids/kids4.webp",
+        //   "/kids/kids5.webp",
+        //   "/kids/kids6.webp",
+        //   "/kids/kids7.webp",
+        //   "/kids/kids8.webp",
+        // ],
 
         dimensions: [
           {
@@ -913,16 +918,16 @@ export const allProducts = [
           "Kiddiez Pro kids toilet cubicles combine reinforced stainless steel construction, secure anchoring, child-friendly hardware, and durable washroom design.",
         shortDescription:
           "The KIDDIEZ PRO Series is a secure and durable modular washroom partition designed specifically for children’s washrooms. With reinforced stainless steel construction, concealed anchoring, and child-friendly hardware, it provides a safe, stable, and comfortable washroom environment.",
-           slider:[
-          "/kids/kids1.webp",
-          "/kids/kids2.webp",
-          "/kids/kids3.webp",
-          "/kids/kids4.webp",
-          "/kids/kids5.webp",
-          "/kids/kids6.webp",
-          "/kids/kids7.webp",
-          "/kids/kids8.webp",
-        ],
+        //    slider:[
+        //   "/kids/kids1.webp",
+        //   "/kids/kids2.webp",
+        //   "/kids/kids3.webp",
+        //   "/kids/kids4.webp",
+        //   "/kids/kids5.webp",
+        //   "/kids/kids6.webp",
+        //   "/kids/kids7.webp",
+        //   "/kids/kids8.webp",
+        // ],
         dimensions: [
           {
             name: "Width of the cubicle",
@@ -970,6 +975,146 @@ export const allProducts = [
           },
         ],
       },
+
+      {
+  name: "Nylon Kiddiez",
+  slug: "nylon-kiddiez",
+  image: "/product/Nylon Kiddiez.webp",
+
+  metaTitle: "Nylon Kiddiez Kids Toilet Cubicles | Megha Systems",
+
+
+  metaDescription:
+    "Nylon Kiddiez child-friendly toilet cubicles feature durable nylon components, modular construction, easy maintenance, multiple colour options, and secure washroom design for kids' facilities.",
+
+  shortDescription:
+    "The KIDDIEZ Series is a child-friendly modular toilet cubicle system designed for safe, comfortable, and hygienic washroom spaces. With durable nylon components, secure construction, easy installation, and practical maintenance features, it is ideal for schools, childcare centres, and other children's facilities.",
+
+     image: "/product/kids2.webp",
+
+  slider: [
+    "/kids/kids1.webp",
+    "/kids/kids2.webp",
+    "/kids/kids3.webp",
+    "/kids/kids4.webp",
+    "/kids/kids5.webp",
+    "/kids/kids6.webp",
+    "/kids/kids7.webp",
+    "/kids/kids8.webp",
+  ],
+
+  dimensions: [
+    {
+      name: "Floor Clearance",
+      regular: "150",
+      speciallyAbled: "150",
+    },
+    {
+      name: "Top Rail Powder",
+      regular: "Coated Aluminium",
+      speciallyAbled: "Coated Aluminium",
+    },
+    {
+      name: "Top Rail Grade",
+      regular: "Aluminium Grade 6063-T5 Alloy",
+      speciallyAbled: "6063-T5 Alloy",
+    },
+    {
+      name: "Panel Support",
+      regular: "Aluminium U-Channels",
+      speciallyAbled: "Aluminium U-Channels",
+    },
+    {
+      name: "Panel Fixing",
+      regular: "Rear Wall & Mid-Pilaster",
+      speciallyAbled: "Rear Wall & Mid-Pilaster",
+    },
+    {
+      name: "Door Hinges",
+      regular: "3 Hinges per Door",
+      speciallyAbled: "3 Hinges per Door",
+    },
+  ],
+
+  imgSpecs: {
+  
+    clearance: "150",
+  },
+
+  keyFeatures: [
+    {
+      name: "Child-Friendly Design",
+      description:
+        "Thoughtfully designed dimensions and features create a comfortable, private, and user-friendly washroom experience for children.",
+    },
+    {
+      name: "Durable Nylon Components",
+      description:
+        "Strong and lightweight nylon accessories provide reliable performance while offering flexibility in design and colour selection.",
+    },
+    {
+      name: "Easy Installation",
+      description:
+        "Practical modular construction allows quick and efficient installation across different washroom layouts.",
+    },
+    {
+      name: "Easy to Clean",
+      description:
+        "Practical floor clearance and easy-to-maintain surfaces support everyday washroom hygiene and maintenance.",
+    },
+    {
+      name: "Multiple Colour Options",
+      description:
+        "Nylon accessories are available in White, Grey, and Black to complement different washroom interiors.",
+    },
+    {
+      name: "Aluminium Top Rail",
+      description:
+        "The cubicle system features a powder-coated aluminium top rail manufactured using Grade 6063-T5 aluminium alloy for reliable structural performance.",
+    },
+    {
+      name: "Secure Panel Support",
+      description:
+        "Aluminium U-channels provide reliable panel support, while rear-wall and mid-pilaster fixing ensure secure panel installation.",
+    },
+    {
+      name: "Three-Hinge Door Support",
+      description:
+        "Each door is supported by three hinges for stable and reliable everyday operation.",
+    },
+  ],
+
+  technicalSpecifications: [
+    {
+      name: "Coating",
+      value: "Powder Coated / Natural Anodized / Stainless Steel",
+    },
+    {
+      name: "Top Rail",
+      value: "Powder-Coated Aluminium",
+    },
+    {
+      name: "Top Rail Grade",
+      value: "Aluminium Grade 6063-T5 Alloy",
+    },
+    {
+      name: "Panel Support",
+      value: "Aluminium U-Channels",
+    },
+    {
+      name: "Panel Fixing",
+      value: "Rear Wall & Mid-Pilaster",
+    },
+    {
+      name: "Door Hinges",
+      value: "3 Hinges per Door",
+    },
+    {
+      name: "Floor Clearance",
+      value: "150 mm",
+    },
+  ],
+},
     ],
   },
 
