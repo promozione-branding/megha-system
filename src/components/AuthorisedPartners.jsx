@@ -102,6 +102,7 @@ function PartnerCard({ partner }) {
             className="
                 group relative
                 flex h-[240px]
+                lg:h-[300px]
                 flex-col
                 overflow-hidden
                 border border-[#deddd7]
@@ -115,7 +116,7 @@ function PartnerCard({ partner }) {
                 hover:shadow-[0_15px_40px_rgba(0,0,0,0.07)]
 
                 md:h-[270px]
-                md:p-6
+                md:p-4
             "
         >
             {/* Top */}

@@ -24,7 +24,7 @@ export default function CertificatesMarquee() {
   const marqueeCertificates = [...CERTIFICATES, ...CERTIFICATES];
 
   return (
-    <section className="relative w-full bg-[#f8f9fa] pt-12 sm:pt-16 lg:pt-20 pb-6 sm:pb-8 lg:pb-10 border-y border-gray-200/80 overflow-hidden font-sans text-[#0d2461]">
+    <section className="relative w-full bg-[#f8f9fa] pt-12 sm:pt-16 lg:pt-15 pb-6 sm:pb-8 lg:pb-10 border-y border-gray-200/80 overflow-hidden font-sans text-[#0d2461]">
       <div className="max-w-[1750px] mx-auto px-6 flex flex-col-reverse lg:grid lg:grid-cols-12 items-center gap-12 lg:gap-8">
         
         {/* Marquee Track Container (Left Side) */}

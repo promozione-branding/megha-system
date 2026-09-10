@@ -75,7 +75,7 @@ export default function ServicesSection() {
         </header>
 
         {/* Services Grid with Permanent Alternating Staggered Offset */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 items-start py-5 lg:pt-16 lg:pb-20">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-5 items-start py-5 lg:pt-10 lg:pb-20">
           {services.map((service, index) => {
             const Icon = service.icon;
             const isStaggered = index % 2 === 0;
@@ -96,7 +96,7 @@ export default function ServicesSection() {
                     delay: index * 0.1,
                     ease: [0.21, 0.47, 0.32, 0.98],
                   }}
-                  className={`group relative rounded-[32px] p-6 sm:p-8 flex flex-col justify-between min-h-[380px] sm:min-h-[420px] transition-all duration-500 overflow-hidden cursor-pointer ${service.isImageCard
+                  className={`group relative rounded-[32px] p-6 sm:p-6 flex flex-col justify-between min-h-[380px] sm:min-h-[420px] transition-all duration-500 overflow-hidden cursor-pointer ${service.isImageCard
                     ? 'shadow-2xl border border-transparent'
                     : 'bg-gradient-to-b from-white to-[#f4f5f7] border border-[#e5e7eb] shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_20px_50px_rgba(0,0,0,0.1)]'
                     }`}

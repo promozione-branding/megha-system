@@ -102,7 +102,7 @@ export default function SplitVantage() {
         className="
           sticky
           top-0
-          h-[100svh]
+          h-[90svh]
           min-h-[620px]
           w-full
           overflow-hidden
@@ -155,7 +155,7 @@ export default function SplitVantage() {
               shadow-lg
 
               min-h-0
-              h-[42svh]
+              h-[28svh]
               sm:h-[40svh]
               lg:h-[560px]
 
@@ -227,111 +227,7 @@ export default function SplitVantage() {
             </div>
 
             {/* Author / Controls */}
-            <div className="pt-3 sm:pt-8 space-y-3 sm:space-y-6">
-              <div className="relative min-h-[38px] sm:min-h-[44px]">
-                <AnimatePresence mode="wait">
-                  <motion.div
-                    key={`${active.id}-author`}
-                    initial={{
-                      opacity: 0,
-                    }}
-                    animate={{
-                      opacity: 1,
-                    }}
-                    exit={{
-                      opacity: 0,
-                    }}
-                    transition={{
-                      duration: 0.25,
-                    }}
-                    className="space-y-0.5"
-                  >
-                    <p
-                      className="
-                        text-xs
-                        sm:text-sm
-                        lg:text-base
-                        font-bold
-                        text-white
-                        tracking-tight
-                      "
-                    >
-                      {active.author}
-                    </p>
-
-                    <p
-                      className="
-                        text-[10px]
-                        sm:text-xs
-                        lg:text-sm
-                        text-slate-300
-                        font-medium
-                      "
-                    >
-                      {active.role}
-                    </p>
-                  </motion.div>
-                </AnimatePresence>
-              </div>
-
-              <div className="flex items-center justify-between">
-                {/* Play */}
-                <button
-                  type="button"
-                  className="
-                    w-10
-                    h-10
-                    sm:w-12
-                    sm:h-12
-                    rounded-full
-                    bg-white
-                    hover:bg-slate-100
-                    text-[#0F172A]
-                    flex
-                    items-center
-                    justify-center
-                    shadow-md
-                    transition-all
-                    duration-200
-                    hover:scale-105
-                    active:scale-95
-                    cursor-pointer
-                  "
-                  aria-label="Play"
-                >
-                  <Play
-                    className="
-                      w-3.5
-                      h-3.5
-                      sm:w-4
-                      sm:h-4
-                      fill-[#0F172A]
-                      translate-x-0.5
-                    "
-                  />
-                </button>
-
-                {/* Dots */}
-                <div className="flex items-center gap-1.5 sm:gap-2">
-                  {items.map((_, idx) => (
-                    <div
-                      key={idx}
-                      className={`
-                        h-1.5
-                        sm:h-2
-                        rounded-full
-                        transition-all
-                        duration-300
-                        ${activeIndex === idx
-                          ? 'w-5 sm:w-6 bg-white'
-                          : 'w-1.5 sm:w-2 bg-white/30'
-                        }
-                      `}
-                    />
-                  ))}
-                </div>
-              </div>
-            </div>
+            
           </div>
 
           {/* =========================

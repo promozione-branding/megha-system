@@ -38,7 +38,7 @@ export default function CTA2({
             <div className="max-w-3xl">
               <div className="mb-3 inline-flex items-center rounded-full border border-white/20 bg-white/10 px-4 py-1.5">
                 <span className="mr-2 h-1.5 w-1.5 rounded-full bg-[#f5bd24]" />
-                <span className="text-xs font-bold uppercase tracking-[0.15em] text-white/80">
+                <span className="text-[8px] md:text-xs font-bold uppercase tracking-[0.15em] text-white/80">
                   {subheading}
                 </span>
               </div>

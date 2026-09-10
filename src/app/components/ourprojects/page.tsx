@@ -38,7 +38,7 @@ const projects: Project[] = [
   },
   {
     number: "02",
-    title: "Urinal Cubicles",
+    title: "Urinal Modesty Panels",
     description:
       "Our urinal cubicle solutions are designed for busy washrooms, combining smart space utilization, durable construction, and easy maintenance.",
     image: "/new1.webp",
@@ -85,7 +85,7 @@ export default function OurProjectsSection() {
   return (
     <>
       <section
-        className="w-full overflow-hidden bg-white px-6 py-15 md:px-12 lg:px-16 xl:px-20"
+        className="w-full overflow-hidden bg-white px-6 py-6 md:py-12 md:px-12 lg:px-16 xl:px-20"
         style={{
           fontFamily:
             "var(--font-jakarta), 'Helvetica Neue', sans-serif",

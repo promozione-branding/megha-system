@@ -513,7 +513,7 @@ export default function ProjectDetail() {
                   ref={imageScrollRef}
                   className="relative h-[1000px] md:h-[1000px]"
                 >
-                  <div className="sticky top-25 h-[440px]">
+                  <div className="sticky top-25 h-[320px] lg:h-[410px] xl:h-[430px]">
                     <div className="relative h-full w-full">
                       {/* BACK CARD */}
                       <div className="absolute inset-0 translate-y-[-18px] scale-[0.96] rounded-[28px] bg-white p-1">

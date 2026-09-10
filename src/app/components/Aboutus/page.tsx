@@ -15,7 +15,7 @@ export default function AboutUs() {
       </div>
 
       <div className="relative z-10 mx-auto max-w-[1750px] px-6 sm:px-10 lg:px-16 xl:px-24">
-        <div className="grid grid-cols-1 items-start gap-8 lg:grid-cols-12 lg:gap-10">
+        <div className="grid grid-cols-1 items-start gap-8 lg:grid-cols-12 lg:gap-1">
 
           {/* Left Column */}
           <motion.div
@@ -84,7 +84,7 @@ export default function AboutUs() {
             </div>
 
             {/* Stats */}
-            <div className="grid grid-cols-1 gap-4 border-t border-[#0d2461]/10 pt-4 sm:grid-cols-3">
+            <div className="grid grid-cols-1 gap-1 border-t border-[#0d2461]/10 pt-4 sm:grid-cols-3">
 
               {/* Years */}
               <motion.div
@@ -146,7 +146,7 @@ export default function AboutUs() {
               >
                 <div className="flex items-center justify-between gap-3">
                   <div>
-                    <h3 className="text-3xl font-extrabold tracking-tight text-[#0d2461] sm:text-4xl">
+                    <h3 className="text-3xl font-extrabold tracking-tight text-[#0d2461] sm:text-[31px]">
                       1 Lakh<span className="text-[#f5bd24]">+</span>
                     </h3>
 

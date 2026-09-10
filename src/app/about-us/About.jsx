@@ -224,7 +224,7 @@ export default function About() {
 
             <section className="relative overflow-hidden bg-white py-10 md:py-15">
                 <div className="mx-auto max-w-[1536px] px-5 sm:px-8 lg:px-12 xl:px-16">
-                    <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-[48%_52%] lg:gap-16 xl:gap-24">
+                    <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-[48%_52%] lg:gap-7 xl:gap-15">
                         <motion.div
                             initial={{ opacity: 0, x: -40 }}
                             whileInView={{ opacity: 1, x: 0 }}
@@ -314,7 +314,7 @@ export default function About() {
 
                             {/* Content */}
                             <div className="mt-8 max-w-2xl space-y-2">
-                                <p className="text-base leading-8 text-gray-600 sm:text-[17px]">
+                                <p className="text-base xl:leading-8 text-gray-600 sm:text-[17px]">
                                     <strong className="font-semibold text-[#0d2461]">
                                         Megha Systems is a trusted toilet cubicle manufacturer and
                                         supplier in India
@@ -353,7 +353,7 @@ export default function About() {
                                 <div className="rounded-2xl border border-[#0d2461]/10 bg-[#0d2461]/[0.025] p-4">
                                     <Factory className="h-5 w-5 text-[#0d2461]" />
 
-                                    <p className="mt-3 text-xs font-bold uppercase tracking-wide text-[#0d2461]">
+                                    <p className="mt-3 text-base lg:text-xs font-bold uppercase tracking-wide text-[#0d2461]">
                                         Manufacturing
                                     </p>
 
@@ -365,7 +365,7 @@ export default function About() {
                                 <div className="rounded-2xl border border-[#0d2461]/10 bg-[#0d2461]/[0.025] p-4">
                                     <Palette className="h-5 w-5 text-[#0d2461]" />
 
-                                    <p className="mt-3 text-xs font-bold uppercase tracking-wide text-[#0d2461]">
+                                    <p className="mt-3 text-base lg:text-xs font-bold uppercase tracking-wide text-[#0d2461]">
                                         Custom Design
                                     </p>
 
@@ -377,7 +377,7 @@ export default function About() {
                                 <div className="rounded-2xl border border-[#0d2461]/10 bg-[#0d2461]/[0.025] p-4">
                                     <ShieldCheck className="h-5 w-5 text-[#0d2461]" />
 
-                                    <p className="mt-3 text-xs font-bold uppercase tracking-wide text-[#0d2461]">
+                                    <p className="mt-3 text-base lg:text-xs font-bold uppercase tracking-wide text-[#0d2461]">
                                         Built to Last
                                     </p>
 
@@ -388,7 +388,7 @@ export default function About() {
                             </div>
 
                             {/* Bottom CTA */}
-                            <div className="mt-4 flex items-center gap-3">
+                            <div className="pt-7 md:mt-4 flex items-center gap-3">
                                 <div className="h-px w-10 bg-[#f5bd24]" />
 
                                 <span className="text-xs font-bold uppercase tracking-[0.18em] text-[#0d2461]/60">
@@ -400,7 +400,7 @@ export default function About() {
                 </div>
             </section>
 
-            <section className="relative bg-[#f7f8fa] py-10 md:py-15">
+            <section className="relative bg-[#f7f8fa] py-6 md:py-11">
                 <div className="mx-auto max-w-[1536px] px-5 sm:px-8 lg:px-12 xl:px-16">
                     <motion.div
                         initial={{ opacity: 0, y: 25 }}
@@ -449,7 +449,7 @@ export default function About() {
                                         <Icon className="h-5 w-5" />
                                     </div>
 
-                                    <h3 className="mt-5 text-sm font-bold leading-5 text-[#0d2461]">
+                                    <h3 className="mt-5 text-sm md:text-base font-bold leading-5 text-[#0d2461]">
                                         {industry.title}
                                     </h3>
                                 </motion.div>
@@ -465,7 +465,7 @@ export default function About() {
                 </div>
             </section>
 
-            <section className="bg-white py-10 md:py-15">
+            <section className="bg-white py-6 md:py-12">
                 <div className="mx-auto max-w-[1536px] px-5 sm:px-8 lg:px-12 xl:px-16">
                     <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2 lg:gap-20">
                         <motion.div
@@ -510,7 +510,7 @@ export default function About() {
                                             </span>
                                         </div>
 
-                                        <ArrowRight className="h-4 w-4 text-gray-300 transition-transform group-hover:translate-x-1 group-hover:text-[#0d2461]" />
+                                        <ArrowRight className="hidden md:block h-4 w-4 text-gray-300 transition-transform group-hover:translate-x-1 group-hover:text-[#0d2461]" />
                                     </div>
                                 ))}
                             </div>
@@ -554,7 +554,7 @@ export default function About() {
                 </div>
             </section>
 
-            <section className="relative overflow-hidden bg-[#0d2461] py-10 md:py-15">
+            <section className="relative overflow-hidden bg-[#0d2461] py-6 md:py-12">
                 {/* Background Decoration */}
                 <div className="pointer-events-none absolute -right-[10%] -top-[20%] h-[500px] w-[500px] rounded-full border border-white/5" />
                 <div className="pointer-events-none absolute -right-[5%] top-[10%] h-[300px] w-[300px] rounded-full border border-white/[0.03]" />
@@ -629,7 +629,7 @@ export default function About() {
                             hover:border-white/20
                             hover:bg-white/[0.1]
                             hover:shadow-2xl
-                            sm:p-6
+                            sm:p-5
                             lg:p-7
                         "
                                 >
@@ -716,7 +716,7 @@ export default function About() {
                         {/* ================= RIGHT ================= */}
                         <div className="lg:pl-6">
 
-                            <p className="max-w-xl text-sm leading-7 text-gray-500 sm:text-base">
+                            <p className="max-w-xl text-sm md:leading-7 text-gray-500 sm:text-base">
                                 Get quality{" "}
                                 <strong className="font-semibold text-[#0d2461]">
                                     toilet cubicles and washroom partition solutions

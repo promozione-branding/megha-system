@@ -32,8 +32,8 @@ export default function ClientMarquee() {
       <div className="relative w-full overflow-hidden flex items-center group">
 
         {/* Left & Right Edge Fades */}
-        <div className="absolute top-0 bottom-0 left-0 w-24 sm:w-40 bg-gradient-to-r from-white via-white/80 to-transparent z-10 pointer-events-none" />
-        <div className="absolute top-0 bottom-0 right-0 w-24 sm:w-40 bg-gradient-to-l from-white via-white/80 to-transparent z-10 pointer-events-none" />
+        <div className="md:absolute top-0 bottom-0 left-0 w-24 sm:w-40 bg-gradient-to-r from-white via-white/80 to-transparent z-10 pointer-events-none" />
+        <div className="md:absolute top-0 bottom-0 right-0 w-24 sm:w-40 bg-gradient-to-l from-white via-white/80 to-transparent z-10 pointer-events-none" />
 
         {/* Scrolling Track */}
         <div className="flex w-max items-center gap-14 sm:gap-20 lg:gap-24 animate-marquee group-hover:[animation-play-state:paused] will-change-transform">

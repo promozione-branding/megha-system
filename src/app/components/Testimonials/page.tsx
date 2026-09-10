@@ -99,7 +99,7 @@ export default function Testimonials() {
               mt-8
               xl:absolute
               xl:left-[29%]
-              xl:top-[310px]
+              xl:top-[280px]
               xl:mt-0
               xl:w-[71%]
             "
@@ -151,6 +151,7 @@ export default function Testimonials() {
                       shadow-[0_4px_18px_rgba(0,0,0,0.04)]
                       sm:p-7
                       lg:min-h-[260px]
+                     
                     "
                   >
                     {/* Stars */}

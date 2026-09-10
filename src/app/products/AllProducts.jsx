@@ -30,9 +30,9 @@ export default function AllProductsPage() {
         <div className="absolute inset-0 opacity-10 bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:16px_16px]" />
 
         <div className="max-w-7xl mx-auto text-center relative z-10 space-y-4">
-          <div className="inline-flex items-center gap-2 bg-white/10 border border-white/20 backdrop-blur-md px-4 py-1.5 rounded-full text-xs font-semibold tracking-widest text-[#f5bd24] uppercase">
+          <div className="inline-flex items-center gap-2 bg-white/10 border border-white/20 backdrop-blur-md px-4 py-1.5 rounded-full text-[8px] md:text-xs font-semibold tracking-widest text-[#f5bd24] uppercase">
             <Sparkles className="w-3.5 h-3.5" />
-            <span>Product Catalog & Architectural Systems</span>
+            <span className=''>Product Catalog & Architectural Systems</span>
           </div>
 
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight leading-tight">
@@ -48,7 +48,7 @@ export default function AllProductsPage() {
       </header>
 
       {/* Main */}
-      <main className="flex-1 max-w-7xl mx-auto w-full px-4 py-12 sm:py-16">
+      <main className="flex-1 max-w-7xl mx-auto w-full px-4 py-6 sm:py-12">
 
         {/* Header */}
         <div className="mb-10 flex flex-wrap items-center justify-between gap-4 border-b border-blue-900/10 pb-6">
@@ -145,7 +145,7 @@ export default function AllProductsPage() {
                     </div>
 
                     {/* Product Content */}
-                    <div className="p-5 flex flex-col flex-1">
+                    <div className="p-4 md:p-5 flex flex-col flex-1">
                       <div className="flex-1">
                         <h3 className="text-xl font-bold text-blue-950 group-hover:text-[#0d2461] transition-colors leading-snug">
                           {product.name}

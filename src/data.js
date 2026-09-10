@@ -191,7 +191,7 @@ export const allProducts = [
           "The MAXI PRO Series is a practical and durable toilet cubicle partition designed for modern commercial washrooms. With a stable aluminium structure, precision-fitted panels, flexible door configuration, and reliable stainless steel hardware, MAXI PRO delivers privacy, comfort, and dependable everyday performance.",
 
         hardwareImg: "/hardware/Maxipro.webp",
-        rightImg: "/right/maxi-pro2.jpeg",
+        rightImg: "/right/max-pro-2.webp",
 
         dimensions: [
           {
@@ -257,6 +257,9 @@ export const allProducts = [
         shortDescription:
           "The DURO Series is engineered for strength, stability, and long-term performance. With Grade 316 stainless steel supports, secure floor anchoring, and reinforced panel connections, DURO provides a robust restroom partition for demanding commercial washrooms.",
         hardwareImg: "/hardware/duronew.webp",
+
+                rightImg: "/right/duro2.webp",
+
 
         dimensions: [
           {
@@ -520,7 +523,7 @@ export const allProducts = [
         shortDescription:
           "The MAXI Series is a luxury toilet cubicle partition designed for commercial and high-traffic washrooms. Combining stainless steel hardware, anodized aluminium profiles, adjustable feet, and refined detailing, MAXI delivers exceptional stability, durability, and easy maintenance.",
 
-        hardwareImg: "/hardware/Maxi.webp",
+        hardwareImg: "/hardware/maxiiiii.webp",
         rightImg: "/right/maxi2.jpeg",
 
         dimensions: [

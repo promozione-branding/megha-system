@@ -213,14 +213,14 @@ export default function Hero3() {
         <div
           className="
             min-h-[70vh]
-            pt-20
+            pt-10
             pb-8
             flex
             flex-col
             justify-center
 
             max-lg:min-h-0
-            max-lg:pt-24
+            max-lg:pt-12
             max-lg:pb-16
             max-lg:justify-start
           "
