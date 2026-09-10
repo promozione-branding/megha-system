@@ -91,11 +91,7 @@ export default function ContactSection() {
       return;
     }
 
-    // Indian mobile number validation
-    if (!/^[6-9]\d{9}$/.test(phone)) {
-      setError("Please enter a valid 10-digit mobile number.");
-      return;
-    }
+   
 
     try {
       setLoading(true);

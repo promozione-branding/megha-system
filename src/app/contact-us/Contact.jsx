@@ -159,10 +159,7 @@ export default function Contact() {
     // INDIAN MOBILE NUMBER VALIDATION
     // Must start with 6, 7, 8 or 9
     // ==========================================
-    if (!/^[6-9]\d{9}$/.test(phone)) {
-      setError("Please enter a valid 10-digit mobile number.");
-      return;
-    }
+    
 
     // ==========================================
     // EMAIL VALIDATION
