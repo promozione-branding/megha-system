@@ -256,7 +256,7 @@ export const allProducts = [
           "Duro toilet cubicles feature Grade 316 stainless steel supports, secure panel connections, and practical floor clearance for demanding washrooms.",
         shortDescription:
           "The DURO Series is engineered for strength, stability, and long-term performance. With Grade 316 stainless steel supports, secure floor anchoring, and reinforced panel connections, DURO provides a robust restroom partition for demanding commercial washrooms.",
-        hardwareImg: "/hardware/duro.webp",
+        hardwareImg: "/hardware/duronew.webp",
 
         dimensions: [
           {
@@ -324,7 +324,7 @@ export const allProducts = [
         shortDescription:
           "The DURO PRO Series is engineered for strength, stability, and lasting performance in demanding washroom environments. Its stainless steel construction and reinforced panel support create a reliable toilet cubicle designed for everyday commercial use.",
 
-        hardwareImg: "/hardware/duropro.webp",
+        hardwareImg: "/hardware/dur-pro-2.webp",
         rightImg: "/right/duro-pro.jpeg",
 
         dimensions: [
@@ -595,7 +595,7 @@ export const allProducts = [
         shortDescription:
           "The LURON Series combines luxury stainless steel construction with thoughtful functionality for modern commercial washrooms. Its concealed support system, precise panel alignment, and flexible door configuration create a clean, stable, and durable toilet cubicle system.",
 
-        hardwareImg: "/hardware/Luron.webp",
+        hardwareImg: "/hardware/luron2.webp",
         rightImg: "/right/luron2.jpeg",
 
         imgSpecs: {},
@@ -732,7 +732,7 @@ export const allProducts = [
           "Premia luxury toilet cubicles combine premium finishes, Gold PVD hardware, Grade 316 stainless steel components, privacy, and lasting performance.",
         shortDescription:
           "The PREMIA Series is a luxury toilet cubicle created for premium commercial and residential washrooms. Combining refined finishes with robust construction, premium PVD hardware, and Grade 316 stainless steel components, PREMIA brings together elegance, privacy, and dependable everyday performance.",
-        hardwareImg: "/hardware/Premia.webp",
+        hardwareImg: "/hardware/prema2.webp",
 
         dimensions: [
           {

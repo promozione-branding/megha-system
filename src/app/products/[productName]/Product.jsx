@@ -251,40 +251,40 @@ export default function ProjectDetail() {
                 </a>
               </div>
             </div>
-           {project.slider && (
-             <div className="relative h-[650px] rounded-2xl overflow-hidden shadow-lg">
-      <Swiper
-        modules={[Autoplay, Navigation, Pagination]}
-        slidesPerView={1}
-        spaceBetween={0}
-        loop={true}
-        speed={700}
-        autoplay={{
-          delay: 3500,
-          disableOnInteraction: false,
-          pauseOnMouseEnter: true,
-        }}
-        navigation
-        pagination={{
-          clickable: true,
-        }}
-        className="h-full w-full project-image-swiper"
-      >
-        {project?.slider.map((image, index) => (
-          <SwiperSlide key={index}>
-            <div className="relative h-full w-full">
-              <img
-                src={image}
-                alt={`Project ${index + 1}`}
-                loading={index === 0 ? "eager" : "lazy"}
-                className="h-full w-full object-fill"
-              />
-            </div>
-          </SwiperSlide>
-        ))}
-      </Swiper>
-    </div>
-           )}
+            {project.slider && (
+              <div className="relative h-[650px] rounded-2xl overflow-hidden shadow-lg">
+                <Swiper
+                  modules={[Autoplay, Navigation, Pagination]}
+                  slidesPerView={1}
+                  spaceBetween={0}
+                  loop={true}
+                  speed={700}
+                  autoplay={{
+                    delay: 3500,
+                    disableOnInteraction: false,
+                    pauseOnMouseEnter: true,
+                  }}
+                  navigation
+                  pagination={{
+                    clickable: true,
+                  }}
+                  className="h-full w-full project-image-swiper"
+                >
+                  {project?.slider.map((image, index) => (
+                    <SwiperSlide key={index}>
+                      <div className="relative h-full w-full">
+                        <img
+                          src={image}
+                          alt={`Project ${index + 1}`}
+                          loading={index === 0 ? "eager" : "lazy"}
+                          className="h-full w-full object-fill"
+                        />
+                      </div>
+                    </SwiperSlide>
+                  ))}
+                </Swiper>
+              </div>
+            )}
           </div>
 
           <div className="w-full lg:w-2/3 flex-1 flex flex-col">
@@ -508,52 +508,56 @@ export default function ProjectDetail() {
               </div>
 
               {/* RIGHT IMAGE STACK */}
-             {project.rightImg ? ( <div
-                ref={imageScrollRef}
-                className="relative h-[1000px] md:h-[1000px]"
-              >
-                <div className="sticky top-25 h-[440px]">
-                  <div className="relative h-full w-full">
-                    {/* BACK CARD */}
-                    <div className="absolute inset-0 translate-y-[-18px] scale-[0.96] rounded-[28px] bg-white p-1">
-                      <div className="h-full w-full overflow-hidden rounded-[20px]">
-                        <img
-                          src={project.rightImg}
-                          alt={project.name}
-                          className="h-full w-full object-"
-                        />
+              {project.rightImg ? (
+                <div
+                  ref={imageScrollRef}
+                  className="relative h-[1000px] md:h-[1000px]"
+                >
+                  <div className="sticky top-25 h-[440px]">
+                    <div className="relative h-full w-full">
+                      {/* BACK CARD */}
+                      <div className="absolute inset-0 translate-y-[-18px] scale-[0.96] rounded-[28px] bg-white p-1">
+                        <div className="h-full w-full overflow-hidden rounded-[20px]">
+                          <img
+                            src={project.rightImg}
+                            alt={project.name}
+                            className="h-full w-full object-"
+                          />
+                        </div>
                       </div>
                     </div>
-
-                  
                   </div>
                 </div>
-              </div>):null}
+              ) : null}
             </div>
           </div>
         </div>
 
         {project.hardwareImg && (
-          <div className="">
-            <h2 className="font-bold text-blue-950 mt-3 text-4xl mb-4">
+          <div className="max-w-6xl mx-auto px-4 mt-10">
+            <h2 className="font-bold text-center text-2xl md:text-4xl text-blue-950  md:mb-6">
               Hardware
             </h2>
-            <img
-              src={project.hardwareImg}
-              alt="hardware"
-              className="w-full h-auto md:h-140 mt-4"
-            />
+
+            <div className="w-full md:h-[500px] flex items-center justify-center bg- rounded-2xl overflow-hidden">
+              <img
+                src={project.hardwareImg}
+                alt="Hardware"
+                className="w-full h-full object-contain"
+              />
+            </div>
           </div>
         )}
+
+         {project?.shapes && (<h2 className="font-bold text-center text-blue-950 text-2xl md:text-4xl mt-5 mb-4">
+          Differnt Types Of Shape
+        </h2>)}
         {project?.shapes && (
-          <div className="">
-            <h2 className="font-bold text-blue-950 text-4xl mt-5 mb-4">
-              Differnt Types Of Shape
-            </h2>
+          <div className="w-full md:h-[500px] flex items-center justify-center bg- rounded-2xl overflow-hidden">
             <img
               src={project.shapes}
               alt="shape"
-              className="w-full h-auto mt-4"
+              className="w-full h-full object-contain"
             />
           </div>
         )}
