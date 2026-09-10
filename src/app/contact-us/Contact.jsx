@@ -46,11 +46,19 @@ const offices = [
 ];
 
 const products = [
-  "Toilet Cubicles",
-  "Washroom Partitions",
-  "Urinal Partitions",
-  "HPL 12 MM Boards",
-  "Locker Solutions",
+   "Black Maxi",
+  "Maxi PRO",
+  "Duro",
+  "Duro Pro",
+  "Cubic Doorz",
+  "Kiddiez",
+  "Kiddiez Pro",
+  "Cielo",
+  "Premia",
+  "Rove",
+  "NEO",
+  "Maxi",
+  "Luron",
   "Other",
 ];
 

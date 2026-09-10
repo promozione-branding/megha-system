@@ -255,7 +255,7 @@ export default function HeroSection() {
           HERO SECTION
       ===================================================== */}
 
-      <section className="w-full bg-white text-black font-sans antialiased pt-2 sm:pt-3 lg:pt-4 pb-8 sm:pb-10 lg:pb-12">
+      <section className="w-full bg-white text-black font-sans antialiased pt-2 sm:pt-3 lg:pt-4 pb-4 sm:pb-5 lg:pb-3">
 
         <div className="mx-auto max-w-[1750px] px-4 lg:px-10">
 
@@ -635,7 +635,7 @@ function ProjectCard({
 
   return (
 
-    <article className="group relative h-[165px] overflow-hidden rounded-[12px] border border-[#e5e5e5] bg-white shadow-[0_3px_15px_rgba(0,0,0,0.04)] transition-all duration-500 hover:-translate-y-1 hover:shadow-[0_12px_35px_rgba(0,0,0,0.10)]">
+    <article className="group relative h-[175px] overflow-hidden rounded-[12px] border border-[#e5e5e5] bg-white shadow-[0_3px_15px_rgba(0,0,0,0.04)] transition-all duration-500 hover:-translate-y-1 hover:shadow-[0_12px_35px_rgba(0,0,0,0.10)]">
 
 
       <div className="flex h-full">
@@ -717,7 +717,7 @@ function ProjectCard({
           ================================================= */}
 
           <Link
-            href={project.href}
+            href="/projects"
             className="mt-2 inline-flex w-fit items-center gap-1.5 rounded-[5px] border border-[#d8d8d8] bg-white px-3 py-1.5 text-[9px] font-medium text-[#222] transition-all duration-300 hover:border-[#222] hover:bg-[#222] hover:text-white"
           >
 
