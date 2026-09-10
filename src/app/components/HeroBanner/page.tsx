@@ -503,7 +503,7 @@ export default function HeroSection() {
 
       <section className="w-full bg-white py-6 md:py-5">
 
-        <div className="mx-auto max-w-7xl px-5 md:px-8">
+        <div className="mx-auto max-w-[1750px] px-5 md:px-8">
 
 
           {/* =================================================
