@@ -386,29 +386,20 @@ export default function ContactSection() {
                       Select Product
                     </option>
 
-                    <option value="Toilet Cubicles">
-                      Toilet Cubicles
-                    </option>
-
-                    <option value="Washroom Partitions">
-                      Washroom Partitions
-                    </option>
-
-                    <option value="Urinal Cubicles">
-                      Urinal Cubicles
-                    </option>
-
-                    <option value="Kids Toilet Cubicles">
-                      Kids Toilet Cubicles
-                    </option>
-
-                    <option value="Public Restroom">
-                      Public Restroom
-                    </option>
-
-                    <option value="Other">
-                      Other
-                    </option>
+                    <option value="Black Maxi">Black Maxi</option>
+<option value="Maxi PRO">Maxi PRO</option>
+<option value="Duro">Duro</option>
+<option value="Duro Pro">Duro Pro</option>
+<option value="Cubic Doorz">Cubic Doorz</option>
+<option value="Kiddiez">Kiddiez</option>
+<option value="Kiddiez Pro">Kiddiez Pro</option>
+<option value="Cielo">Cielo</option>
+<option value="Premia">Premia</option>
+<option value="Rove">Rove</option>
+<option value="NEO">NEO</option>
+<option value="Maxi">Maxi</option>
+<option value="Luron">Luron</option>
+<option value="Other">Other</option>
                   </select>
 
                 </div>
