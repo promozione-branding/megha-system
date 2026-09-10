@@ -81,7 +81,7 @@ const projects = [
   {
     id: 2,
     image: "/hero2/foxconn.webp",
-    logo: '/hero2/clients/Apple (2).webp',
+    logo: '/assets/clients/Apple (2).webp',
     title: "Manufacturing Facility",
     stats: "Premium Restroom Solutions",
     description:
@@ -92,7 +92,7 @@ const projects = [
 
   {
     id: 3,
-   image: "/hero2/marutiDoor.webp",
+   image: "/hero2/mcd.webp",
     logo: '/assets/clients/mag.webp',
     title: "Multiple Locations",
     stats: "Hygienic. Stylish. Durable.",
