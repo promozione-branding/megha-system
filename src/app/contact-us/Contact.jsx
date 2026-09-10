@@ -41,12 +41,12 @@ const offices = [
   },
   {
     title: "Ghaziabad",
-    address: "HPL 12 MM Board in Ghaziabad",
+    address: "Coming Soon",
   },
 ];
 
 const products = [
-   "Black Maxi",
+  "Black Maxi",
   "Maxi PRO",
   "Duro",
   "Duro Pro",
@@ -159,7 +159,7 @@ export default function Contact() {
     // INDIAN MOBILE NUMBER VALIDATION
     // Must start with 6, 7, 8 or 9
     // ==========================================
-    
+
 
     // ==========================================
     // EMAIL VALIDATION
@@ -216,7 +216,7 @@ export default function Contact() {
 
       setError(
         err?.response?.data?.message ||
-          "Unable to submit your enquiry. Please try again."
+        "Unable to submit your enquiry. Please try again."
       );
     } finally {
       setLoading(false);
@@ -365,12 +365,12 @@ export default function Contact() {
                       contact@meghasystems.com
                     </a>
 
-                    <a
+                    {/* <a
                       href="mailto:meghainteriorsfbd@gmail.com"
                       className="block text-sm font-semibold text-[#0d2461] hover:underline"
                     >
                       meghainteriorsfbd@gmail.com
-                    </a>
+                    </a> */}
                   </div>
                 </div>
 

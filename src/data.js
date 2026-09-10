@@ -122,7 +122,7 @@ export const allProducts = [
         shortDescription:
           "The BLACK MAXI Series brings a bold, sophisticated look to modern washrooms with premium PVD-coated stainless steel hardware and a refined matte black finish. Engineered for high-traffic environments, it combines luxury aesthetics with strength, corrosion resistance, and lasting performance.",
         hardwareImg: "/hardware/Blackmaxi.webp",
-        rightImg:"/right/backmaxi.jpeg",
+        rightImg: "/right/backmaxi.jpeg",
         dimensions: [
           {
             name: "Width of the cubicle",
@@ -258,7 +258,7 @@ export const allProducts = [
           "The DURO Series is engineered for strength, stability, and long-term performance. With Grade 316 stainless steel supports, secure floor anchoring, and reinforced panel connections, DURO provides a robust restroom partition for demanding commercial washrooms.",
         hardwareImg: "/hardware/duronew.webp",
 
-                rightImg: "/right/duro2.webp",
+        rightImg: "/right/duro2.webp",
 
 
         dimensions: [
@@ -1134,7 +1134,7 @@ export const allProducts = [
   },
 
   {
-    categoryName: "PD DOORS & URINAL PARTITIONS",
+    categoryName: "URINAL PARTITIONS",
     slug: "pd-doors-and-urinal-partitions",
     title: "Doors & Urinal Partition System",
     excerpt: "Complete Privacy. Seamless Design.",
