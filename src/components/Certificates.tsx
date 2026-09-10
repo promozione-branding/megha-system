@@ -14,7 +14,7 @@ const CERTIFICATES = [
     {
         id: 1,
         title: 'Authorized OEM',
-        image: '/assets/certificates/14.png',
+        image: '/assets/certificates/certioem.webp',
         alt: 'ISO Certification',
     },
     {

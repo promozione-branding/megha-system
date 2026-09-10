@@ -1,12 +1,14 @@
 import { motion } from "framer-motion";
 import { Phone, MessageCircle } from "lucide-react";
+import { FaWhatsapp } from "react-icons/fa";
+import { MdCall } from "react-icons/md";
 
 const StickyContactButtons = () => {
   const buttons = [
     {
       label: "WhatsApp",
       href: "https://wa.me/919873735713",
-      icon: MessageCircle,
+      icon: FaWhatsapp,
       bg: "#25D366",
       hoverBg: "#20bd5a",
       target: "_blank",
@@ -14,14 +16,14 @@ const StickyContactButtons = () => {
     {
       label: "Call Now",
       href: "tel:+919873735713",
-      icon: Phone,
+      icon: MdCall,
       bg: "#2563eb",
       hoverBg: "#1d4ed8",
     },
     {
       label: "Call Now",
       href: "tel:+919873735716",
-      icon: Phone,
+      icon: MdCall,
       bg: "#2563eb",
       hoverBg: "#1d4ed8",
     },
@@ -79,8 +81,8 @@ const StickyContactButtons = () => {
               className="absolute left-0 top-0 z-20 flex h-12 w-12 shrink-0 items-center justify-center"
             >
               <Icon
-                className="h-[21px] w-[21px]"
-                strokeWidth={2.3}
+                className="h-[28px] w-[28px]"
+                
               />
             </motion.div>
 
