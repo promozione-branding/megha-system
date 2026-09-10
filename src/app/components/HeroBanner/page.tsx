@@ -66,6 +66,18 @@ const HERO_SLIDES = [
 
 const projects = [
 
+   {
+    id: 2,
+    image: "/hero2/foxconn.webp",
+    logo: '/assets/clients/Apple (2).webp',
+    title: "Manufacturing Facility",
+    stats: "Premium Restroom Solutions",
+    description:
+      "500+ toilet cubicles installed at the Foxconn facility for Apple",
+    button: "View Project",
+    href: "#",
+  },
+
   {
     id: 1,
     image: "/hero2/marutiDoor.webp",
@@ -78,17 +90,7 @@ const projects = [
     href: "#",
   },
 
-  {
-    id: 2,
-    image: "/hero2/foxconn.webp",
-    logo: '/assets/clients/Apple (2).webp',
-    title: "Manufacturing Facility",
-    stats: "Premium Restroom Solutions",
-    description:
-      "500+ toilet cubicles installed at the Foxconn facility for Apple",
-    button: "View Project",
-    href: "#",
-  },
+ 
 
   {
     id: 3,
@@ -375,6 +377,7 @@ export default function HeroSection() {
               <Swiper
                 modules={[EffectFade, Pagination]}
                 effect="fade"
+                speed={800}
                 loop={true}
                 pagination={{ clickable: true }}
 
@@ -543,9 +546,8 @@ export default function HeroSection() {
             <Swiper
               modules={[Autoplay, Navigation]}
 
-              loop={projects.length > 3}
-
-              speed={800}
+               speed={2000}
+                loop={true}
 
               spaceBetween={18}
 
@@ -553,7 +555,7 @@ export default function HeroSection() {
               
 
               autoplay={{
-                delay: 3500,
+                
                 disableOnInteraction: false,
                 pauseOnMouseEnter: true,
               }}
