@@ -627,7 +627,11 @@ export default function HeroSection() {
    PROJECT CARD
 ============================================================ */
 
-function ProjectCard({ project }) {
+function ProjectCard({
+  project,
+}: {
+  project: (typeof projects)[number];
+}) {
 
   return (
 
