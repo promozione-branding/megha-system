@@ -339,12 +339,11 @@ export default function HeroSection() {
               <video
                 ref={videoRef}
                 src="/assets/video/meg (1).mp4"
-                controls
-                autoPlay
-                muted
-                loop
-                playsInline
-                preload="auto"
+                 autoPlay
+  muted
+  loop
+  playsInline
+  preload="auto"
                 className="w-full h-full object-fill"
               />
 
@@ -358,12 +357,11 @@ export default function HeroSection() {
               <video
                 ref={videoRef}
                 src="/assets/video/CLIP 4 COMPRESSED.mp4"
-                controls
-                autoPlay
-                muted
-                loop
-                playsInline
-                preload="auto"
+                 autoPlay
+  muted
+  loop
+  playsInline
+  preload="auto"
                 className="w-full h-full object-fill"
               />
 
@@ -482,7 +480,7 @@ export default function HeroSection() {
 
               <video
                 src="/assets/video/video_1.mp4"
-                controls
+                
                 autoPlay
                 className="w-full h-full object-contain"
               >
@@ -519,7 +517,7 @@ export default function HeroSection() {
               NO AUTOPLAY
           ================================================= */}
 
-          <div className="hidden min-[1200px]:grid grid-cols-4 gap-[18px]">
+          <div className="hidden  min-[1200px]:grid grid-cols-4 gap-[18px]">
 
             {projects.map((project) => (
 
@@ -637,7 +635,7 @@ function ProjectCard({
 
   return (
 
-    <article className="group relative h-[175px] overflow-hidden rounded-[12px] border border-[#e5e5e5] bg-white shadow-[0_3px_15px_rgba(0,0,0,0.04)] transition-all duration-500 hover:-translate-y-1 hover:shadow-[0_12px_35px_rgba(0,0,0,0.10)]">
+    <article className="group relative h-[250px]  md:h-[220px] overflow-hidden rounded-[12px] border border-[#e5e5e5] bg-white shadow-[0_3px_15px_rgba(0,0,0,0.04)] transition-all duration-500 hover:-translate-y-1 hover:shadow-[0_12px_35px_rgba(0,0,0,0.10)]">
 
 
       <div className="flex h-full">
@@ -677,7 +675,7 @@ function ProjectCard({
 
             {/* LOGO */}
 
-            <div className="mb-3 flex h-[30px] items-center">
+            <div className="mb-3 flex h-[40px] items-center">
 
               <Image
                 src={project.logo}
@@ -692,7 +690,7 @@ function ProjectCard({
 
             {/* TITLE */}
 
-            <h3 className="text-[14px] font-semibold leading-tight text-[#202020]">
+            <h3 className="text-[17px] font-semibold leading-tight text-[#202020]">
               {project.title}
             </h3>
 
@@ -706,7 +704,7 @@ function ProjectCard({
 
             {/* DESCRIPTION */}
 
-            <p className="mt-2 line-clamp-3 text-[9.5px] leading-[1.5] text-[#777]">
+            <p className="mt-2 line-clamp-3 text-[13px] text-[9.5px] leading-[1.5] text-[#777]">
               {project.description}
             </p>
 
@@ -720,7 +718,7 @@ function ProjectCard({
 
           <Link
             href="/projects"
-            className="mt-2 inline-flex w-fit items-center gap-1.5 rounded-[5px] border border-[#d8d8d8] bg-white px-3 py-1.5 text-[9px] font-medium text-[#222] transition-all duration-300 hover:border-[#222] hover:bg-[#222] hover:text-white"
+            className="mt-2 inline-flex w-fit  items-center gap-1.5 rounded-[5px] border border-[#d8d8d8] bg-white px-3 py-1.5 text-[13px] font-medium text-[#222] transition-all duration-300 hover:border-[#222] hover:bg-[#222] hover:text-white"
           >
 
             {project.button}

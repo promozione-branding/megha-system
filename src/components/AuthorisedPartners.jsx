@@ -1,6 +1,6 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { FreeMode } from "swiper/modules";
+import { Autoplay, FreeMode } from "swiper/modules";
 
 import "swiper/css";
 import "swiper/css/free-mode";
@@ -70,26 +70,33 @@ export default function AuthorisedPartners() {
 
                 {/* ================= MOBILE SWIPER ================= */}
                 <div className="md:hidden">
-                    <Swiper
-                        modules={[FreeMode]}
-                        spaceBetween={5}
-                        slidesPerView={2}
-                        freeMode={{
-                            enabled: true,
-                            sticky: false,
-                        }}
-                        grabCursor
-                        className="!overflow-visible"
-                    >
-                        {partners.map((partner) => (
-                            <SwiperSlide
-                                key={partner.name}
-                                className="!h-auto"
-                            >
-                                <PartnerCard partner={partner} />
-                            </SwiperSlide>
-                        ))}
-                    </Swiper>
+                   <Swiper
+    modules={[FreeMode, Autoplay]}
+    spaceBetween={8}
+    slidesPerView={2}
+    freeMode={{
+        enabled: true,
+        sticky: false,
+    }}
+    autoplay={{
+        delay: 1800,
+        disableOnInteraction: false,
+        pauseOnMouseEnter: false,
+    }}
+    speed={700}
+    loop={true}
+    grabCursor
+    className="!overflow-visible"
+>
+    {partners.map((partner) => (
+        <SwiperSlide
+            key={partner.name}
+            className="!h-auto"
+        >
+            <PartnerCard partner={partner} />
+        </SwiperSlide>
+    ))}
+</Swiper>
                 </div>
             </div>
         </section>
