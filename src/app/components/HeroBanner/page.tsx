@@ -635,7 +635,7 @@ function ProjectCard({
 
   return (
 
-    <article className="group relative h-[250px]  md:h-[220px] overflow-hidden rounded-[12px] border border-[#e5e5e5] bg-white shadow-[0_3px_15px_rgba(0,0,0,0.04)] transition-all duration-500 hover:-translate-y-1 hover:shadow-[0_12px_35px_rgba(0,0,0,0.10)]">
+    <article className="group relative h-[250px]  md:h-[230px] overflow-hidden rounded-[12px] border border-[#e5e5e5] bg-white shadow-[0_3px_15px_rgba(0,0,0,0.04)] transition-all duration-500 hover:-translate-y-1 hover:shadow-[0_12px_35px_rgba(0,0,0,0.10)]">
 
 
       <div className="flex h-full">
