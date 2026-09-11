@@ -53,6 +53,7 @@ const products = [
   "Cubic Doorz",
   "Kiddiez",
   "Kiddiez Pro",
+  "Nylon Kiddiez",
   "Cielo",
   "Premia",
   "Rove",

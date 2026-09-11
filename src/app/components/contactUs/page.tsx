@@ -393,6 +393,7 @@ export default function ContactSection() {
 <option value="Cubic Doorz">Cubic Doorz</option>
 <option value="Kiddiez">Kiddiez</option>
 <option value="Kiddiez Pro">Kiddiez Pro</option>
+<option value="Nylon Kiddiez">Nylon Kiddiez</option>
 <option value="Cielo">Cielo</option>
 <option value="Premia">Premia</option>
 <option value="Rove">Rove</option>
