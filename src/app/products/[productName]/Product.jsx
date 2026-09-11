@@ -148,7 +148,7 @@ export default function ProjectDetail() {
         </div>
       </section>
 
-      <main className="flex-1 py-6 sm:py-8 lg:py-10 px-3 sm:px-6 lg:px-6 xl:px-8">
+      <main className="flex-1 py-6 sm:py-8 lg:py-10 px-4 sm:px-6 lg:px-6 xl:px-8">
         <div className="max-w-[1850px] mx-auto flex flex-col-reverse lg:flex-row gap-6 lg:gap-10">
           {/* LEFT SIDEBAR */}
           <div className="w-full lg:w-1/3 xl:w-[350px] flex flex-col gap-6 flex-shrink-0">
