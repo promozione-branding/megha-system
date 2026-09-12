@@ -1,3 +1,4 @@
+
 'use client';
 
 import React, { useState } from 'react';
@@ -59,10 +60,10 @@ const services: ServiceItem[] = [
   },
 ];
 
-export default function ServicesSection() {
+export default function ServicesSection(): React.ReactElement {
   const [activeCard, setActiveCard] = useState<number | null>(null);
 
-  const handleCardClick = (id: number) => {
+  const handleCardClick = (id: number): void => {
     // Click behavior only for mobile/tablet
     if (window.innerWidth < 1024) {
       setActiveCard((prev) => (prev === id ? null : id));
@@ -70,33 +71,32 @@ export default function ServicesSection() {
   };
 
   return (
-    <section className="w-full bg-white py-4 sm:py-8 px-4 sm:px-8 lg:px-12 font-sans antialiased text-[#111111] overflow-hidden">
-      <div className="max-w-[1750px] mx-auto space-y-8 lg:px-6">
-
+    <section className="w-full bg-white py-4 px-4 font-sans antialiased text-[#111111] overflow-hidden sm:px-8 sm:py-8 lg:px-12">
+      <div className="mx-auto max-w-[1750px] space-y-8 lg:px-6">
         {/* Header Block */}
-        <header className="text-center max-w-3xl mx-auto pt-4 flex flex-col items-center">
-          <p className="text-[10px] sm:text-[11px] font-bold tracking-[0.4em] text-gray-400 uppercase mb-3">
+        <header className="mx-auto flex max-w-3xl flex-col items-center pt-4 text-center">
+          <p className="mb-3 text-[10px] font-bold uppercase tracking-[0.4em] text-gray-400 sm:text-[11px]">
             OUR CAPABILITIES
           </p>
 
-          <h2 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-[#111111] leading-[1.1] mb-2">
+          <h2 className="mb-2 text-3xl font-extrabold leading-[1.1] tracking-tight text-[#111111] sm:text-5xl lg:text-6xl">
             What{' '}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-gray-400 to-gray-600 font-medium">
+            <span className="bg-gradient-to-r from-gray-400 to-gray-600 bg-clip-text font-medium text-transparent">
               Goes
             </span>{' '}
             Into
             <br className="hidden sm:block" /> A Better Cubicle.
           </h2>
 
-          <p className="text-sm sm:text-base text-gray-500 max-w-2xl mx-auto leading-relaxed">
+          <p className="mx-auto max-w-2xl text-sm leading-relaxed text-gray-500 sm:text-base">
             From premium materials and precision hardware to smart space
             planning and expert installation, every element is carefully
             engineered to deliver lasting performance and a refined finish.
           </p>
         </header>
 
-        {/* Services Grid with Permanent Alternating Staggered Offset */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-5 items-start py-5 lg:pt-10 lg:pb-20">
+        {/* Services Grid */}
+        <div className="grid grid-cols-1 items-start gap-6 py-5 sm:grid-cols-2 lg:grid-cols-4 lg:gap-5 lg:pb-20 lg:pt-10">
           {services.map((service, index) => {
             const Icon = service.icon;
             const isStaggered = index % 2 === 0;
@@ -121,87 +121,172 @@ export default function ServicesSection() {
                     ease: [0.21, 0.47, 0.32, 0.98],
                   }}
                   onClick={() => handleCardClick(service.id)}
-                  className={`group relative rounded-[32px] p-6 sm:p-6 flex flex-col justify-between min-h-[380px] sm:min-h-[420px] transition-all duration-500 overflow-hidden cursor-pointer ${
+                  className={`group relative flex min-h-[380px] cursor-pointer flex-col justify-between overflow-hidden rounded-[32px] p-6 transition-all duration-500 sm:min-h-[420px] sm:p-6 ${
                     service.isImageCard
-                      ? 'shadow-2xl border border-transparent'
-                      : 'bg-gradient-to-b from-white to-[#f4f5f7] border border-[#e5e7eb] shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_20px_50px_rgba(0,0,0,0.1)]'
+                      ? 'border border-transparent shadow-2xl'
+                      : 'border border-[#e5e7eb] bg-gradient-to-b from-white to-[#f4f5f7] shadow-[0_8px_30px_rgb(0,0,0,0.04)] lg:hover:shadow-[0_20px_50px_rgba(0,0,0,0.1)]'
                   }`}
                 >
-                  {/* Background Image & Rich Gradient Overlay */}
+                  {/* Background Image */}
                   <div
-                    className={`absolute inset-0 transition-all duration-700 z-0 ${
-                      service.isImageCard
-                        ? 'opacity-100'
-                        : `opacity-0 group-hover:opacity-100 ${
-                            activeCard === service.id
-                              ? 'max-lg:opacity-100'
-                              : ''
-                          }`
-                    }`}
+                    className={`
+                      absolute
+                      inset-0
+                      z-0
+                      overflow-hidden
+                      transition-opacity
+                      duration-700
+
+                      ${
+                        service.isImageCard
+                          ? 'opacity-100'
+                          : `
+                            max-lg:opacity-100
+                            lg:opacity-0
+                            lg:group-hover:opacity-100
+                          `
+                      }
+
+                      ${
+                        activeCard === service.id
+                          ? 'max-lg:opacity-100'
+                          : ''
+                      }
+                    `}
                   >
                     <img
                       src={service.bgImage}
                       alt={service.title}
-                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-[1.5s] ease-out"
+                      className="
+                        h-full
+                        w-full
+                        object-cover
+                        transition-transform
+                        duration-[1.5s]
+                        ease-out
+                        max-lg:scale-100
+                        lg:group-hover:scale-110
+                      "
                     />
 
                     <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-black/10 opacity-90 transition-opacity duration-500" />
                   </div>
 
-                  {/* Card Top: Icon & Text */}
+                  {/* Card Top */}
                   <div className="relative z-10 space-y-6">
-
-                    {/* Floating Icon Container */}
+                    {/* Floating Icon */}
                     <div
-                      className={`w-14 h-14 rounded-2xl flex items-center justify-center transition-all duration-500 ${
+                      className={`flex h-14 w-14 items-center justify-center rounded-2xl transition-all duration-500 ${
                         service.isImageCard
-                          ? 'bg-white/20 backdrop-blur-md border border-white/30 text-white shadow-lg'
-                          : 'bg-white shadow-sm border border-gray-100 text-[#111111] group-hover:bg-white/20 group-hover:backdrop-blur-md group-hover:border-white/30 group-hover:text-white group-hover:shadow-lg'
+                          ? 'border border-white/30 bg-white/20 text-white shadow-lg backdrop-blur-md'
+                          : `
+                            border
+                            border-gray-100
+                            bg-white
+                            text-[#111111]
+                            shadow-sm
+
+                            max-lg:border-white/30
+                            max-lg:bg-white/20
+                            max-lg:text-white
+                            max-lg:shadow-lg
+                            max-lg:backdrop-blur-md
+
+                            lg:group-hover:border-white/30
+                            lg:group-hover:bg-white/20
+                            lg:group-hover:text-white
+                            lg:group-hover:shadow-lg
+                            lg:group-hover:backdrop-blur-md
+                          `
                       }`}
                     >
-                      <Icon className="w-7 h-7 stroke-[1.5]" />
+                      <Icon className="h-7 w-7 stroke-[1.5]" />
                     </div>
 
                     {/* Title & Description */}
                     <div className="space-y-3">
-                    <h3
-  className={`text-xl sm:text-2xl font-bold tracking-tight leading-snug transition-colors duration-500 ${
-    service.isImageCard
-      ? "text-white"
-      : activeCard === service.id
-        ? "text-white"
-        : "text-[#111111] group-hover:text-white"
-  }`}
->
-  {service.title}
-</h3>
+                      <h3
+                        className={`
+                          text-xl
+                          font-bold
+                          leading-snug
+                          tracking-tight
+                          transition-colors
+                          duration-500
+                          sm:text-2xl
+
+                          ${
+                            service.isImageCard
+                              ? 'text-white'
+                              : `
+                                max-lg:text-white
+                                lg:text-[#111111]
+                                lg:group-hover:text-white
+                              `
+                          }
+                        `}
+                      >
+                        {service.title}
+                      </h3>
 
                       <p
-  className={`text-sm leading-relaxed transition-colors duration-500 ${
-    service.isImageCard
-      ? 'text-white'
-      : activeCard === service.id
-        ? 'text-gray-300'
-        : 'text-[#111111] group-hover:text-white'
-  }`}
->
-  {service.description}
-</p>
+                        className={`
+                          text-sm
+                          leading-relaxed
+                          transition-colors
+                          duration-500
+
+                          ${
+                            service.isImageCard
+                              ? 'text-white'
+                              : `
+                                max-lg:text-gray-300
+                                lg:text-[#111111]
+                                lg:group-hover:text-white
+                              `
+                          }
+                        `}
+                      >
+                        {service.description}
+                      </p>
                     </div>
                   </div>
 
-                  {/* Card Bottom: Elegant Arrow Button */}
-                  <div className="relative z-10 pt-8 flex justify-end">
+                  {/* Card Bottom */}
+                  <div className="relative z-10 flex justify-end pt-8">
                     <Link
                       href="/products"
-                      onClick={(e) => e.stopPropagation()}
-                      className={`w-12 h-12 rounded-full flex items-center justify-center transition-all duration-500 ${
-                        service.isImageCard
-                          ? 'bg-white text-[#111111] shadow-[0_0_20px_rgba(255,255,255,0.3)] hover:scale-110'
-                          : 'bg-white border border-gray-200 text-[#111111] shadow-sm group-hover:bg-white group-hover:border-transparent group-hover:shadow-[0_0_20px_rgba(255,255,255,0.3)] group-hover:scale-110'
-                      }`}
+                      onClick={(e: React.MouseEvent<HTMLAnchorElement>) =>
+                        e.stopPropagation()
+                      }
+                      className={`
+                        flex
+                        h-12
+                        w-12
+                        items-center
+                        justify-center
+                        rounded-full
+                        transition-all
+                        duration-500
+
+                        ${
+                          service.isImageCard
+                            ? 'bg-white text-[#111111] shadow-[0_0_20px_rgba(255,255,255,0.3)] hover:scale-110'
+                            : `
+                              border
+                              border-gray-200
+                              bg-white
+                              text-[#111111]
+                              shadow-sm
+
+                              lg:group-hover:border-transparent
+                              lg:group-hover:shadow-[0_0_20px_rgba(255,255,255,0.3)]
+                              lg:group-hover:scale-110
+                            `
+                        }
+                      `}
                     >
-                      <ChevronRight className="w-5 h-5 stroke-[2]" />
+                      <ChevronRight className="h-5 w-5 stroke-[2]" />
                     </Link>
                   </div>
                 </motion.div>
@@ -213,3 +298,4 @@ export default function ServicesSection() {
     </section>
   );
 }
+

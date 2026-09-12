@@ -31,8 +31,8 @@ const HERO_SLIDES = [
     description:
       'Designed with precision. With 500+ toilet cubicles installed at the Foxconn facility for Apple, our solutions bring together scale, precision, and dependable performance.',
     // src: '/assets/hero_section_images/Apple-BKC-Mumbai-India-media-preview-hero_Full-Bleed-Image.jpg.slideshow-large.jpg.jpeg',
-    src:"/appleNew.webp",
-    mobileSrc:"/mapple.webp",
+    src:"/foxconnF.webp",
+    mobileSrc:"/appleMF.webp",
     alt: 'Apple BKC Architectural Showcase',
   },
 
@@ -42,8 +42,8 @@ const HERO_SLIDES = [
     description:
       'Built around performance. Delivered for Maruti Suzuki. With 4,000+ toilet cubicles installed at the Kadkhoda plant, our solutions are made for scale, precision, and demanding environments.',
     // src: '/assets/hero_section_images/l53220260518130534.webp',
-    src:"/marutiNew.webp",
-        mobileSrc:"/mmaruti.webp",
+    src:"/marutiF.webp",
+        mobileSrc:"/marutiMF.webp",
 
     alt: 'maruti suzuki',
   },
@@ -54,8 +54,8 @@ const HERO_SLIDES = [
     description:
       'Designed for demanding footfall. Delivered across 50+ MCD & McDonald’s outlets, our toilet cubicles combine durability, hygiene, and consistent performance across every location.',
     // src: '/assets/hero_section_images/McDonald-1.jpg.jpeg',
-    src:"/mcdNew.webp",
-        mobileSrc:"/mmcd.webp",
+    src:"/MCDF.webp",
+        mobileSrc:"/mcdMF.webp",
 
     alt: 'McDonald',
   },
@@ -65,8 +65,8 @@ const HERO_SLIDES = [
     title: 'Built for Modern Washrooms.',
     description:
       'Designed for scale and precision. 650+ toilet cubicles installed at OPPO’s Kasna factory, delivering durability, functionality, and dependable performance.',
-    src:  "/oppoNew.webp",
-        mobileSrc:"/moppo.webp",
+    src:  "/OppoF.webp",
+        mobileSrc:"/oppoMF.webp",
 
     alt: 'Oppo',
   },
