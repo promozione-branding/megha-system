@@ -41,7 +41,7 @@ const projects: Project[] = [
     title: "Urinal Modesty Panels",
     description:
       "Our urinal cubicle solutions are designed for busy washrooms, combining smart space utilization, durable construction, and easy maintenance.",
-    image: "/uni2.webp",
+    image: "/uniNew.jpeg",
     details:
       "Megha Systems urinal partitions provide privacy and efficient space utilization for commercial, institutional, and high-traffic washrooms. Our systems are manufactured using durable materials designed for regular use and easy maintenance.",
     features: [
