@@ -207,11 +207,9 @@ export default function FooterSection() {
         </div>
 
         {/* Bottom Sub-bar */}
-        <div className="pt-8 border-t border-white/15 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-white/70 relative z-20 pb-10">
+        <div className="pt-8 border-t border-white/15 flex flex-col sm:flex-row items-center justify-center gap-4 text-sm text-white/70 relative z-20 pb-10">
           <p>© 2026 Megha Systems. All rights reserved.</p>
-          <div className="flex items-center gap-8">
-            <p>Website Designed By <Link href="https://inquirybazaar.com" target="_blank" className="hover:text-white transition-colors text-[#CF9306]">Inquiry Bazaar Pvt. Ltd.</Link> B2B Marketplace</p>
-          </div>
+          
         </div>
 
       </div>
