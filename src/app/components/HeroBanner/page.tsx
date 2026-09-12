@@ -32,6 +32,7 @@ const HERO_SLIDES = [
       'Designed with precision. With 500+ toilet cubicles installed at the Foxconn facility for Apple, our solutions bring together scale, precision, and dependable performance.',
     // src: '/assets/hero_section_images/Apple-BKC-Mumbai-India-media-preview-hero_Full-Bleed-Image.jpg.slideshow-large.jpg.jpeg',
     src:"/appleNew.webp",
+    mobileSrc:"/mapple.webp",
     alt: 'Apple BKC Architectural Showcase',
   },
 
@@ -42,6 +43,8 @@ const HERO_SLIDES = [
       'Built around performance. Delivered for Maruti Suzuki. With 4,000+ toilet cubicles installed at the Kadkhoda plant, our solutions are made for scale, precision, and demanding environments.',
     // src: '/assets/hero_section_images/l53220260518130534.webp',
     src:"/marutiNew.webp",
+        mobileSrc:"/mmaruti.webp",
+
     alt: 'maruti suzuki',
   },
 
@@ -52,6 +55,8 @@ const HERO_SLIDES = [
       'Designed for demanding footfall. Delivered across 50+ MCD & McDonald’s outlets, our toilet cubicles combine durability, hygiene, and consistent performance across every location.',
     // src: '/assets/hero_section_images/McDonald-1.jpg.jpeg',
     src:"/mcdNew.webp",
+        mobileSrc:"/mmcd.webp",
+
     alt: 'McDonald',
   },
 
@@ -61,6 +66,8 @@ const HERO_SLIDES = [
     description:
       'Designed for scale and precision. 650+ toilet cubicles installed at OPPO’s Kasna factory, delivering durability, functionality, and dependable performance.',
     src:  "/oppoNew.webp",
+        mobileSrc:"/moppo.webp",
+
     alt: 'Oppo',
   },
 
@@ -375,48 +382,50 @@ export default function HeroSection() {
 
             <div className="relative min-h-[320px] sm:min-h-[380px] lg:min-h-[440px] xl:min-h-[480px] w-full overflow-hidden rounded-[22px] shadow-sm group/slider">
 
-              <Swiper
-                modules={[EffectFade, Pagination]}
-                effect="fade"
-                speed={800}
-                loop={true}
-                pagination={{ clickable: true }}
+             <Swiper
+  modules={[EffectFade, Pagination]}
+  effect="fade"
+  speed={800}
+  loop={true}
+  pagination={{ clickable: true }}
+  onSwiper={(swiper) => {
+    swiperRef.current = swiper;
+  }}
+  onSlideChange={(swiper) => {
+    setActiveSlideIndex(swiper.realIndex);
+  }}
+  className="hero-swiper h-full md:h-full w-full text-white"
+>
+  {HERO_SLIDES.map((slide) => (
+    <SwiperSlide
+      key={slide.id}
+      className="relative h-[200px] w-full sm:min-h-[380px] lg:min-h-[440px] xl:min-h-[480px]"
+    >
+      {/* Desktop Image */}
+      <Image
+        src={slide.src}
+        alt={slide.alt}
+        fill
+        priority={slide.id === 1}
+        sizes="(max-width: 767px) 0vw, 100vw"
+        className="hidden object-fit object-center md:block"
+      />
 
-                onSwiper={(swiper) => {
-                  swiperRef.current = swiper;
-                }}
+      {/* Mobile Image */}
+      <Image
+        src={slide.mobileSrc}
+        alt={slide.alt}
+        fill
+        priority={slide.id === 1}
+        sizes="100vw"
+        className="object-fill object-center md:hidden"
+      />
 
-                onSlideChange={(swiper) => {
-                  setActiveSlideIndex(swiper.realIndex);
-                }}
-
-                className="w-full h-full hero-swiper text-white"
-              >
-
-                {HERO_SLIDES.map((slide) => (
-
-                  <SwiperSlide
-                    key={slide.id}
-                    className="relative w-full h-full min-h-[320px] sm:min-h-[380px] lg:min-h-[440px] xl:min-h-[480px]"
-                  >
-
-                    <Image
-                      src={slide.src}
-                      alt={slide.alt}
-                      fill
-                      priority={slide.id === 1}
-                      className="object-fit md:object-fit object-center"
-                    />
-
-                    {/* Subtle Overlay Gradient */}
-
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent pointer-events-none" />
-
-                  </SwiperSlide>
-
-                ))}
-
-              </Swiper>
+      {/* Overlay */}
+      <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent" />
+    </SwiperSlide>
+  ))}
+</Swiper>
 
             </div>
 
