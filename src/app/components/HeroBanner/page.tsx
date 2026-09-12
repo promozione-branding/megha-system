@@ -405,7 +405,7 @@ export default function HeroSection() {
                       alt={slide.alt}
                       fill
                       priority={slide.id === 1}
-                      className="object-fill object-center"
+                      className="object-fit md:object-fit object-center"
                     />
 
                     {/* Subtle Overlay Gradient */}
