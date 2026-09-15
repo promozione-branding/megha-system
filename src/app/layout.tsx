@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import { Geist, Geist_Mono, Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 
@@ -18,10 +19,32 @@ const jakartaSans = Plus_Jakarta_Sans({
   weight: ["300", "400", "500", "600", "700", "800"],
 });
 
-
 export const metadata: Metadata = {
-  title: "Megha Systems | Toilet Cubicle Partition & Restroom Partition in India",
-  description: "Explore premium toilet cubicles and washroom partition by Megha Systems, from standard and luxury cubicles to kids, urinal, wall-hung, and customized systems.",
+  title:
+    "Megha Systems | Toilet Cubicle Partition & Restroom Partition in India",
+  description:
+    "Explore premium toilet cubicles and washroom partition by Megha Systems, from standard and luxury cubicles to kids, urinal, wall-hung, and customized systems.",
+};
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://toiletcubiclemanufacturer.com/#organization",
+      name: "Toilet Cubicle Manufacturer",
+      url: "https://toiletcubiclemanufacturer.com/",
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://toiletcubiclemanufacturer.com/#website",
+      url: "https://toiletcubiclemanufacturer.com/",
+      name: "Toilet Cubicle Manufacturer",
+      publisher: {
+        "@id": "https://toiletcubiclemanufacturer.com/#organization",
+      },
+    },
+  ],
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
@@ -30,6 +53,20 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} ${jakartaSans.variable} h-full antialiased`}
     >
+      <head>
+        <link
+          rel="canonical"
+          href="https://toiletcubiclemanufacturer.com/"
+        />
+        <Script
+          id="website-schema"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(jsonLd),
+          }}
+        />
+      </head>
+
       <body className="min-h-full flex flex-col">{children}</body>
     </html>
   );
