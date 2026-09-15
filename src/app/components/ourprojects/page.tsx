@@ -26,7 +26,7 @@ const projects: Project[] = [
     description:
       "Created for premium environments, our luxury cubicles bring together sophisticated finishes, premium materials, and precision detailing to make every washroom feel considered.",
     image:
-      "/luxe4.jpeg",
+      "/WhatsApp Image 2026-09-14 at 6.17.59 PM.jpeg",
     details:
       "Our luxury toilet cubicles are designed for premium commercial and hospitality environments where aesthetics, durability, and attention to detail matter. We offer refined finishes and practical configurations that create a sophisticated washroom experience.",
     features: [
