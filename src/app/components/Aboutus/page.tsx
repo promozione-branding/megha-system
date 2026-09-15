@@ -44,7 +44,7 @@ export default function AboutUs() {
             </motion.div>
 
             {/* Heading */}
-            <h2 className="text-3xl font-extrabold leading-[1.04] tracking-tight sm:text-5xl lg:text-[55px]">
+            <h1 className="text-3xl font-extrabold leading-[1.04] tracking-tight sm:text-5xl lg:text-[55px]">
               <span className="font-medium text-[#0d2461]/40">From</span>{' '}
               Expertise{' '}
               <span className="font-medium text-[#0d2461]/40">to</span>{' '}
@@ -56,7 +56,7 @@ export default function AboutUs() {
               <span className="block text-[#0d2461]">
                 Designed for performance.
               </span>
-            </h2>
+            </h1>
           </motion.div>
 
           {/* Right Column */}

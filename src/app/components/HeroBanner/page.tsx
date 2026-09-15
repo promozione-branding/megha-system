@@ -287,7 +287,7 @@ export default function HeroSection() {
 
           {/* Main Headline */}
 
-          <h1 className="text-3xl sm:text-6xl lg:text-[68px] xl:text-[76px] font-semibold tracking-[-0.04em] text-black leading-[1.02] max-w-7xl">
+          <h2 className="text-3xl sm:text-6xl lg:text-[68px] xl:text-[76px] font-semibold tracking-[-0.04em] text-black leading-[1.02] max-w-7xl">
 
             <TypewriterText
               key={`title-${activeSlideIndex}`}
@@ -295,7 +295,7 @@ export default function HeroSection() {
               speed={45}
             />
 
-          </h1>
+          </h2>
 
 
           {/* Action Button & Description Row */}
