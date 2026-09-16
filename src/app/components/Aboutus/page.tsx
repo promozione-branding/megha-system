@@ -45,17 +45,9 @@ export default function AboutUs() {
 
             {/* Heading */}
             <h1 className="text-3xl font-extrabold leading-[1.04] tracking-tight sm:text-5xl lg:text-[55px]">
-              <span className="font-medium text-[#0d2461]/40">From</span>{' '}
-              Expertise{' '}
-              <span className="font-medium text-[#0d2461]/40">to</span>{' '}
-              Excellence,
-              <br className="hidden sm:block" />
-              <span className="block font-medium text-[#0d2461]/40">
-                Built around precision.
-              </span>
-              <span className="block text-[#0d2461]">
-                Designed for performance.
-              </span>
+              Toilet Cubicle Partition,{' '}
+              <span className="font-medium text-[#0d2461]/40"> Built to Perform.</span>{' '}
+             
             </h1>
           </motion.div>
 
