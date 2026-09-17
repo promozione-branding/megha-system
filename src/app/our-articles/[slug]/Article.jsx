@@ -116,54 +116,29 @@ export default function Article({ blog }) {
         )}
 
         {/* Content */}
-        <motion.article
-          className="mx-auto mt-10 max-w-4xl sm:mt-14"
-          initial={{
-            opacity: 0,
-            y: 20,
-          }}
-          animate={{
-            opacity: 1,
-            y: 0,
-          }}
-          transition={{
-            duration: 0.6,
-            delay: 0.2,
-          }}
-        >
-          <div
-            className="
-                            prose
-                            prose-lg
-                            max-w-none
-                            text-[#0d2461]/80
-
-                            prose-headings:font-extrabold
-                            prose-headings:text-[#0d2461]
-
-                            prose-h1:text-4xl
-                            prose-h2:text-3xl
-                            prose-h3:text-2xl
-
-                            prose-p:leading-[1.9]
-
-                            prose-a:font-semibold
-                            prose-a:text-[#0d2461]
-
-                            prose-strong:text-[#0d2461]
-
-                            prose-blockquote:border-[#f5bd24]
-                            prose-blockquote:text-[#0d2461]/70
-
-                            prose-img:rounded-2xl
-                        "
-            dangerouslySetInnerHTML={{
-              __html:
-                blog.content ||
-                '<p>No content available.</p>',
-            }}
-          />
-        </motion.article>
+       {/* Content */}
+<motion.article
+  className="mx-auto mt-10 max-w-4xl sm:mt-14"
+  initial={{
+    opacity: 0,
+    y: 20,
+  }}
+  animate={{
+    opacity: 1,
+    y: 0,
+  }}
+  transition={{
+    duration: 0.6,
+    delay: 0.2,
+  }}
+>
+  <div
+    className="blog-content"
+    dangerouslySetInnerHTML={{
+      __html: blog.content || "<p>No content available.</p>",
+    }}
+  />
+</motion.article>
 
       </div>
     </main>
