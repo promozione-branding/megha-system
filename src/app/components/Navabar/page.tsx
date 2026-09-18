@@ -147,7 +147,7 @@ export default function Navbar() {
               <Image
                 width={100}
                 height={100}
-                src="/assets/logo/1.png"
+                src="/assets/logo/1logo.webp"
                 alt="Megha Systems"
                  unoptimized
                 className="object-contain h-full w-full"
