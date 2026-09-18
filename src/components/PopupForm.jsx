@@ -172,7 +172,7 @@ export default function PopupForm({ isOpen, onClose }) {
                 {/* Brand */}
                 <div className="flex items-center gap-3">
                   <img
-                    src="/assets/logo/1.png"
+                     src="/assets/logo/1logo.webp"
                     alt="logo"
                     className="rounded-lg"
                   />

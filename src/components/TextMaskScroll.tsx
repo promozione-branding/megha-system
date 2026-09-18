@@ -292,7 +292,7 @@ export default function TextMaskScroll() {
                 <Image
                 height={100}
                 width={100}
-                  src="/assets/logo/1.png"
+                   src="/assets/logo/1logo.webp"
                   alt="Megha System"
                   className="block w-full h-auto"
                 />
