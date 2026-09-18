@@ -121,7 +121,7 @@ export const allProducts = [
           "Black Maxi toilet cubicles combine premium PVD stainless steel hardware, modern design, durability, and corrosion resistance for high-traffic spaces.",
         shortDescription:
           "The BLACK MAXI Series brings a bold, sophisticated look to modern washrooms with premium PVD-coated stainless steel hardware and a refined matte black finish. Engineered for high-traffic environments, it combines luxury aesthetics with strength, corrosion resistance, and lasting performance.",
-        hardwareImg: "/hardware/Blackmaxi.webp",
+        hardwareImg: "/hardware/blackmaxihardware22.jpeg",
         rightImg: "/right/backmaxi.jpeg",
         dimensions: [
           {
@@ -190,7 +190,7 @@ export const allProducts = [
         shortDescription:
           "The MAXI PRO Series is a practical and durable toilet cubicle partition designed for modern commercial washrooms. With a stable aluminium structure, precision-fitted panels, flexible door configuration, and reliable stainless steel hardware, MAXI PRO delivers privacy, comfort, and dependable everyday performance.",
 
-        hardwareImg: "/hardware/Maxipro.webp",
+        hardwareImg: "/hardware/maxprohardwar22.jpeg",
         rightImg: "/right/max-pro-2.webp",
 
         dimensions: [
@@ -678,7 +678,7 @@ export const allProducts = [
         shortDescription:
           "The CIELO Series brings a clean, floating aesthetic to modern washrooms with its innovative ceiling-hung design. With no floor contact, the system creates a seamless visual appearance while making floor cleaning easier, improving hygiene, and reducing maintenance.",
 
-        hardwareImg: "/hardware/Cielo.webp",
+        hardwareImg: "/hardware/celiohardware22.jpeg",
         rightImg: "/right/ceilo.jpeg",
 
         dimensions: [
@@ -798,7 +798,7 @@ export const allProducts = [
           "Rove wall-hung toilet cubicles offer a modern floor-free design with durable panels, corrosion-resistant hardware, easy cleaning, and multiple finish options.",
         shortDescription:
           "The ROVE Series is a modern wall-hung Restroom Partition Cubicle designed to create a clean, open, and floor-free washroom environment. Supported by heavy-duty wall brackets, ROVE combines lightweight construction with durable materials, making cleaning easier while enhancing hygiene and visual appeal.",
-        hardwareImg: "/hardware/rove.webp",
+        hardwareImg: "/hardware/rovehardware22.jpeg",
         rightImg: "/right/rove.jpeg",
 
         dimensions: [
