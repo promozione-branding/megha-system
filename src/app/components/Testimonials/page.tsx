@@ -53,7 +53,10 @@ export default function Testimonials() {
           {/* ================= LEFT IMAGE ================= */}
           <div className="relative z-10">
             <div className="relative h-full xl:aspect-[1.34/1] w-full overflow-hidden rounded-[14px]">
-              <img
+              <Image
+              height={100}
+              width={100}
+              unoptimized
                 src="/4.jpeg"
                 alt="Refined toilet cubicle interior"
                 className="h-full w-full object-cover"

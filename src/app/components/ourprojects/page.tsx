@@ -9,6 +9,7 @@ import {
   X,
 } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 
 interface Project {
   number: string;
@@ -296,7 +297,9 @@ export default function OurProjectsSection() {
 
                 {/* Image */}
                 <div className="relative min-h-[280px] overflow-hidden bg-neutral-100 lg:min-h-[600px]">
-                  <img
+                  <Image
+                  height={100}
+                  width={100}
                     src={selectedProject.image}
                     alt={selectedProject.title}
                     className="absolute inset-0 h-full w-full object-cover"

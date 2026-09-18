@@ -7,6 +7,7 @@ import {
   useMotionValueEvent,
   AnimatePresence,
 } from "framer-motion";
+import Image from "next/image";
 
 interface LayerData {
   id: number;
@@ -160,7 +161,10 @@ export default function LightWallSectionScroll() {
               <div className="lg:col-span-8">
                 <div className="relative w-full  rounded-3xl border border-[#e2e8f0] bg-white shadow-[0_20px_60px_rgba(13,36,97,0.10)]">
 
-                  <img
+                  <Image
+                  height={100}
+                  width={100}
+                  unoptimized
                     src="/assets/new2.jpeg"
                     alt="Bathroom cubicle system with numbered component markers"
                     className="block w-full rounded-2xl md:h-[80vh]"

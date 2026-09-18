@@ -5,6 +5,7 @@ import { Autoplay, FreeMode } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/free-mode";
 import Link from "next/link";
+import Image from "next/image";
 
 const partners = [
     {
@@ -153,7 +154,9 @@ function PartnerCard({ partner }) {
 
             {/* Logo */}
             <div className="flex flex-1 items-center justify-center py-6">
-                <img
+                <Image
+                width={100}
+                height={100}
                     src={partner.logo}
                     alt={`${partner.name} logo`}
                     loading="lazy"

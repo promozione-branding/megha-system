@@ -4,6 +4,7 @@ import { useRef, useState } from 'react';
 import { motion, useScroll, useTransform, MotionValue } from 'framer-motion';
 import PopupForm from '@/components/PopupForm';
 import Link from 'next/link';
+import Image from 'next/image';
 
 interface Project {
   id: number;
@@ -447,7 +448,10 @@ export default function Hero3() {
     "
                   >
                     {/* Image */}
-                    <img
+                    <Image
+                    height={100}
+                    width={100}
+                    unoptimized
                       src={project.image}
                       alt={project.title}
                       className="

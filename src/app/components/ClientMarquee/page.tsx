@@ -47,7 +47,6 @@ export default function ClientMarquee() {
                   alt={client.alt}
                   height={140}
                   width={140}
-                  className=""
                 />
               </div>
             </div>

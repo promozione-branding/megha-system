@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import { useRef, useEffect } from 'react';
 
 const SVG_MASK = `url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1100 200' preserveAspectRatio='xMidYMid meet'><text x='50%25' y='50%25' text-anchor='middle' dominant-baseline='middle' font-family='Arial,sans-serif' font-weight='900' font-size='110' fill='black'>MEGHA SYSTEMS</text></svg>")`;
@@ -288,7 +289,9 @@ export default function TextMaskScroll() {
                   sm:rounded-lg
                 "
               >
-                <img
+                <Image
+                height={100}
+                width={100}
                   src="/assets/logo/1.png"
                   alt="Megha System"
                   className="block w-full h-auto"

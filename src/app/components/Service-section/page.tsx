@@ -11,6 +11,7 @@ import {
   LayoutGrid,
 } from 'lucide-react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 interface ServiceItem {
   id: number;
@@ -154,7 +155,9 @@ export default function ServicesSection(): React.ReactElement {
                       }
                     `}
                   >
-                    <img
+                    <Image
+                      height={100}
+                      width={100}
                       src={service.bgImage}
                       alt={service.title}
                       className="

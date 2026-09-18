@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import { Plus, X, ChevronRight, Sparkles } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
+import Image from 'next/image';
 
 interface FAQItem {
   id: number;
@@ -65,7 +66,10 @@ export default function WashroomCubiclesFAQ() {
 
           {/* Media Card */}
           <div className="relative rounded-[28px] overflow-hidden shadow-md border border-neutral-200/80 bg-white">
-            <img
+            <Image
+            height={100}
+            width={100}
+            unoptimized
               src="/assets/faq.webp"
               alt="Premium Washroom Cubicle Partitions"
               className="w-full h-[270px] sm:h-[340px] object-cover"

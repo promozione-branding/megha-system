@@ -12,6 +12,7 @@ import {
 import Link from 'next/link';
 import { allProducts } from '@/data';
 import PopupForm from '@/components/PopupForm';
+import Image from 'next/image';
 
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -143,9 +144,12 @@ export default function Navbar() {
                 sm:max-lg:w-[190px]
               "
             >
-              <img
+              <Image
+                width={100}
+                height={100}
                 src="/assets/logo/1.png"
-                alt="Megha Systems Logo"
+                alt="Megha Systems"
+                 unoptimized
                 className="object-contain h-full w-full"
               />
             </div>
