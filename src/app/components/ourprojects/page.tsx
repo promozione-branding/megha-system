@@ -302,6 +302,7 @@ export default function OurProjectsSection() {
                   width={100}
                     src={selectedProject.image}
                     alt={selectedProject.title}
+                    unoptimized
                     className="absolute inset-0 h-full w-full object-cover"
                   />
 
