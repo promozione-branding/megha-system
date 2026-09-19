@@ -166,7 +166,7 @@ export default function LightWallSectionScroll() {
                   width={100}
                   unoptimized
                     src="/assets/new2.jpeg"
-                    alt="Bathroom cubicle system with numbered component markers"
+                    alt="Changing Room Cubicle Partition"
                     className="block w-full rounded-2xl md:h-[80vh]"
                   />
 

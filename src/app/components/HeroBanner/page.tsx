@@ -325,7 +325,7 @@ const ProjectCard = memo(function ProjectCard({
 });
 
 /* ============================================================
-   HERO SECTION
+   HERO SECTIONp;
 ============================================================ */
 
 export default function HeroSection() {
@@ -790,7 +790,7 @@ export default function HeroSection() {
           <div className="block min-[1200px]:hidden">
             <Swiper
               modules={[Autoplay, Navigation]}
-              speed={700}
+              speed={1000}
               loop
               spaceBetween={18}
               autoplay={{
