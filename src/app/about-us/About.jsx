@@ -239,7 +239,7 @@ export default function About() {
                             <div className="relative aspect-[1/1.05] overflow-hidden rounded-[28px] bg-gray-100">
                                 <img
                                     src="/newm.webp"
-                                    alt="Megha Systems toilet cubicle and washroom partition solutions"
+                                    alt="Urinal Partition"
                                     className="h-full w-full object-cover transition-transform duration-700 hover:scale-105"
                                 />
 

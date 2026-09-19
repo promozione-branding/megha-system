@@ -42,7 +42,7 @@ const HERO_SLIDES = [
       'Designed with precision. With 500+ toilet cubicles installed at the Foxconn facility for Apple, our solutions bring together scale, precision, and dependable performance.',
     src: '/foxconnF.webp',
     mobileSrc: '/appleMF.webp',
-    alt: 'Apple BKC Architectural Showcase',
+    alt: 'Apple BKC Architectural Toilet Cubicle Showcase',
   },
 
   {
@@ -52,7 +52,7 @@ const HERO_SLIDES = [
       'Built around performance. Delivered for Maruti Suzuki. With 4,000+ toilet cubicles installed at the Kadkhoda plant, our solutions are made for scale, precision, and demanding environments.',
     src: '/marutiF.webp',
     mobileSrc: '/marutiMF.webp',
-    alt: 'Maruti Suzuki',
+    alt: 'Maruti Suzuki  Toilet Cubicle Partition',
   },
 
   {
@@ -62,7 +62,7 @@ const HERO_SLIDES = [
       'Designed for demanding footfall. Delivered across 50+ MCD & McDonald’s outlets, our toilet cubicles combine durability, hygiene, and consistent performance across every location.',
     src: '/MCDF.webp',
     mobileSrc: '/mcdMF.webp',
-    alt: 'McDonald',
+    alt: 'McDonald Toilet Cubicle ',
   },
 
   {
@@ -72,7 +72,7 @@ const HERO_SLIDES = [
       'Designed for scale and precision. 650+ toilet cubicles installed at OPPO’s Kasna factory, delivering durability, functionality, and dependable performance.',
     src: '/OppoF.webp',
     mobileSrc: '/oppoMF.webp',
-    alt: 'Oppo',
+    alt: 'Oppo Toilet Cubicle',
   },
 ] as const;
 
@@ -86,6 +86,7 @@ const projects = [
     image: '/hero2/foxconn.webp',
     logo: '/assets/clients/Apple (2).webp',
     title: 'Manufacturing Facility',
+    alt:"Apple Toilet Cubicle Partition",
     stats: 'Premium Restroom Solutions',
     description:
       '500+ toilet cubicles installed at the Foxconn facility for Apple',
@@ -96,6 +97,7 @@ const projects = [
     id: 1,
     image: '/hero2/marutiDoor.webp',
     logo: '/assets/clients/maruti.webp',
+    alt:"Maruti Suzuki Toilet Cubicle Partition",
     title: 'Kharkhoda Plant',
     stats: '2,000+ Toilet Cubicles Installed',
     description:
@@ -107,6 +109,7 @@ const projects = [
     id: 3,
     image: '/hero2/mcd.webp',
     logo: '/assets/clients/mag.webp',
+    alt:"McDonald Toilet Cubicle Partition",
     title: 'Multiple Locations',
     stats: 'Hygienic. Stylish. Durable.',
     description:
@@ -119,6 +122,7 @@ const projects = [
     image: '/hero2/oppo.webp',
     logo: '/hero2/oppoLogo.webp',
     title: 'Corporate Office',
+    alt:"Oppo Toilet Cubicle Partition",
     stats: '500+ Cubicles Installed',
     description:
       'Premium restroom partitions designed for modern corporate spaces.',
@@ -228,7 +232,7 @@ const ProjectCard = memo(function ProjectCard({
         <div className="relative h-full w-[43%] shrink-0 overflow-hidden">
           <Image
             src={project.image}
-            alt={project.title}
+            alt={project.alt}
             fill
             sizes="(max-width: 767px) 43vw, 220px"
             loading="lazy"

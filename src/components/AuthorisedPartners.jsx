@@ -158,7 +158,7 @@ function PartnerCard({ partner }) {
                 width={100}
                 height={100}
                     src={partner.logo}
-                    alt={`${partner.name} logo`}
+                    alt={`${partner.name}`}
                     loading="lazy"
                     className="
                         block

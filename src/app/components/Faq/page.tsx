@@ -71,7 +71,7 @@ export default function WashroomCubiclesFAQ() {
             width={100}
             unoptimized
               src="/assets/faq.webp"
-              alt="Premium Washroom Cubicle Partitions"
+              alt="Changing Room Cubicle Partition"
               className="w-full h-[270px] sm:h-[340px] object-cover"
             />
 

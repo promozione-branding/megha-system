@@ -58,7 +58,7 @@ export default function Testimonials() {
               width={100}
               unoptimized
                 src="/4.jpeg"
-                alt="Refined toilet cubicle interior"
+                alt=" Toilet Cubicle Partition"
                 className="h-full w-full object-cover"
               />
 

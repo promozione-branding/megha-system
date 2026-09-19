@@ -300,7 +300,7 @@ function ProjectImageCard({
       <div className="absolute inset-0 z-0 h-full w-full overflow-hidden">
         <img
           src={item.imageUrl}
-          alt={item.author}
+          alt="Toilet Cubicle Partition"
           className="
             h-full
             w-full
@@ -367,7 +367,7 @@ function ProjectImageCard({
     >
       <img
         src={item.imageUrl}
-        alt={item.author}
+        alt=" Toilet Cubicle Partition"
         className="
           h-full
           w-full

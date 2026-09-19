@@ -1,5 +1,5 @@
 # robots.txt for Megha System
-# https://www.bearingmanufacturers.com/
+https://toiletcubiclemanufacturer.com/
 
 # Default rules for all crawlers
 User-agent: *

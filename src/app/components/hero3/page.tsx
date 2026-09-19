@@ -453,7 +453,7 @@ export default function Hero3() {
                     width={100}
                     unoptimized
                       src={project.image}
-                      alt={project.title}
+                      alt={`${project.title} Toilet Cubicle`}
                       className="
         w-full
         h-full

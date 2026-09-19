@@ -131,7 +131,7 @@ export default function Projects() {
                 <div className="relative aspect-[4/3] overflow-hidden">
                   <img
                     src={project.image}
-                    alt={project.name}
+                    alt={`${project.name} Toilet Cubicle`}
                     className="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
                   />
 
@@ -220,7 +220,7 @@ export default function Projects() {
               <div className="relative flex max-h-[70vh] w-fit max-w-[95vw] bg-[#07173f]">
                 <img
                   src={selectedProject.image}
-                  alt={selectedProject.name}
+                  alt={`${selectedProject.name} Toilet Cubicle`}
                   className="block max-h-[70vh] max-w-[95vw] w-auto object-cover"
                 />
               </div>
