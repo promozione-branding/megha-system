@@ -44,8 +44,8 @@ export default function DurableRestroomSolutions({ city }) {
               </strong>{" "}
               for your office, school, hospital, hotel, shopping mall, or any
               other place of commercial activity, then Megha Systems is what
-              you need. Our company designs and installs high-quality toilet
-              cubicles and partitions offering great privacy, functionality,
+              you need. Our company designs and installs high-quality <a href="/" className="font-bold">toilet
+              cubicles</a> and partitions offering great privacy, functionality,
               and neatness of appearance.
             </p>
 

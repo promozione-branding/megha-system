@@ -166,7 +166,7 @@ export default function RestRoom({ city }) {
               </h3>
 
               <p className="mt-5 text-base leading-8 text-[#555]">
-                Our restroom cubicle partitions are perfect{" "}
+                Our <a href="/" className="font-bold">restroom cubicle</a> partitions are perfect{" "}
                 <strong className="font-semibold text-[#222]">
                   for offices, schools, hospitals, hotels, shopping malls and
                   other high traffic buildings

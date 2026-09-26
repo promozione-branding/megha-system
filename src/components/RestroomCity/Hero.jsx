@@ -32,7 +32,7 @@ export default function Hero({ city }) {
           initial={{ opacity: 0, y: 35 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="flex max-w-5xl flex-col items-center"
+          className="flex max-w-6xl flex-col items-center"
         >
 
           {/* Label */}
@@ -43,11 +43,11 @@ export default function Hero({ city }) {
           </div>
 
           {/* Heading */}
-          <h1 className="text-3xl flex font-extrabold leading-[0.9] tracking-[-0.04em] text-white sm:text-6xl">
+          <h1 className="text-3xl flex font-extrabold flex-wrap justify-center text-nowrap  leading-[0.9]  text-white sm:text-6xl">
             Restroom Cubicle
             
-            <span className="text-[#f5bd24]">
-              &nbsp; in {city}
+            <span className="text-[#f5bd24] ml-4">
+               in {city}
             </span>
           </h1>
 
