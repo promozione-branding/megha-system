@@ -32,7 +32,7 @@ export default function RestRoom({ city }) {
       href: "/products/nylon-kiddiez",
     },
     {
-      name: "Full SS Restroom Cubicle Systems 004",
+      name: "Full SS Restroom Cubicle Systems",
       image: "/citypg/uni.webp",
       href: "/products/urinal-modesty-panels",
     },
