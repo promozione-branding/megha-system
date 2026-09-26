@@ -79,7 +79,6 @@ export default function ProjectDetail() {
   return (
     <div className="min-h-screen bg-[#faf9f6] text-blue-900 font-sans flex flex-col">
       {/* Global Navbar */}
-      <Navbar />
 
       {/* Top Banner Header matching the requested design */}
       <section className="relative w-full bg-[#f6f3ee] py-14 sm:py-18 lg:py-20 px-6 overflow-hidden border-b border-[#e8e4dc]">
