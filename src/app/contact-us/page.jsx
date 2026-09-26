@@ -1,7 +1,5 @@
 import React from 'react'
 import Contact from './Contact'
-import Navbar from '@/app/components/Navabar/page';
-import FooterSection from '@/app/components/Footer/page';
 
 export const metadata = {
     title: "Contact Megha Systems | Toilet Cubicle",
@@ -11,9 +9,7 @@ export const metadata = {
 export default function page() {
     return (
         <>
-            <Navbar />
             <Contact />
-            <FooterSection />
         </>
     )
 }

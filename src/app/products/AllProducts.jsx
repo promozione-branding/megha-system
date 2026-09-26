@@ -23,7 +23,6 @@ export default function AllProductsPage() {
 
   return (
     <div className="min-h-screen bg-[#faf9f6] text-blue-950 font-sans flex flex-col">
-      <Navbar />
 
       {/* Hero */}
       <header className="relative bg-gradient-to-b from-[#0d2461] to-[#08173d] text-white py-16 sm:py-20 px-6 overflow-hidden">
@@ -175,8 +174,6 @@ export default function AllProductsPage() {
         </div>
       </main>
 
-      <StickyContactButtons />
-      <FooterSection />
     </div>
   );
 }

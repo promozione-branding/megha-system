@@ -50,7 +50,6 @@ export default function ProjectDetail() {
   if (!project) {
     return (
       <div className="min-h-screen bg-[#faf9f6] text-blue-900 font-sans flex flex-col">
-        <Navbar />
 
         <main className="flex-1 flex items-center justify-center px-6 py-20">
           <div className="text-center">
@@ -565,8 +564,6 @@ export default function ProjectDetail() {
 
       <CTA2 />
 
-      <StickyContactButtons />
-      <FooterSection />
     </div>
   );
 }
