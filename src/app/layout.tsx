@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Script from "next/script";
 import { Geist, Geist_Mono, Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
+import Navbar from "./components/Navabar/page";
+import FooterSection from "./components/Footer/page";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -83,7 +85,10 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         </Script>
       </head>
 
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+                <Navbar />
+{children}         <FooterSection />
+</body>
     </html>
   );
 }

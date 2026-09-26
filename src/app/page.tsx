@@ -25,7 +25,6 @@ export default function Home() {
   return (
     <SmoothScroll>
       <main className="relative min-h-screen bg-[#0f0f11] text-white">
-        <Navbar />
         <HeroSection />
         <AuthorisedPartners />
         <OurProjectsSection />
@@ -42,7 +41,6 @@ export default function Home() {
         <WashroomCubiclesFAQ />
         <ContactSection />
         <BuyNowBanner />
-        <FooterSection />
         <StickyContactButtons />
       </main>
     </SmoothScroll>
