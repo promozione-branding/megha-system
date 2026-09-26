@@ -29,7 +29,7 @@ export default function DurableRestroomSolutions({ city }) {
             </span>
 
             {/* Heading */}
-            <h2 className="mt-5 text-4xl font-serif font-extrabold leading-[1.08] tracking-tight text-[#0d2461] sm:text-5xl lg:text-[52px]">
+            <h2 className="mt-5 text-4xl  font-extrabold leading-[1.08] tracking-tight text-[#0d2461] sm:text-5xl lg:text-[52px]">
               Durable and Modern{" "}
               <span className="text-[#f5bd24]">
                 Restroom Solutions

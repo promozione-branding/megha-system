@@ -61,7 +61,7 @@ export default function FAQ({ city }) {
                 FAQ
               </span>
 
-              <h2 className="font-serif text-4xl leading-[1.12] tracking-tight text-[#1e1e24] sm:text-4xl">
+              <h2 className=" text-4xl leading-[1.12] tracking-tight text-[#1e1e24] sm:text-4xl">
                 Frequently Asked Questions About Toilet Cubicles in {city}
               </h2>
             </div>
@@ -93,7 +93,7 @@ export default function FAQ({ city }) {
                 </div>
 
                 <div className="leading-tight">
-                  <p className="font-serif text-sm font-bold tracking-wide">
+                  <p className=" text-sm font-bold tracking-wide">
                     Quality Restroom Solutions
                   </p>
 

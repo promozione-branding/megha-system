@@ -53,7 +53,7 @@ export default function Afforable({city}) {
               </span>
 
               {/* Heading */}
-              <h2 className="mt-5 font-serif text-4xl font-bold leading-[1.1] tracking-tight text-[#171717] sm:text-5xl lg:text-[52px]">
+              <h2 className="mt-5  text-4xl font-bold leading-[1.1] tracking-tight text-[#171717] sm:text-5xl lg:text-[52px]">
                 Affordable Restroom Cubicles in{" "}
                 <span className="text-[#1E3A8A]">{city}</span>
               </h2>

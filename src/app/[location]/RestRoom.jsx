@@ -19,7 +19,7 @@ export default function RestRoom({ city }) {
     {
       name: "Black Maxi ",
       href: "/products/black-maxi",
-      image: "/citypg/blackmaxi.webp",
+      image: "/citypg/Blackmaxi.webp",
     },
     {
       name: "Premia",
@@ -51,7 +51,7 @@ export default function RestRoom({ city }) {
     <>
      <Hero city={city}/>
 
-      <section className="w-full bg-white py-6 sm:py-13 ">
+      <section className="w-full  bg-white py-6 sm:py-13 ">
         <div className="mx-auto max-w-[1280px] px-6 lg:px-8">
           {/* TOP CONTENT */}
           <div className="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:items-end">
@@ -61,7 +61,7 @@ export default function RestRoom({ city }) {
                 Our Products
               </span>
 
-              <h2 className="text-3xl font-serif font-bold leading-tight tracking-tight text-black sm:text-[35px]">
+              <h2 className="text-3xl  font-bold leading-tight tracking-tight text-black sm:text-[35px]">
                 Toilet Cubicles & Partitions Series
               </h2>
             </div>
@@ -123,7 +123,7 @@ export default function RestRoom({ city }) {
                 Restroom Solutions
               </span>
 
-              <h2 className="text-3xl font-serif font-bold leading-tight tracking-tight text-[#111] sm:text-4xl lg:text-5xl">
+              <h2 className="text-3xl  font-bold leading-tight tracking-tight text-[#111] sm:text-4xl lg:text-5xl">
                 Restroom Cubicle Partition in {city}
               </h2>
 
@@ -136,7 +136,7 @@ export default function RestRoom({ city }) {
                 maintenance are key requirements.
               </p>
 
-              <p className="mt-6 font-serif text-base font-semibold leading-7 text-[#222]">
+              <p className="mt-6  text-base font-semibold leading-7 text-[#222]">
                 Our partitions include:
               </p>
 
@@ -161,7 +161,7 @@ export default function RestRoom({ city }) {
             <div className="rounded-[24px] bg-[#f7f7f7] p-7 sm:p-9 lg:p-10">
               <div className="mb-6 h-1 w-14 bg-[#0d2461]" />
 
-              <h3 className="text-2xl font-serif font-bold leading-tight text-[#111] sm:text-3xl">
+              <h3 className="text-2xl  font-bold leading-tight text-[#111] sm:text-3xl">
                 Built for High-Traffic Spaces
               </h3>
 
