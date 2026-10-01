@@ -1,7 +1,7 @@
 import React from 'react'
 import Article from './Article'
-import Navbar from '@/app/components/Navabar/page';
-import FooterSection from '@/app/components/Footer/page';
+// import Navbar from '@/app/components/Navabar/page';
+// import FooterSection from '@/app/components/Footer/page';
 import { connect } from "./../../../lib/mongodb";
 import Blog from "./../../../models/Blog";
 import { notFound } from "next/navigation";
@@ -41,9 +41,7 @@ export default async function page({ params }) {
     const blog = await Blog.findOne({ permalink: slug });
 
     return (<>
-        <Navbar />
         <Article blog={blog} />
-        <FooterSection />
     </>
     )
 }
