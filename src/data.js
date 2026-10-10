@@ -114,6 +114,8 @@ export const allProducts = [
     products: [
       {
         name: "Black Maxi",
+        price: 12500,
+        oldPrice: 14000,
         slug: "black-maxi",
         image: "/product/Black Maxi.webp",
         metaTitle: "Black Maxi Toilet Cubicles | Toilet Cubicle System",
@@ -183,6 +185,8 @@ export const allProducts = [
       {
         name: "Maxi PRO",
         slug: "maxi-pro",
+        price: 13000,
+        oldPrice: 15000,
         image: "/product/Maxi Pro.webp",
         metaTitle: "Maxi PRO Toilet Cubicles | Modular Washroom Cubicles",
         metaDescription:
@@ -250,6 +254,8 @@ export const allProducts = [
       {
         name: "Duro",
         slug: "duro",
+        price: 12500,
+        oldPrice: 14000,
         image: "/product/Duro-Toilet-Cubicles.webp",
         metaTitle: "Duro Toilet Cubicles | Durable Stainless Steel Cubicles",
         metaDescription:
@@ -320,6 +326,8 @@ export const allProducts = [
       {
         name: "Duro Pro",
         slug: "duro-pro",
+        price: 13000,
+        oldPrice: 15000,
         image: "/product/duro pro toilet cubicles.webp",
         metaTitle: "Duro Pro Toilet Cubicles | Stainless Steel Washroom System",
         metaDescription:
@@ -389,6 +397,8 @@ export const allProducts = [
       {
         name: "Cubic Doorz",
         slug: "cubic-doorz",
+        price: 12500,
+        oldPrice: 14000,
         image: "/product/Cubi Doorz.webp",
         metaTitle: "Cubic Doorz | Compact Toilet Cubicle Door System",
         metaDescription:
@@ -452,6 +462,8 @@ export const allProducts = [
       {
         name: "NEO",
         slug: "neo",
+        price: 13000,
+        oldPrice: 15000,
         image: "/product/Neo.webp",
         metaTitle: "NEO Modular Toilet Cubicles | Megha Systems",
         metaDescription:
@@ -516,6 +528,8 @@ export const allProducts = [
       {
         name: "Maxi",
         slug: "maxi",
+        price: 13000,
+        oldPrice: 15000,
         image: "/product/Maxi.webp",
         metaTitle: "Maxi Toilet Cubicles | Stainless Steel Washroom Cubicles",
         metaDescription:
@@ -591,6 +605,8 @@ export const allProducts = [
       {
         name: "Luron",
         slug: "luron",
+        price: 12500,
+        oldPrice: 14000,
         image: "/product/Luron.webp",
         metaTitle: "Luron Toilet Cubicles | Stainless Steel Cubicle System",
         metaDescription:
@@ -671,6 +687,8 @@ export const allProducts = [
       {
         name: "Cielo",
         slug: "cielo",
+        price: 13000,
+        oldPrice: 15000,
         image: "/product/Cielo.webp",
         metaTitle: "Cielo Ceiling-Hung Toilet Cubicles | Megha Systems",
         metaDescription:
@@ -729,6 +747,8 @@ export const allProducts = [
       {
         name: "Premia",
         slug: "premia",
+        price: 12500,
+        oldPrice: 14000,
         image: "/product/Premia.webp",
         metaTitle: "Premia Luxury Toilet Cubicles | Premium Washroom Solutions",
         metaDescription:
@@ -792,6 +812,8 @@ export const allProducts = [
       {
         name: "Rove",
         slug: "rove",
+        price: 13000,
+        oldPrice: 15000,
         image: "/product/Rove.webp",
         metaTitle: "Rove Wall-Hung Toilet Cubicles | Megha Systems",
         metaDescription:
@@ -851,6 +873,8 @@ export const allProducts = [
       {
         name: "Kiddiez",
         slug: "kiddiez",
+        price: 12500,
+        oldPrice: 14000,
         image: "/product/Kiddiez.webp",
         metaTitle: "Kiddiez",
         metaDescription:
@@ -929,6 +953,8 @@ export const allProducts = [
       {
         name: "Kiddiez Pro",
         slug: "kiddiez-pro",
+        price: 13000,
+        oldPrice: 15000,
         image: "/product/Kiddiez Pro.webp",
         metaTitle: "Kiddiez Pro Kids Toilet Cubicles | Megha Systems",
         metaDescription:
@@ -992,10 +1018,11 @@ export const allProducts = [
           },
         ],
       },
-
       {
         name: "Nylon Kiddiez",
         slug: "nylon-kiddiez",
+        price: 13000,
+        oldPrice: 15000,
         image: "/product/Nylon Kiddiez.webp",
 
         metaTitle: "Nylon Kiddiez Kids Toilet Cubicles | Megha Systems",
@@ -1143,6 +1170,8 @@ export const allProducts = [
       {
         name: "Urinal Modesty Panels",
         slug: "urinal-modesty-panels",
+        price: 1999,
+        oldPrice: 3500,
         image: "/product/Commercial Urinal Partitions.webp",
         metaTitle: "Urinal Modesty Panels | Megha Systems",
         metaDescription:

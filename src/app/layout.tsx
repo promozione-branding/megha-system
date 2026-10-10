@@ -67,7 +67,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
             __html: JSON.stringify(jsonLd),
           }}
         />
-         {/* Microsoft Clarity */}
+        {/* Microsoft Clarity */}
         <Script
           id="microsoft-clarity"
           strategy="afterInteractive"
@@ -86,9 +86,10 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       </head>
 
       <body className="min-h-full flex flex-col">
-                <Navbar />
-{children}         <FooterSection />
-</body>
+        <Navbar />
+        {children}
+        <FooterSection />
+      </body>
     </html>
   );
 }

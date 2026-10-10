@@ -2,7 +2,7 @@
 
 import React, { useState, useRef } from "react";
 import Link from "next/link";
-import { ArrowRight, Phone, Plus, Minus, Quote, FileText } from "lucide-react";
+import { ArrowRight, Phone, Plus, Minus, Quote, FileText, } from "lucide-react";
 import Navbar from "@/app/components/Navabar/page";
 import FooterSection from "@/app/components/Footer/page";
 import { motion, useScroll, useTransform } from "framer-motion";
@@ -15,12 +15,15 @@ import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import { MdOutlineAddShoppingCart } from "react-icons/md";
+import CheckoutPopup from "@/components/CheckoutPopup";
 
 export default function ProjectDetail() {
   const { productName } = useParams();
   const [openAccordion, setOpenAccordion] = useState(0);
   const imageScrollRef = useRef(null);
-
+  const [checkoutOpen, setCheckoutOpen] = useState(false);
+  const [cartItems, setCartItems] = useState([]);
   // Get slug from /products/[slug]
   const slug = productName;
 
@@ -39,6 +42,85 @@ export default function ProjectDetail() {
     [0, 0.25, 0.75, 1],
     ["100%", "70%", "15%", "0%"],
   );
+
+
+  const addToCart = (product) => {
+    try {
+      const saved = localStorage.getItem("megha-cart");
+      const parsed = saved ? JSON.parse(saved) : [];
+      const cart = Array.isArray(parsed) ? parsed : [];
+
+      const productId = product.id ?? product.slug;
+
+      const cartProduct = {
+        id: productId,
+        name: product.name,
+        price: Number(product.price ?? 0),
+        image: product.image || "",
+        quantity: 1,
+      };
+
+      const existing = cart.find(
+        (item) => String(item.id) === String(productId)
+      );
+
+      const updatedCart = existing
+        ? cart.map((item) =>
+          String(item.id) === String(productId)
+            ? { ...item, quantity: item.quantity + 1 }
+            : item
+        )
+        : [...cart, cartProduct];
+
+      localStorage.setItem(
+        "megha-cart",
+        JSON.stringify(updatedCart)
+      );
+
+      // Notify the checkout page and navbar immediately.
+      window.dispatchEvent(new Event("megha-cart-updated"));
+
+      // alert(`${product.name} added to cart!`);
+    } catch (error) {
+      console.error("Failed to add product to cart:", error);
+      alert("Could not add this product. Please try again.");
+    }
+  };
+
+  const openCheckout = () => {
+    try {
+      const saved = localStorage.getItem("megha-cart");
+      const parsed = saved ? JSON.parse(saved) : [];
+      const cart = Array.isArray(parsed) ? parsed : [];
+
+      // If the current product is already in the cart, use the cart.
+      // Otherwise, open checkout with the current product.
+      const productId = project.id ?? project.slug;
+
+      const existingProduct = cart.find(
+        (item) => String(item.id) === String(productId)
+      );
+
+      const checkoutItems = existingProduct
+        ? cart
+        : [
+          ...cart,
+          {
+            id: productId,
+            name: project.name,
+            price: Number(project.price ?? 0),
+            image: project.image || "",
+            quantity: 1,
+          },
+        ];
+
+      setCartItems(checkoutItems);
+      setCheckoutOpen(true);
+    } catch (error) {
+      console.error("Failed to open checkout:", error);
+      alert("Could not open checkout. Please try again.");
+    }
+  };
 
   const secondImageScale = useTransform(
     scrollYProgress,
@@ -170,11 +252,10 @@ export default function ProjectDetail() {
                     <Link
                       key={category.slug}
                       href={`/products#${category.slug}`}
-                      className={`px-5 py-4 text-sm font-semibold flex justify-between items-center rounded-xl transition-all ${
-                        isActiveCategory
-                          ? "bg-[#0d2461] text-white shadow-md"
-                          : "bg-white border border-blue-100 text-blue-950 hover:bg-blue-50/60"
-                      }`}
+                      className={`px-5 py-4 text-sm font-semibold flex justify-between items-center rounded-xl transition-all ${isActiveCategory
+                        ? "bg-[#0d2461] text-white shadow-md"
+                        : "bg-white border border-blue-100 text-blue-950 hover:bg-blue-50/60"
+                        }`}
                     >
                       <span>{category.categoryName}</span>
 
@@ -291,9 +372,55 @@ export default function ProjectDetail() {
                 P r o j e c t &nbsp; D e t a i l
               </div>
 
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-blue-950 mb-5 tracking-tight">
-                {project.name}
-              </h1>
+              <div className="flex mb-5 flex-wrap justify-between items-center gap-2">
+                <div className="flex gap-4">
+                  <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-blue-950 tracking-tight">
+                    {project.name}
+                  </h1>
+
+                  <div className="md:flex hidden items-center gap-4 mt-4">
+                    <span className="text-lg text-gray-400 line-through">
+                      ₹{project.oldPrice?.toLocaleString("en-IN") || "12,500"}
+                    </span>
+
+                    <span className="text-xl font-bold text-blue-950">
+                      ₹{project.price?.toLocaleString("en-IN") || "12,000"}
+                    </span>
+                  </div>
+                </div>
+
+                <div className="flex items-center justify-between gap-3">
+                  <div className="md:hidden flex items-center gap-2">
+                    <span className="text-lg text-gray-400 line-through">
+                      ₹{project.oldPrice?.toLocaleString("en-IN") || "12,500"}
+                    </span>
+
+                    <span className="text-xl font-bold text-blue-950">
+                      ₹{project.price?.toLocaleString("en-IN") || "12,000"}
+                    </span>
+                  </div>
+
+                  <div className="flex items-center gap-2">
+                    <button
+                      type="button"
+                      onClick={() => addToCart(project)}
+                      className="p-3 bg-[#0d2461] text-white cursor-pointer rounded-full border border-blue-950 hover:bg-[#081b50] transition-colors"
+                      aria-label="Add to cart"
+                      title="Add to cart"
+                    >
+                      <MdOutlineAddShoppingCart size={22} />
+                    </button>
+
+                    <button
+                      type="button"
+                      onClick={openCheckout}
+                      className="px-4 py-2.5 bg-[#0d2461] text-white rounded-md font-semibold hover:bg-[#081b50] transition-colors"
+                    >
+                      Buy Now
+                    </button>
+                  </div>
+                </div>
+              </div>
 
               <p className="text-base sm:text-lg text-blue-900/80 leading-relaxed max-w-4xl">
                 {project.shortDescription}
@@ -381,11 +508,10 @@ export default function ProjectDetail() {
                       <button
                         type="button"
                         onClick={() => setDimensionType("regular")}
-                        className={`px-3 py-1.5 text-xs font-semibold rounded-md transition-all ${
-                          dimensionType === "regular"
-                            ? "bg-[#0d2461] text-white"
-                            : "text-blue-900 hover:bg-blue-50"
-                        }`}
+                        className={`px-3 py-1.5 text-xs font-semibold rounded-md transition-all ${dimensionType === "regular"
+                          ? "bg-[#0d2461] text-white"
+                          : "text-blue-900 hover:bg-blue-50"
+                          }`}
                       >
                         Regular
                       </button>
@@ -393,11 +519,10 @@ export default function ProjectDetail() {
                       <button
                         type="button"
                         onClick={() => setDimensionType("speciallyAbled")}
-                        className={`px-3 py-1.5 text-xs font-semibold rounded-md transition-all ${
-                          dimensionType === "speciallyAbled"
-                            ? "bg-[#0d2461] text-white"
-                            : "text-blue-900 hover:bg-blue-50"
-                        }`}
+                        className={`px-3 py-1.5 text-xs font-semibold rounded-md transition-all ${dimensionType === "speciallyAbled"
+                          ? "bg-[#0d2461] text-white"
+                          : "text-blue-900 hover:bg-blue-50"
+                          }`}
                       >
                         Specially Abled
                       </button>
@@ -432,11 +557,10 @@ export default function ProjectDetail() {
                   {project.keyFeatures?.map((feature, index) => (
                     <div
                       key={index}
-                      className={`rounded-xl transition-all duration-300 overflow-hidden ${
-                        openAccordion === index
-                          ? "bg-blue-50/90 border border-blue-200 shadow-sm"
-                          : "bg-white border border-blue-100 hover:border-blue-300"
-                      }`}
+                      className={`rounded-xl transition-all duration-300 overflow-hidden ${openAccordion === index
+                        ? "bg-blue-50/90 border border-blue-200 shadow-sm"
+                        : "bg-white border border-blue-100 hover:border-blue-300"
+                        }`}
                     >
                       <button
                         onClick={() =>
@@ -445,11 +569,10 @@ export default function ProjectDetail() {
                         className="w-full px-5 py-4 flex justify-between items-center text-left"
                       >
                         <span
-                          className={`font-semibold text-sm sm:text-[15px] ${
-                            openAccordion === index
-                              ? "text-[#0d2461] font-bold"
-                              : "text-blue-950"
-                          }`}
+                          className={`font-semibold text-sm sm:text-[15px] ${openAccordion === index
+                            ? "text-[#0d2461] font-bold"
+                            : "text-blue-950"
+                            }`}
                         >
                           {feature.name}
                         </span>
@@ -468,11 +591,10 @@ export default function ProjectDetail() {
                       </button>
 
                       <div
-                        className={`px-5 overflow-hidden transition-all duration-300 ease-in-out ${
-                          openAccordion === index
-                            ? "max-h-40 pb-4 opacity-100"
-                            : "max-h-0 opacity-0"
-                        }`}
+                        className={`px-5 overflow-hidden transition-all duration-300 ease-in-out ${openAccordion === index
+                          ? "max-h-40 pb-4 opacity-100"
+                          : "max-h-0 opacity-0"
+                          }`}
                       >
                         <p className="text-blue-900/80 text-xs sm:text-sm leading-relaxed">
                           {feature.description}
@@ -547,9 +669,10 @@ export default function ProjectDetail() {
           </div>
         )}
 
-         {project?.shapes && (<h2 className="font-bold text-center text-blue-950 text-2xl md:text-4xl mt-5 mb-4">
+        {project?.shapes && (<h2 className="font-bold text-center text-blue-950 text-2xl md:text-4xl mt-5 mb-4">
           Differnt Types Of Shape
         </h2>)}
+
         {project?.shapes && (
           <div className="w-full md:h-[500px] flex items-center justify-center bg- rounded-2xl overflow-hidden">
             <img
@@ -561,8 +684,18 @@ export default function ProjectDetail() {
         )}
       </main>
 
-      <CTA2 />
+      <CheckoutPopup
+        isOpen={checkoutOpen}
+        onClose={() => setCheckoutOpen(false)}
+        cartItems={cartItems}
+        onOrderSuccess={() => {
+          localStorage.removeItem("megha-cart");
+          setCartItems([]);
+          window.dispatchEvent(new Event("megha-cart-updated"));
+        }}
+      />
 
+      <CTA2 />
     </div>
   );
 }

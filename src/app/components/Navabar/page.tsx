@@ -8,16 +8,122 @@ import {
   X,
   ArrowUpRight,
   Phone,
+  ShoppingCart,
 } from 'lucide-react';
 import Link from 'next/link';
 import { allProducts } from '@/data';
 import PopupForm from '@/components/PopupForm';
+import CartSidebar from '@/components/CartSidebar';
 import Image from 'next/image';
+
+type CartItem = {
+  id: string | number;
+  name: string;
+  price: number;
+  quantity: number;
+  image: string;
+};
+
+type CartSidebarProps = {
+  isOpen: boolean;
+  onClose: () => void;
+  cartItems: CartItem[];
+  updateQuantity: (id: CartItem["id"], quantity: number) => void;
+  removeItem: (id: CartItem["id"]) => void;
+  clearCart: () => void;
+};
 
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
+  const [cartItems, setCartItems] = useState<CartItem[]>([]);
+  const [cartLoaded, setCartLoaded] = useState(false);
+  const [cartOpen, setCartOpen] = useState(false);
+
+  // Load the existing cart before saving anything.
+  useEffect(() => {
+    try {
+      const savedCart = localStorage.getItem("megha-cart");
+
+      if (savedCart) {
+        const parsed: unknown = JSON.parse(savedCart);
+
+        if (Array.isArray(parsed)) {
+          setCartItems(parsed as CartItem[]);
+        }
+      }
+
+    } catch (error) {
+      console.error("Failed to load cart:", error);
+    } finally {
+      setCartLoaded(true);
+    }
+  }, []);
+
+  // Save only after the initial cart has loaded.
+  useEffect(() => {
+    if (!cartLoaded) return;
+
+    localStorage.setItem("megha-cart", JSON.stringify(cartItems));
+  }, [cartItems, cartLoaded]);
+
+  // Load the cart and synchronize it with localStorage.
+  useEffect(() => {
+    const syncCart = () => {
+      try {
+        const saved = localStorage.getItem("megha-cart");
+        const parsed: unknown = saved ? JSON.parse(saved) : [];
+
+        setCartItems(Array.isArray(parsed) ? (parsed as CartItem[]) : []);
+      } catch (error) {
+        console.error("Failed to load cart:", error);
+        setCartItems([]);
+      } finally {
+        setCartLoaded(true);
+      }
+    };
+
+    syncCart();
+
+    window.addEventListener("megha-cart-updated", syncCart);
+    window.addEventListener("storage", syncCart);
+
+    return () => {
+      window.removeEventListener("megha-cart-updated", syncCart);
+      window.removeEventListener("storage", syncCart);
+    };
+  }, []);
+
+  // Persist cart changes.
+  useEffect(() => {
+    if (!cartLoaded) return;
+
+    localStorage.setItem("megha-cart", JSON.stringify(cartItems));
+  }, [cartItems, cartLoaded]);
+
+  const updateQuantity = (id: CartItem["id"], quantity: number) => {
+    setCartItems((items) =>
+      items.map((item) =>
+        String(item.id) === String(id)
+          ? { ...item, quantity: Math.max(1, quantity) }
+          : item
+      )
+    );
+  };
+
+  const removeItem = (id: CartItem["id"]) => {
+    setCartItems((items) =>
+      items.filter((item) => String(item.id) !== String(id))
+    );
+  };
+
+  // Clear both React state and localStorage after successful checkout.
+  const clearCart = () => {
+    setCartItems([]);
+    localStorage.removeItem("megha-cart");
+    window.dispatchEvent(new Event("megha-cart-updated"));
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -57,7 +163,7 @@ export default function Navbar() {
           TOP ANNOUNCEMENT BAR
       ===================================================== */}
 
-     <div className="w-full md:flex hidden sticky top-0 z-[60] bg-[#0d2461] text-white text-[13px] sm:text-[13.5px] font-semibold tracking-wide text-center py-1.5 px-4 items-center justify-center gap-3">
+      <div className="w-full md:flex hidden sticky top-0 z-[60] bg-[#0d2461] text-white text-[13px] sm:text-[13.5px] font-semibold tracking-wide text-center py-1.5 px-4 items-center justify-center gap-3">
         <span className="opacity-85">
           India&apos;s Trusted Restroom Cubicle Solutions
         </span>
@@ -83,7 +189,7 @@ export default function Navbar() {
           href="tel:+919873735713"
           className="inline-flex items-center gap-1.5 text-[#f5bd24] hover:text-white transition-colors font-bold"
         >
-          
+
           +91 98737 35713
         </a>
       </div>
@@ -93,12 +199,11 @@ export default function Navbar() {
       ===================================================== */}
 
       <header
-  className={`relative z-50 w-full transition-all duration-500 sticky top-0 md:top-[32px] font-sans ${
-    scrolled
-      ? 'bg-white/97 backdrop-blur-2xl shadow-[0_4px_30px_rgba(13,36,97,0.12)] border-b border-[#0d2461]/10'
-      : 'bg-white border-b border-[#0d2461]/8'
-  }`}
->
+        className={`relative z-50 w-full transition-all duration-500 sticky top-0 md:top-[32px] font-sans ${scrolled
+          ? 'bg-white/97 backdrop-blur-2xl shadow-[0_4px_30px_rgba(13,36,97,0.12)] border-b border-[#0d2461]/10'
+          : 'bg-white border-b border-[#0d2461]/8'
+          }`}
+      >
         {/* Gold accent line */}
         <div className="absolute top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-transparent via-[#f5bd24] to-transparent opacity-80" />
 
@@ -149,7 +254,7 @@ export default function Navbar() {
                 height={100}
                 src="/assets/logo/1logo.webp"
                 alt="Megha Systems"
-                 unoptimized
+                unoptimized
                 className="object-contain h-full w-full"
               />
             </div>
@@ -288,36 +393,26 @@ export default function Navbar() {
               Get in Touch
             </button>
 
-            <a
-              href="/products"
-              className="group relative inline-flex items-center gap-2 bg-[#0d2461] text-white px-5 sm:px-6 py-2.5 text-[14px] font-bold rounded-lg overflow-hidden transition-all duration-300 hover:shadow-[0_8px_30px_rgba(13,36,97,0.35)] hover:-translate-y-0.5 active:translate-y-0"
+            <button onClick={() => setCartOpen(true)}
+              className="group relative inline-flex items-center gap-2 bg-[#0d2461] text-white px-2 py-2 text-[14px] font-bold rounded-lg transition-all duration-300 hover:shadow-[0_8px_30px_rgba(13,36,97,0.35)] hover:-translate-y-0.5 active:translate-y-0"
             >
-              <span className="absolute inset-0 bg-gradient-to-r from-transparent via-[#f5bd24]/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-in-out" />
+              {/* <span className="et-0 bg-gradient-to-r from-transparent via-[#f5bd24]/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-in-out" /> */}
 
-              <span className="relative z-10">
-                All Products
-              </span>
-
-              <ArrowRight className="relative z-10 w-4 h-4 group-hover:translate-x-1 transition-transform duration-200" />
-            </a>
+              <ShoppingCart />
+              {cartItems.length > 0 && (
+                <span className="absolute -top-1.5 -right-3 flex h-5 min-w-5 items-center justify-center rounded-full bg-[#f5bd24] px-1 text-[11px] font-extrabold text-[#0d2461]">
+                  {cartItems.reduce((total, item) => total + item.quantity, 0)}
+                </span>
+              )}
+            </button>
           </div>
 
-          
-
-          {/* =================================================
-              MOBILE TOGGLE
-          ================================================= */}
-
-        {/* =================================================
-    MOBILE + TABLET ACTIONS
-================================================= */}
-
-<div className="xl:hidden flex items-center gap-0 shrink-0">
-  {/* Get a Quote */}
-  <button
-    type="button"
-    onClick={() => setOpen(true)}
-    className="
+          <div className="xl:hidden flex items-center gap-2 shrink-0">
+            {/* Get a Quote */}
+            <button
+              type="button"
+              onClick={() => setOpen(true)}
+              className="
       inline-flex
       items-center
       justify-center
@@ -337,15 +432,28 @@ export default function Navbar() {
       transition-all
       duration-200
     "
-  >
-    Get a Quote
-  </button>
+            >
+              Get a Quote
+            </button>
 
-  {/* Hamburger */}
-  <button
-    type="button"
-    onClick={() => setMobileMenuOpen((prev) => !prev)}
-    className="
+            <button onClick={() => setCartOpen(true)}
+              className="group relative inline-flex items-center gap-2 bg-[#0d2461] text-white px-2 py-2 text-[14px] font-bold rounded-lg transition-all duration-300 hover:shadow-[0_8px_30px_rgba(13,36,97,0.35)] hover:-translate-y-0.5 active:translate-y-0"
+            >
+              {/* <span className="et-0 bg-gradient-to-r from-transparent via-[#f5bd24]/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-in-out" /> */}
+
+              <ShoppingCart />
+              {cartItems.length > 0 && (
+                <span className="absolute -top-1.5 -right-3 flex h-5 min-w-5 items-center justify-center rounded-full bg-[#f5bd24] px-1 text-[11px] font-extrabold text-[#0d2461]">
+                  {cartItems.reduce((total, item) => total + item.quantity, 0)}
+                </span>
+              )}
+            </button>
+
+            {/* Hamburger */}
+            <button
+              type="button"
+              onClick={() => setMobileMenuOpen((prev) => !prev)}
+              className="
       shrink-0
       p-2.5
       text-[#0d2461]
@@ -354,16 +462,16 @@ export default function Navbar() {
       rounded-xl
       transition-colors
     "
-    aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
-    aria-expanded={mobileMenuOpen}
-  >
-    {mobileMenuOpen ? (
-      <X className="w-6 h-6" />
-    ) : (
-      <Menu className="w-6 h-6" />
-    )}
-  </button>
-</div>
+              aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
+              aria-expanded={mobileMenuOpen}
+            >
+              {mobileMenuOpen ? (
+                <X className="w-6 h-6" />
+              ) : (
+                <Menu className="w-6 h-6" />
+              )}
+            </button>
+          </div>
         </div>
 
         {/* =====================================================
@@ -595,6 +703,14 @@ export default function Navbar() {
       {/* =====================================================
           POPUP
       ===================================================== */}
+      <CartSidebar
+        isOpen={cartOpen}
+        onClose={() => setCartOpen(false)}
+        cartItems={cartItems}
+        updateQuantity={updateQuantity}
+        removeItem={removeItem}
+        clearCart={clearCart}
+      />
 
       <PopupForm
         isOpen={open}
