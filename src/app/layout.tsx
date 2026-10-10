@@ -56,6 +56,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       className={`${geistSans.variable} ${geistMono.variable} ${jakartaSans.variable} h-full antialiased`}
     >
       <head>
+        <meta name="google-site-verification" content="bXEnBddglPIVddzJa8y7GaOldMccSPBnInJwbCGg-tY" />
         <link
           rel="canonical"
           href="https://toiletcubiclemanufacturer.com/"
