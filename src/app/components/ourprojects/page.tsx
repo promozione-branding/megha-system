@@ -10,6 +10,7 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
+import { handleCallClick } from "@/lib/track";
 
 interface Project {
   number: string;
@@ -173,6 +174,7 @@ export default function OurProjectsSection() {
 
                       <a
                         href="tel:+919873735713"
+                        onClick={() => handleCallClick({ source: "Website", obj: "N/A" })}
                         className="text-sm font-bold text-neutral-900 transition-colors hover:text-neutral-600"
                       >
                         +91 9873735713
@@ -180,6 +182,7 @@ export default function OurProjectsSection() {
                       <br className="md:hidden" />
                       <a
                         href="tel:+919873735716"
+                        onClick={() => handleCallClick({ source: "Website", obj: "N/A" })}
                         className="text-sm font-bold md:ml-2 text-neutral-900 transition-colors hover:text-neutral-600"
                       >
                         +91 9873735716
@@ -356,7 +359,10 @@ export default function OurProjectsSection() {
 
                     <a
                       href="tel:+919873735713"
-                      onClick={closeProject}
+                      onClick={() => {
+                        handleCallClick({ source: "Website", obj: "N/A" });
+                        closeProject();
+                      }}
                       className="
                         group
                         inline-flex

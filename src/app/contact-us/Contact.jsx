@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { motion } from "framer-motion";
+import { handleCallClick } from "@/lib/track";
 import {
   ArrowRight,
   Building2,
@@ -390,6 +391,7 @@ export default function Contact() {
                       <div className="mt-1 flex flex-wrap gap-x-4 gap-y-1">
                         <a
                           href="tel:+919873735716"
+                          onClick={() => handleCallClick({ source: "Website", obj: "N/A" })}
                           className="text-sm font-bold text-[#0d2461] hover:text-[#f0ad00]"
                         >
                           +91 9873735716
@@ -397,6 +399,7 @@ export default function Contact() {
 
                         <a
                           href="tel:+919873735713"
+                          onClick={() => handleCallClick({ source: "Website", obj: "N/A" })}
                           className="text-sm font-bold text-[#0d2461] hover:text-[#f0ad00]"
                         >
                           +91 9873735713

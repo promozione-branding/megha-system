@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import { ChevronRight, Share2, Globe, Camera, Send, Building2 } from 'lucide-react';
 import Link from 'next/link';
 import { FaFacebookF, FaLinkedinIn, FaInstagram, FaTelegramPlane, FaWhatsapp, } from "react-icons/fa";
+import { handleCallClick, handleWhatsappClick } from "@/lib/track";
 
 export default function FooterSection() {
   const [email, setEmail] = useState('');
@@ -138,6 +139,7 @@ export default function FooterSection() {
                 <p>
                   <a
                     href="tel:+919873735716"
+                    onClick={() => handleCallClick({ source: "Website", obj: "N/A" })}
                     className="hover:text-white transition-colors font-medium text-white"
                   >
                     +91 9873735716
@@ -147,6 +149,7 @@ export default function FooterSection() {
                 <p>
                   <a
                     href="tel:+919873735713"
+                    onClick={() => handleCallClick({ source: "Website", obj: "N/A" })}
                     className="hover:text-white transition-colors font-medium text-white"
                   >
                     +91 9873735713
@@ -188,6 +191,7 @@ export default function FooterSection() {
 
                 <a
                   href="https://wa.me/919873735716"
+                  onClick={() => handleWhatsappClick({ source: "Website", obj: "N/A" })}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-10 h-10 rounded-full bg-white/10 border border-white/20 text-white flex items-center justify-center hover:bg-white hover:text-[#0b1329] transition-all shadow-sm"

@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import { handleCallClick } from "@/lib/track";
 
 const policies = [
     {
@@ -196,6 +197,7 @@ export default function Page() {
                                 <div className="mt-7 flex flex-wrap gap-4">
                                     <a
                                         href="tel:+919873735716"
+                                        onClick={() => handleCallClick({ source: "Website", obj: "N/A" })}
                                         className="rounded-lg bg-white px-6 py-3 text-sm font-semibold text-[#102b35] transition hover:bg-[#f1ecdf]"
                                     >
                                         Call Us

@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { Phone, MessageCircle } from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa";
 import { MdCall } from "react-icons/md";
+import { handleCallClick, handleWhatsappClick } from "@/lib/track";
 
 const StickyContactButtons = () => {
   const buttons = [
@@ -38,6 +39,13 @@ const StickyContactButtons = () => {
           <motion.a
             key={button.label}
             href={button.href}
+            onClick={() => {
+              if (button.href.startsWith("tel:")) {
+                handleCallClick({ source: "Website", obj: "N/A" });
+              } else {
+                handleWhatsappClick({ source: "Website", obj: "N/A" });
+              }
+            }}
             target={button.target}
             rel={button.target ? "noopener noreferrer" : undefined}
             initial="rest"

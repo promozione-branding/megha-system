@@ -13,6 +13,7 @@ import CTA2 from "@/components/CTA2";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import "swiper/css";
+import { handleCallClick } from "@/lib/track";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { MdOutlineAddShoppingCart } from "react-icons/md";
@@ -305,6 +306,7 @@ export default function ProjectDetail() {
 
                     <a
                       href="tel:+919873735716"
+                      onClick={() => handleCallClick({ source: "Website", obj: "N/A" })}
                       className="hover:text-white transition-colors font-medium text-white"
                     >
                       +91 9873735716

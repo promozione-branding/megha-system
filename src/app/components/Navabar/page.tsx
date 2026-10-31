@@ -15,6 +15,7 @@ import { allProducts } from '@/data';
 import PopupForm from '@/components/PopupForm';
 import CartSidebar from '@/components/CartSidebar';
 import Image from 'next/image';
+import { handleCallClick } from '@/lib/track';
 
 type CartItem = {
   id: string | number;
@@ -22,15 +23,6 @@ type CartItem = {
   price: number;
   quantity: number;
   image: string;
-};
-
-type CartSidebarProps = {
-  isOpen: boolean;
-  onClose: () => void;
-  cartItems: CartItem[];
-  updateQuantity: (id: CartItem["id"], quantity: number) => void;
-  removeItem: (id: CartItem["id"]) => void;
-  clearCart: () => void;
 };
 
 export default function Navbar() {
@@ -50,7 +42,7 @@ export default function Navbar() {
         const parsed: unknown = JSON.parse(savedCart);
 
         if (Array.isArray(parsed)) {
-          setCartItems(parsed as CartItem[]);
+          queueMicrotask(() => setCartItems(parsed as CartItem[]));
         }
       }
 
@@ -180,6 +172,7 @@ export default function Navbar() {
 
         <a
           href="tel:+919873735716"
+          onClick={() => handleCallClick({ source: "Website", obj: "N/A" })}
           className="inline-flex items-center gap-1.5 text-[#f5bd24] hover:text-white transition-colors font-bold"
         >
           <Phone className="w-3.5 h-3.5" />
@@ -187,6 +180,7 @@ export default function Navbar() {
         </a>
         <a
           href="tel:+919873735713"
+          onClick={() => handleCallClick({ source: "Website", obj: "N/A" })}
           className="inline-flex items-center gap-1.5 text-[#f5bd24] hover:text-white transition-colors font-bold"
         >
 
@@ -629,7 +623,7 @@ export default function Navbar() {
             ================================================= */}
 
             <div className="pt-4 mt-3 border-t border-[#0d2461]/10 space-y-2.5">
-              <a
+              <Link
                 href="/products"
                 onClick={closeMobileMenu}
                 className="
@@ -651,7 +645,7 @@ export default function Navbar() {
                 <span>All Products</span>
 
                 <ArrowRight className="w-4 h-4" />
-              </a>
+              </Link>
 
               <button
                 type="button"
@@ -680,7 +674,10 @@ export default function Navbar() {
             {/* Mobile phone */}
             <a
               href="tel:+919873735716"
-              onClick={closeMobileMenu}
+              onClick={() => {
+                handleCallClick({ source: "Website", obj: "N/A" });
+                closeMobileMenu();
+              }}
               className="
                 mt-3
                 flex

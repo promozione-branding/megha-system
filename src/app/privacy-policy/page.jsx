@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import { handleCallClick } from "@/lib/track";
 
 const sections = [
     {
@@ -318,6 +319,7 @@ export default function Page() {
                             <div className="mt-6 space-y-4 text-sm">
                                 <a
                                     href="tel:+919873735716"
+                                    onClick={() => handleCallClick({ source: "Website", obj: "N/A" })}
                                     className="flex items-center gap-3 transition hover:text-[#d5c6a1]"
                                 >
                                     <span className="text-[#d5c6a1]">
@@ -328,6 +330,7 @@ export default function Page() {
 
                                 <a
                                     href="tel:+919873735713"
+                                    onClick={() => handleCallClick({ source: "Website", obj: "N/A" })}
                                     className="flex items-center gap-3 transition hover:text-[#d5c6a1]"
                                 >
                                     <span className="text-[#d5c6a1]">

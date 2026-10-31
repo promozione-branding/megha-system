@@ -4,6 +4,7 @@
 import  { useState } from 'react';
 import { ArrowRight, Phone } from 'lucide-react';
 import PopupForm from '@/components/PopupForm';
+import { handleCallClick } from '@/lib/track';
 
 interface BuyNowBannerProps {
   heading?: string;
@@ -71,6 +72,7 @@ export default function CTA2({
               {/* Call Now */}
               <a
                 href="tel:+919873735716"
+                onClick={() => handleCallClick({ source: "Website", obj: "N/A" })}
                 className="group inline-flex min-w-[175px] items-center justify-center gap-3 rounded-full border border-white/30 bg-white/10 px-6 py-3.5 text-sm font-bold text-white backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-white hover:bg-white hover:text-[#0d2461]"
               >
                 <span className="flex h-8 w-8 items-center justify-center rounded-full bg-white text-[#0d2461] transition-transform duration-300 group-hover:scale-110">
@@ -100,4 +102,3 @@ export default function CTA2({
     </>
   );
 }
-

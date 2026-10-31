@@ -3,6 +3,7 @@
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import { ArrowLeft, MessageCircle, ShoppingBag } from "lucide-react";
+import { handleWhatsappClick } from "@/lib/track";
 
 type CartItem = {
     id: string | number;
@@ -132,6 +133,7 @@ export default function CheckoutPage() {
         event: React.FormEvent<HTMLFormElement>
     ) => {
         event.preventDefault();
+        handleWhatsappClick({ source: "Website", obj: "N/A" });
 
         if (!cartLoaded || cartItems.length === 0) {
             alert("Your cart is empty. Please add products first.");

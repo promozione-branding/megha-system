@@ -13,6 +13,7 @@ import {
   Loader2,
   CheckCircle2,
 } from "lucide-react";
+import { handleCallClick } from "@/lib/track";
 
 export default function ContactSection() {
   const [formData, setFormData] = useState({
@@ -179,6 +180,7 @@ export default function ContactSection() {
 
                     <a
                       href="tel:+919873735713"
+                      onClick={() => handleCallClick({ source: "Website", obj: "N/A" })}
                       className="text-base font-semibold text-black tracking-tight mt-0.5 block hover:underline"
                     >
                       +91 9873735713
@@ -186,6 +188,7 @@ export default function ContactSection() {
 
                     <a
                       href="tel:+919873735716"
+                      onClick={() => handleCallClick({ source: "Website", obj: "N/A" })}
                       className="text-base font-semibold text-black tracking-tight mt-0.5 block hover:underline"
                     >
                       +91 9873735716
@@ -546,4 +549,3 @@ export default function ContactSection() {
     </section>
   );
 }
-
