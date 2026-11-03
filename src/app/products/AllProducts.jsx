@@ -173,7 +173,7 @@ export default function AllProductsPage() {
           ))}
         </div>
       </main>
-
+      <StickyContactButtons />
     </div>
   );
 }

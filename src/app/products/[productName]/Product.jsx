@@ -696,7 +696,7 @@ export default function ProjectDetail() {
           window.dispatchEvent(new Event("megha-cart-updated"));
         }}
       />
-
+      <StickyContactButtons />
       <CTA2 />
     </div>
   );

@@ -120,7 +120,7 @@ export default function RootLayout({
       <body className="min-h-full relative flex flex-col">
         <Navbar />
         {children}
-        <StickyContactButtons />
+        {/* <StickyContactButtons /> */}
         <FooterSection />
       </body>
     </html>
