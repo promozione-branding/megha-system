@@ -43,7 +43,7 @@ export default function Home() {
         <ContactSection />
         <BuyNowBanner />
         <ToiletCubicleSupplyNetwork/>
-        <StickyContactButtons />
+      
       </main>
     </SmoothScroll>
   );

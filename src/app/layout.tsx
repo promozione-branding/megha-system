@@ -1,9 +1,11 @@
+
 import type { Metadata } from "next";
 import Script from "next/script";
 import { Geist, Geist_Mono, Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/Navabar/page";
 import FooterSection from "./components/Footer/page";
+import StickyContactButtons from "@/components/StickyContactButtons";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -49,18 +51,26 @@ const jsonLd = {
   ],
 };
 
-export default function RootLayout({ children }: LayoutProps<"/">) {
+export default function RootLayout({
+  children,
+}: LayoutProps<"/">) {
   return (
     <html
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} ${jakartaSans.variable} h-full antialiased`}
     >
       <head>
-        <meta name="google-site-verification" content="bXEnBddglPIVddzJa8y7GaOldMccSPBnInJwbCGg-tY" />
+        <meta
+          name="google-site-verification"
+          content="bXEnBddglPIVddzJa8y7GaOldMccSPBnInJwbCGg-tY"
+        />
+
         <link
           rel="canonical"
           href="https://toiletcubiclemanufacturer.com/"
         />
+
+        {/* Website Schema */}
         <Script
           id="website-schema"
           type="application/ld+json"
@@ -68,6 +78,25 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
             __html: JSON.stringify(jsonLd),
           }}
         />
+
+        {/* Google Tag Manager */}
+        <Script
+          id="google-tag-manager"
+          src="https://www.googletagmanager.com/gtm.js?id=GTM-TX2VFRKX"
+          strategy="afterInteractive"
+        />
+
+        <Script
+          id="google-tag-manager-init"
+          strategy="beforeInteractive"
+        >
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+          `}
+        </Script>
+
         {/* Microsoft Clarity */}
         <Script
           id="microsoft-clarity"
@@ -75,20 +104,23 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         >
           {`
             (function(c,l,a,r,i,t,y){
-                c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-                t=l.createElement(r);
-                t.async=1;
-                t.src="https://www.clarity.ms/tag/"+i;
-                y=l.getElementsByTagName(r)[0];
-                y.parentNode.insertBefore(t,y);
+              c[a]=c[a]||function(){
+                (c[a].q=c[a].q||[]).push(arguments)
+              };
+              t=l.createElement(r);
+              t.async=1;
+              t.src="https://www.clarity.ms/tag/"+i;
+              y=l.getElementsByTagName(r)[0];
+              y.parentNode.insertBefore(t,y);
             })(window, document, "clarity", "script", "ylmkevm6z3");
           `}
         </Script>
       </head>
 
-      <body className="min-h-full flex flex-col">
+      <body className="min-h-full relative flex flex-col">
         <Navbar />
         {children}
+        <StickyContactButtons />
         <FooterSection />
       </body>
     </html>
