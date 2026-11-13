@@ -1,7 +1,9 @@
+
 const TRACKING_API = "https://brandbnalo.com/api/tracking/create";
 
 // Set your default supplier ID here
-const DEFAULT_SUPPLIER_TOKEN = process.env.NEXT_PUBLIC_SUPPLIER_TOKEN || "6a9fb2bdd936bdc2bb1d6df7";
+const DEFAULT_SUPPLIER_TOKEN =
+    process.env.NEXT_PUBLIC_SUPPLIER_TOKEN || "6a9fb2bdd936bdc2bb1d6df7";
 
 /**
  * @typedef {{supplierToken?: string}} TrackingObject
@@ -16,12 +18,24 @@ const DEFAULT_SUPPLIER_TOKEN = process.env.NEXT_PUBLIC_SUPPLIER_TOKEN || "6a9fb2
  *   supplierToken?: string;
  * }} params
  */
-export const trackEvent = ({ eventType, obj = null, source = "Website", supplierToken, }) => {
+export const trackEvent = ({
+    eventType,
+    obj = null,
+    source = "Website",
+    supplierToken,
+}) => {
+    // Get current website URL
+    const webisteUrl =
+        typeof window !== "undefined"
+            ? window.location.hostname + window.location.pathname
+            : "";
+
     const payload = {
         productId: obj || "N/A",
-        supplierToken: supplierToken || obj?.supplierToken || DEFAULT_SUPPLIER_TOKEN,
+        supplierToken:
+            supplierToken || obj?.supplierToken || DEFAULT_SUPPLIER_TOKEN,
         eventType,
-        source,
+        source: webisteUrl || source,
     };
 
     if (!payload.supplierToken) {
@@ -44,7 +58,11 @@ export const trackEvent = ({ eventType, obj = null, source = "Website", supplier
 
 // Call tracking
 /** @param {{obj?: TrackingValue, source?: string, supplierToken?: string}} params */
-export const handleCallClick = ({ obj = null, source = "Website", supplierToken, }) => {
+export const handleCallClick = ({
+    obj = null,
+    source = "Website",
+    supplierToken,
+}) => {
     trackEvent({
         eventType: "call_click",
         obj,
@@ -55,7 +73,11 @@ export const handleCallClick = ({ obj = null, source = "Website", supplierToken,
 
 // WhatsApp tracking
 /** @param {{obj?: TrackingValue, source?: string, supplierToken?: string}} params */
-export const handleWhatsappClick = ({ obj = null, source = "Website", supplierToken, }) => {
+export const handleWhatsappClick = ({
+    obj = null,
+    source = "Website",
+    supplierToken,
+}) => {
     trackEvent({
         eventType: "whatsapp_click",
         obj,
