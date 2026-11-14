@@ -122,10 +122,12 @@ export default function PopupForm({
 
     try {
       setLoading(true);
+      const webisteUrl = window.location.hostname + window.location.pathname;
+
 
       const data = {
         supplierToken: "6a9fb2bdd936bdc2bb1d6df7",
-        platform: "Megha System Contact Form",
+        platform: webisteUrl||  "Megha System Contact Form",
         platformEmail: "contact@meghasystems.com",
 
         name: formData.contactPerson,

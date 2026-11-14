@@ -96,9 +96,10 @@ export default function ContactSection() {
 
     try {
       setLoading(true);
-
+const webisteUrl = window.location.hostname + window.location.pathname;
       const data = {
-        platform: "Megha System Contact Form",
+        
+        platform: webisteUrl|| "Megha System Contact Form",
         supplierToken: "6a9fb2bdd936bdc2bb1d6df7",
         platformEmail: "contact@meghasystems.com",
 

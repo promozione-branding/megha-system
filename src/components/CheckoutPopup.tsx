@@ -207,8 +207,11 @@ export default function CheckoutPopup({
                 "Please contact the customer to confirm availability and final pricing.",
             ].join("\n");
 
+
+const webisteUrl = window.location.hostname + window.location.pathname;
+
             const payload = {
-                platform: "Megha System Checkout",
+                platform: webisteUrl||  "Megha System Checkout",
                 supplierToken: "6a9fb2bdd936bdc2bb1d6df7",
                 platformEmail: "contact@meghasystems.com",
                 name: customer.name.trim(),
