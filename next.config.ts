@@ -11,6 +11,17 @@ const nextConfig: NextConfig = {
         protocol: "https",
         hostname: "i.pravatar.cc",
       },
+      {
+        protocol: "https",
+        hostname: "ui-avatars.com",
+        pathname: "/api/**",
+      },
+      {
+        protocol: "https",
+        hostname: "toiletcubiclemanufacturer.com",
+        pathname: "/product/**",
+        search: "",
+      },
     ],
   },
 };

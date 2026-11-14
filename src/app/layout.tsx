@@ -3,9 +3,7 @@ import type { Metadata } from "next";
 import Script from "next/script";
 import { Geist, Geist_Mono, Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
-import Navbar from "./components/Navabar/page";
-import FooterSection from "./components/Footer/page";
-import StickyContactButtons from "@/components/StickyContactButtons";
+import SiteChrome from "./components/SiteChrome";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -118,10 +116,7 @@ export default function RootLayout({
       </head>
 
       <body className="min-h-full relative flex flex-col">
-        <Navbar />
-        {children}
-        {/* <StickyContactButtons /> */}
-        <FooterSection />
+        <SiteChrome>{children}</SiteChrome>
       </body>
     </html>
   );
